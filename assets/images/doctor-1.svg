@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAF6F8" />
+      <stop offset="50%" stop-color="#E1F2FB" />
+      <stop offset="100%" stop-color="#D0EAF6" />
+    </linearGradient>
+    <linearGradient id="coatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F1F6F9" />
+    </linearGradient>
+    <linearGradient id="scrubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0878BE" />
+      <stop offset="100%" stop-color="#065C94" />
+    </linearGradient>
+    <linearGradient id="skinGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9D7C2" />
+      <stop offset="100%" stop-color="#ECC0A4" />
+    </linearGradient>
+    <filter id="shadow1" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#163B4D" flood-opacity="0.1" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas with Subtle Medical Waves -->
+  <rect width="400" height="450" rx="24" fill="url(#bgGrad1)" />
+  <circle cx="340" cy="80" r="90" fill="#4FAF45" opacity="0.08" />
+  <circle cx="60" cy="380" r="110" fill="#0878BE" opacity="0.08" />
+
+  <!-- Doctor Silhouette & Body -->
+  <g filter="url(#shadow1)">
+    <!-- Shoulders / Coat -->
+    <path d="M 80 450 C 90 340, 130 310, 200 310 C 270 310, 310 340, 320 450 Z" fill="url(#coatGrad)" />
+    <!-- Scrub Inner V-neck -->
+    <path d="M 165 310 L 200 365 L 235 310 Z" fill="url(#scrubGrad)" />
+    <!-- Doctor Lapel Left -->
+    <path d="M 160 310 L 175 420 L 195 450 L 130 450 L 110 350 Z" fill="#E2EDF3" />
+    <!-- Doctor Lapel Right -->
+    <path d="M 240 310 L 225 420 L 205 450 L 270 450 L 290 350 Z" fill="#E2EDF3" />
+  </g>
+
+  <!-- Stethoscope -->
+  <path d="M 160 315 C 160 380, 180 410, 200 410 C 220 410, 240 380, 240 315" fill="none" stroke="#163B4D" stroke-width="4" stroke-linecap="round" />
+  <circle cx="200" cy="410" r="9" fill="#0878BE" stroke="#FFFFFF" stroke-width="2.5" />
+
+  <!-- Neck -->
+  <path d="M 175 250 L 175 320 C 185 330, 215 330, 225 320 L 225 250 Z" fill="url(#skinGrad1)" />
+
+  <!-- Head / Face -->
+  <ellipse cx="200" cy="210" rx="55" ry="68" fill="url(#skinGrad1)" filter="url(#shadow1)" />
+
+  <!-- Hair -->
+  <path d="M 142 200 C 140 140, 160 120, 200 120 C 240 120, 260 140, 258 200 C 250 160, 235 145, 200 145 C 165 145, 150 160, 142 200 Z" fill="#2C3E50" />
+
+  <!-- Eyes & Eyebrows -->
+  <path d="M 168 185 Q 180 180 190 185" fill="none" stroke="#2C3E50" stroke-width="3" stroke-linecap="round" />
+  <path d="M 210 185 Q 220 180 232 185" fill="none" stroke="#2C3E50" stroke-width="3" stroke-linecap="round" />
+  <circle cx="179" cy="198" r="4.5" fill="#163B4D" />
+  <circle cx="221" cy="198" r="4.5" fill="#163B4D" />
+  <circle cx="181" cy="196" r="1.5" fill="#FFFFFF" />
+  <circle cx="223" cy="196" r="1.5" fill="#FFFFFF" />
+
+  <!-- Glasses / Modern Frame -->
+  <rect x="162" y="188" width="34" height="22" rx="6" fill="none" stroke="#0878BE" stroke-width="2.5" />
+  <rect x="204" y="188" width="34" height="22" rx="6" fill="none" stroke="#0878BE" stroke-width="2.5" />
+  <path d="M 196 198 L 204 198" stroke="#0878BE" stroke-width="2.5" />
+
+  <!-- Nose -->
+  <path d="M 200 198 L 197 222 L 204 222" fill="none" stroke="#D19C7C" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Smile -->
+  <path d="M 184 242 Q 200 258 216 242" fill="none" stroke="#A75B46" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Medical ID Badge Clip -->
+  <rect x="135" y="360" width="22" height="32" rx="3" fill="#FFFFFF" stroke="#0878BE" stroke-width="1.5" />
+  <rect x="138" y="365" width="16" height="6" fill="#0878BE" />
+  <rect x="138" y="374" width="16" height="2" fill="#6B7C86" />
+  <rect x="138" y="378" width="10" height="2" fill="#6B7C86" />
+</svg>

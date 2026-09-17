@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5FAFC" />
+      <stop offset="50%" stop-color="#EAF6F8" />
+      <stop offset="100%" stop-color="#E1F8E8" />
+    </linearGradient>
+    <linearGradient id="scrubGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#163B4D" />
+      <stop offset="100%" stop-color="#0E2632" />
+    </linearGradient>
+    <linearGradient id="skinGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FADBC8" />
+      <stop offset="100%" stop-color="#ECC6AF" />
+    </linearGradient>
+    <filter id="shadow2" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#163B4D" flood-opacity="0.1" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="400" height="450" rx="24" fill="url(#bgGrad2)" />
+  <circle cx="80" cy="90" r="85" fill="#0878BE" opacity="0.08" />
+  <circle cx="330" cy="370" r="100" fill="#4FAF45" opacity="0.09" />
+
+  <!-- Doctor Silhouette & Body -->
+  <g filter="url(#shadow2)">
+    <!-- Shoulders / Scrubs -->
+    <path d="M 85 450 C 95 345, 135 315, 200 315 C 265 315, 305 345, 315 450 Z" fill="url(#scrubGrad2)" />
+    <!-- V-Neck line -->
+    <path d="M 172 315 L 200 360 L 228 315 Z" fill="#4FAF45" opacity="0.4" />
+  </g>
+
+  <!-- Stethoscope -->
+  <path d="M 160 315 C 160 375, 178 405, 200 405 C 222 405, 240 375, 240 315" fill="none" stroke="#4FAF45" stroke-width="4" stroke-linecap="round" />
+  <circle cx="200" cy="405" r="9" fill="#4FAF45" stroke="#FFFFFF" stroke-width="2.5" />
+
+  <!-- Neck -->
+  <path d="M 178 245 L 178 318 C 188 326, 212 326, 222 318 L 222 245 Z" fill="url(#skinGrad2)" />
+
+  <!-- Head / Face -->
+  <ellipse cx="200" cy="205" rx="52" ry="64" fill="url(#skinGrad2)" filter="url(#shadow2)" />
+
+  <!-- Elegant Dark Hair Tied Back / Styled -->
+  <path d="M 140 210 C 135 130, 160 110, 200 110 C 240 110, 265 130, 260 210 C 255 170, 245 140, 200 140 C 155 140, 145 170, 140 210 Z" fill="#1C2833" />
+  <!-- Side hair waves -->
+  <path d="M 148 180 C 145 230, 160 260, 165 270 C 158 240, 155 200, 155 180 Z" fill="#1C2833" />
+  <path d="M 252 180 C 255 230, 240 260, 235 270 C 242 240, 245 200, 245 180 Z" fill="#1C2833" />
+
+  <!-- Eyes & Eyebrows -->
+  <path d="M 170 182 Q 182 176 192 182" fill="none" stroke="#1C2833" stroke-width="2.8" stroke-linecap="round" />
+  <path d="M 208 182 Q 218 176 230 182" fill="none" stroke="#1C2833" stroke-width="2.8" stroke-linecap="round" />
+  <ellipse cx="181" cy="195" rx="4.5" ry="5" fill="#163B4D" />
+  <ellipse cx="219" cy="195" rx="4.5" ry="5" fill="#163B4D" />
+  <circle cx="183" cy="193" r="1.5" fill="#FFFFFF" />
+  <circle cx="221" cy="193" r="1.5" fill="#FFFFFF" />
+
+  <!-- Nose -->
+  <path d="M 200 195 L 197 218 L 203 218" fill="none" stroke="#CE9B7C" stroke-width="2.2" stroke-linecap="round" />
+
+  <!-- Smile & Lips -->
+  <path d="M 185 238 Q 200 252 215 238" fill="none" stroke="#B04A3B" stroke-width="3" stroke-linecap="round" />
+  <path d="M 188 238 Q 200 244 212 238" fill="none" stroke="#D97A6C" stroke-width="2" />
+
+  <!-- Medical ID Clip -->
+  <rect x="245" y="350" width="22" height="32" rx="3" fill="#FFFFFF" stroke="#4FAF45" stroke-width="1.5" />
+  <rect x="248" y="355" width="16" height="6" fill="#4FAF45" />
+  <rect x="248" y="364" width="16" height="2" fill="#6B7C86" />
+</svg>

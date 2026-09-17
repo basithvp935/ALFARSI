@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 90" width="100%" height="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0CA2E8" />
+      <stop offset="100%" stop-color="#0878BE" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5EC853" />
+      <stop offset="100%" stop-color="#4FAF45" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0878BE" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Dynamic Human / Movement Symbol -->
+  <g transform="translate(10, 5)">
+    <!-- Central Head / Vitality Circle -->
+    <circle cx="40" cy="22" r="7.5" fill="url(#greenGrad)" />
+    
+    <!-- Primary Blue Flowing Spine / Human Curve -->
+    <path d="M 40 33 C 32 40, 22 52, 28 66 C 33 76, 46 76, 52 68 C 45 66, 38 58, 41 48 C 43 42, 49 38, 48 34 Z" 
+          fill="url(#blueGrad)" />
+    
+    <!-- Secondary Green Dynamic Swirl / Recovery Arch -->
+    <path d="M 33 26 C 24 32, 14 44, 16 58 C 17 64, 21 68, 26 70 C 22 64, 22 52, 29 42 C 34 35, 41 31, 33 26 Z" 
+          fill="url(#greenGrad)" opacity="0.9" />
+
+    <!-- Uplifting Blue Arm / Mobility Arc -->
+    <path d="M 42 34 C 48 30, 58 26, 68 30 C 72 32, 70 36, 65 37 C 56 36, 49 40, 44 44 Z" 
+          fill="url(#blueGrad)" />
+
+    <!-- Supportive Green Lower Energy Dot -->
+    <circle cx="58" cy="56" r="3.5" fill="url(#greenGrad)" />
+  </g>
+
+  <!-- English & Arabic Brand Typography -->
+  <g transform="translate(88, 0)">
+    <!-- Arabic Main Title -->
+    <text x="0" y="32" font-family="'Cairo', 'Tajawal', 'Segoe UI', sans-serif" font-size="20" font-weight="700" fill="#163B4D" letter-spacing="0.5">
+      مركز الفارسي للعلاج الطبيعي
+    </text>
+    
+    <!-- English Main Title -->
+    <text x="0" y="55" font-family="'Plus Jakarta Sans', 'Manrope', 'Segoe UI', sans-serif" font-size="15" font-weight="800" fill="#0878BE" letter-spacing="1.5">
+      AL FARSI PHYSIOTHERAPY CENTER
+    </text>
+    
+    <!-- Subtitle / Tagline -->
+    <text x="0" y="73" font-family="'Plus Jakarta Sans', 'Manrope', 'Segoe UI', sans-serif" font-size="9" font-weight="600" fill="#4FAF45" letter-spacing="2.5">
+      REHABILITATION &amp; MOVEMENT CARE
+    </text>
+  </g>
+</svg>
