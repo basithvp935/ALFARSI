@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Al Farsi Physiotherapy Center | مركز الفارسي للعلاج الطبيعي</title>
+  <title>Al Farsi Physiotherapy &amp; Rehabilitation Center | مركز الفارسي للعلاج الطبيعي</title>
   <meta name="description"
-    content="Al Farsi Physiotherapy Center offers advanced, personalized physiotherapy, rehabilitation and movement recovery care in a modern clinical environment.">
+    content="Al Farsi Physiotherapy Center offers advanced, personalized physiotherapy, neurological stroke rehabilitation, back pain relief, orthopedic recovery, and holistic therapies in Muscat, Oman.">
   <meta name="keywords"
-    content="Al Farsi Physiotherapy, مركز الفارسي للعلاج الطبيعي, physiotherapy, rehabilitation, physical therapy, sports injuries, orthopedic rehab, back pain relief">
+    content="Al Farsi Physiotherapy, مركز الفارسي للعلاج الطبيعي, physiotherapy, stroke rehabilitation, back pain relief, cerebral palsy, orthopedic rehab, sports injury, hijama, reflexology, Oman medical center">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
@@ -33,6 +33,37 @@
 <body>
 
   <!-- ==========================================================================
+       0. TOP NOTIFICATION & CONTACT BAR (Inspired by Greenwich Kottakkal Header)
+       ========================================================================== -->
+  <div class="top-header-bar d-none d-lg-block">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center py-2">
+        <!-- Left: Location & Working Hours -->
+        <div class="top-bar-left d-flex align-items-center gap-4">
+          <div class="top-bar-item">
+            <i class="bi bi-geo-alt-fill text-accent-green"></i>
+            <span>Al Khuwair, Muscat, Sultanate of Oman</span>
+          </div>
+
+        </div>
+
+        <!-- Right: Contact, Email & Language Switcher -->
+        <div class="top-bar-right d-flex align-items-center gap-3">
+          <a href="tel:+96824567890" class="top-bar-link">
+            <i class="bi bi-telephone-fill text-accent-green"></i>
+            <span>+968 2456 7890</span>
+          </a>
+          <a href="mailto:care@alfarsiphysio.com" class="top-bar-link">
+            <i class="bi bi-envelope-fill text-accent-green"></i>
+            <span>care@alfarsiphysio.com</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
        1. HEADER / STICKY NAVIGATION
        ========================================================================== -->
   <header>
@@ -55,22 +86,42 @@
             <li class="nav-item">
               <a class="nav-link active" href="#home">Home</a>
             </li>
+            <!-- Treatments Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#treatments" id="treatmentsDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Treatments
+              </a>
+              <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="treatmentsDropdown">
+                <li><a class="dropdown-item" href="#treatments" data-filter="neurological"><i class="bi bi-heart-pulse-fill text-primary"></i> Stroke &amp; Neurological Rehab</a></li>
+                <li><a class="dropdown-item" href="#treatments" data-filter="spine"><i class="bi bi-person-arms-up text-primary"></i> Back Pain &amp; Sciatica</a></li>
+                <li><a class="dropdown-item" href="#treatments" data-filter="orthopedic"><i class="bi bi-trophy-fill text-primary"></i> Sports Injury Rehab</a></li>
+                <li><a class="dropdown-item" href="#treatments" data-filter="orthopedic"><i class="bi bi-bandaid-fill text-primary"></i> Post-Surgical Recovery</a></li>
+                <li><a class="dropdown-item" href="#treatments" data-filter="holistic"><i class="bi bi-stars text-primary"></i> Hijama &amp; Reflexology</a></li>
+                <li><a class="dropdown-item" href="#ayurveda"><i class="bi bi-flower1 text-success"></i> Ayurvedic &amp; Panchakarma</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-primary fw-bold" href="#treatments">Explore All Treatments <i class="bi bi-arrow-right"></i></a></li>
+              </ul>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#services">Services</a>
+              <a class="nav-link" href="#ayurveda"><i class="bi bi-flower1 text-success me-1"></i>Ayurveda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" href="#doctors">Specialists</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
 
           <!-- Header CTA -->
-          <div class="d-flex align-items-center">
+          <div class="d-flex align-items-center gap-2">
             <a href="#contact" class="btn btn-primary-custom nav-cta-btn">
               <i class="bi bi-calendar2-check-fill"></i>
-              <span>Book an Appointment</span>
+              <span>Book Appointment</span>
             </a>
           </div>
         </div>
@@ -80,7 +131,7 @@
 
   <main>
     <!-- ==========================================================================
-         2. HERO SECTION WITH BACKGROUND VIDEO
+         2. HERO SECTION WITH BACKGROUND VIDEO & GOOGLE RATING WIDGET
          ========================================================================== -->
     <section class="hero-section hero-video-section" id="home">
       <!-- Background Video & Overlay -->
@@ -95,13 +146,13 @@
         <div class="row align-items-center">
           <!-- Hero Left Content -->
           <div class="col-lg-8 col-xl-7 reveal">
-            <!-- Brand Badge -->
+            <!-- Brand Eyebrow Badge -->
             <div class="badge-eyebrow">
               <span class="dot"></span>
-              <span>AL FARSI PHYSIOTHERAPY CENTER</span>
+              <span>CENTER OF EXCELLENCE IN ADVANCED REHABILITATION</span>
             </div>
 
-            <!-- Main Heading with Typewriter Writing Animation -->
+            <!-- Main Heading with Dynamic Typewriter Effect -->
             <h1 class="hero-heading">
               Move Better. <br>
               <span class="italic-accent typewriter-wrapper"><span id="typewriterTarget">Live Better.</span><span
@@ -110,23 +161,24 @@
 
             <!-- Supporting Heading -->
             <h2 class="hero-subheading">
-              Advanced Physiotherapy &amp; Rehabilitation Care Designed Around You
+              Comprehensive Physiotherapy, Neurological Stroke Rehab &amp; Holistic Pain Recovery
             </h2>
 
             <!-- Paragraph -->
-            <p class="hero-description" style="max-width: 620px;">
-              Personalized physiotherapy and rehabilitation programs focused on improving movement, reducing discomfort
-              and supporting a healthier, more active life.
+            <p class="hero-description" style="max-width: 640px;">
+              Personalized evidence-based rehabilitation protocols combining modern physical medicine and proven therapeutic techniques to restore mobility, eliminate pain, and rebuild vitality naturally.
             </p>
+
+
 
             <!-- Buttons -->
             <div class="hero-btn-group">
               <a href="#contact" class="btn btn-primary-custom">
                 <i class="bi bi-calendar-event"></i>
-                <span>Book an Appointment</span>
+                <span>Make Appointment</span>
               </a>
-              <a href="#services" class="btn btn-outline-custom">
-                <span>Explore Our Services</span>
+              <a href="#treatments" class="btn btn-outline-custom">
+                <span>Explore Treatments</span>
                 <i class="bi bi-arrow-right"></i>
               </a>
             </div>
@@ -136,59 +188,59 @@
     </section>
 
     <!-- ==========================================================================
-         3. TRUST / QUICK INFORMATION STRIP
+         3. HERO STATS & TRUST STRIP (Counters & Quality Credentials)
          ========================================================================== -->
     <section class="trust-strip-section" aria-label="Core Center Pillars">
       <div class="container">
-        <div class="row g-4">
-          <!-- Item 1 -->
+        <div class="row g-4 hero-trust-bar">
+          <!-- Stat 1 -->
           <div class="col-xl-3 col-md-6 reveal delay-100">
             <div class="trust-card">
               <div class="trust-card-icon">
-                <i class="bi bi-person-badge"></i>
+                <i class="bi bi-award-fill"></i>
               </div>
               <div>
-                <div class="trust-card-title">Expert Physiotherapy</div>
-                <p class="trust-card-sub">Certified medical specialists</p>
+                <div class="trust-card-title"><span class="counter-value" data-target="16" data-suffix="+">16+</span> Years Experience</div>
+                <p class="trust-card-sub">UK &amp; International Certified Experts</p>
               </div>
             </div>
           </div>
 
-          <!-- Item 2 -->
+          <!-- Stat 2 -->
           <div class="col-xl-3 col-md-6 reveal delay-200">
             <div class="trust-card">
               <div class="trust-card-icon">
-                <i class="bi bi-clipboard2-pulse"></i>
+                <i class="bi bi-people-fill"></i>
               </div>
               <div>
-                <div class="trust-card-title">Personalized Treatment</div>
-                <p class="trust-card-sub">Tailored to your body &amp; goals</p>
+                <div class="trust-card-title"><span class="counter-value" data-target="15000" data-suffix="+">15,000+</span> Recovered</div>
+                <p class="trust-card-sub">Successfully treated patient cases</p>
               </div>
             </div>
           </div>
 
-          <!-- Item 3 -->
+          <!-- Stat 3 -->
           <div class="col-xl-3 col-md-6 reveal delay-300">
-            <div class="trust-card">
-              <div class="trust-card-icon">
-                <i class="bi bi-cpu"></i>
-              </div>
-              <div>
-                <div class="trust-card-title">Modern Rehabilitation</div>
-                <p class="trust-card-sub">State-of-the-art facilities</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 4 -->
-          <div class="col-xl-3 col-md-6 reveal delay-400">
             <div class="trust-card">
               <div class="trust-card-icon">
                 <i class="bi bi-shield-check"></i>
               </div>
               <div>
-                <div class="trust-card-title">Patient-Centered Care</div>
-                <p class="trust-card-sub">Compassionate holistic health</p>
+                <div class="trust-card-title"><span class="counter-value" data-target="98" data-suffix="%">98%</span> Recovery Rate</div>
+                <p class="trust-card-sub">Non-invasive &amp; surgery-free results</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat 4 -->
+          <div class="col-xl-3 col-md-6 reveal delay-400">
+            <div class="trust-card">
+              <div class="trust-card-icon">
+                <i class="bi bi-headset"></i>
+              </div>
+              <div>
+                <div class="trust-card-title">24/7 Helpline</div>
+                <p class="trust-card-sub">Ongoing clinical follow-up care</p>
               </div>
             </div>
           </div>
@@ -215,10 +267,11 @@
                   <i class="bi bi-universal-access"></i>
                 </div>
                 <div>
-                  <div
-                    style="font-size: 0.8rem; font-weight: 700; color: var(--primary-green); text-transform: uppercase; letter-spacing: 1px;">
-                    Our Mission</div>
-                  <div style="font-size: 1.05rem; font-weight: 800; color: var(--dark-navy);">Care • Recovery • Movement
+                  <div style="font-size: 0.8rem; font-weight: 700; color: var(--primary-green); text-transform: uppercase; letter-spacing: 1px;">
+                    Our Mission
+                  </div>
+                  <div style="font-size: 1.05rem; font-weight: 800; color: var(--dark-navy);">
+                    Care • Recovery • Movement
                   </div>
                 </div>
               </div>
@@ -229,42 +282,140 @@
           <div class="col-lg-6 reveal reveal-right">
             <div class="badge-eyebrow">
               <span class="dot"></span>
-              <span>ABOUT AL FARSI</span>
+              <span>ABOUT AL FARSI CLINIC</span>
             </div>
 
             <h2 class="section-title">
-              Helping You Move With <span class="italic-accent">Confidence</span>
+              Helping You Move With <span class="italic-accent">Freedom &amp; Vitality</span>
             </h2>
 
-            <p>
-              <strong>Al Farsi Physiotherapy Center</strong> provides specialized rehabilitation care focused on
-              restoring mobility, relieving discomfort, and improving everyday physical function.
+            <p class="lead-text">
+              <strong>Al Farsi Physiotherapy Center</strong> is a premier specialized medical rehabilitation facility in Muscat, dedicated to restoring mobility, eliminating chronic discomfort, and fostering long-term physical independence.
             </p>
 
             <p>
-              Our evidence-based clinical approach combines comprehensive biomechanical assessment with individualized
-              treatment protocols to support your long-term wellness.
+              Our evidence-based clinical model combines comprehensive biomechanical analysis with personalized treatment protocols—spanning orthopedic physical therapy, neurological stroke rehabilitation, spinal decompression, and complementary natural therapies.
             </p>
 
             <!-- Key Feature List -->
             <ul class="about-feature-list">
               <li>
                 <i class="bi bi-check-circle-fill"></i>
-                <span>Comprehensive Movement &amp; Biomechanical Assessment</span>
+                <span>Comprehensive Biomechanical &amp; Dosha Movement Assessment</span>
               </li>
               <li>
                 <i class="bi bi-check-circle-fill"></i>
-                <span>Customized, Evidence-Based Personalized Treatment</span>
+                <span>Multi-Disciplinary Personalized Treatment Protocols</span>
               </li>
               <li>
                 <i class="bi bi-check-circle-fill"></i>
-                <span>Dedicated Post-Injury &amp; Post-Surgical Rehabilitation</span>
+                <span>Dedicated Neurological, Post-Stroke &amp; Spine Decompression</span>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Safe, Non-Invasive, Non-Surgical Rehabilitation Care</span>
               </li>
             </ul>
 
-            <div class="pt-2">
-              <a href="#services" class="btn btn-primary-custom">
-                <span>Learn More About Our Care</span>
+            <div class="pt-2 d-flex gap-3 flex-wrap">
+              <a href="#treatments" class="btn btn-primary-custom">
+                <span>View Our Treatments</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-outline-custom">
+                <i class="bi bi-telephone"></i>
+                <span>Consult Our Doctors</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. "WHAT WE OFFER" / HOLISTIC OFFERINGS (From Greenwich Site Structure)
+         ========================================================================== -->
+    <section class="section-padding bg-light-bg" id="offerings">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mb-5 reveal">
+          <div class="badge-eyebrow">
+            <span class="dot"></span>
+            <span>WHAT WE OFFER</span>
+          </div>
+          <h2 class="section-title">
+            Our Comprehensive <span class="italic-accent">Holistic &amp; Clinical Offerings</span>
+          </h2>
+          <p class="section-subtitle">
+            From acute sports recovery and spinal care to neurological rehabilitation and natural therapies, we provide integrative physical medicine tailored to your life.
+          </p>
+        </div>
+
+        <!-- 4 Primary Pillar Cards -->
+        <div class="row g-4">
+          <!-- Offering 1 -->
+          <div class="col-lg-3 col-md-6 reveal delay-100">
+            <div class="offering-luxury-card">
+              <div class="offering-icon-wrap bg-blue-soft">
+                <i class="bi bi-activity text-primary"></i>
+              </div>
+              <h3 class="offering-title">Advanced Physiotherapy</h3>
+              <p class="offering-desc">
+                Daily evidence-based manual therapy, targeted therapeutic exercise, and electro-physical modalities to heal joints and restore optimal biomechanics.
+              </p>
+              <a href="#treatments" class="offering-link" data-filter="orthopedic">
+                <span>Explore Category</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Offering 2 -->
+          <div class="col-lg-3 col-md-6 reveal delay-200">
+            <div class="offering-luxury-card">
+              <div class="offering-icon-wrap bg-green-soft">
+                <i class="bi bi-heart-pulse text-success"></i>
+              </div>
+              <h3 class="offering-title">Stroke &amp; Neuro Rehab</h3>
+              <p class="offering-desc">
+                Specialized neurological rehabilitation for stroke recovery, hemiplegia, paralysis, and balance restoration using intensive neuromuscular retraining.
+              </p>
+              <a href="#treatments" class="offering-link" data-filter="neurological">
+                <span>Explore Category</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Offering 3 -->
+          <div class="col-lg-3 col-md-6 reveal delay-300">
+            <div class="offering-luxury-card">
+              <div class="offering-icon-wrap bg-blue-soft">
+                <i class="bi bi-person-arms-up text-primary"></i>
+              </div>
+              <h3 class="offering-title">Spine &amp; Chronic Pain</h3>
+              <p class="offering-desc">
+                Natural, surgery-free relief for sciatica, cervical spondylosis, lumbar disc herniation, and postural syndromes through non-invasive decompression.
+              </p>
+              <a href="#treatments" class="offering-link" data-filter="spine">
+                <span>Explore Category</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Offering 4 -->
+          <div class="col-lg-3 col-md-6 reveal delay-400">
+            <div class="offering-luxury-card">
+              <div class="offering-icon-wrap bg-green-soft">
+                <i class="bi bi-stars text-success"></i>
+              </div>
+              <h3 class="offering-title">Holistic Complementary Care</h3>
+              <p class="offering-desc">
+                Medical cupping (Hijama), therapeutic reflexology, dry needling, and therapeutic relaxation for total body circulation and natural pain relief.
+              </p>
+              <a href="#treatments" class="offering-link" data-filter="holistic">
+                <span>Explore Category</span>
                 <i class="bi bi-arrow-right"></i>
               </a>
             </div>
@@ -274,161 +425,341 @@
     </section>
 
     <!-- ==========================================================================
-         5. SERVICES SECTION
+         6. COMPREHENSIVE TREATMENTS DIRECTORY & FILTER MATRIX (All 12+ Fields)
          ========================================================================== -->
-    <section class="section-padding bg-light-bg" id="services">
+    <section class="section-padding" id="treatments">
       <div class="container">
         <!-- Section Header -->
-        <div class="text-center mb-5 reveal">
+        <div class="text-center mb-4 reveal">
           <div class="badge-eyebrow">
             <span class="dot"></span>
-            <span>OUR CLINICAL SERVICES</span>
+            <span>OUR CLINICAL TREATMENTS</span>
           </div>
           <h2 class="section-title">
-            Physiotherapy Designed Around <span class="italic-accent">Your Needs</span>
+            Comprehensive <span class="italic-accent">Rehabilitation Treatments</span>
           </h2>
           <p class="section-subtitle">
-            Comprehensive rehabilitation and physiotherapy support to help you move, recover and return to the
-            activities you value.
+            Experience holistic healing with personalized therapies that restore balance, reduce pain, and rebuild vital movement.
           </p>
         </div>
 
-        <!-- 6 Service Cards Grid with Photography -->
-        <div class="row g-4">
-          <!-- Service 1: Orthopedic -->
-          <div class="col-lg-4 col-md-6 reveal delay-100">
+        <!-- Filter Tabs -->
+        <div class="treatment-filter-tabs text-center mb-5 reveal">
+          <button class="filter-tab-btn active" data-filter="all">All Treatments</button>
+          <button class="filter-tab-btn" data-filter="neurological">Neurological &amp; Stroke</button>
+          <button class="filter-tab-btn" data-filter="spine">Spine &amp; Pain Care</button>
+          <button class="filter-tab-btn" data-filter="orthopedic">Orthopedic &amp; Sports</button>
+          <button class="filter-tab-btn" data-filter="holistic">Specialized &amp; Holistic</button>
+        </div>
+
+        <!-- 12 Treatment Cards Grid -->
+        <div class="row g-4" id="treatmentGrid">
+          <!-- Treatment 1: Stroke Treatment -->
+          <div class="col-lg-4 col-md-6 treatment-item reveal" data-category="neurological">
             <div class="service-card enhanced-service-card">
               <div class="service-card-img-wrap">
-                <img src="assets/images/service-orthopedic.jpg" alt="Orthopedic Physiotherapy" class="service-card-img"
-                  loading="lazy">
+                <img src="assets/images/service-neurological.jpg" alt="Stroke Treatment & Neurological Rehab" class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-heart-pulse-fill"></i> Neurological</div>
                 <div class="service-card-overlay"></div>
               </div>
               <div class="service-card-content">
-                <h3 class="service-card-title">Orthopedic Physiotherapy</h3>
+                <h3 class="service-card-title">Stroke Rehabilitation</h3>
                 <p class="service-card-desc">
-                  Specialized management for bone, joint, ligament, and tendon disorders, helping restore optimal
-                  musculoskeletal function and ease pain.
+                  Neurological rehabilitation for stroke recovery, paralysis, gait retraining, and motor restoration using advanced neuro-facilitation.
                 </p>
-                <a href="#contact" class="service-link" data-bs-toggle="modal" data-bs-target="#serviceDetailModal"
-                  data-service="orthopedic">
-                  <span>Learn More</span>
+                <div class="treatment-tags">
+                  <span class="tag-chip">Paralysis Care</span>
+                  <span class="tag-chip">Gait Training</span>
+                  <span class="tag-chip">Neuroplasticity</span>
+                </div>
+                <a href="treatment.html?id=stroke" class="service-link">
+                  <span>Discover More</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Service 2: Neurological -->
-          <div class="col-lg-4 col-md-6 reveal delay-200">
+          <!-- Treatment 2: Back Pain Treatment -->
+          <div class="col-lg-4 col-md-6 treatment-item reveal delay-100" data-category="spine">
             <div class="service-card enhanced-service-card">
               <div class="service-card-img-wrap">
-                <img src="assets/images/service-neurological.jpg" alt="Neurological Rehabilitation"
-                  class="service-card-img" loading="lazy">
+                <img src="assets/images/service-back-neck.jpg" alt="Back Pain & Sciatica Treatment" class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-person-arms-up"></i> Spine Care</div>
                 <div class="service-card-overlay"></div>
               </div>
               <div class="service-card-content">
-                <h3 class="service-card-title">Neurological Rehabilitation</h3>
+                <h3 class="service-card-title">Back Pain &amp; Sciatica</h3>
                 <p class="service-card-desc">
-                  Targeted therapeutic exercises and neuromuscular re-education to improve balance, coordination,
-                  strength, and motor independence.
+                  Natural, surgery-free relief for sciatica, lumbar disc herniation, spinal stenosis, and chronic lower back pain.
                 </p>
-                <a href="#contact" class="service-link" data-bs-toggle="modal" data-bs-target="#serviceDetailModal"
-                  data-service="neurological">
-                  <span>Learn More</span>
+                <div class="treatment-tags">
+                  <span class="tag-chip">Disc Herniation</span>
+                  <span class="tag-chip">Sciatic Nerve</span>
+                  <span class="tag-chip">Decompression</span>
+                </div>
+                <a href="treatment.html?id=backpain" class="service-link">
+                  <span>Discover More</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Service 3: Sports Injury -->
-          <div class="col-lg-4 col-md-6 reveal delay-300">
+          <!-- Treatment 3: Cervical Spondylosis -->
+          <div class="col-lg-4 col-md-6 treatment-item reveal delay-200" data-category="spine">
             <div class="service-card enhanced-service-card">
               <div class="service-card-img-wrap">
-                <img src="assets/images/service-sports.jpg" alt="Sports Injury Rehabilitation" class="service-card-img"
-                  loading="lazy">
+                <img src="assets/images/service-back-neck.jpg" alt="Cervical Spondylosis & Neck Pain" class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-activity"></i> Neck &amp; Spine</div>
                 <div class="service-card-overlay"></div>
               </div>
               <div class="service-card-content">
-                <h3 class="service-card-title">Sports Injury Rehabilitation</h3>
+                <h3 class="service-card-title">Cervical Spondylosis</h3>
                 <p class="service-card-desc">
-                  High-performance recovery programs to treat sprains, strains, tears, and overuse injuries, safely
-                  returning athletes to peak form.
+                  Comprehensive relief from neck stiffness, radiating arm numbness, posture strain, and degenerative cervical disc issues.
                 </p>
-                <a href="#contact" class="service-link" data-bs-toggle="modal" data-bs-target="#serviceDetailModal"
-                  data-service="sports">
-                  <span>Learn More</span>
+                <div class="treatment-tags">
+                  <span class="tag-chip">Neck Stiffness</span>
+                  <span class="tag-chip">Posture Correction</span>
+                  <span class="tag-chip">Manual Therapy</span>
+                </div>
+                <a href="treatment.html?id=cervical" class="service-link">
+                  <span>Discover More</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Service 4: Back & Neck -->
-          <div class="col-lg-4 col-md-6 reveal delay-100">
+          <!-- Treatment 4: Cerebral Palsy -->
+          <div class="col-lg-4 col-md-6 treatment-item reveal" data-category="neurological">
             <div class="service-card enhanced-service-card">
               <div class="service-card-img-wrap">
-                <img src="assets/images/service-back-neck.jpg" alt="Back & Neck Pain Management"
-                  class="service-card-img" loading="lazy">
+                <img src="assets/images/service-neurological.jpg" alt="Cerebral Palsy Pediatric Care" class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-heart-fill"></i> Pediatric Neuro</div>
                 <div class="service-card-overlay"></div>
               </div>
               <div class="service-card-content">
-                <h3 class="service-card-title">Back &amp; Neck Pain Management</h3>
+                <h3 class="service-card-title">Cerebral Palsy Care</h3>
                 <p class="service-card-desc">
-                  Evidence-based spinal therapies, posture corrections, and deep core strengthening to alleviate
-                  cervical
-                  and lumbar discomfort.
+                  Compassionate developmental physiotherapy and neuromuscular retraining supporting childhood mobility, motor skills, and independence.
                 </p>
-                <a href="#contact" class="service-link" data-bs-toggle="modal" data-bs-target="#serviceDetailModal"
-                  data-service="spine">
-                  <span>Learn More</span>
+                <div class="treatment-tags">
+                  <span class="tag-chip">Motor Skills</span>
+                  <span class="tag-chip">Spasticity Control</span>
+                  <span class="tag-chip">Child Rehab</span>
+                </div>
+                <a href="treatment.html?id=cerebralpalsy" class="service-link">
+                  <span>Discover More</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Service 5: Post-Surgical -->
-          <div class="col-lg-4 col-md-6 reveal delay-200">
+          <!-- Treatment 5: Sports Injury Rehabilitation -->
+          <div class="col-lg-4 col-md-6 treatment-item reveal delay-100" data-category="orthopedic">
             <div class="service-card enhanced-service-card">
               <div class="service-card-img-wrap">
-                <img src="assets/images/service-post-surgical.jpg" alt="Post-Surgical Rehabilitation"
-                  class="service-card-img" loading="lazy">
+                <img src="assets/images/service-sports.jpg" alt="Sports Injury Rehabilitation" class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-trophy"></i> Sports Care</div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title">Sports Injury Recovery</h3>
+                <p class="service-card-desc">
+                  High-performance recovery for ACL sprains, rotator cuff tears, ankle trauma, and return-to-play functional conditioning.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip">ACL / Meniscus</span>
+                  <span class="tag-chip">Tendonitis</span>
+                  <span class="tag-chip">Return-to-Play</span>
+                </div>
+                <a href="treatment.html?id=sports" class="service-link">
+                  <span>Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Treatment 6: Orthopedic Physiotherapy -->
+          <div class="col-lg-4 col-md-6 treatment-item reveal delay-200" data-category="orthopedic">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/service-orthopedic.jpg" alt="Orthopedic Physiotherapy" class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-bandaid"></i> Orthopedic</div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title">Orthopedic Rehabilitation</h3>
+                <p class="service-card-desc">
+                  Specialized management for bone, joint, ligament, and cartilage disorders, easing chronic stiffness and arthritis.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip">Osteoarthritis</span>
+                  <span class="tag-chip">Joint Pain</span>
+                  <span class="tag-chip">Biomechanical Alignment</span>
+                </div>
+                <a href="treatment.html?id=orthopedic" class="service-link">
+                  <span>Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Treatment 7: Post-Surgical Rehabilitation -->
+          <div class="col-lg-4 col-md-6 treatment-item reveal" data-category="orthopedic">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/service-post-surgical.jpg" alt="Post-Surgical Rehabilitation" class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-shield-plus"></i> Post-Surgery</div>
                 <div class="service-card-overlay"></div>
               </div>
               <div class="service-card-content">
                 <h3 class="service-card-title">Post-Surgical Rehabilitation</h3>
                 <p class="service-card-desc">
-                  Structured phased recovery following orthopedic, joint replacement, and spinal procedures for safe and
-                  rapid functional restoration.
+                  Structured recovery following joint replacement, spinal surgery, and arthroscopy to regain complete strength safely.
                 </p>
-                <a href="#contact" class="service-link" data-bs-toggle="modal" data-bs-target="#serviceDetailModal"
-                  data-service="postop">
-                  <span>Learn More</span>
+                <div class="treatment-tags">
+                  <span class="tag-chip">Knee / Hip Replacement</span>
+                  <span class="tag-chip">Scar Management</span>
+                  <span class="tag-chip">Rapid Mobility</span>
+                </div>
+                <a href="treatment.html?id=postop" class="service-link">
+                  <span>Discover More</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Service 6: Joint & Muscle -->
-          <div class="col-lg-4 col-md-6 reveal delay-300">
+          <!-- Treatment 8: Parkinson's & Motor Disorders -->
+          <div class="col-lg-4 col-md-6 treatment-item reveal delay-100" data-category="neurological">
             <div class="service-card enhanced-service-card">
               <div class="service-card-img-wrap">
-                <img src="assets/images/service-joint-muscle.jpg" alt="Joint & Muscle Rehabilitation"
-                  class="service-card-img" loading="lazy">
+                <img src="assets/images/service-neurological.jpg" alt="Parkinson's Disease Support" class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-shuffle"></i> Movement Disorders</div>
                 <div class="service-card-overlay"></div>
               </div>
               <div class="service-card-content">
-                <h3 class="service-card-title">Joint &amp; Muscle Rehabilitation</h3>
+                <h3 class="service-card-title">Parkinson's Movement Care</h3>
                 <p class="service-card-desc">
-                  Holistic treatment for frozen shoulder, chronic tendonitis, muscle imbalances, and stiffness to
-                  restore
-                  free, pain-free movement.
+                  Targeted exercise therapy enhancing postural stability, reducing tremors, overcoming freezing episodes, and preventing falls.
                 </p>
-                <a href="#contact" class="service-link" data-bs-toggle="modal" data-bs-target="#serviceDetailModal"
-                  data-service="joint">
-                  <span>Learn More</span>
+                <div class="treatment-tags">
+                  <span class="tag-chip">Balance Training</span>
+                  <span class="tag-chip">Tremor Control</span>
+                  <span class="tag-chip">Coordination</span>
+                </div>
+                <a href="treatment.html?id=parkinsons" class="service-link">
+                  <span>Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Treatment 9: Frozen Shoulder & Joint Mobility -->
+          <div class="col-lg-4 col-md-6 treatment-item reveal delay-200" data-category="orthopedic">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/service-joint-muscle.jpg" alt="Frozen Shoulder & Joint Mobility" class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-arrows-move"></i> Joint Mobility</div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title">Joint &amp; Muscle Mobility</h3>
+                <p class="service-card-desc">
+                  Dedicated therapeutic protocols for adhesive capsulitis (frozen shoulder), tendon stiffness, and myofascial restrictions.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip">Frozen Shoulder</span>
+                  <span class="tag-chip">Trigger Point</span>
+                  <span class="tag-chip">Range of Motion</span>
+                </div>
+                <a href="treatment.html?id=joint" class="service-link">
+                  <span>Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Treatment 10: Hijama / Medical Cupping -->
+          <div class="col-lg-4 col-md-6 treatment-item reveal" data-category="holistic">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/why-us.jpg" alt="Medical Cupping Hijama Therapy" class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-droplet-half"></i> Holistic Therapy</div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title">Hijama (Medical Cupping)</h3>
+                <p class="service-card-desc">
+                  Sterile medical cupping and dry cupping to stimulate micro-circulation, relieve deep muscle spasm, and promote natural tissue detox.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip">Circulation Boost</span>
+                  <span class="tag-chip">Pain Decompression</span>
+                  <span class="tag-chip">Natural Healing</span>
+                </div>
+                <a href="treatment.html?id=hijama" class="service-link">
+                  <span>Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Treatment 11: Reflexology & Dry Needling -->
+          <div class="col-lg-4 col-md-6 treatment-item reveal delay-100" data-category="holistic">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/service-orthopedic.jpg" alt="Therapeutic Reflexology" class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-magic"></i> Complementary Care</div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title">Therapeutic Reflexology</h3>
+                <p class="service-card-desc">
+                  Precision pressure point activation and dry needling targeting neuropathic discomfort, stress release, and sensory re-education.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip">Dry Needling</span>
+                  <span class="tag-chip">Acupressure</span>
+                  <span class="tag-chip">Stress Relief</span>
+                </div>
+                <a href="treatment.html?id=reflexology" class="service-link">
+                  <span>Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Treatment 12: Electrotherapy & Advanced Modalities -->
+          <div class="col-lg-4 col-md-6 treatment-item reveal delay-200" data-category="holistic">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/service-neurological.jpg" alt="Electrotherapy & Deep Tissue Ultrasound" class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-lightning-charge-fill"></i> Modern Modality</div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title">Electrotherapy &amp; Ultrasound</h3>
+                <p class="service-card-desc">
+                  TENS, neuromuscular electrical stimulation (NMES), and therapeutic deep ultrasound to accelerate cellular repair and block pain signals.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip">TENS / NMES</span>
+                  <span class="tag-chip">Deep Ultrasound</span>
+                  <span class="tag-chip">Cellular Repair</span>
+                </div>
+                <a href="treatment.html?id=electrotherapy" class="service-link">
+                  <span>Discover More</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -439,7 +770,425 @@
     </section>
 
     <!-- ==========================================================================
-         6. WHY CHOOSE US SECTION
+         6B. AYURVEDIC & HOLISTIC HEALING SANCTUARY (Dedicated Section)
+         ========================================================================== -->
+    <section class="section-padding ayurveda-sanctuary-section" id="ayurveda">
+      <!-- Botanical Leaf Ambient Background Glows -->
+      <div class="ayur-bg-leaf-pattern"></div>
+      <div class="ayur-ambient-glow-1"></div>
+      <div class="ayur-ambient-glow-2"></div>
+
+      <div class="container position-relative">
+        <!-- Section Header -->
+        <div class="text-center mb-5 reveal">
+          <div class="badge-eyebrow ayur-badge-eyebrow">
+            <span class="ayur-leaf-icon"><i class="bi bi-tree-fill"></i></span>
+            <span>ANCIENT WISDOM &amp; BOTANICAL HEALING</span>
+          </div>
+          <h2 class="section-title">
+            Traditional <span class="ayur-italic-accent">Ayurvedic Therapies</span> &amp; Herbal Wellness
+          </h2>
+          <p class="section-subtitle">
+            Immerse yourself in authentic Kerala Ayurvedic healing, customized medicated oils, and time-honored botanical protocols designed to eliminate chronic pain, restore vital energy, and balance your body’s natural doshas.
+          </p>
+        </div>
+
+        <!-- Featured Ayurvedic Spotlight Banner -->
+        <div class="ayur-spotlight-card reveal mb-5">
+          <div class="row g-0 align-items-stretch">
+            <div class="col-lg-6 ayur-spotlight-content">
+              <div class="ayur-spotlight-tag">
+                <i class="bi bi-patch-check-fill"></i> 100% Authentic Kerala Ayurveda • GCC Standard
+              </div>
+              <h3 class="ayur-spotlight-title">
+                Personalized Botanical Healing for Spine, Joints &amp; Vitality
+              </h3>
+              <p class="ayur-spotlight-text">
+                Every therapy at Al Farsi combines pure herbal extractions, warm cold-pressed botanical oils, and skilled Kerala master therapists. Private luxury treatment suites dedicated for gentlemen and ladies with full privacy and sterile comfort.
+              </p>
+              
+              <!-- 4 Feature Highlights Grid -->
+              <div class="ayur-highlights-grid">
+                <div class="ayur-highlight-item">
+                  <div class="ayur-hl-icon"><i class="bi bi-droplet-half"></i></div>
+                  <div>
+                    <strong>Pure Medicated Tailams</strong>
+                    <span>Neem, Bala, Dhanwantharam &amp; Ashwagandha oils</span>
+                  </div>
+                </div>
+                <div class="ayur-highlight-item">
+                  <div class="ayur-hl-icon"><i class="bi bi-person-check-fill"></i></div>
+                  <div>
+                    <strong>Private Suites for Men &amp; Women</strong>
+                    <span>Dedicated male &amp; female certified therapists</span>
+                  </div>
+                </div>
+                <div class="ayur-highlight-item">
+                  <div class="ayur-hl-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+                  <div>
+                    <strong>Spine &amp; Disc Natural Relief</strong>
+                    <span>Deep herbal penetration for sciatica &amp; lumbar care</span>
+                  </div>
+                </div>
+                <div class="ayur-highlight-item">
+                  <div class="ayur-hl-icon"><i class="bi bi-shield-fill-check"></i></div>
+                  <div>
+                    <strong>MOH Oman Certified Standard</strong>
+                    <span>Authentic Kerala wooden Droni tables &amp; calm aroma</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ayur-spotlight-actions mt-4">
+                <a href="#contact" class="btn btn-ayur-primary">
+                  <i class="bi bi-calendar-heart-fill"></i>
+                  <span>Book Ayurvedic Consultation</span>
+                </a>
+                <a href="https://wa.me/96894000000?text=Hello%20Al%20Farsi%20Center,%20I%20would%20like%20to%20inquire%20about%20Ayurvedic%20Treatments" target="_blank" class="btn btn-ayur-outline">
+                  <i class="bi bi-whatsapp"></i>
+                  <span>WhatsApp Doctor</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-6 ayur-spotlight-media">
+              <img src="assets/images/ayurveda-gcc-man.jpg" alt="Traditional Ayurvedic Kizhi Massage for GCC Men" class="ayur-media-photo" loading="lazy">
+              <div class="ayur-media-wrapper">
+                <div class="ayur-media-badge">
+                  <i class="bi bi-flower1"></i>
+                  <span>Herbal Kizhi &amp; Panchakarma</span>
+                </div>
+                <div class="ayur-floating-stat">
+                  <span class="ayur-stat-num">5,000+</span>
+                  <span class="ayur-stat-label">Years of Time-Tested Botanical Healing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Specialized Ayurvedic Therapy Cards -->
+        <div class="row g-4">
+          <!-- Card 1: Kizhi / Elakizhi -->
+          <div class="col-lg-3 col-md-6 reveal">
+            <div class="ayur-card">
+              <div class="ayur-card-banner banner-kizhi">
+                <img src="assets/images/ayurveda-gcc-man.jpg" alt="Elakizhi Herbal Poultice for Men" class="ayur-card-banner-img" style="object-position: center 25%;" loading="lazy">
+                <span class="ayur-card-pill"><i class="bi bi-flower2"></i> Herbal Poultice</span>
+                <div class="ayur-card-icon-bubble">
+                  <i class="bi bi-fire"></i>
+                </div>
+              </div>
+              <div class="ayur-card-body">
+                <h4 class="ayur-card-title">Elakizhi &amp; Podikizhi</h4>
+                <p class="ayur-card-desc">
+                  Steamed bundles of wild medicinal leaves and herbal powders soaked in warm medicated oils to relieve acute joint pain, arthritis, sciatica, and chronic stiffness.
+                </p>
+                <div class="ayur-card-tags">
+                  <span>#JointPain</span>
+                  <span>#HerbalSteam</span>
+                  <span>#SpineRelief</span>
+                </div>
+                <a href="treatment.html?id=elakizhi" class="ayur-card-link">
+                  <span>Discover Protocol</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Shirodhara -->
+          <div class="col-lg-3 col-md-6 reveal">
+            <div class="ayur-card">
+              <div class="ayur-card-banner banner-shirodhara">
+                <img src="assets/images/ayurveda-shirodhara.jpg" alt="Shirodhara Oil Stream for Men" class="ayur-card-banner-img" style="object-position: center 40%;" loading="lazy">
+                <span class="ayur-card-pill"><i class="bi bi-droplet-fill"></i> Medicated Oil Stream</span>
+                <div class="ayur-card-icon-bubble">
+                  <i class="bi bi-moon-stars-fill"></i>
+                </div>
+              </div>
+              <div class="ayur-card-body">
+                <h4 class="ayur-card-title">Shirodhara &amp; Nasyam</h4>
+                <p class="ayur-card-desc">
+                  Continuous rhythmic stream of warm herbal oil over the forehead to soothe the nervous system, alleviate deep stress, chronic migraines, sleep disorders, and anxiety.
+                </p>
+                <div class="ayur-card-tags">
+                  <span>#StressRelief</span>
+                  <span>#SleepHarmony</span>
+                  <span>#NervousSystem</span>
+                </div>
+                <a href="treatment.html?id=shirodhara" class="ayur-card-link">
+                  <span>Discover Protocol</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Kati & Janu Basti -->
+          <div class="col-lg-3 col-md-6 reveal">
+            <div class="ayur-card">
+              <div class="ayur-card-banner banner-basti">
+                <img src="assets/images/ayurveda-basti.jpg" alt="Kati Basti Spinal Oil Reservoir" class="ayur-card-banner-img" style="object-position: 75% 65%;" loading="lazy">
+                <span class="ayur-card-pill"><i class="bi bi-shield-plus"></i> Localized Oil Dam</span>
+                <div class="ayur-card-icon-bubble">
+                  <i class="bi bi-bandaid-fill"></i>
+                </div>
+              </div>
+              <div class="ayur-card-body">
+                <h4 class="ayur-card-title">Kati &amp; Janu Basti</h4>
+                <p class="ayur-card-desc">
+                  Herbal dough reservoirs retaining warm medicinal oil over the lumbar spine or knee joints to penetrate deep tissues, healing slipped discs and knee cartilage degeneration.
+                </p>
+                <div class="ayur-card-tags">
+                  <span>#DiscHerniation</span>
+                  <span>#KneeCare</span>
+                  <span>#LumbarSpine</span>
+                </div>
+                <a href="treatment.html?id=basti" class="ayur-card-link">
+                  <span>Discover Protocol</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Abhyanga & Panchakarma -->
+          <div class="col-lg-3 col-md-6 reveal">
+            <div class="ayur-card">
+              <div class="ayur-card-banner banner-abhyanga">
+                <img src="assets/images/ayurveda-hero.jpg" alt="Abhyanga Medicated Herbal Therapy" class="ayur-card-banner-img" style="object-position: center 50%;" loading="lazy">
+                <span class="ayur-card-pill"><i class="bi bi-tree-fill"></i> Full Body Detox</span>
+                <div class="ayur-card-icon-bubble">
+                  <i class="bi bi-sparkles"></i>
+                </div>
+              </div>
+              <div class="ayur-card-body">
+                <h4 class="ayur-card-title">Abhyanga &amp; Detox</h4>
+                <p class="ayur-card-desc">
+                  Synchronized full-body massage using warm medicinal oils along biological energy pathways to stimulate lymphatic drainage, purge toxins, and nourish vital organs.
+                </p>
+                <div class="ayur-card-tags">
+                  <span>#Detoxification</span>
+                  <span>#LymphaticFlow</span>
+                  <span>#VitalImmunity</span>
+                </div>
+                <a href="treatment.html?id=abhyanga" class="ayur-card-link">
+                  <span>Discover Protocol</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botanical Quality Promise Strip -->
+        <div class="ayur-promise-strip reveal mt-5">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+            <div class="ayur-promise-item">
+              <i class="bi bi-patch-check-fill text-leaf"></i>
+              <span><strong>100% Organically Sourced:</strong> Certified wild herbs with no chemical additives</span>
+            </div>
+            <div class="ayur-promise-divider"></div>
+            <div class="ayur-promise-item">
+              <i class="bi bi-heart-pulse-fill text-leaf"></i>
+              <span><strong>Integrated Care:</strong> Harmonized with modern clinical physiotherapy protocols</span>
+            </div>
+            <div class="ayur-promise-divider"></div>
+            <div class="ayur-promise-item">
+              <i class="bi bi-geo-alt-fill text-leaf"></i>
+              <span><strong>Private Luxury Rooms:</strong> Dedicated serene wellness suites in Muscat, Oman</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. HOW IT WORKS / SIMPLE AND EFFECTIVE HEALING PROCESS (From Greenwich Site)
+         ========================================================================== -->
+    <section class="section-padding bg-pattern-mesh journey-section-enhanced" id="how-it-works">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mb-5 reveal">
+          <div class="badge-eyebrow">
+            <span class="dot"></span>
+            <span>HOW IT WORKS</span>
+          </div>
+          <h2 class="section-title">
+            Simple and Effective <span class="italic-accent">3-Step Healing Process</span>
+          </h2>
+          <p class="section-subtitle">
+            A structured, supportive clinical pathway designed to identify the true root causes of your symptoms and guide you back to pain-free mobility.
+          </p>
+        </div>
+
+        <!-- Flowing Connector Track for Desktop -->
+        <div class="journey-cards-grid position-relative">
+          <div class="journey-connector-track d-none d-lg-block">
+            <div class="connector-dot dot-1"></div>
+            <div class="connector-dot dot-2"></div>
+            <div class="connector-dot dot-3"></div>
+          </div>
+
+          <div class="row g-4 position-relative" style="z-index: 2;">
+            <!-- Step 1 Card -->
+            <div class="col-lg-4 reveal delay-100">
+              <div class="luxury-journey-card" data-step="1">
+                <div class="card-glow-backdrop"></div>
+                <div class="card-top-accent"></div>
+
+                <div class="journey-card-header">
+                  <div class="step-pill">
+                    <span class="step-badge-text">STEP 01</span>
+                    <span class="step-badge-arabic">الاستشارة والتقييم</span>
+                  </div>
+                  <div class="journey-icon-circle">
+                    <i class="bi bi-clipboard2-pulse-fill"></i>
+                  </div>
+                </div>
+
+                <div class="journey-card-body">
+                  <h3 class="journey-step-title">01 — In-Depth Clinical Consultation</h3>
+                  <p class="journey-step-desc">
+                    Comprehensive assessment to understand your body constitution, movement biomechanics, nerve conduction, and the precise root causes of pain.
+                  </p>
+
+                  <div class="journey-milestones">
+                    <div class="milestone-chip">
+                      <i class="bi bi-check2-circle"></i>
+                      <span>Biomechanical Range Analysis</span>
+                    </div>
+                    <div class="milestone-chip">
+                      <i class="bi bi-check2-circle"></i>
+                      <span>Neurological &amp; Postural Test</span>
+                    </div>
+                    <div class="milestone-chip">
+                      <i class="bi bi-check2-circle"></i>
+                      <span>Medical History Review</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="journey-card-footer">
+                  <div class="journey-phase-meta">
+                    <span class="phase-name">Phase 1: Diagnostics &amp; Assessment</span>
+                    <span class="phase-pct">Stage 1 of 3</span>
+                  </div>
+                  <div class="phase-progress-bar">
+                    <div class="phase-fill fill-step-1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 Card -->
+            <div class="col-lg-4 reveal delay-200">
+              <div class="luxury-journey-card" data-step="2">
+                <div class="card-glow-backdrop"></div>
+                <div class="card-top-accent"></div>
+
+                <div class="journey-card-header">
+                  <div class="step-pill">
+                    <span class="step-badge-text">STEP 02</span>
+                    <span class="step-badge-arabic">خطة العلاج المخصصة</span>
+                  </div>
+                  <div class="journey-icon-circle">
+                    <i class="bi bi-sliders2-vertical"></i>
+                  </div>
+                </div>
+
+                <div class="journey-card-body">
+                  <h3 class="journey-step-title">02 — Personalized Treatment Plan</h3>
+                  <p class="journey-step-desc">
+                    Customized combination of evidence-based physical therapy, manual mobilization, spinal decompression, and specialized holistic treatments.
+                  </p>
+
+                  <div class="journey-milestones">
+                    <div class="milestone-chip">
+                      <i class="bi bi-check2-circle"></i>
+                      <span>Targeted Manual Therapy</span>
+                    </div>
+                    <div class="milestone-chip">
+                      <i class="bi bi-check2-circle"></i>
+                      <span>Electro-Physical Modalities</span>
+                    </div>
+                    <div class="milestone-chip">
+                      <i class="bi bi-check2-circle"></i>
+                      <span>Customized Exercise Regimen</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="journey-card-footer">
+                  <div class="journey-phase-meta">
+                    <span class="phase-name">Phase 2: Active Recovery &amp; Strength</span>
+                    <span class="phase-pct">Stage 2 of 3</span>
+                  </div>
+                  <div class="phase-progress-bar">
+                    <div class="phase-fill fill-step-2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 Card -->
+            <div class="col-lg-4 reveal delay-300">
+              <div class="luxury-journey-card" data-step="3">
+                <div class="card-glow-backdrop"></div>
+                <div class="card-top-accent"></div>
+
+                <div class="journey-card-header">
+                  <div class="step-pill">
+                    <span class="step-badge-text">STEP 03</span>
+                    <span class="step-badge-arabic">التعافي والوقاية المستمرة</span>
+                  </div>
+                  <div class="journey-icon-circle">
+                    <i class="bi bi-graph-up-arrow"></i>
+                  </div>
+                </div>
+
+                <div class="journey-card-body">
+                  <h3 class="journey-step-title">03 — Therapy, Recovery &amp; Follow-Up</h3>
+                  <p class="journey-step-desc">
+                    Regular guided sessions with expert doctor follow-ups, continuous milestone measurement, and lifelong ergonomic coaching to prevent relapse.
+                  </p>
+
+                  <div class="journey-milestones">
+                    <div class="milestone-chip">
+                      <i class="bi bi-check2-circle"></i>
+                      <span>Daily Supervised Sessions</span>
+                    </div>
+                    <div class="milestone-chip">
+                      <i class="bi bi-check2-circle"></i>
+                      <span>Functional Independence Test</span>
+                    </div>
+                    <div class="milestone-chip">
+                      <i class="bi bi-check2-circle"></i>
+                      <span>Lifelong Home Guidance</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="journey-card-footer">
+                  <div class="journey-phase-meta">
+                    <span class="phase-name">Phase 3: Long-Term Independence</span>
+                    <span class="phase-pct">Stage 3 of 3</span>
+                  </div>
+                  <div class="phase-progress-bar">
+                    <div class="phase-fill fill-step-3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. WHY CHOOSE US SECTION (From Greenwich Site Structure)
          ========================================================================== -->
     <section class="section-padding why-choose-section" id="why-us">
       <div class="container">
@@ -452,23 +1201,21 @@
             </div>
 
             <h2 class="section-title">
-              Care That Puts Your <span class="italic-accent green-accent">Recovery First</span>
+              Experience True Wellness <br><span class="italic-accent green-accent">With Clinical Excellence</span>
             </h2>
 
             <p class="mb-4">
-              We believe rehabilitation should be as unique as you are. Our clinic combines world-class physiotherapy
-              standards with personalized attention to ensure your lasting health and comfort.
+              We combine world-class medical standards with compassionate, personalized attention to ensure every patient experiences genuine recovery and lasting vitality.
             </p>
 
             <!-- Feature Block 01 -->
             <div class="why-feature-box">
               <div class="why-header">
                 <span class="why-number">01</span>
-                <h4 class="why-title">Personalized Care</h4>
+                <h4 class="why-title">Expertise in Evidence-Based Therapy</h4>
               </div>
               <p class="why-desc">
-                Every treatment plan is custom-built around your specific body biomechanics, daily routine, and personal
-                recovery objectives.
+                Benefit from authentic physical medicine protocols and certified practitioners using time-tested and modern healing techniques.
               </p>
             </div>
 
@@ -476,11 +1223,10 @@
             <div class="why-feature-box">
               <div class="why-header">
                 <span class="why-number">02</span>
-                <h4 class="why-title">Professional Approach</h4>
+                <h4 class="why-title">Personalized Holistic Care</h4>
               </div>
               <p class="why-desc">
-                Highly certified physiotherapists with clinical expertise in international recovery protocols and
-                evidence-based medicine.
+                Receive customized therapies tailored to your unique anatomical condition for long-lasting health, balance, and freedom of motion.
               </p>
             </div>
 
@@ -488,11 +1234,10 @@
             <div class="why-feature-box">
               <div class="why-header">
                 <span class="why-number">03</span>
-                <h4 class="why-title">Modern Rehabilitation</h4>
+                <h4 class="why-title">Natural &amp; Safe Non-Surgical Treatments</h4>
               </div>
               <p class="why-desc">
-                Advanced electrotherapy, biomechanical analysis tools, and modern exercise modalities that accelerate
-                tissue healing.
+                Enjoy safe, non-invasive therapies combining manual decompression, specialized exercises, and complementary modalities without relying on heavy pharmaceuticals.
               </p>
             </div>
 
@@ -500,11 +1245,10 @@
             <div class="why-feature-box">
               <div class="why-header">
                 <span class="why-number">04</span>
-                <h4 class="why-title">Comfortable Environment</h4>
+                <h4 class="why-title">Modern Facilities &amp; Serene Ambience</h4>
               </div>
               <p class="why-desc">
-                A serene, hygienic, and welcoming clinical atmosphere designed to put you at ease throughout every
-                therapy session.
+                Modern clinical private treatment suites, electrotherapy technology, and a soothing atmosphere designed to make every session comfortable.
               </p>
             </div>
           </div>
@@ -524,7 +1268,7 @@
                 </div>
                 <div>
                   <div style="font-size: 1rem; font-weight: 800; color: var(--dark-navy);">100% Certified Care</div>
-                  <div style="font-size: 0.8rem; color: var(--muted-text);">Licensed Medical Standards</div>
+                  <div style="font-size: 0.8rem; color: var(--muted-text);">Licensed Medical Standards (MOH / ISO)</div>
                 </div>
               </div>
             </div>
@@ -534,194 +1278,7 @@
     </section>
 
     <!-- ==========================================================================
-         7. RECOVERY / PHYSIOTHERAPY JOURNEY SECTION
-         ========================================================================== -->
-    <section class="section-padding journey-section-enhanced" id="journey">
-      <div class="container">
-        <!-- Section Header -->
-        <div class="text-center mb-5 reveal">
-          <div class="badge-eyebrow">
-            <span class="dot"></span>
-            <span>STEP-BY-STEP REHABILITATION</span>
-          </div>
-          <h2 class="section-title">
-            Your Journey Toward <span class="italic-accent">Better Movement</span>
-          </h2>
-          <p class="section-subtitle">
-            A clear, supportive, and structured clinical pathway from initial consultation to complete physical
-            independence.
-          </p>
-        </div>
-
-        <!-- Enhanced Journey Cards Grid -->
-        <div class="journey-cards-grid">
-          <!-- Flowing connector line for desktop -->
-          <div class="journey-connector-track d-none d-lg-block">
-            <div class="connector-dot dot-1"></div>
-            <div class="connector-dot dot-2"></div>
-            <div class="connector-dot dot-3"></div>
-          </div>
-
-          <div class="row g-4 position-relative" style="z-index: 2;">
-            <!-- Step 1 Card -->
-            <div class="col-lg-4 reveal delay-100">
-              <div class="luxury-journey-card" data-step="1">
-                <div class="card-glow-backdrop"></div>
-                <div class="card-top-accent"></div>
-
-                <div class="journey-card-header">
-                  <div class="step-pill">
-                    <span class="step-badge-text">STEP 01</span>
-                    <span class="step-badge-arabic">التقييم الشامل</span>
-                  </div>
-                  <div class="journey-icon-circle">
-                    <i class="bi bi-clipboard2-pulse-fill"></i>
-                  </div>
-                </div>
-
-                <div class="journey-card-body">
-                  <h3 class="journey-step-title">01 — Detailed Clinical Assessment</h3>
-                  <p class="journey-step-desc">
-                    Comprehensive examination to understand your exact condition, movement range, postural alignment,
-                    and root causes of pain.
-                  </p>
-
-                  <div class="journey-milestones">
-                    <div class="milestone-chip">
-                      <i class="bi bi-check2-circle"></i>
-                      <span>Biomechanical Evaluation</span>
-                    </div>
-                    <div class="milestone-chip">
-                      <i class="bi bi-check2-circle"></i>
-                      <span>Root Cause Diagnostics</span>
-                    </div>
-                    <div class="milestone-chip">
-                      <i class="bi bi-check2-circle"></i>
-                      <span>Baseline Range of Motion</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="journey-card-footer">
-                  <div class="journey-phase-meta">
-                    <span class="phase-name">Phase 1: Diagnostic Insight</span>
-                    <span class="phase-pct">Stage 1 of 3</span>
-                  </div>
-                  <div class="phase-progress-bar">
-                    <div class="phase-fill fill-step-1"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Step 2 Card -->
-            <div class="col-lg-4 reveal delay-200">
-              <div class="luxury-journey-card" data-step="2">
-                <div class="card-glow-backdrop"></div>
-                <div class="card-top-accent"></div>
-
-                <div class="journey-card-header">
-                  <div class="step-pill">
-                    <span class="step-badge-text">STEP 02</span>
-                    <span class="step-badge-arabic">العلاج المخصص</span>
-                  </div>
-                  <div class="journey-icon-circle">
-                    <i class="bi bi-sliders2-vertical"></i>
-                  </div>
-                </div>
-
-                <div class="journey-card-body">
-                  <h3 class="journey-step-title">02 — Tailored Active Rehabilitation</h3>
-                  <p class="journey-step-desc">
-                    Customized treatment program combining evidence-based manual therapy, targeted therapeutic exercise,
-                    and advanced modalities.
-                  </p>
-
-                  <div class="journey-milestones">
-                    <div class="milestone-chip">
-                      <i class="bi bi-check2-circle"></i>
-                      <span>Targeted Manual Therapy</span>
-                    </div>
-                    <div class="milestone-chip">
-                      <i class="bi bi-check2-circle"></i>
-                      <span>Corrective Strength Protocols</span>
-                    </div>
-                    <div class="milestone-chip">
-                      <i class="bi bi-check2-circle"></i>
-                      <span>Modern Pain Relief Modalities</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="journey-card-footer">
-                  <div class="journey-phase-meta">
-                    <span class="phase-name">Phase 2: Restoration &amp; Strength</span>
-                    <span class="phase-pct">Stage 2 of 3</span>
-                  </div>
-                  <div class="phase-progress-bar">
-                    <div class="phase-fill fill-step-2"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Step 3 Card -->
-            <div class="col-lg-4 reveal delay-300">
-              <div class="luxury-journey-card" data-step="3">
-                <div class="card-glow-backdrop"></div>
-                <div class="card-top-accent"></div>
-
-                <div class="journey-card-header">
-                  <div class="step-pill">
-                    <span class="step-badge-text">STEP 03</span>
-                    <span class="step-badge-arabic">التعافي والوقاية</span>
-                  </div>
-                  <div class="journey-icon-circle">
-                    <i class="bi bi-graph-up-arrow"></i>
-                  </div>
-                </div>
-
-                <div class="journey-card-body">
-                  <h3 class="journey-step-title">03 — Progress, Vitality &amp; Prevention</h3>
-                  <p class="journey-step-desc">
-                    Continuous milestone tracking, functional independence testing, and a personalized lifelong routine
-                    to prevent injury recurrence.
-                  </p>
-
-                  <div class="journey-milestones">
-                    <div class="milestone-chip">
-                      <i class="bi bi-check2-circle"></i>
-                      <span>Functional Milestone Tracking</span>
-                    </div>
-                    <div class="milestone-chip">
-                      <i class="bi bi-check2-circle"></i>
-                      <span>Full Range &amp; Power Return</span>
-                    </div>
-                    <div class="milestone-chip">
-                      <i class="bi bi-check2-circle"></i>
-                      <span>Lifelong Home Guidance</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="journey-card-footer">
-                  <div class="journey-phase-meta">
-                    <span class="phase-name">Phase 3: Long-term Independence</span>
-                    <span class="phase-pct">Stage 3 of 3</span>
-                  </div>
-                  <div class="phase-progress-bar">
-                    <div class="phase-fill fill-step-3"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         8. OUR DOCTORS & SPECIALISTS SECTION
+         9. OUR DOCTORS & SPECIALISTS SECTION
          ========================================================================== -->
     <section class="section-padding doctors-section bg-light-bg" id="doctors">
       <div class="container">
@@ -735,8 +1292,7 @@
             Meet Our Expert <span class="italic-accent">Physiotherapy Doctors</span>
           </h2>
           <p class="section-subtitle">
-            Board-certified rehabilitation specialists and clinical therapists dedicated to your personalized healing
-            and mobility recovery.
+            Board-certified rehabilitation consultants and therapists dedicated to your personalized healing and mobility recovery.
           </p>
         </div>
 
@@ -767,8 +1323,7 @@
                 </div>
 
                 <p class="doctor-bio">
-                  Senior specialist with over 16 years of clinical excellence in advanced joint biomechanics, complex
-                  spinal alignment, and personalized recovery.
+                  Senior specialist with over 16 years of clinical excellence in advanced joint biomechanics, complex spinal alignment, and personalized recovery.
                 </p>
 
                 <!-- Specialties Chips -->
@@ -793,7 +1348,7 @@
 
                 <!-- Doctor CTA -->
                 <div class="doctor-card-action">
-                  <a href="#contact" class="btn btn-outline-custom w-100 doctor-book-btn">
+                  <a href="#contact" class="btn btn-outline-custom w-100 doctor-book-btn" data-doctor="Dr. Tariq Al-Farsi">
                     <i class="bi bi-calendar-plus"></i>
                     <span>Book With Dr. Tariq</span>
                   </a>
@@ -827,15 +1382,14 @@
                 </div>
 
                 <p class="doctor-bio">
-                  Australian-qualified lead specialist dedicated to neuromuscular retraining, stroke rehabilitation,
-                  postural realignment, and chronic neck/back pain.
+                  Lead neuro specialist dedicated to neuromuscular retraining, stroke rehabilitation, cerebral palsy support, and chronic spinal pain recovery.
                 </p>
 
                 <!-- Specialties Chips -->
                 <div class="doctor-specialties">
                   <span class="spec-chip"><i class="bi bi-check2"></i> Neuro Rehab</span>
-                  <span class="spec-chip"><i class="bi bi-check2"></i> Posture Realignment</span>
-                  <span class="spec-chip"><i class="bi bi-check2"></i> Pain Care</span>
+                  <span class="spec-chip"><i class="bi bi-check2"></i> Stroke Recovery</span>
+                  <span class="spec-chip"><i class="bi bi-check2"></i> Cerebral Palsy</span>
                 </div>
 
                 <!-- Rating & Outcomes -->
@@ -853,7 +1407,7 @@
 
                 <!-- Doctor CTA -->
                 <div class="doctor-card-action">
-                  <a href="#contact" class="btn btn-outline-custom w-100 doctor-book-btn">
+                  <a href="#contact" class="btn btn-outline-custom w-100 doctor-book-btn" data-doctor="Dr. Layla Al-Balushi">
                     <i class="bi bi-calendar-plus"></i>
                     <span>Book With Dr. Layla</span>
                   </a>
@@ -887,14 +1441,13 @@
                 </div>
 
                 <p class="doctor-bio">
-                  Certified manual physical therapist specializing in sports trauma recovery, ACL and rotator cuff
-                  re-strengthening, and post-operative joint mobility.
+                  Certified manual physical therapist specializing in sports trauma recovery, ACL and rotator cuff re-strengthening, and post-operative joint mobility.
                 </p>
 
                 <!-- Specialties Chips -->
                 <div class="doctor-specialties">
-                  <span class="spec-chip"><i class="bi bi-check2"></i> Sports Traumatology</span>
-                  <span class="spec-chip"><i class="bi bi-check2"></i> Post-Surgical Care</span>
+                  <span class="spec-chip"><i class="bi bi-check2"></i> Sports Trauma</span>
+                  <span class="spec-chip"><i class="bi bi-check2"></i> Post-Op Rehab</span>
                   <span class="spec-chip"><i class="bi bi-check2"></i> Return-to-Play</span>
                 </div>
 
@@ -913,7 +1466,7 @@
 
                 <!-- Doctor CTA -->
                 <div class="doctor-card-action">
-                  <a href="#contact" class="btn btn-outline-custom w-100 doctor-book-btn">
+                  <a href="#contact" class="btn btn-outline-custom w-100 doctor-book-btn" data-doctor="Dr. Marcus Vance">
                     <i class="bi bi-calendar-plus"></i>
                     <span>Book With Dr. Marcus</span>
                   </a>
@@ -926,7 +1479,206 @@
     </section>
 
     <!-- ==========================================================================
-         9. CALL TO ACTION (CTA) SECTION
+         10. PATIENT HEALING STORIES & TESTIMONIALS (From Greenwich Site Structure)
+         ========================================================================== -->
+    <section class="section-padding testimonials-section" id="testimonials">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mb-5 reveal">
+          <div class="badge-eyebrow">
+            <span class="dot"></span>
+            <span>TESTIMONIALS</span>
+          </div>
+          <h2 class="section-title">
+            Healing Stories from <span class="italic-accent">Our Patients</span>
+          </h2>
+          <p class="section-subtitle">
+            A smooth and results-driven healing journey that feels natural, comfortable, and truly transformative.
+          </p>
+        </div>
+
+        <!-- Testimonials Cards Grid -->
+        <div class="row g-4">
+          <!-- Story 1 -->
+          <div class="col-lg-4 col-md-6 reveal delay-100">
+            <div class="testimonial-luxury-card">
+              <div class="quote-bubble-icon">
+                <i class="bi bi-quote"></i>
+              </div>
+              <div class="rating-stars-gold mb-3 text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-text">
+                "Absolutely life changing experience—I couldn't be more grateful for the doctors and clinical team. I am a different person from when I walked in. The personalized rehabilitation protocols and compassionate care are world-class."
+              </p>
+              <div class="testimonial-author-meta d-flex align-items-center justify-content-between pt-3 border-top">
+                <div>
+                  <h4 class="author-name">Jamie-Lee Dimes</h4>
+                  <span class="author-condition text-primary">Stroke &amp; Neuro Rehabilitation</span>
+                </div>
+                <span class="verified-badge"><i class="bi bi-patch-check-fill text-success"></i> Verified</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story 2 -->
+          <div class="col-lg-4 col-md-6 reveal delay-200">
+            <div class="testimonial-luxury-card">
+              <div class="quote-bubble-icon">
+                <i class="bi bi-quote"></i>
+              </div>
+              <div class="rating-stars-gold mb-3 text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-text">
+                "I went for treatment for severe lower backache and sciatica leg pain that other treatments couldn't resolve. We were treated by highly trained specialists. We both are now completely pain-free. Their hospitality and care is five stars!"
+              </p>
+              <div class="testimonial-author-meta d-flex align-items-center justify-content-between pt-3 border-top">
+                <div>
+                  <h4 class="author-name">Rajesh Bindal</h4>
+                  <span class="author-condition text-primary">Back Pain &amp; Sciatica Recovery</span>
+                </div>
+                <span class="verified-badge"><i class="bi bi-patch-check-fill text-success"></i> Verified</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story 3 -->
+          <div class="col-lg-4 col-md-6 reveal delay-300">
+            <div class="testimonial-luxury-card">
+              <div class="quote-bubble-icon">
+                <i class="bi bi-quote"></i>
+              </div>
+              <div class="rating-stars-gold mb-3 text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-text">
+                "I completed a 16-day program for lower back pain, numbness, and spine stiffness. Highly cooperative doctors and staff. Daily follow-ups, modern electro-physical sessions, and clear home exercises. Highly recommend for all neuro and ortho conditions!"
+              </p>
+              <div class="testimonial-author-meta d-flex align-items-center justify-content-between pt-3 border-top">
+                <div>
+                  <h4 class="author-name">Mohammed Akmal Hussain</h4>
+                  <span class="author-condition text-primary">Spine &amp; Nerve Decompression</span>
+                </div>
+                <span class="verified-badge"><i class="bi bi-patch-check-fill text-success"></i> Verified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         11. CLINICAL INSIGHTS & HEALTH ARTICLES (From Greenwich Site Structure)
+         ========================================================================== -->
+    <section class="section-padding bg-light-bg" id="insights">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mb-5 reveal">
+          <div class="badge-eyebrow">
+            <span class="dot"></span>
+            <span>HEALTH ARTICLES &amp; INSIGHTS</span>
+          </div>
+          <h2 class="section-title">
+            Physiotherapy &amp; Wellness <span class="italic-accent">Insights</span>
+          </h2>
+          <p class="section-subtitle">
+            Expert knowledge and clinical advice on maintaining spinal wellness, speeding recovery, and enhancing your daily movement.
+          </p>
+        </div>
+
+        <!-- 3 Blog Cards -->
+        <div class="row g-4">
+          <!-- Article 1 -->
+          <div class="col-lg-4 col-md-6 reveal delay-100">
+            <div class="blog-luxury-card">
+              <div class="blog-thumb-wrap">
+                <img src="assets/images/service-back-neck.jpg" alt="How Specialized Therapy Helps Relieve Chronic Back Pain" class="blog-img">
+                <span class="blog-badge">Spine Health</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta">
+                  <span><i class="bi bi-calendar3"></i> Sep 2026</span>
+                  <span><i class="bi bi-clock"></i> 5 Min Read</span>
+                </div>
+                <h3 class="blog-title">How Specialized Physical Therapy Helps Relieve Chronic Back Pain Naturally</h3>
+                <p class="blog-excerpt">
+                  Discover evidence-based non-surgical decompression strategies, deep core stabilization, and postural alignments to treat sciatica without surgery.
+                </p>
+                <a href="#insights" class="blog-read-link" data-bs-toggle="modal" data-bs-target="#blogModal" data-article="backpain-article">
+                  <span>Read Article</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 2 -->
+          <div class="col-lg-4 col-md-6 reveal delay-200">
+            <div class="blog-luxury-card">
+              <div class="blog-thumb-wrap">
+                <img src="assets/images/service-neurological.jpg" alt="Best Clinical Treatments for Neurological Recovery" class="blog-img">
+                <span class="blog-badge">Neuro Rehab</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta">
+                  <span><i class="bi bi-calendar3"></i> Aug 2026</span>
+                  <span><i class="bi bi-clock"></i> 6 Min Read</span>
+                </div>
+                <h3 class="blog-title">Best Clinical Protocols for Neurological Rehabilitation &amp; Stroke Recovery</h3>
+                <p class="blog-excerpt">
+                  Exploring neuroplasticity, gait re-education, and functional electrical stimulation techniques that accelerate paralysis recovery.
+                </p>
+                <a href="#insights" class="blog-read-link" data-bs-toggle="modal" data-bs-target="#blogModal" data-article="neuro-article">
+                  <span>Read Article</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 3 -->
+          <div class="col-lg-4 col-md-6 reveal delay-300">
+            <div class="blog-luxury-card">
+              <div class="blog-thumb-wrap">
+                <img src="assets/images/service-sports.jpg" alt="Complete Mind & Body Rejuvenation and Movement" class="blog-img">
+                <span class="blog-badge">Sports &amp; Posture</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta">
+                  <span><i class="bi bi-calendar3"></i> Jul 2026</span>
+                  <span><i class="bi bi-clock"></i> 4 Min Read</span>
+                </div>
+                <h3 class="blog-title">Complete Mind &amp; Body Rejuvenation: Ergonomics, Joint Flexibility and Vitality</h3>
+                <p class="blog-excerpt">
+                  Simple daily routines and posture correction habits to protect your cervical spine and maintain pain-free flexibility at work and home.
+                </p>
+                <a href="#insights" class="blog-read-link" data-bs-toggle="modal" data-bs-target="#blogModal" data-article="posture-article">
+                  <span>Read Article</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         13. CALL TO ACTION (CTA) SECTION
          ========================================================================== -->
     <section class="cta-section">
       <div class="cta-glow-circle"></div>
@@ -940,12 +1692,11 @@
           </div>
 
           <h2 class="cta-heading font-serif">
-            Ready to Take the Next Step?
+            Ready to Reclaim Your Movement &amp; Vitality?
           </h2>
 
           <p class="cta-text">
-            Start your journey toward better movement, reduced discomfort, and improved physical wellbeing with
-            personalized physiotherapy care at Al Farsi Center.
+            Take the first step toward pain-free living with an individualized consultation and comprehensive assessment at Al Farsi Center.
           </p>
 
           <div class="cta-buttons">
@@ -953,10 +1704,10 @@
               <i class="bi bi-calendar-check-fill text-primary"></i>
               <span>Book an Appointment</span>
             </a>
-            <a href="#contact" class="btn btn-outline-custom"
+            <a href="tel:+96824567890" class="btn btn-outline-custom"
               style="color: #FFFFFF !important; border-color: rgba(255,255,255,0.6);">
               <i class="bi bi-telephone-fill"></i>
-              <span>Contact Us</span>
+              <span>Call Helpline</span>
             </a>
           </div>
         </div>
@@ -964,7 +1715,7 @@
     </section>
 
     <!-- ==========================================================================
-         9. CONTACT & APPOINTMENT PREVIEW SECTION
+         14. CONTACT & COMPREHENSIVE SERVICE BOOKING FORM (From Greenwich Fields)
          ========================================================================== -->
     <section class="section-padding contact-section" id="contact">
       <div class="container">
@@ -982,17 +1733,33 @@
               </h2>
 
               <p class="mb-4 text-muted">
-                Our compassionate team is ready to answer your questions and match you with the right specialist.
+                Our compassionate medical team is ready to answer your inquiries, review diagnostic reports, and schedule your appointment.
               </p>
 
-              <!-- Phone -->
+              <!-- Phone Numbers -->
               <div class="info-item">
                 <div class="info-item-icon">
                   <i class="bi bi-telephone-fill"></i>
                 </div>
                 <div>
-                  <div class="info-item-title">Phone Numbers</div>
-                  <div class="info-item-detail">+968 2456 7890 / +968 9123 4567</div>
+                  <div class="info-item-title">Phone Helplines</div>
+                  <div class="info-item-detail">
+                    <a href="tel:+96824567890" class="text-dark fw-bold">+968 2456 7890</a> / 
+                    <a href="tel:+96891234567" class="text-dark fw-bold">+968 9123 4567</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- WhatsApp Hotline -->
+              <div class="info-item">
+                <div class="info-item-icon bg-green-soft">
+                  <i class="bi bi-whatsapp text-success"></i>
+                </div>
+                <div>
+                  <div class="info-item-title">WhatsApp Direct Booking</div>
+                  <div class="info-item-detail">
+                    <a href="https://wa.me/96871704990" target="_blank" class="text-success fw-bold">+968 7170 4990 (Instant Response)</a>
+                  </div>
                 </div>
               </div>
 
@@ -1003,7 +1770,9 @@
                 </div>
                 <div>
                   <div class="info-item-title">Email Inquiries</div>
-                  <div class="info-item-detail">care@alfarsiphysio.com</div>
+                  <div class="info-item-detail">
+                    <a href="mailto:care@alfarsiphysio.com" class="text-dark">care@alfarsiphysio.com</a>
+                  </div>
                 </div>
               </div>
 
@@ -1027,27 +1796,32 @@
                   <div class="info-item-title">Opening Hours</div>
                   <div class="info-item-detail">
                     Saturday – Thursday: 8:00 AM – 9:00 PM<br>
-                    Friday: Closed / Emergency On-Call
+                    24/7 Patient On-Call Support
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Right Column: Appointment Form -->
+          <!-- Right Column: Enhanced Appointment Booking Form with all Greenwich Fields -->
           <div class="col-lg-7 reveal reveal-right">
             <div class="appointment-form-card">
-              <h3 style="font-size: 1.65rem; font-weight: 700; color: var(--dark-navy); margin-bottom: 8px;">
-                Request an Appointment
-              </h3>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h3 style="font-size: 1.65rem; font-weight: 700; color: var(--dark-navy); margin-bottom: 0;">
+                  Service Booking Form
+                </h3>
+                <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill fw-bold fs-8">
+                  <i class="bi bi-shield-check"></i> Fast Response
+                </span>
+              </div>
               <p class="text-muted mb-4">
-                Fill in your details below and our team will get back to you promptly to confirm your consultation.
+                Fill in your details below and our clinical team will get back to you promptly to confirm your consultation.
               </p>
 
               <!-- Success Alert Container -->
               <div id="formAlert" class="form-feedback-alert"></div>
 
-              <!-- Form -->
+              <!-- Comprehensive Booking Form -->
               <form id="appointmentForm" novalidate>
                 <div class="row g-3">
                   <!-- Full Name -->
@@ -1059,7 +1833,7 @@
 
                   <!-- Phone Number -->
                   <div class="col-md-6">
-                    <label for="phoneNumber" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                    <label for="phoneNumber" class="form-label">Phone / WhatsApp Number <span class="text-danger">*</span></label>
                     <input type="tel" class="form-control" id="phoneNumber" placeholder="e.g. +968 9123 4567" required>
                     <div class="invalid-feedback">Please enter a valid phone number.</div>
                   </div>
@@ -1071,43 +1845,88 @@
                     <div class="invalid-feedback">Please provide a valid email address.</div>
                   </div>
 
-                  <!-- Service Required -->
+                  <!-- Treatment Required (Comprehensive Dropdown with all fields) -->
                   <div class="col-md-6">
-                    <label for="serviceSelect" class="form-label">Service Needed <span
-                        class="text-danger">*</span></label>
+                    <label for="serviceSelect" class="form-label">Treatment / Service Needed <span class="text-danger">*</span></label>
                     <select class="form-select" id="serviceSelect" required>
-                      <option value="" selected disabled>Select a Physiotherapy Service</option>
-                      <option value="Orthopedic Physiotherapy">Orthopedic Physiotherapy</option>
-                      <option value="Neurological Rehabilitation">Neurological Rehabilitation</option>
-                      <option value="Sports Injury Rehabilitation">Sports Injury Rehabilitation</option>
-                      <option value="Back & Neck Pain Management">Back & Neck Pain Management</option>
-                      <option value="Post-Surgical Rehabilitation">Post-Surgical Rehabilitation</option>
-                      <option value="Joint & Muscle Rehabilitation">Joint & Muscle Rehabilitation</option>
-                      <option value="General Consultation">General Clinical Assessment</option>
+                      <option value="" selected disabled>Select Treatment or Department</option>
+                      <optgroup label="Neurological &amp; Stroke">
+                        <option value="Stroke Treatment">Stroke Treatment &amp; Rehabilitation</option>
+                        <option value="Cerebral Palsy">Cerebral Palsy &amp; Pediatric Care</option>
+                        <option value="Parkinson's Disease">Parkinson's Disease Support</option>
+                        <option value="Neurological Disorders">General Neurological Rehabilitation</option>
+                      </optgroup>
+                      <optgroup label="Spine &amp; Chronic Pain">
+                        <option value="Back Pain Treatment">Back Pain &amp; Sciatica Treatment</option>
+                        <option value="Cervical Spondylosis">Cervical Spondylosis &amp; Neck Care</option>
+                        <option value="Postural Realignment">Spine Decompression &amp; Posture</option>
+                      </optgroup>
+                      <optgroup label="Orthopedic &amp; Sports">
+                        <option value="Orthopedic Physiotherapy">Orthopedic Physiotherapy</option>
+                        <option value="Sports Injury Rehabilitation">Sports Injury Rehabilitation</option>
+                        <option value="Post-Surgical Rehabilitation">Post-Surgical Joint Recovery</option>
+                        <option value="Joint & Muscle Rehabilitation">Joint &amp; Muscle Mobility</option>
+                      </optgroup>
+                      <optgroup label="Specialized &amp; Holistic">
+                        <option value="Hijama Cupping">Medical Cupping (Hijama)</option>
+                        <option value="Therapeutic Reflexology">Therapeutic Reflexology &amp; Needling</option>
+                        <option value="Electrotherapy & Modalities">Electrotherapy &amp; Ultrasound</option>
+                        <option value="General Clinical Consultation">General Clinical Assessment</option>
+                      </optgroup>
                     </select>
-                    <div class="invalid-feedback">Please select a service.</div>
+                    <div class="invalid-feedback">Please select a treatment service.</div>
+                  </div>
+
+                  <!-- Preferred Doctor (Optional) -->
+                  <div class="col-md-6">
+                    <label for="doctorSelect" class="form-label">Preferred Specialist (Optional)</label>
+                    <select class="form-select" id="doctorSelect">
+                      <option value="Any Available Specialist" selected>Any Available Specialist</option>
+                      <option value="Dr. Tariq Al-Farsi (Clinical Director & Orthopedic)">Dr. Tariq Al-Farsi (Orthopedic & Spine)</option>
+                      <option value="Dr. Layla Al-Balushi (Lead Neuro Specialist)">Dr. Layla Al-Balushi (Neuro & Stroke)</option>
+                      <option value="Dr. Marcus Vance (Senior Sports Consultant)">Dr. Marcus Vance (Sports & Post-Op)</option>
+                    </select>
                   </div>
 
                   <!-- Preferred Date -->
-                  <div class="col-md-12">
-                    <label for="preferredDate" class="form-label">Preferred Date <span
-                        class="text-danger">*</span></label>
+                  <div class="col-md-6">
+                    <label for="preferredDate" class="form-label">Preferred Date <span class="text-danger">*</span></label>
                     <input type="date" class="form-control" id="preferredDate" required>
                     <div class="invalid-feedback">Please select a preferred date.</div>
                   </div>
 
+                  <!-- Preferred Time Slot -->
+                  <div class="col-md-6">
+                    <label for="timeSlotSelect" class="form-label">Preferred Time Slot</label>
+                    <select class="form-select" id="timeSlotSelect">
+                      <option value="Morning (8:00 AM - 12:00 PM)">Morning (8:00 AM – 12:00 PM)</option>
+                      <option value="Afternoon (12:00 PM - 4:00 PM)">Afternoon (12:00 PM – 4:00 PM)</option>
+                      <option value="Evening (4:00 PM - 9:00 PM)">Evening (4:00 PM – 9:00 PM)</option>
+                    </select>
+                  </div>
+
+                  <!-- Patient Status -->
+                  <div class="col-md-6">
+                    <label for="patientTypeSelect" class="form-label">Patient Type</label>
+                    <select class="form-select" id="patientTypeSelect">
+                      <option value="New Patient Consultation" selected>New Patient Consultation</option>
+                      <option value="Follow-up Session">Follow-up Treatment Session</option>
+                      <option value="Second Opinion / Report Review">Second Opinion / Diagnostic Review</option>
+                    </select>
+                  </div>
+
                   <!-- Message / Notes -->
-                  <div class="col-md-12">
+                  <div class="col-12">
                     <label for="message" class="form-label">Brief Description of Condition / Symptoms (Optional)</label>
                     <textarea class="form-control" id="message" rows="3"
-                      placeholder="Tell us about any specific pain, injury, or recovery goals..."></textarea>
+                      placeholder="Tell us about your pain duration, previous surgeries, or recovery goals..."></textarea>
                   </div>
 
                   <!-- Submit Button -->
                   <div class="col-12 mt-4">
-                    <button type="submit" class="btn btn-primary-custom w-100 py-3">
+                    <button type="submit" class="btn btn-primary-custom w-100 py-3 fs-6">
                       <i class="bi bi-send-fill"></i>
-                      <span>Request an Appointment</span>
+                      <span>Submit Appointment Request</span>
                     </button>
                   </div>
                 </div>
@@ -1120,7 +1939,7 @@
   </main>
 
   <!-- ==========================================================================
-       10. FOOTER
+       15. FOOTER (Multi-Column Enhanced Structure Inspired by Greenwich)
        ========================================================================== -->
   <footer class="site-footer">
     <div class="container">
@@ -1129,15 +1948,20 @@
         <div class="col-lg-4 col-md-6">
           <img src="assets/images/logo-white.svg" alt="Al Farsi Physiotherapy Center" class="footer-logo-img">
           <p class="footer-desc">
-            Professional physiotherapy and rehabilitation care focused on movement, recovery and wellbeing. Empowering
-            you to live an active, pain-free life.
+            Al Farsi Physiotherapy Center is a premier rehabilitation institution in Muscat, Oman, dedicated to restoring mobility, alleviating pain, and supporting long-term health and vitality.
           </p>
+
+          <div class="footer-cert-badges d-flex gap-2 mb-3">
+            <span class="badge bg-white-10 text-light border border-secondary px-2 py-1 fs-8"><i class="bi bi-patch-check-fill text-success"></i> ISO 9001:2015</span>
+            <span class="badge bg-white-10 text-light border border-secondary px-2 py-1 fs-8"><i class="bi bi-shield-check text-success"></i> MOH Licensed</span>
+          </div>
+
           <div class="footer-socials">
-            <a href="#" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="social-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a href="#" class="social-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/96871704990" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
           </div>
         </div>
 
@@ -1147,23 +1971,28 @@
           <ul class="footer-links">
             <li><a href="#home"><i class="bi bi-chevron-right"></i> Home</a></li>
             <li><a href="#about"><i class="bi bi-chevron-right"></i> About Us</a></li>
-            <li><a href="#services"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="#offerings"><i class="bi bi-chevron-right"></i> What We Offer</a></li>
+            <li><a href="#how-it-works"><i class="bi bi-chevron-right"></i> How It Works</a></li>
             <li><a href="#why-us"><i class="bi bi-chevron-right"></i> Why Choose Us</a></li>
-            <li><a href="#journey"><i class="bi bi-chevron-right"></i> Recovery Journey</a></li>
-            <li><a href="#contact"><i class="bi bi-chevron-right"></i> Contact</a></li>
+            <li><a href="#doctors"><i class="bi bi-chevron-right"></i> Our Specialists</a></li>
+            <li><a href="#testimonials"><i class="bi bi-chevron-right"></i> Patient Stories</a></li>
+            <li><a href="#insights"><i class="bi bi-chevron-right"></i> Health Articles</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact Us</a></li>
           </ul>
         </div>
 
-        <!-- Clinical Services Links -->
+        <!-- Clinical Treatments Links (From Greenwich fields) -->
         <div class="col-lg-3 col-md-6 col-6">
-          <h4 class="footer-heading">Our Services</h4>
+          <h4 class="footer-heading">Our Treatments</h4>
           <ul class="footer-links">
-            <li><a href="#services"><i class="bi bi-chevron-right"></i> Orthopedic Care</a></li>
-            <li><a href="#services"><i class="bi bi-chevron-right"></i> Neuro Rehabilitation</a></li>
-            <li><a href="#services"><i class="bi bi-chevron-right"></i> Sports Injury Care</a></li>
-            <li><a href="#services"><i class="bi bi-chevron-right"></i> Spine &amp; Neck Pain</a></li>
-            <li><a href="#services"><i class="bi bi-chevron-right"></i> Post-Surgical Rehab</a></li>
-            <li><a href="#services"><i class="bi bi-chevron-right"></i> Joint Mobility</a></li>
+            <li><a href="#treatments"><i class="bi bi-chevron-right"></i> Stroke Treatment</a></li>
+            <li><a href="#treatments"><i class="bi bi-chevron-right"></i> Back Pain &amp; Sciatica</a></li>
+            <li><a href="#treatments"><i class="bi bi-chevron-right"></i> Cervical Spondylosis</a></li>
+            <li><a href="#treatments"><i class="bi bi-chevron-right"></i> Sports Injury Care</a></li>
+            <li><a href="#treatments"><i class="bi bi-chevron-right"></i> Cerebral Palsy Care</a></li>
+            <li><a href="#treatments"><i class="bi bi-chevron-right"></i> Post-Surgical Rehab</a></li>
+            <li><a href="#treatments"><i class="bi bi-chevron-right"></i> Hijama &amp; Cupping</a></li>
+            <li><a href="#treatments"><i class="bi bi-chevron-right"></i> Reflexology Therapy</a></li>
           </ul>
         </div>
 
@@ -1173,11 +2002,15 @@
           <ul class="footer-links">
             <li class="d-flex align-items-start gap-2 text-muted mb-2">
               <i class="bi bi-geo-alt-fill text-primary"></i>
-              <span>Al Khuwair, Muscat, Sultanate of Oman</span>
+              <span>Al Khuwair Medical District, Way 3512, Muscat, Oman</span>
             </li>
             <li class="d-flex align-items-center gap-2 text-muted mb-2">
               <i class="bi bi-telephone-fill text-primary"></i>
               <span>+968 2456 7890</span>
+            </li>
+            <li class="d-flex align-items-center gap-2 text-muted mb-2">
+              <i class="bi bi-whatsapp text-success"></i>
+              <span>+968 7170 4990 (WhatsApp)</span>
             </li>
             <li class="d-flex align-items-center gap-2 text-muted mb-2">
               <i class="bi bi-envelope-fill text-primary"></i>
@@ -1185,7 +2018,7 @@
             </li>
             <li class="d-flex align-items-center gap-2 text-muted">
               <i class="bi bi-clock-fill text-primary"></i>
-              <span>Sat - Thu: 8:00 AM - 9:00 PM</span>
+              <span>Working 24 Hours Patient Helpline</span>
             </li>
           </ul>
         </div>
@@ -1198,8 +2031,7 @@
             &copy; 2026 Al Farsi Physiotherapy Center. All Rights Reserved.
           </div>
           <div class="col-md-6 text-md-end">
-            <span class="arabic-text text-light opacity-75">مركز الفارسي للعلاج الطبيعي — رعاية متقدمة لحركتك
-              وصحتك</span>
+            <span class="arabic-text text-light opacity-75">مركز الفارسي للعلاج الطبيعي والتأهيل — صحتك وحركتك في أمان</span>
           </div>
         </div>
       </div>
@@ -1207,34 +2039,70 @@
   </footer>
 
   <!-- ==========================================================================
-       11. SERVICE DETAILS MODAL
+       16. SERVICE DETAILS MODAL (Supports All 12 Treatments Dynamically)
        ========================================================================== -->
   <div class="modal fade" id="serviceDetailModal" tabindex="-1" aria-labelledby="modalServiceTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content custom-modal">
         <div class="modal-header custom-modal-header">
           <div>
-            <h3 class="modal-title font-serif fs-4 fw-bold text-dark" id="modalServiceTitle">Service Title</h3>
-            <span class="arabic-text text-primary fw-bold" id="modalServiceArabic">عنوان الخدمة</span>
+            <h3 class="modal-title font-serif fs-4 fw-bold text-dark" id="modalServiceTitle">Treatment Title</h3>
+            <span class="arabic-text text-primary fw-bold" id="modalServiceArabic">عنوان العلاج</span>
           </div>
-          <button type="button" class="btn-close" data-bs-toggle="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body custom-modal-body">
           <p id="modalServiceDesc" class="fs-6 text-muted mb-4"></p>
-          <h5 class="fw-bold text-dark mb-3">Key Treatment Focus &amp; Benefits:</h5>
+          <h5 class="fw-bold text-dark mb-3">Key Treatment Protocols &amp; Clinical Benefits:</h5>
           <ul id="modalServiceHighlights" class="list-unstyled mb-4"></ul>
-          <div class="d-flex justify-content-end gap-2 pt-2 border-top">
-            <button type="button" class="btn btn-outline-secondary rounded-pill px-4"
-              data-bs-dismiss="modal">Close</button>
+          <div class="d-flex justify-content-between align-items-center pt-3 border-top flex-wrap gap-2">
+            <div class="text-muted fs-8">
+              <i class="bi bi-shield-check text-success"></i> Evidence-Based &amp; Non-Surgical Care
+            </div>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Close</button>
+              <a href="#contact" class="btn btn-primary-custom" data-bs-dismiss="modal" id="modalBookBtn">
+                <i class="bi bi-calendar-check"></i>
+                <span>Book This Treatment</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       17. BLOG / INSIGHTS READER MODAL
+       ========================================================================== -->
+  <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="modalBlogTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content custom-modal">
+        <div class="modal-header custom-modal-header">
+          <div>
+            <span class="badge bg-primary text-white mb-1" id="modalBlogBadge">Health Insight</span>
+            <h3 class="modal-title font-serif fs-4 fw-bold text-dark" id="modalBlogTitle">Article Title</h3>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body custom-modal-body">
+          <div id="modalBlogContent" class="fs-6 text-muted leading-relaxed"></div>
+          <div class="d-flex justify-content-end gap-2 pt-3 border-top mt-4">
+            <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Close</button>
             <a href="#contact" class="btn btn-primary-custom" data-bs-dismiss="modal">
               <i class="bi bi-calendar-check"></i>
-              <span>Book For This Service</span>
+              <span>Book a Consultation</span>
             </a>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Back to Top Button -->
+  <button type="button" id="backToTopBtn" class="back-to-top-btn" aria-label="Scroll to top" title="Scroll to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 
   <!-- Floating WhatsApp Direct Contact Button -->
   <a href="https://wa.me/96871704990?text=Hello%20Al%20Farsi%20Physiotherapy%20Center%2C%20I%20would%20like%20to%20inquire%20about%20an%20appointment."

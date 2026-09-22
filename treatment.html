@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Treatment Details | Al Farsi Physiotherapy Center</title>
+  <meta name="description" id="pageDesc" content="Detailed physiotherapy treatment information at Al Farsi Rehabilitation Center, Muscat, Oman.">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600;1,700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ============================================================
+       TREATMENT DETAIL PAGE — MAGAZINE-GRADE PREMIUM STYLING
+       ============================================================ */
+    :root {
+      --hero-h: 580px;
+    }
+    * { box-sizing: border-box; }
+    body { background: #F5FAFC; font-family: var(--font-body); }
+
+    /* ── Sticky Mini Nav ── */
+    .tp-nav {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(11, 28, 38, 0.97);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(8,120,190,0.22);
+      padding: 12px 0;
+    }
+    .tp-nav .brand-logo-img { height: 40px; }
+    .tp-nav-right { display: flex; align-items: center; gap: 16px; }
+    .back-home-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.7); text-decoration: none;
+      font-size: 0.83rem; font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 7px 16px; border-radius: 100px;
+      transition: all 0.3s ease;
+    }
+    .back-home-btn:hover { color: #fff; border-color: var(--primary-blue); background: rgba(8,120,190,0.2); }
+    .nav-book-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--blue-gradient);
+      color: #fff; font-size: 0.83rem; font-weight: 700;
+      padding: 8px 20px; border-radius: 100px;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(8,120,190,0.3);
+      transition: all 0.3s ease;
+    }
+    .nav-book-btn:hover { transform: translateY(-1px); color: #fff; box-shadow: 0 8px 24px rgba(8,120,190,0.4); }
+
+    /* ── Breadcrumb ── */
+    .tp-breadcrumb {
+      background: #fff;
+      border-bottom: 1px solid #E2EFF4;
+      padding: 12px 0;
+    }
+    .breadcrumb { margin: 0; font-size: 0.82rem; }
+    .breadcrumb-item a { color: var(--primary-blue); text-decoration: none; }
+    .breadcrumb-item.active { color: #6B7C86; }
+
+    /* ── HERO BANNER ── */
+    .tp-hero {
+      position: relative;
+      height: var(--hero-h);
+      overflow: hidden;
+      display: flex; align-items: flex-end;
+    }
+    .tp-hero-bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 30%;
+      transition: transform 6s ease;
+    }
+    .tp-hero:hover .tp-hero-bg { transform: scale(1.04); }
+    .tp-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(105deg,
+        rgba(6,28,40,0.88) 0%,
+        rgba(8,120,190,0.35) 50%,
+        rgba(6,28,40,0.72) 100%);
+    }
+    .tp-hero-particles {
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(8,120,190,0.18) 0, transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(79,175,69,0.12) 0, transparent 35%);
+    }
+    .tp-hero-content {
+      position: relative; z-index: 3;
+      padding: 0 0 52px; width: 100%;
+    }
+    .tp-hero-meta {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 18px; flex-wrap: wrap;
+    }
+    .tp-category-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(8,120,190,0.22);
+      border: 1px solid rgba(8,120,190,0.5);
+      color: #7dd4fb; font-size: 0.75rem; font-weight: 800;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 6px 16px; border-radius: 100px;
+      backdrop-filter: blur(10px);
+    }
+    .tp-est-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(79,175,69,0.18);
+      border: 1px solid rgba(79,175,69,0.4);
+      color: #8de882; font-size: 0.75rem; font-weight: 700;
+      padding: 6px 14px; border-radius: 100px;
+    }
+    .tp-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 700; color: #fff;
+      line-height: 1.1; margin-bottom: 18px;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.3);
+    }
+    .tp-hero h1 em { font-style: italic; color: #7dd4fb; }
+    .tp-hero-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.08rem; line-height: 1.75;
+      max-width: 680px; margin-bottom: 28px;
+    }
+    .tp-hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+    .tp-hero-tag {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.85);
+      font-size: 0.78rem; font-weight: 600;
+      padding: 5px 14px; border-radius: 100px;
+      backdrop-filter: blur(6px);
+    }
+    .tp-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-primary-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--blue-gradient);
+      color: #fff; font-weight: 700; font-size: 0.95rem;
+      padding: 14px 28px; border-radius: 14px;
+      text-decoration: none;
+      box-shadow: 0 8px 28px rgba(8,120,190,0.4);
+      transition: all 0.35s ease;
+    }
+    .hero-primary-btn:hover { transform: translateY(-3px); color: #fff; box-shadow: 0 14px 36px rgba(8,120,190,0.5); }
+    .hero-whatsapp-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: #fff; font-weight: 700; font-size: 0.95rem;
+      padding: 14px 24px; border-radius: 14px;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(37,211,102,0.35);
+      transition: all 0.35s ease;
+    }
+    .hero-whatsapp-btn:hover { transform: translateY(-3px); color: #fff; box-shadow: 0 14px 32px rgba(37,211,102,0.45); }
+
+    /* Hero stats strip inside hero */
+    .tp-hero-stats {
+      display: flex; gap: 0;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px; overflow: hidden;
+      backdrop-filter: blur(12px);
+      margin-top: 36px;
+      max-width: 540px;
+    }
+    .tp-hs-item {
+      flex: 1; padding: 16px 20px; text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .tp-hs-item:last-child { border-right: none; }
+    .tp-hs-val { font-size: 1.5rem; font-weight: 800; color: #fff; line-height: 1; }
+    .tp-hs-val span { color: var(--primary-green); }
+    .tp-hs-label { font-size: 0.72rem; color: rgba(255,255,255,0.6); font-weight: 500; margin-top: 4px; }
+
+    /* ── BODY LAYOUT ── */
+    .tp-body { padding: 64px 0 80px; }
+
+    /* ── SECTION CARDS ── */
+    .tp-card {
+      background: #fff;
+      border-radius: 24px;
+      border: 1px solid #E2EFF4;
+      box-shadow: 0 4px 24px rgba(8,120,190,0.06);
+      padding: 36px 38px;
+      margin-bottom: 28px;
+      transition: box-shadow 0.3s ease;
+    }
+    .tp-card:hover { box-shadow: 0 8px 36px rgba(8,120,190,0.1); }
+
+    .tp-card-header {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 24px; padding-bottom: 18px;
+      border-bottom: 2px solid #EAF6F8;
+    }
+    .tp-card-icon {
+      width: 46px; height: 46px; flex-shrink: 0;
+      background: var(--blue-gradient);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 1.15rem;
+      box-shadow: 0 4px 14px rgba(8,120,190,0.28);
+    }
+    .tp-card-icon.green { background: var(--green-gradient); box-shadow: 0 4px 14px rgba(79,175,69,0.28); }
+    .tp-card-icon.gold { background: linear-gradient(135deg, #f5a623, #e8851c); box-shadow: 0 4px 14px rgba(245,166,35,0.28); }
+    .tp-card-title { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: var(--dark-navy); margin: 0; }
+
+    /* Overview split */
+    .overview-split { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 4px; }
+    .overview-img {
+      border-radius: 16px; overflow: hidden; height: 260px;
+    }
+    .overview-img img { width: 100%; height: 100%; object-fit: cover; }
+    .overview-text p { color: #6B7C86; line-height: 1.85; font-size: 0.95rem; }
+    .overview-text p + p { margin-top: 14px; }
+    @media (max-width: 768px) {
+      .overview-split { grid-template-columns: 1fr; }
+      .overview-img { height: 200px; }
+    }
+
+    /* Conditions grid */
+    .conditions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+      gap: 12px;
+    }
+    .condition-chip {
+      display: flex; align-items: center; gap: 10px;
+      background: #EAF6F8;
+      border: 1px solid rgba(8,120,190,0.12);
+      border-radius: 12px; padding: 12px 16px;
+      font-size: 0.875rem; font-weight: 600; color: var(--dark-navy);
+      transition: all 0.25s ease;
+    }
+    .condition-chip:hover { background: var(--primary-blue-light); border-color: var(--primary-blue); transform: translateY(-2px); }
+    .condition-chip i { color: var(--primary-blue); font-size: 1rem; flex-shrink: 0; }
+
+    /* Benefits */
+    .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .benefit-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      background: #F5FAFC; border: 1px solid #E2EFF4;
+      border-radius: 14px; padding: 16px 18px;
+    }
+    .benefit-icon {
+      width: 34px; height: 34px; flex-shrink: 0;
+      background: rgba(79,175,69,0.12);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--primary-green); font-size: 1rem;
+    }
+    .benefit-text { font-size: 0.875rem; color: #6B7C86; line-height: 1.55; font-weight: 500; }
+    @media (max-width: 640px) { .benefits-grid { grid-template-columns: 1fr; } }
+
+    /* Process steps — horizontal timeline */
+    .process-timeline { position: relative; }
+    .process-timeline-track {
+      display: flex; gap: 0;
+      position: relative;
+    }
+    .process-timeline-track::before {
+      content: '';
+      position: absolute;
+      top: 28px; left: 28px; right: 28px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-blue) 0%, var(--primary-green) 100%);
+      opacity: 0.2;
+      z-index: 0;
+    }
+    .pt-step {
+      flex: 1; text-align: center; padding: 0 16px;
+      position: relative; z-index: 1;
+    }
+    .pt-step-num {
+      width: 56px; height: 56px; margin: 0 auto 16px;
+      background: var(--blue-gradient);
+      border: 4px solid #fff;
+      box-shadow: 0 4px 20px rgba(8,120,190,0.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 1rem; font-weight: 800;
+    }
+    .pt-step:nth-child(even) .pt-step-num { background: var(--green-gradient); box-shadow: 0 4px 20px rgba(79,175,69,0.3); }
+    .pt-step-title { font-size: 0.9rem; font-weight: 800; color: var(--dark-navy); margin-bottom: 8px; }
+    .pt-step-desc { font-size: 0.815rem; color: #6B7C86; line-height: 1.55; }
+    @media (max-width: 768px) {
+      .process-timeline-track { flex-direction: column; gap: 16px; }
+      .process-timeline-track::before { display: none; }
+      .pt-step { display: flex; gap: 16px; text-align: left; }
+      .pt-step-num { flex-shrink: 0; margin: 0; }
+    }
+
+    /* What to expect */
+    .expect-list { list-style: none; padding: 0; margin: 0; }
+    .expect-list li {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 14px 0; border-bottom: 1px solid #EAF6F8;
+      font-size: 0.9rem; color: #6B7C86; line-height: 1.6;
+    }
+    .expect-list li:last-child { border-bottom: none; }
+    .expect-num {
+      flex-shrink: 0; width: 30px; height: 30px;
+      background: var(--primary-blue-light);
+      color: var(--primary-blue); font-size: 0.8rem; font-weight: 800;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* FAQ accordion */
+    .tp-faq .accordion-button {
+      font-weight: 700; font-size: 0.92rem; color: var(--dark-navy);
+      background: #F5FAFC;
+      border-radius: 12px !important;
+    }
+    .tp-faq .accordion-button:not(.collapsed) {
+      background: var(--primary-blue-light);
+      color: var(--primary-blue);
+      box-shadow: none;
+    }
+    .tp-faq .accordion-button::after { filter: invert(40%) sepia(80%) saturate(400%) hue-rotate(185deg); }
+    .tp-faq .accordion-item {
+      border: 1px solid #E2EFF4 !important;
+      border-radius: 12px !important;
+      margin-bottom: 10px; overflow: hidden;
+    }
+    .tp-faq .accordion-body {
+      font-size: 0.875rem; color: #6B7C86; line-height: 1.75;
+      background: #fff;
+    }
+
+    /* ── SIDEBAR ── */
+    .tp-sidebar-card {
+      background: #fff; border-radius: 22px;
+      border: 1px solid #E2EFF4;
+      box-shadow: 0 4px 24px rgba(8,120,190,0.07);
+      padding: 28px; margin-bottom: 24px;
+    }
+    .tp-sidebar-card h4 {
+      font-weight: 800; font-size: 0.95rem; color: var(--dark-navy);
+      margin-bottom: 18px; padding-bottom: 12px;
+      border-bottom: 2px solid #EAF6F8;
+      display: flex; align-items: center; gap: 8px;
+    }
+
+    /* CTA sidebar card */
+    .tp-cta-card {
+      background: var(--dark-mesh);
+      border-radius: 22px; padding: 30px 26px;
+      margin-bottom: 24px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .tp-cta-card::before {
+      content: '';
+      position: absolute; top: -80px; right: -80px;
+      width: 220px; height: 220px;
+      background: radial-gradient(circle, rgba(8,120,190,0.35) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .tp-cta-card::after {
+      content: '';
+      position: absolute; bottom: -60px; left: -60px;
+      width: 160px; height: 160px;
+      background: radial-gradient(circle, rgba(79,175,69,0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .tp-cta-card h3 {
+      font-family: var(--font-serif);
+      color: #fff; font-size: 1.45rem; font-weight: 700;
+      margin-bottom: 10px; position: relative; z-index: 1;
+    }
+    .tp-cta-card p { color: rgba(255,255,255,0.65); font-size: 0.875rem; line-height: 1.6; position: relative; z-index: 1; }
+    .cta-wa-btn {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: #fff; font-weight: 800; font-size: 0.92rem;
+      padding: 13px 22px; border-radius: 14px;
+      text-decoration: none; margin-top: 18px;
+      position: relative; z-index: 1;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+      transition: all 0.3s ease;
+    }
+    .cta-wa-btn:hover { transform: translateY(-2px); color: #fff; box-shadow: 0 10px 28px rgba(37,211,102,0.5); }
+    .cta-appt-btn {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      background: var(--blue-gradient);
+      color: #fff; font-weight: 800; font-size: 0.92rem;
+      padding: 13px 22px; border-radius: 14px;
+      text-decoration: none; margin-top: 12px;
+      position: relative; z-index: 1;
+      box-shadow: 0 6px 20px rgba(8,120,190,0.4);
+      transition: all 0.3s ease;
+    }
+    .cta-appt-btn:hover { transform: translateY(-2px); color: #fff; }
+
+    /* Quick Info rows */
+    .qi-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 0; border-bottom: 1px solid #EAF6F8;
+      font-size: 0.875rem;
+    }
+    .qi-row:last-child { border-bottom: none; }
+    .qi-label { color: #6B7C86; display: flex; align-items: center; gap: 7px; }
+    .qi-label i { color: var(--primary-blue); }
+    .qi-val { font-weight: 700; color: var(--dark-navy); }
+    .qi-val.success { color: var(--primary-green); }
+
+    /* Related treatments */
+    .related-link {
+      display: flex; align-items: center; gap: 14px;
+      background: #F5FAFC; border: 1px solid #E2EFF4;
+      border-radius: 14px; padding: 13px 16px;
+      margin-bottom: 10px; text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .related-link:hover { border-color: var(--primary-blue); transform: translateX(5px); background: var(--primary-blue-light); }
+    .related-icon {
+      width: 42px; height: 42px; flex-shrink: 0;
+      background: #fff; border: 1px solid #E2EFF4;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--primary-blue); font-size: 1.1rem;
+    }
+    .related-info h6 { font-size: 0.875rem; font-weight: 700; color: var(--dark-navy); margin: 0 0 2px; }
+    .related-info span { font-size: 0.75rem; color: #6B7C86; }
+
+    /* Testimonial mini */
+    .mini-testimonial {
+      background: #F5FAFC; border-radius: 16px;
+      border-left: 4px solid var(--primary-blue);
+      padding: 18px 20px; margin-bottom: 14px;
+    }
+    .mini-testimonial blockquote {
+      font-style: italic; color: #6B7C86; font-size: 0.875rem;
+      line-height: 1.7; margin: 0 0 12px;
+    }
+    .mini-t-author { display: flex; align-items: center; gap: 10px; }
+    .mini-t-avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--blue-gradient);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-weight: 800; font-size: 0.9rem;
+    }
+    .mini-t-name { font-weight: 700; font-size: 0.83rem; color: var(--dark-navy); }
+    .mini-t-stars { color: #f5a623; font-size: 0.75rem; }
+
+    /* ── Not Found ── */
+    #tpNotFound { display: none; text-align: center; padding: 100px 20px; }
+    #tpNotFound i { font-size: 5rem; color: #E2EFF4; }
+
+    /* ── Footer Strip ── */
+    .tp-footer {
+      background: var(--dark-mesh);
+      padding: 56px 0; text-align: center;
+    }
+    .tp-footer h2 {
+      font-family: var(--font-serif);
+      color: #fff; font-size: clamp(1.6rem, 3vw, 2.4rem);
+      margin-bottom: 12px;
+    }
+    .tp-footer p { color: rgba(255,255,255,0.6); margin-bottom: 30px; font-size: 1rem; }
+
+    /* ── Reveal animation ── */
+    .tp-reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .tp-reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 991px) {
+      .tp-hero { height: 480px; }
+      .tp-card { padding: 24px 22px; }
+      .tp-sidebar-card { padding: 22px; }
+      .tp-cta-card { padding: 24px 20px; }
+      .tp-hero-stats { max-width: 100%; }
+    }
+    /* ── AYURVEDIC LEAF-GREEN THEME OVERRIDE ── */
+    body.ayur-theme {
+      --primary-blue: #059669;
+      --primary-blue-light: #ECFDF5;
+      --blue-gradient: linear-gradient(135deg, #059669 0%, #047857 100%);
+      background: #F2FAF5;
+    }
+    body.ayur-theme .tp-nav {
+      background: rgba(6, 44, 34, 0.97);
+      border-bottom: 1px solid rgba(16, 185, 129, 0.28);
+    }
+    body.ayur-theme .tp-hero-overlay {
+      background: linear-gradient(105deg,
+        rgba(6, 78, 59, 0.92) 0%,
+        rgba(5, 150, 105, 0.45) 50%,
+        rgba(2, 44, 34, 0.88) 100%);
+    }
+    body.ayur-theme .tp-hero-particles {
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.25) 0, transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.18) 0, transparent 35%);
+    }
+    body.ayur-theme .tp-hero-cat-badge {
+      background: rgba(16, 185, 129, 0.25);
+      border-color: rgba(167, 243, 208, 0.4);
+      color: #A7F3D0;
+    }
+    body.ayur-theme .tp-card-icon {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3);
+    }
+    body.ayur-theme .condition-chip {
+      background: #F0FDF4;
+      border-color: rgba(16, 185, 129, 0.25);
+      color: #064E3B;
+    }
+    body.ayur-theme .condition-chip:hover {
+      background: #DCFCE7;
+      border-color: #059669;
+    }
+    body.ayur-theme .condition-chip i {
+      color: #059669;
+    }
+    body.ayur-theme .benefit-icon {
+      background: rgba(16, 185, 129, 0.15);
+      color: #059669;
+    }
+    body.ayur-theme .pt-step-num {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    }
+    body.ayur-theme .expect-num {
+      background: rgba(16, 185, 129, 0.15);
+      color: #059669;
+    }
+    body.ayur-theme .qi-icon {
+      background: rgba(16, 185, 129, 0.15);
+      color: #059669;
+    }
+    body.ayur-theme .mini-testimonial {
+      border-left-color: #059669;
+      background: #F0FDF4;
+    }
+    body.ayur-theme .mini-t-avatar {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    }
+    body.ayur-theme .hero-primary-btn {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      box-shadow: 0 4px 20px rgba(5, 150, 105, 0.4);
+    }
+    body.ayur-theme .hero-primary-btn:hover {
+      background: linear-gradient(135deg, #047857 0%, #065F46 100%);
+    }
+    body.ayur-theme .related-icon {
+      background: rgba(16, 185, 129, 0.15);
+      color: #059669;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══ STICKY NAV ═══ -->
+  <nav class="tp-nav">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html">
+        <img src="assets/images/logo.svg" alt="Al Farsi Logo" class="brand-logo-img">
+      </a>
+      <div class="tp-nav-right">
+        <a href="index.html#treatments" class="back-home-btn">
+          <i class="bi bi-arrow-left"></i> All Treatments
+        </a>
+        <a href="contact.html" class="nav-book-btn">
+          <i class="bi bi-calendar2-check-fill"></i> Book Appointment
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ BREADCRUMB ═══ -->
+  <div class="tp-breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-fill me-1"></i>Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html#treatments">Treatments</a></li>
+        <li class="breadcrumb-item active" id="tpBreadcrumb">Loading…</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ═══ HERO BANNER ═══ -->
+  <div class="tp-hero" id="tpHero">
+    <img src="" alt="" class="tp-hero-bg" id="tpHeroImg">
+    <div class="tp-hero-overlay"></div>
+    <div class="tp-hero-particles"></div>
+    <div class="tp-hero-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-8 col-lg-10">
+            <div class="tp-hero-meta">
+              <div class="tp-category-badge" id="tpCategoryBadge">
+                <i id="tpCategoryIcon"></i>
+                <span id="tpCategoryLabel"></span>
+              </div>
+              <div class="tp-est-badge">
+                <i class="bi bi-patch-check-fill"></i>
+                <span>Evidence-Based Protocol</span>
+              </div>
+            </div>
+            <h1 id="tpHeroTitle">Loading…</h1>
+            <p class="tp-hero-desc" id="tpHeroDesc"></p>
+            <div class="tp-hero-tags" id="tpHeroTags"></div>
+            <div class="tp-hero-actions">
+              <a href="index.html#contact" class="hero-primary-btn">
+                <i class="bi bi-calendar2-check-fill"></i> Book a Free Consultation
+              </a>
+              <a href="#" class="hero-whatsapp-btn" id="tpWaHeroBtn" target="_blank">
+                <i class="bi bi-whatsapp"></i> WhatsApp Us Now
+              </a>
+            </div>
+            <div class="tp-hero-stats" id="tpHeroStats">
+              <div class="tp-hs-item">
+                <div class="tp-hs-val" id="tpStat1Val">—</div>
+                <div class="tp-hs-label" id="tpStat1Label">Session Duration</div>
+              </div>
+              <div class="tp-hs-item">
+                <div class="tp-hs-val" id="tpStat2Val">—</div>
+                <div class="tp-hs-label" id="tpStat2Label">Typical Sessions</div>
+              </div>
+              <div class="tp-hs-item">
+                <div class="tp-hs-val"><span>Free</span></div>
+                <div class="tp-hs-label">Initial Assessment</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ NOT FOUND ═══ -->
+  <div id="tpNotFound">
+    <div class="container">
+      <i class="bi bi-exclamation-circle"></i>
+      <h3 class="mt-3" style="color:var(--dark-navy)">Treatment Not Found</h3>
+      <p class="text-muted">We couldn't find this treatment. Please browse all available treatments.</p>
+      <a href="index.html#treatments" class="btn btn-primary-custom mt-4">Browse All Treatments</a>
+    </div>
+  </div>
+
+  <!-- ═══ MAIN BODY ═══ -->
+  <section class="tp-body" id="tpBody">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- ════ LEFT — Main Content ════ -->
+        <div class="col-lg-8">
+
+          <!-- 1. Overview with Split Image -->
+          <div class="tp-card tp-reveal">
+            <div class="tp-card-header">
+              <div class="tp-card-icon"><i class="bi bi-info-circle-fill"></i></div>
+              <h2 class="tp-card-title">About This Treatment</h2>
+            </div>
+            <div class="overview-split">
+              <div class="overview-text">
+                <p id="overviewP1"></p>
+                <p id="overviewP2"></p>
+              </div>
+              <div class="overview-img">
+                <img src="" alt="" id="overviewImg">
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Conditions Treated -->
+          <div class="tp-card tp-reveal">
+            <div class="tp-card-header">
+              <div class="tp-card-icon gold"><i class="bi bi-clipboard2-pulse-fill"></i></div>
+              <h2 class="tp-card-title">Conditions We Treat</h2>
+            </div>
+            <p class="text-muted small mb-4" id="conditionsIntro"></p>
+            <div class="conditions-grid" id="conditionsGrid"></div>
+          </div>
+
+          <!-- 3. Key Benefits -->
+          <div class="tp-card tp-reveal">
+            <div class="tp-card-header">
+              <div class="tp-card-icon green"><i class="bi bi-patch-check-fill"></i></div>
+              <h2 class="tp-card-title">Key Benefits of This Treatment</h2>
+            </div>
+            <div class="benefits-grid" id="benefitsGrid"></div>
+          </div>
+
+          <!-- 4. Treatment Approach / Process -->
+          <div class="tp-card tp-reveal">
+            <div class="tp-card-header">
+              <div class="tp-card-icon"><i class="bi bi-diagram-3-fill"></i></div>
+              <h2 class="tp-card-title">Our Step-by-Step Approach</h2>
+            </div>
+            <p class="text-muted small mb-4">Every patient receives a structured, phased treatment pathway tailored specifically to their condition and goals.</p>
+            <div class="process-timeline">
+              <div class="process-timeline-track" id="processTrack"></div>
+            </div>
+          </div>
+
+          <!-- 5. What to Expect -->
+          <div class="tp-card tp-reveal">
+            <div class="tp-card-header">
+              <div class="tp-card-icon gold"><i class="bi bi-eye-fill"></i></div>
+              <h2 class="tp-card-title">What to Expect at Al Farsi</h2>
+            </div>
+            <ul class="expect-list" id="expectList"></ul>
+          </div>
+
+
+        </div>
+
+        <!-- ════ RIGHT — Sidebar ════ -->
+        <div class="col-lg-4">
+
+          <!-- Book CTA -->
+          <div class="tp-cta-card tp-reveal">
+            <h3>Begin Your Recovery Today</h3>
+            <p>Our specialists will craft a personalised treatment plan designed around your specific needs and goals.</p>
+            <a href="#" id="tpWaSideBtn" class="cta-wa-btn" target="_blank">
+              <i class="bi bi-whatsapp fs-5"></i> Chat on WhatsApp
+            </a>
+            <a href="index.html#contact" class="cta-appt-btn">
+              <i class="bi bi-calendar2-check-fill fs-5"></i> Book Appointment
+            </a>
+          </div>
+
+          <!-- Quick Info -->
+          <div class="tp-sidebar-card tp-reveal">
+            <h4><i class="bi bi-lightning-charge-fill text-warning"></i> Quick Info</h4>
+            <div class="qi-row">
+              <span class="qi-label"><i class="bi bi-clock"></i> Session Duration</span>
+              <span class="qi-val" id="qiDuration">—</span>
+            </div>
+            <div class="qi-row">
+              <span class="qi-label"><i class="bi bi-repeat"></i> Typical Sessions</span>
+              <span class="qi-val" id="qiSessions">—</span>
+            </div>
+            <div class="qi-row">
+              <span class="qi-label"><i class="bi bi-geo-alt-fill"></i> Location</span>
+              <span class="qi-val">Al Khuwair, Muscat</span>
+            </div>
+            <div class="qi-row">
+              <span class="qi-label"><i class="bi bi-telephone-fill"></i> Helpline</span>
+              <span class="qi-val">24 Hours</span>
+            </div>
+            <div class="qi-row">
+              <span class="qi-label"><i class="bi bi-clipboard2-check-fill"></i> Assessment</span>
+              <span class="qi-val success">Free of Charge</span>
+            </div>
+            <div class="qi-row">
+              <span class="qi-label"><i class="bi bi-shield-check-fill"></i> Insurance</span>
+              <span class="qi-val">Most Plans Accepted</span>
+            </div>
+          </div>
+
+          <!-- Patient Testimonials -->
+          <div class="tp-sidebar-card tp-reveal">
+            <h4><i class="bi bi-heart-fill text-danger"></i> Patient Stories</h4>
+            <div id="miniTestimonials"></div>
+            <a href="index.html#testimonials" class="d-block text-center mt-2" style="color:var(--primary-blue); font-size:0.85rem; font-weight:700; text-decoration:none;">
+              View All Stories <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Related Treatments -->
+          <div class="tp-sidebar-card tp-reveal">
+            <h4><i class="bi bi-grid-fill text-primary"></i> Related Treatments</h4>
+            <div id="relatedList"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER CTA ═══ -->
+  <div class="tp-footer">
+    <div class="container">
+      <h2>Ready to Restore Your <em style="font-style:italic; color:#7dd4fb;">Full Mobility?</em></h2>
+      <p>Get your personalised rehabilitation programme started with a free consultation at Al Farsi Center, Muscat.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="contact.html" class="hero-primary-btn">
+          <i class="bi bi-calendar2-check-fill"></i> Book Free Consultation
+        </a>
+        <a href="index.html#treatments" style="display:inline-flex; align-items:center; gap:8px; border:1px solid rgba(255,255,255,0.25); color:#fff; font-weight:700; padding:14px 24px; border-radius:14px; text-decoration:none; transition:all .3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">
+          <i class="bi bi-grid-3x3-gap-fill"></i> All Treatments
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  /* ══════════════════════════════════════════════════
+     TREATMENT DATA — 12 Treatments with full content
+  ══════════════════════════════════════════════════ */
+  const TREATMENTS = {
+    stroke: {
+      title: 'Stroke Rehabilitation',
+      titleItalic: 'Stroke <em>Rehabilitation</em>',
+      category: 'Neurological', categoryIcon: 'bi-heart-pulse-fill',
+      image: 'assets/images/service-neurological.jpg',
+      tags: ['Paralysis Recovery', 'Gait Retraining', 'Neuroplasticity', 'Motor Restoration'],
+      lead: 'Advanced neuro-facilitation for post-stroke recovery — restoring movement, independence, and quality of life through evidence-based neurological rehabilitation at Al Farsi Center, Muscat.',
+      duration: '45–60 min', sessions: '12–30',
+      overview: [
+        'Stroke is one of the most devastating neurological events, often leaving survivors with partial or complete loss of motor function, balance impairment, and speech difficulties. At Al Farsi Physiotherapy Centre, our specialist neurological rehabilitation team employs a comprehensive, patient-centred approach to stroke recovery — from the earliest acute phase through to full community re-integration.',
+        'Using internationally validated neuro-facilitation methods including the Bobath Concept, PNF (Proprioceptive Neuromuscular Facilitation), task-specific training, and mirror therapy, our physiotherapists stimulate neuroplasticity — the brain\'s remarkable ability to rewire and rebuild neural pathways. Every programme is individually designed, regularly reassessed, and adapted to the patient\'s evolving recovery stage.'
+      ],
+      conditionsIntro: 'We specialise in the full spectrum of post-stroke neurological deficits and related movement disorders:',
+      conditions: ['Hemiplegia & Hemiparesis', 'Foot Drop', 'Spasticity & Hypertonia', 'Gait & Balance Disorders', 'Muscle Weakness (Paresis)', 'Dysphagia (Swallowing)', 'Cognitive-Motor Deficits', 'Visual Field Loss', 'Shoulder Subluxation', 'Apraxia & Dysarthria'],
+      benefits: [
+        'Restores voluntary motor control through neuroplasticity-based retraining',
+        'Improves walking speed, stride symmetry, and safe community mobility',
+        'Reduces spasticity and muscle contracture with targeted therapy',
+        'Rebuilds balance, postural control, and fall prevention strategies',
+        'Accelerates return to independence in daily life and self-care',
+        'Provides measurable, outcome-tracked progress at every session'
+      ],
+      steps: [
+        { title: 'Neurological Assessment', desc: 'Validated deficit evaluation using Brunnstrom, Fugl-Meyer, and Berg Balance Scales.' },
+        { title: 'Personalised Rehab Plan', desc: 'Phased programme targeting motor control, gait, ADL retraining, and functional goals.' },
+        { title: 'Intensive Therapy', desc: 'Daily or alternate-day sessions using PNF, Bobath, FES, and task-specific training.' },
+        { title: 'Progress & Discharge', desc: 'Regular reassessments, caregiver education, and home exercise programme handover.' }
+      ],
+      expects: [
+        'A warm, professional welcome with a comprehensive initial neurological assessment at no charge.',
+        'A dedicated physiotherapist assigned to you for continuity and personalised care throughout recovery.',
+        'State-of-the-art neurofacilitation techniques and equipment used in every session.',
+        'Weekly progress reviews and transparent goal-setting with you and your family.',
+        'A tailored home exercise programme and caregiver training to maximise daily gains.',
+        'Seamless communication with your medical team and specialist neurologist as needed.'
+      ],
+      faqs: [
+        { q: 'How soon after stroke should I start physiotherapy?', a: 'Physiotherapy should ideally begin within 24–48 hours of stroke onset in the acute hospital setting. The sooner rehabilitation begins, the greater the potential for neuroplastic recovery. We can often begin outpatient therapy as soon as you are medically stable.' },
+        { q: 'How many sessions will I need?', a: 'Recovery varies by stroke severity and time since onset. Most patients require 12–30 sessions over 3–6 months, though complex cases may benefit from longer programmes. We reassess regularly to keep your plan optimal.' },
+        { q: 'Can I recover even years after a stroke?', a: 'Yes. While the greatest recovery window is in the first 6 months, neuroplasticity continues for years. Many patients achieve significant functional improvements long after their stroke with consistent, targeted therapy.' },
+        { q: 'Will the physiotherapist come to my home?', a: 'We offer both clinic-based and selected home visit sessions. Please contact us to discuss the most suitable option for your situation.' }
+      ],
+      testimonials: [
+        { quote: 'After my stroke I couldn\'t move my left side at all. After 3 months at Al Farsi, I\'m walking again. The team gave me my life back.', author: 'Ahmad K.', initials: 'AK' },
+        { quote: 'The therapists are incredibly patient and knowledgeable. I saw improvement from the very first week of treatment.', author: 'Fatima R.', initials: 'FR' }
+      ],
+      related: ['cerebralpalsy', 'parkinsons', 'electrotherapy']
+    },
+
+    backpain: {
+      title: 'Back Pain & Sciatica Relief',
+      titleItalic: 'Back Pain &amp; <em>Sciatica Relief</em>',
+      category: 'Spine Care', categoryIcon: 'bi-person-arms-up',
+      image: 'assets/images/service-back-neck.jpg',
+      tags: ['Disc Herniation', 'Sciatic Nerve', 'Spinal Decompression', 'Surgery-Free Relief'],
+      lead: 'Natural, evidence-based relief for chronic back pain, sciatica, lumbar disc herniation, and spinal stenosis — without surgery, using specialist manual therapy and targeted rehabilitation.',
+      duration: '45 min', sessions: '8–16',
+      overview: [
+        'Chronic lower back pain and sciatica are among the most debilitating musculoskeletal conditions affecting daily life, work, and sleep. At Al Farsi, our spine specialists address the true root causes of your pain — biomechanical imbalances, disc pathology, nerve compression, and muscular dysfunction — rather than simply masking symptoms.',
+        'Our comprehensive spine care programme combines expert hands-on manual therapy, McKenzie mechanical diagnosis and therapy, spinal mobilisation, targeted core stabilisation, and progressive therapeutic exercise to restore full lumbar function, eliminate radiating leg pain, and prevent recurrence. Most patients experience significant relief within the first 3–4 sessions.'
+      ],
+      conditionsIntro: 'Our spine specialists treat the full range of lumbar and sciatic conditions:',
+      conditions: ['Lumbar Disc Herniation', 'Sciatica / Nerve Root Compression', 'Spinal Stenosis', 'Spondylolisthesis', 'Facet Joint Syndrome', 'Piriformis Syndrome', 'SI Joint Dysfunction', 'Chronic Low Back Pain', 'Muscle Spasm & Tightness', 'Post-Discectomy Rehab'],
+      benefits: [
+        'Eliminates radiating leg pain and numbness along the sciatic pathway',
+        'Restores full lumbar range of motion through targeted joint mobilisation',
+        'Strengthens deep core stabilisers for long-term spinal protection',
+        'Avoids surgery through evidence-based conservative management',
+        'Corrects postural dysfunctions and improves workplace ergonomics',
+        'Provides a personalised home programme to prevent future episodes'
+      ],
+      steps: [
+        { title: 'Postural & Movement Screen', desc: 'Full spine assessment with neurological testing, palpation, and movement analysis.' },
+        { title: 'Manual Therapy Phase', desc: 'Spinal mobilisation, manipulation, and soft-tissue release to free joint restrictions.' },
+        { title: 'Therapeutic Exercise', desc: 'Core stabilisation, McKenzie protocol, and neuromuscular retraining programme.' },
+        { title: 'Prevention & Education', desc: 'Ergonomics coaching, posture correction, and self-management strategies.' }
+      ],
+      expects: [
+        'A thorough biomechanical and neurological assessment of your spine and lower limbs.',
+        'Honest, clear explanation of your diagnosis and realistic recovery expectations.',
+        'Hands-on manual therapy beginning in your very first treatment session.',
+        'Progressive exercises that evolve as your strength and mobility improve.',
+        'Practical advice on managing pain at work, home, and during daily activities.',
+        'A discharge plan with a home exercise programme to keep you pain-free long term.'
+      ],
+      faqs: [
+        { q: 'Is physiotherapy better than surgery for back pain?', a: 'For the vast majority of back pain and sciatica cases, evidence strongly supports physiotherapy as the first-line treatment. Surgery is only recommended when conservative treatment fails after 6–12 weeks or when there is severe neurological compromise. Our team will guide you on the most appropriate pathway.' },
+        { q: 'How quickly will I feel relief?', a: 'Most patients notice meaningful improvement within 3–6 sessions. Acute sciatica often responds more quickly than chronic back pain. Your physiotherapist will set clear milestones at each stage.' },
+        { q: 'Should I rest or keep moving with back pain?', a: 'Contrary to popular belief, bed rest is rarely recommended. Gentle, guided movement is almost always better than rest. Your therapist will prescribe the right level of activity for your specific condition.' },
+        { q: 'Can physio help a herniated disc?', a: 'Yes. Most disc herniations respond very well to physiotherapy, including manual therapy, specific exercises, and neural mobilisation. Many patients avoid surgery entirely through consistent physiotherapy.' }
+      ],
+      testimonials: [
+        { quote: 'I had sciatica so bad I couldn\'t sit for more than 5 minutes. After 10 sessions at Al Farsi, I\'m completely pain-free and back to work.', author: 'Mohammed A.', initials: 'MA' },
+        { quote: 'The team identified the exact cause of my back pain in the first session. I finally understood why it wasn\'t getting better on its own.', author: 'Sara H.', initials: 'SH' }
+      ],
+      related: ['cervical', 'orthopedic', 'electrotherapy']
+    },
+
+    cervical: {
+      title: 'Cervical Spondylosis & Neck Care',
+      titleItalic: 'Cervical Spondylosis &amp; <em>Neck Care</em>',
+      category: 'Neck & Spine', categoryIcon: 'bi-activity',
+      image: 'assets/images/service-back-neck.jpg',
+      tags: ['Neck Stiffness', 'Posture Correction', 'Arm Numbness', 'Manual Therapy'],
+      lead: 'Specialist relief for cervical spondylosis, disc prolapse, neck stiffness, and radiating arm pain — combining Maitland mobilisation, cervical traction, and posture retraining.',
+      duration: '40–50 min', sessions: '8–14',
+      overview: [
+        'The cervical spine is one of the most mechanically complex and vulnerable regions of the body, bearing the weight of the head while allowing extraordinary range of motion. Cervical spondylosis, disc degeneration, and postural overload can produce persistent neck pain, stiffness, headaches, and radiating arm numbness that significantly impacts daily life and work.',
+        'At Al Farsi, our certified cervical spine specialists use precise Maitland joint mobilisation, neural mobilisation techniques, cervical mechanical traction, and deep neck flexor strengthening to restore pain-free motion, decompress nerve roots, and retrain postural habits. We treat the structural cause, not just the symptom.'
+      ],
+      conditionsIntro: 'Conditions treated by our cervical spine physiotherapy team:',
+      conditions: ['Cervical Spondylosis', 'Cervical Disc Prolapse', 'Cervicogenic Headache', 'Whiplash Injury', 'Thoracic Outlet Syndrome', 'C-Spine Radiculopathy', 'Text Neck Syndrome', 'Torticollis', 'Muscle Spasm', 'Post-Cervical Surgery Rehab'],
+      benefits: [
+        'Restores full cervical rotation, flexion, and extension without pain',
+        'Eliminates radiating arm numbness, tingling, and radiculopathy',
+        'Corrects forward head posture and thoracic kyphosis permanently',
+        'Reduces tension headaches arising from cervical joint dysfunction',
+        'Strengthens deep neck stabilisers to prevent recurrence',
+        'Provides relief often from the very first manual therapy session'
+      ],
+      steps: [
+        { title: 'Cervical Assessment', desc: 'ROM measurement, neural tension tests, and postural analysis to identify the pain driver.' },
+        { title: 'Manual Therapy', desc: 'Maitland mobilisation, cervical traction, and deep soft-tissue massage to free restrictions.' },
+        { title: 'Strengthening Protocol', desc: 'Deep neck flexor training and scapular stabilisation exercise programme.' },
+        { title: 'Posture Retraining', desc: 'Ergonomic advice, workspace setup guidance, and daily posture habit retraining.' }
+      ],
+      expects: [
+        'A thorough cervical spine assessment including postural analysis and neurological screening.',
+        'Immediate hands-on treatment in your first session to begin reducing pain and stiffness.',
+        'Clear explanation of why your neck pain is occurring and exactly how we will fix it.',
+        'Home exercises that are practical, effective, and easy to fit into your daily routine.',
+        'Advice on optimal workstation setup, sleeping posture, and device use habits.',
+        'Regular progress checks with updated goals every 4 sessions.'
+      ],
+      faqs: [
+        { q: 'Can physiotherapy cure cervical spondylosis permanently?', a: 'Spondylosis is a degenerative process, so structural changes cannot be reversed. However, physiotherapy is highly effective at eliminating pain, restoring movement, and teaching you how to manage the condition so it doesn\'t limit your life.' },
+        { q: 'Is cervical traction safe?', a: 'When applied by a trained physiotherapist using appropriate parameters, cervical traction is a very safe and effective technique for reducing disc pressure and relieving nerve root compression.' },
+        { q: 'Why do I get headaches with my neck pain?', a: 'Cervicogenic headaches originate from the upper cervical joints (C1–C3) and referred pain from suboccipital muscles. These respond exceptionally well to cervical manual therapy and postural correction.' },
+        { q: 'How do I prevent my neck pain from returning?', a: 'The key is strengthening your deep neck flexors, improving your posture habits, optimising your workstation, and performing regular maintenance exercises. We will teach you all of this before discharge.' }
+      ],
+      testimonials: [
+        { quote: 'My arm had been numb for 6 months. After cervical traction and mobilisation at Al Farsi, the numbness was 80% better in just 3 weeks.', author: 'Layla M.', initials: 'LM' },
+        { quote: 'I was sceptical about physio for my neck pain but the results speak for themselves. The team is outstanding.', author: 'Khalid J.', initials: 'KJ' }
+      ],
+      related: ['backpain', 'electrotherapy', 'reflexology']
+    },
+
+    cerebralpalsy: {
+      title: 'Cerebral Palsy & Pediatric Physiotherapy',
+      titleItalic: 'Cerebral Palsy &amp; <em>Pediatric Physiotherapy</em>',
+      category: 'Pediatric Neuro', categoryIcon: 'bi-heart-fill',
+      image: 'assets/images/service-neurological.jpg',
+      tags: ['Motor Development', 'Spasticity Control', 'NDT / Bobath', 'Child-Centred Care'],
+      lead: 'Compassionate, play-based developmental physiotherapy for children with cerebral palsy and neuromotor conditions — helping every child move better, grow stronger, and live fuller.',
+      duration: '45–60 min', sessions: 'Ongoing',
+      overview: [
+        'Cerebral palsy and paediatric neuromotor conditions require highly specialised physiotherapy delivered by therapists with deep expertise in child development and neurological rehabilitation. At Al Farsi, our paediatric physiotherapy team provides compassionate, child-centred therapy that uses evidence-based approaches within an engaging, playful environment — so children actually look forward to sessions.',
+        'Using Neurodevelopmental Treatment (NDT/Bobath), sensory integration, motor learning strategies, and targeted therapeutic exercise, we help children with cerebral palsy reach their highest functional potential — whether that means sitting independently, walking with assistance, or participating fully in school and family life. Parents and caregivers are central partners in every step of the programme.'
+      ],
+      conditionsIntro: 'Our paediatric physiotherapy specialists treat a wide range of childhood neuromotor conditions:',
+      conditions: ['Cerebral Palsy (All Types)', 'Spastic Diplegia / Hemiplegia', 'Ataxic & Dyskinetic CP', 'Global Developmental Delay', 'Hypotonia (Low Muscle Tone)', 'Toe Walking', 'Torticollis (Wry Neck)', 'Gross Motor Delay', 'Muscular Dystrophy', 'Post-Orthopaedic Surgery Rehab'],
+      benefits: [
+        'Improves sitting, standing, walking, and independent daily function',
+        'Reduces spasticity and prevents progressive deformity',
+        'Enhances gross and fine motor skill development through play',
+        'Supports sensory processing and proprioceptive development',
+        'Builds parental confidence with practical home carry-over training',
+        'Tracks developmental milestones with systematic, goal-oriented reporting'
+      ],
+      steps: [
+        { title: 'Paediatric Assessment', desc: 'GMFCS scoring, developmental screening, and movement analysis with full family involvement.' },
+        { title: 'NDT / Bobath Therapy', desc: 'Hands-on facilitation to normalise tone, improve postural control, and guide movement.' },
+        { title: 'Play-Based Activities', desc: 'Child-led exercises targeting specific motor goals in a fun, motivating environment.' },
+        { title: 'Parent & Carer Training', desc: 'Practical home exercise instruction to maximise therapy carry-over every day.' }
+      ],
+      expects: [
+        'A welcoming, child-friendly environment where your child feels safe and engaged.',
+        'A specialist paediatric physiotherapist with dedicated training in neurodevelopmental therapy.',
+        'Family-centred care — you will be fully involved and trained throughout the programme.',
+        'Play-based therapy that feels like fun, not work, for your child.',
+        'Clear, measurable goals set collaboratively with you every month.',
+        'Written progress reports suitable for school, medical teams, and insurance providers.'
+      ],
+      faqs: [
+        { q: 'At what age should a child with CP start physiotherapy?', a: 'The earlier the better. We can work with infants from a few months of age. Early intervention during the peak neuroplastic window (before age 5) produces the greatest long-term benefits, though therapy remains valuable at any age.' },
+        { q: 'How often should my child attend sessions?', a: 'Most children benefit from 2–3 sessions per week during intensive phases, reducing to 1 session per week during maintenance. We will recommend the optimal frequency based on your child\'s needs and your family\'s circumstances.' },
+        { q: 'Will my child be able to walk?', a: 'Walking potential varies with CP type and severity. Many children with spastic diplegia or hemiplegia can achieve independent or assisted walking with consistent therapy. We will give you honest, realistic expectations based on your child\'s specific presentation.' },
+        { q: 'Can physiotherapy help my child at school?', a: 'Yes. We collaborate with schools, occupational therapists, and special education teams to ensure therapy goals translate into school participation and inclusion.' }
+      ],
+      testimonials: [
+        { quote: 'My son with spastic diplegia couldn\'t stand at all. After 8 months of intensive therapy at Al Farsi, he\'s taking his first independent steps. We cry with happiness every day.', author: 'Umm Khalid', initials: 'UK' },
+        { quote: 'The paediatric team is incredibly gifted with children. My daughter genuinely loves going to sessions — that makes everything so much easier.', author: 'Nadia S.', initials: 'NS' }
+      ],
+      related: ['stroke', 'electrotherapy', 'reflexology']
+    },
+
+    sports: {
+      title: 'Sports Injury Rehabilitation',
+      titleItalic: 'Sports Injury <em>Rehabilitation</em>',
+      category: 'Sports Care', categoryIcon: 'bi-trophy-fill',
+      image: 'assets/images/service-sports.jpg',
+      tags: ['ACL / Meniscus', 'Return-to-Play Testing', 'Biomechanical Analysis', 'Performance Recovery'],
+      lead: 'High-performance sports rehabilitation for ACL tears, rotator cuff injuries, ankle trauma, and more — with evidence-based return-to-sport testing to get you back competing safely.',
+      duration: '50–60 min', sessions: '10–24',
+      overview: [
+        'Sports injuries demand specialised rehabilitation that goes far beyond basic exercise. At Al Farsi, our sports physiotherapy team combines cutting-edge injury assessment, hands-on manual therapy, progressive strength and conditioning, and sport-specific functional training to return athletes to their sport faster, stronger, and with significantly reduced re-injury risk.',
+        'Whether you are a professional athlete, weekend warrior, or school-level competitor, we build your programme around your specific sport\'s demands and your personal performance goals. Every plan includes biomechanical analysis to identify and correct the movement faults that caused your injury in the first place — breaking the cycle of recurring sports injuries.'
+      ],
+      conditionsIntro: 'We treat the complete spectrum of sports and exercise-related injuries:',
+      conditions: ['ACL Tear / Reconstruction', 'Meniscus Injury', 'Rotator Cuff Tear', 'Ankle Ligament Sprain', 'Tennis & Golfer\'s Elbow', 'Hamstring Strain', 'Patellofemoral Syndrome', 'Achilles Tendinopathy', 'Stress Fracture', 'Shoulder Dislocation'],
+      benefits: [
+        'Faster safe return to sport with phased, objective progression criteria',
+        'Restores pre-injury strength, power, and neuromuscular control',
+        'Dramatically reduces re-injury risk through proprioceptive training',
+        'Corrects biomechanical faults and movement patterns that cause injury',
+        'Prepares athletes with validated return-to-sport functional testing',
+        'Provides sport-specific injury prevention programmes for training integration'
+      ],
+      steps: [
+        { title: 'Sports Injury Assessment', desc: 'Biomechanical screening, functional movement analysis, and injury severity grading.' },
+        { title: 'Acute Management', desc: 'Taping, joint mobilisation, and soft-tissue therapy to control pain and swelling.' },
+        { title: 'Strength & Conditioning', desc: 'Progressive loading, plyometrics, and sport-specific functional drills.' },
+        { title: 'Return-to-Sport Testing', desc: 'Objective functional performance tests confirming full readiness before competition.' }
+      ],
+      expects: [
+        'A sports-specialist physiotherapist who understands your sport and its physical demands.',
+        'A detailed biomechanical assessment to identify injury causes, not just symptoms.',
+        'Honest communication about realistic timelines based on your injury type and severity.',
+        'Gym-based rehabilitation with progressive loading and sport-specific training.',
+        'Objective return-to-sport milestones so you know exactly when you\'re ready.',
+        'An injury prevention programme to protect you through your next training season.'
+      ],
+      faqs: [
+        { q: 'How long does ACL rehabilitation take?', a: 'ACL reconstruction rehabilitation typically takes 9–12 months to complete safely. Return to pivoting sports before this significantly increases re-rupture risk. We follow evidence-based criteria-based progressions, not just time-based ones.' },
+        { q: 'When should I see a physiotherapist after a sports injury?', a: 'As soon as possible — ideally within 24–48 hours for acute injuries. Early intervention reduces pain, swelling, and recovery time significantly. Even for chronic or overuse injuries, earlier is always better.' },
+        { q: 'Can I train while rehabilitating a sports injury?', a: 'In most cases, yes. We will identify what you can safely do and keep your cardiovascular fitness and upper body strength maintained throughout lower limb rehabilitation. Staying active supports faster recovery.' },
+        { q: 'Do you work with professional sports teams?', a: 'Yes. We work with athletes and teams across various sports in Oman. Please contact us for team assessment and sports medicine consultancy enquiries.' }
+      ],
+      testimonials: [
+        { quote: 'Tore my ACL playing football. The rehabilitation at Al Farsi was incredibly thorough. I returned to competitive play at 10 months — stronger than before the injury.', author: 'Bilal T.', initials: 'BT' },
+        { quote: 'The team\'s understanding of sport-specific demands set them apart. They knew exactly what I needed to get back on the pitch.', author: 'Yusuf A.', initials: 'YA' }
+      ],
+      related: ['orthopedic', 'postop', 'joint']
+    },
+
+    orthopedic: {
+      title: 'Orthopedic Rehabilitation',
+      titleItalic: 'Orthopedic <em>Rehabilitation</em>',
+      category: 'Orthopedic', categoryIcon: 'bi-bandaid-fill',
+      image: 'assets/images/service-orthopedic.jpg',
+      tags: ['Osteoarthritis', 'Joint Mobility', 'Biomechanical Alignment', 'Pain-Free Movement'],
+      lead: 'Expert management for bone, joint, ligament, and cartilage disorders — reducing chronic pain, improving joint function, and rebuilding musculoskeletal health without surgery.',
+      duration: '45 min', sessions: '10–20',
+      overview: [
+        'Orthopedic physiotherapy addresses the full spectrum of musculoskeletal conditions — from acute injuries to chronic degenerative disorders like osteoarthritis. At Al Farsi, our orthopaedic specialists combine precise joint mobilisation, soft-tissue therapy, therapeutic ultrasound, and progressive exercise to restore joint health, eliminate chronic pain, and dramatically improve quality of life.',
+        'We take a whole-body biomechanical approach — understanding how alignment, posture, gait, and muscle imbalances contribute to joint deterioration. By correcting these factors, we don\'t just treat the pain; we address its root cause and give you the tools to maintain joint health for the long term.'
+      ],
+      conditionsIntro: 'Our orthopaedic physiotherapy team specialises in:',
+      conditions: ['Osteoarthritis (Knee / Hip / Shoulder)', 'Rheumatoid Arthritis', 'Bursitis', 'Plantar Fasciitis', 'Gout Rehabilitation', 'Bone Fracture Rehab', 'Ligament Laxity', 'Muscle Imbalance', 'Scoliosis Management', 'PFPS (Runner\'s Knee)'],
+      benefits: [
+        'Reduces arthritic joint pain and morning stiffness significantly',
+        'Improves joint range of motion through targeted mobilisation techniques',
+        'Strengthens muscles around affected joints to offload cartilage',
+        'Corrects biomechanical alignment to minimise future wear and tear',
+        'Delays or eliminates the need for surgical intervention in most cases',
+        'Educates patients on joint protection strategies for sustainable daily living'
+      ],
+      steps: [
+        { title: 'Musculoskeletal Assessment', desc: 'Joint mobility testing, strength measurement, and imaging review to define treatment targets.' },
+        { title: 'Joint Mobilisation', desc: 'Grade-specific Maitland mobilisation and soft-tissue techniques to restore joint movement.' },
+        { title: 'Therapeutic Exercise', desc: 'Graded strengthening, stretching, and neuromuscular control progressions.' },
+        { title: 'Education & Self-Management', desc: 'Joint protection advice, activity modification, and long-term maintenance planning.' }
+      ],
+      expects: [
+        'A comprehensive orthopaedic assessment with clear diagnosis explanation.',
+        'Gentle yet effective hands-on treatment to restore joint mobility from session one.',
+        'Individually prescribed exercises that strengthen without causing pain flares.',
+        'Advice on joint-friendly activities and modifications for work and daily life.',
+        'Collaboration with your orthopaedic surgeon or rheumatologist where needed.',
+        'A long-term maintenance programme to protect joint health after discharge.'
+      ],
+      faqs: [
+        { q: 'Can physiotherapy help osteoarthritis?', a: 'Absolutely. While arthritis cannot be reversed, physiotherapy is one of the most effective treatments available for managing arthritis pain, improving function, and reducing the rate of joint deterioration. Exercise is considered the most important treatment for OA by clinical guidelines worldwide.' },
+        { q: 'Will exercise make my arthritis worse?', a: 'No — when prescribed correctly, exercise is the single most beneficial treatment for arthritis. The key is choosing the right exercises at the right intensity. Our physiotherapists specialise in exactly this prescription.' },
+        { q: 'Do I need a referral from my doctor to attend?', a: 'No referral is required. You can contact us directly to book an assessment. We will liaise with your doctor if needed.' },
+        { q: 'How do I know if I need surgery or physiotherapy?', a: 'We assess this during your initial appointment and provide an honest recommendation. In most cases, a good course of physiotherapy is the appropriate first step and often avoids surgery entirely.' }
+      ],
+      testimonials: [
+        { quote: 'My knee OA was making walking painful. After 12 sessions of physio, I\'m walking 5km daily without pain. I cancelled my surgery consultation.', author: 'Hassan R.', initials: 'HR' },
+        { quote: 'I didn\'t realise how much my hip alignment was causing my knee pain. Al Farsi treated the real problem, not just the symptom.', author: 'Amina K.', initials: 'AK' }
+      ],
+      related: ['postop', 'sports', 'joint']
+    },
+
+    postop: {
+      title: 'Post-Surgical Rehabilitation',
+      titleItalic: 'Post-Surgical <em>Rehabilitation</em>',
+      category: 'Post-Surgery', categoryIcon: 'bi-shield-plus',
+      image: 'assets/images/service-post-surgical.jpg',
+      tags: ['Joint Replacement', 'Scar Management', 'Rapid Mobility', 'Prehab Available'],
+      lead: 'Structured, phased recovery after joint replacement, spinal surgery, and arthroscopy — restoring strength, mobility, and full function safely through evidence-based post-surgical physiotherapy.',
+      duration: '50–60 min', sessions: '16–36',
+      overview: [
+        'The success of any orthopaedic surgical procedure is profoundly influenced by the quality of rehabilitation that follows it. Post-surgical physiotherapy at Al Farsi begins at the earliest safe opportunity — often within days of your operation — and follows evidence-based, surgeon-aligned protocols to minimise complications, restore movement, and rebuild strength progressively.',
+        'We offer both pre-surgical "prehabilitation" to optimise your physical condition before the operation, and comprehensive post-surgical programmes that guide you through each phase of recovery — from acute pain management and oedema control through to full return to daily activities, sport, and work. Scar management, lymphatic drainage, and patient education are integral to every plan.'
+      ],
+      conditionsIntro: 'We provide expert rehabilitation following a wide range of orthopaedic and spinal procedures:',
+      conditions: ['Total Knee Replacement (TKR)', 'Total Hip Replacement (THR)', 'Spinal Fusion / Discectomy', 'ACL Reconstruction', 'Rotator Cuff Repair', 'Shoulder Stabilisation', 'Arthroscopy Recovery', 'Fracture Fixation (ORIF)', 'Ankle Ligament Repair', 'Carpal Tunnel Surgery'],
+      benefits: [
+        'Accelerates safe recovery through phase-appropriate exercise protocols',
+        'Controls post-operative swelling via lymphatic drainage and compression therapy',
+        'Prevents stiffness and scar adhesion through early, guided mobilisation',
+        'Rebuilds muscle strength, endurance, and proprioceptive control progressively',
+        'Manages surgical scarring with soft-tissue mobilisation techniques',
+        'Returns patients to daily activities and work significantly faster'
+      ],
+      steps: [
+        { title: 'Prehab (Optional)', desc: 'Strengthening before surgery to improve baseline fitness and accelerate post-op recovery.' },
+        { title: 'Acute Phase (Wk 1–3)', desc: 'Pain control, oedema management, passive range of motion, and early mobilisation.' },
+        { title: 'Rehab Phase (Wk 3–12)', desc: 'Progressive strengthening, balance retraining, and functional movement restoration.' },
+        { title: 'Return-to-Activity', desc: 'Sport-specific or occupation-specific conditioning with objective outcome measurement.' }
+      ],
+      expects: [
+        'A physiotherapist who has reviewed your surgical notes and is aligned with your surgeon\'s protocol.',
+        'A clear phase-by-phase recovery roadmap with milestones explained from day one.',
+        'Gentle yet effective early mobilisation to prevent stiffness and reduce hospitalisation time.',
+        'Progressive strengthening that challenges you appropriately at every stage.',
+        'Specialist scar management to prevent adhesion and maximise cosmetic outcomes.',
+        'Regular written progress summaries to share with your surgical team.'
+      ],
+      faqs: [
+        { q: 'When should I start physiotherapy after my operation?', a: 'For most joint replacements and reconstructions, physiotherapy begins within 24–48 hours in hospital. Outpatient physiotherapy typically begins 1–2 weeks post-surgery, depending on your surgeon\'s protocol. The sooner, the better within safe limits.' },
+        { q: 'How many sessions will I need after a knee replacement?', a: 'Most total knee replacement patients require 20–30 outpatient sessions over 3–4 months for a full, optimal recovery. Under-treating post-surgical rehabilitation is a common reason for poor long-term outcomes.' },
+        { q: 'What is prehabilitation and should I do it?', a: 'Prehab is physiotherapy performed before your surgery to build strength and fitness. Research shows patients who complete prehab recover faster, have shorter hospital stays, and achieve better outcomes. We strongly recommend it when surgical timing allows.' },
+        { q: 'Will physiotherapy be painful after surgery?', a: 'Some discomfort during early mobilisation is normal and expected. Our therapists are skilled at finding the right balance between therapeutic challenge and managing pain, and will never push you beyond safe limits.' }
+      ],
+      testimonials: [
+        { quote: 'My knee replacement recovery was far better than I expected. The physiotherapist was encouraging, professional, and genuinely cared about my progress.', author: 'Nasser M.', initials: 'NM' },
+        { quote: 'I did prehab before my hip replacement and the difference was remarkable. I was walking with just a stick on day 3 post-surgery.', author: 'Zainab F.', initials: 'ZF' }
+      ],
+      related: ['orthopedic', 'sports', 'electrotherapy']
+    },
+
+    parkinsons: {
+      title: "Parkinson's Disease Physiotherapy",
+      titleItalic: "Parkinson's Disease <em>Physiotherapy</em>",
+      category: 'Movement Disorders', categoryIcon: 'bi-shuffle',
+      image: 'assets/images/service-neurological.jpg',
+      tags: ['LSVT BIG®', 'Fall Prevention', 'Gait Training', 'Balance Retraining'],
+      lead: "Specialised LSVT BIG® and movement disorder physiotherapy — enhancing walking, balance, and independence in Parkinson's disease while reducing fall risk and freezing episodes.",
+      duration: '50–60 min', sessions: 'Ongoing',
+      overview: [
+        "Parkinson's disease is a progressive neurological condition affecting movement, balance, and coordination. While there is no cure, physiotherapy is one of the most powerful tools available for managing its impact on daily life. At Al Farsi, our movement disorder specialists use LSVT BIG® — the gold-standard Parkinson's physiotherapy approach — alongside cueing strategies, gait retraining, and balance training to help patients live more actively and independently for longer.",
+        "Research consistently demonstrates that regular, intensive physiotherapy significantly delays functional decline in Parkinson's, reduces fall risk, improves gait speed, and enhances quality of life. Our team works closely with neurology teams and coordinates with medication management to optimise each patient's rehabilitation outcomes."
+      ],
+      conditionsIntro: "Conditions and symptoms we address in Parkinson's physiotherapy:",
+      conditions: ["Parkinson's Disease (All Stages)", 'Festination (Shuffling Gait)', 'Freezing of Gait', 'Postural Instability', 'Bradykinesia (Slowness)', 'Rigidity & Stiffness', 'Essential Tremor', 'Balance Impairment', 'Falls & Near-Falls', 'Reduced Arm Swing'],
+      benefits: [
+        'Improves walking speed, stride length, and gait symmetry measurably',
+        'Reduces freezing episodes through evidence-based cueing strategies',
+        'Enhances balance reactions and dramatically reduces fall risk',
+        'Maintains upper limb function and handwriting (fine motor) ability',
+        'Improves postural alignment and trunk rotation significantly',
+        'Supports meaningful independence in daily activities for longer'
+      ],
+      steps: [
+        { title: 'Functional Assessment', desc: 'Gait analysis, balance testing (BBS, TUG), and UPDRS motor subscale scoring.' },
+        { title: 'LSVT BIG® Training', desc: 'High-amplitude, high-effort exercises to counteract bradykinesia and small movement patterns.' },
+        { title: 'Balance & Fall Prevention', desc: 'Reactive balance training, cueing strategies, and dual-task walking exercises.' },
+        { title: 'Home & Carer Programme', desc: 'Daily exercise plan and caregiver instruction to maintain gains between sessions.' }
+      ],
+      expects: [
+        "A physiotherapist certified in LSVT BIG® Parkinson's rehabilitation.",
+        'A functional assessment that honestly reflects your current abilities and challenges.',
+        "An intensive, challenging programme that genuinely improves your movement quality.",
+        "Family and carer involvement welcomed and encouraged in all sessions.",
+        "Close coordination with your neurologist to optimise medication and therapy timing.",
+        "A home exercise programme that is realistic and sustainable alongside medication."
+      ],
+      faqs: [
+        { q: "How can physiotherapy help Parkinson's if it's progressive?", a: "While PD is progressive, the rate at which it impacts function is significantly influenced by physical activity levels. Regular physiotherapy has been shown to slow functional decline, reduce falls, and maintain independence for considerably longer than without therapy. Think of it as maintenance — the more you do, the more you preserve." },
+        { q: "What is LSVT BIG® and why is it recommended for Parkinson's?", a: "LSVT BIG® is a standardised, research-validated physiotherapy protocol specifically developed for Parkinson's disease. It focuses on large-amplitude movements and intensive practice to retrain the brain to generate normal-sized movements. It has strong evidence for improving gait, balance, and quality of life." },
+        { q: "When is the right time to start physiotherapy for Parkinson's?", a: "At diagnosis. Starting physiotherapy early — even when symptoms are mild — leads to better long-term outcomes. Early intervention prevents compensatory movement patterns and builds physical reserve for later stages." },
+        { q: "How do I manage freezing of gait at home?", a: "Your physiotherapist will teach you multiple cueing strategies — auditory, visual, and attentional — that you can use immediately when freezing occurs. These are highly effective and we practice them extensively during sessions." }
+      ],
+      testimonials: [
+        { quote: "My father's walk improved more in 2 months of LSVT BIG at Al Farsi than in the previous 2 years of general exercise. Absolutely remarkable.", author: 'Son of Patient', initials: 'SP' },
+        { quote: "The physiotherapist understands Parkinson's so well. For the first time I feel like someone really knows how to help me.", author: 'Abdulla W.', initials: 'AW' }
+      ],
+      related: ['stroke', 'cerebralpalsy', 'electrotherapy']
+    },
+
+    joint: {
+      title: 'Joint & Muscle Mobility',
+      titleItalic: 'Joint &amp; Muscle <em>Mobility Therapy</em>',
+      category: 'Joint Mobility', categoryIcon: 'bi-arrows-move',
+      image: 'assets/images/service-joint-muscle.jpg',
+      tags: ['Frozen Shoulder', 'Myofascial Release', 'Trigger Point Therapy', 'Range of Motion'],
+      lead: 'Restoring full joint range of motion and muscle flexibility through expert joint mobilisation, dry needling, and myofascial release — eliminating stiffness, trigger points, and chronic tightness.',
+      duration: '45 min', sessions: '8–16',
+      overview: [
+        'Restricted joint mobility and myofascial tightness are among the most common — yet frequently under-treated — causes of chronic pain and functional limitation. At Al Farsi, our joint mobility specialists use a sophisticated combination of Kaltenborn and Maitland joint mobilisation, advanced myofascial release, and trigger point dry needling to systematically restore full range of motion and eliminate the muscular guarding patterns that perpetuate stiffness.',
+        'Whether you suffer from a frozen shoulder that has progressively locked your arm, chronic hip flexor tightness limiting your gait, or widespread myofascial pain syndrome, our therapists will identify the precise tissue restrictions and deliver targeted, effective treatment. We then teach you a self-management programme to maintain the mobility gains long after discharge.'
+      ],
+      conditionsIntro: 'Joint and myofascial conditions we specialise in treating:',
+      conditions: ['Frozen Shoulder (Adhesive Capsulitis)', 'Myofascial Pain Syndrome', 'Trigger Point Dysfunction', 'Tendon Stiffness', 'Hip Flexor Tightness', 'IT Band Syndrome', 'Plantar Fascia Tightness', 'Capsular Pattern Restriction', 'Thoracic Stiffness', 'Piriformis Tightness'],
+      benefits: [
+        'Restores full joint range of motion through systematic progressive mobilisation',
+        'Eliminates stubborn trigger points causing widespread referred pain',
+        'Releases deep myofascial restrictions that cause postural compensations',
+        'Reduces chronic muscular guarding and protective spasm effectively',
+        'Improves tissue extensibility and joint lubrication durably',
+        'Provides lasting results supported by a personalised self-stretch programme'
+      ],
+      steps: [
+        { title: 'Mobility Assessment', desc: 'Goniometric measurement, end-feel assessment, and myofascial mapping of restriction patterns.' },
+        { title: 'Joint Mobilisation', desc: 'Graded Maitland / Kaltenborn accessory joint movements to restore arthrokinematics.' },
+        { title: 'Myofascial Release & Dry Needling', desc: 'Targeted soft-tissue work and trigger point needling for deep tissue liberation.' },
+        { title: 'Active Mobility Programme', desc: 'Progressive self-mobilisation, stretching, and strengthening to consolidate gains.' }
+      ],
+      expects: [
+        'Precise assessment of your joint mobility using calibrated measurement tools.',
+        'Honest explanation of which specific tissues are restricting your movement.',
+        'Effective hands-on therapy that produces measurable range of motion improvement each session.',
+        'Dry needling explained fully before use, and only performed with your explicit consent.',
+        'Progressive self-mobility exercises that complement clinic treatment.',
+        'Ongoing monitoring to ensure gains are maintained and build upon each visit.'
+      ],
+      faqs: [
+        { q: 'How long does a frozen shoulder take to resolve?', a: 'Frozen shoulder typically passes through three phases over 1–3 years without treatment. With physiotherapy, recovery is significantly accelerated — most patients achieve substantial improvement in 3–6 months of consistent treatment.' },
+        { q: 'What is dry needling and is it painful?', a: 'Dry needling involves inserting thin acupuncture needles into myofascial trigger points to release muscle tension and reduce referred pain. Most patients feel a brief local twitch response, then significant relief. It is generally well tolerated and highly effective.' },
+        { q: 'How is myofascial release different from massage?', a: 'Myofascial release is a specific, sustained manual technique applied to fascial restrictions throughout the body, distinct from general therapeutic massage. It addresses the connective tissue network rather than just surface muscles, producing deeper, more lasting results.' },
+        { q: 'Can joint stiffness be fully reversed?', a: 'In most cases, yes — particularly if caused by adhesive capsulitis, muscular tightness, or post-injury scarring. Joint stiffness from severe osteoarthritis has more limited reversal potential, but significant improvement in range and function is still achievable.' }
+      ],
+      testimonials: [
+        { quote: 'My shoulder had been completely frozen for a year. After 14 sessions at Al Farsi, I have full range back. I can put my shirt on alone again — it means everything.', author: 'Ibrahim N.', initials: 'IN' },
+        { quote: 'The dry needling for my hip flexor changed my life. Pain I\'d had for 3 years was gone in 4 sessions.', author: 'Reem A.', initials: 'RA' }
+      ],
+      related: ['orthopedic', 'sports', 'reflexology']
+    },
+
+    hijama: {
+      title: 'Hijama — Medical Cupping Therapy',
+      titleItalic: 'Hijama — <em>Medical Cupping Therapy</em>',
+      category: 'Holistic Therapy', categoryIcon: 'bi-droplet-half',
+      image: 'assets/images/why-us.jpg',
+      tags: ['Wet & Dry Cupping', 'Sterile Equipment', 'Certified Practitioners', 'Sunnah Medicine'],
+      lead: 'Professionally administered Hijama (medical wet cupping) and dry cupping in a fully sterile clinical environment — stimulating natural healing, relieving deep muscular tension, and improving circulation.',
+      duration: '30–60 min', sessions: '1–6',
+      overview: [
+        'Hijama (حِجامة) — the prophetic practice of medical cupping — has been practiced for over 3,000 years across ancient medical traditions and is now supported by a growing body of modern clinical research. At Al Farsi, Hijama is performed exclusively by certified practitioners using fully sterile, single-use equipment in a clinically controlled environment, adhering to all international infection control standards.',
+        'Cupping therapy creates localised negative pressure beneath the cup, gently lifting the fascia and skin to stimulate micro-circulation, encourage lymphatic drainage, and release deep muscular adhesions. Wet cupping (Hijama) additionally involves controlled superficial micro-incisions to remove stagnant blood and metabolic waste products from targeted areas, a practice validated by both traditional wisdom and emerging scientific evidence.'
+      ],
+      conditionsIntro: 'Hijama and cupping therapy is beneficial for a wide range of conditions:',
+      conditions: ['Chronic Muscular Pain', 'Deep Tissue Tension', 'Migraine & Headaches', 'Shoulder & Neck Stiffness', 'Knee & Joint Pain', 'Fatigue & Low Energy', 'Skin Conditions', 'Menstrual Pain', 'Blood Circulation Issues', 'General Health & Wellbeing'],
+      benefits: [
+        'Stimulates micro-circulation to accelerate natural tissue healing significantly',
+        'Releases deep fascial adhesions and stubborn muscular knots effectively',
+        'Reduces chronic pain through neuromodulatory and anti-inflammatory effects',
+        'Promotes lymphatic drainage and metabolic waste clearance from tissues',
+        'Performed with complete sterility and Sunnah-aligned clinical protocols',
+        'Complements physiotherapy for accelerated combined rehabilitation outcomes'
+      ],
+      steps: [
+        { title: 'Health Consultation', desc: 'Review of medical history, contraindication screening, and cupping site selection.' },
+        { title: 'Dry Cupping Phase', desc: 'Silicone or glass cups applied to loosen fascia and draw blood flow to the area.' },
+        { title: 'Wet Cupping — Hijama', desc: 'Controlled micro-incisions followed by cupping to remove stagnant blood safely.' },
+        { title: 'Post-Session Care', desc: 'Wound dressing, aftercare instructions, hydration advice, and follow-up scheduling.' }
+      ],
+      expects: [
+        'A private, respectful, and clinically clean treatment environment.',
+        'A certified Hijama practitioner who explains every step before proceeding.',
+        'Complete use of sterile, single-use equipment — no exceptions.',
+        'Contraindication screening to ensure Hijama is safe and appropriate for you.',
+        'Clear aftercare instructions for the 24–48 hours following your session.',
+        'The option to combine Hijama with physiotherapy treatment on the same visit.'
+      ],
+      faqs: [
+        { q: 'Is Hijama painful?', a: 'Most patients are surprised by how comfortable Hijama is. The dry cupping phase is painless — you feel a gentle suction sensation. The wet cupping incisions are very superficial and brief. Most patients describe the overall experience as deeply relaxing.' },
+        { q: 'How often should I have Hijama?', a: 'For general health and wellbeing, once per month is typical. For chronic pain conditions, a course of 4–6 sessions over 6–8 weeks is often recommended, then maintenance sessions as needed. We will advise you individually.' },
+        { q: 'Are there people who should NOT have Hijama?', a: 'Yes. Hijama is contraindicated for pregnant women, patients on anticoagulant medications, those with certain blood disorders, active skin infections, or severe anaemia. Your practitioner will screen for all contraindications during your consultation.' },
+        { q: 'Is Hijama at Al Farsi Islamically compliant?', a: 'Yes. Our Hijama is performed according to authentic Sunnah guidelines — on the recommended days when appropriate, on the correct anatomical sites, and with full respect for Islamic principles of modesty and purity.' }
+      ],
+      testimonials: [
+        { quote: 'I\'ve had Hijama many times before but never in a setting as professional and clean as Al Farsi. The practitioner\'s knowledge was exceptional.', author: 'Abdullah H.', initials: 'AH' },
+        { quote: 'My chronic shoulder pain that physio alone hadn\'t fully resolved cleared completely after 3 combined Hijama and physio sessions.', author: 'Mariam T.', initials: 'MT' }
+      ],
+      related: ['reflexology', 'backpain', 'joint']
+    },
+
+    reflexology: {
+      title: 'Therapeutic Reflexology & Dry Needling',
+      titleItalic: 'Therapeutic Reflexology &amp; <em>Dry Needling</em>',
+      category: 'Complementary Care', categoryIcon: 'bi-magic',
+      image: 'assets/images/service-orthopedic.jpg',
+      tags: ['Dry Needling', 'Acupressure', 'Stress Relief', 'Neuropathic Pain'],
+      lead: 'Clinical reflexology and precision dry needling to activate the body\'s natural healing systems, relieve neuropathic pain, reduce stress-related tension, and support overall wellbeing.',
+      duration: '40–50 min', sessions: '4–10',
+      overview: [
+        'Therapeutic reflexology at Al Farsi combines traditional zone therapy with contemporary clinical dry needling and acupressure to stimulate the body\'s innate healing mechanisms. Reflexology is based on the principle that specific points on the feet, hands, and ears correspond to organs, glands, and body systems — and that applying precise pressure to these zones promotes systemic relaxation, improved circulation, and organ function.',
+        'Our clinical dry needling practice targets myofascial trigger points with fine, sterile acupuncture needles to produce immediate neuromuscular pain relief, reduce muscle hypertonicity, and restore normal motor recruitment patterns. Both modalities integrate seamlessly with conventional physiotherapy to provide a comprehensive, whole-person approach to pain management and recovery.'
+      ],
+      conditionsIntro: 'Reflexology and dry needling are particularly beneficial for:',
+      conditions: ['Neuropathic Pain', 'Chronic Muscular Tension', 'Stress & Anxiety-Related Pain', 'Plantar Fasciitis', 'Diabetic Neuropathy', 'Insomnia & Sleep Disruption', 'Migraine & Headaches', 'Chronic Fatigue Syndrome', 'Lymphoedema', 'Fibromyalgia'],
+      benefits: [
+        'Activates the parasympathetic nervous system to reduce systemic stress measurably',
+        'Relieves neuropathic pain through reflex arc modulation and endorphin release',
+        'Improves sleep quality and reduces anxiety-related muscular tension',
+        'Stimulates lymphatic flow and reduces localised oedema effectively',
+        'Provides powerful complement to conventional physiotherapy programmes',
+        'Produces deep whole-body relaxation and improved sense of wellbeing'
+      ],
+      steps: [
+        { title: 'Reflex Assessment', desc: 'Mapping of tender reflex zones and review of systemic health concerns.' },
+        { title: 'Reflexology Session', desc: 'Systematic thumb-walking and pressure techniques on foot, hand, or ear reflex zones.' },
+        { title: 'Dry Needling', desc: 'Fine-needle insertion into myofascial trigger points for deep neuromuscular pain relief.' },
+        { title: 'Integration & Aftercare', desc: 'Post-session rest, hydration guidance, and integration with physiotherapy plan.' }
+      ],
+      expects: [
+        'A calm, private, and professionally maintained treatment environment.',
+        'A full health review before reflexology to ensure the most appropriate zones are targeted.',
+        'Dry needling explained in detail and only performed with your full, informed consent.',
+        'Genuinely deep relaxation that many patients describe as the most restful hour of their week.',
+        'Specific home practices recommended to extend the benefits of each session.',
+        'Seamless integration with your physiotherapy programme for maximum combined benefit.'
+      ],
+      faqs: [
+        { q: 'Is there evidence that reflexology works?', a: 'Yes. While reflexology is considered a complementary therapy, a growing body of research supports its benefits for stress reduction, pain management, improved circulation, and quality of life — particularly for chronic pain and anxiety-related conditions.' },
+        { q: 'Does dry needling hurt?', a: 'The needle insertion itself is barely felt due to the very fine gauge used. You may feel a local muscle twitch response — a brief, involuntary contraction that signals the trigger point is releasing. This is followed by a warm, relaxed sensation. Most patients find it highly tolerable.' },
+        { q: 'How is clinical dry needling different from acupuncture?', a: 'Dry needling is based on Western anatomical and neurophysiological principles, targeting specific myofascial trigger points to release muscle tension and relieve pain. Traditional acupuncture follows Traditional Chinese Medicine meridian theory. Both use the same needles but have different theoretical frameworks and target selection.' },
+        { q: 'Who should NOT have dry needling?', a: 'Dry needling is not suitable for patients with needle phobia, blood clotting disorders, lymphoedema in the treatment area, local infection, or pregnancy (in certain areas). Your therapist will screen for these during your consultation.' }
+      ],
+      testimonials: [
+        { quote: 'The combination of reflexology and dry needling at Al Farsi eliminated my chronic tension headaches after 2 years of failed treatments elsewhere.', author: 'Hessa A.', initials: 'HA' },
+        { quote: 'I sleep better than I have in years. The sessions are incredibly relaxing and the results have been transformative for my wellbeing.', author: 'Muna K.', initials: 'MK' }
+      ],
+      related: ['hijama', 'cervical', 'joint']
+    },
+
+    electrotherapy: {
+      title: 'Electrotherapy & Therapeutic Ultrasound',
+      titleItalic: 'Electrotherapy &amp; <em>Therapeutic Ultrasound</em>',
+      category: 'Modern Modality', categoryIcon: 'bi-lightning-charge-fill',
+      image: 'assets/images/service-neurological.jpg',
+      tags: ['TENS / NMES', 'Deep Ultrasound', 'Interferential Therapy', 'Cellular Repair'],
+      lead: 'Advanced electrotherapy and therapeutic ultrasound — scientifically proven modalities that accelerate tissue healing, reduce pain, and restore muscle function faster than manual therapy alone.',
+      duration: '20–40 min', sessions: '6–12',
+      overview: [
+        'Electrotherapy and therapeutic ultrasound are evidence-based physical modalities that harness electrical and acoustic energy to accelerate the body\'s natural healing processes. At Al Farsi, these technologies are used as powerful adjuncts to our physiotherapy programmes — never as standalone treatments — to amplify outcomes and reduce recovery time.',
+        'Our certified physiotherapists deploy a range of modalities including TENS (Transcutaneous Electrical Nerve Stimulation) for pain relief, NMES (Neuromuscular Electrical Stimulation) for muscle re-education, Interferential Therapy (IFT) for deep tissue pain and circulation, and therapeutic ultrasound for cellular repair and scar tissue management. Each modality is selected and calibrated precisely to your diagnosis and treatment goals.'
+      ],
+      conditionsIntro: 'Electrotherapy and ultrasound are highly effective for:',
+      conditions: ['Acute & Chronic Pain', 'Muscle Weakness / Atrophy', 'Post-Surgical Swelling', 'Tendonitis & Bursitis', 'Neuropathic Pain', 'Muscle Spasm & Guarding', 'Wound & Scar Healing', 'Oedema Management', 'Bone Healing (US)', 'Nerve Regeneration (NMES)'],
+      benefits: [
+        'Provides rapid pain relief through endorphin release and nerve signal modulation',
+        'Re-activates atrophied muscles after injury or surgery via NMES stimulation',
+        'Accelerates deep tissue cellular repair at the molecular level with ultrasound',
+        'Reduces acute and chronic inflammation measurably and effectively',
+        'Improves local micro-circulation and supports lymphatic drainage',
+        'Completely safe, non-invasive, and integrates with all physiotherapy techniques'
+      ],
+      steps: [
+        { title: 'Electrotherapy Assessment', desc: 'Identify optimal modality, treatment parameters, and electrode placement for your diagnosis.' },
+        { title: 'Electrode / Probe Application', desc: 'Precise placement of electrodes or ultrasound probe over the target tissue.' },
+        { title: 'Calibrated Treatment Session', desc: 'Delivery of therapeutic electrical or acoustic energy at evidence-based parameters.' },
+        { title: 'Integration with Therapy', desc: 'Electrotherapy combined with manual therapy and exercise for maximum synergistic benefit.' }
+      ],
+      expects: [
+        'Clear explanation of which electrotherapy modality is being used and why.',
+        'Equipment checks and skin assessment performed before every session for safety.',
+        'A comfortable, relaxing experience — most modalities are completely painless.',
+        'Measurable improvements in pain, swelling, and muscle function tracked session by session.',
+        'Combination of electrotherapy with hands-on physiotherapy in the same session.',
+        'Education on how to optimise outcomes through activity, nutrition, and rest.'
+      ],
+      faqs: [
+        { q: 'Is electrotherapy safe?', a: 'Yes. When applied correctly by trained physiotherapists, electrotherapy modalities are very safe. There are some contraindications (pacemakers, pregnancy, active malignancy, etc.) which are always screened for before treatment.' },
+        { q: 'Will I feel the electrical current?', a: 'TENS and IFT produce a gentle tingling or buzzing sensation that most patients find pleasant. NMES causes visible muscle contractions, which can feel like moderate muscle exercise. Therapeutic ultrasound is completely imperceptible — you feel only the therapist\'s probe movement.' },
+        { q: 'How quickly does electrotherapy work?', a: 'Pain relief effects of TENS are often felt within the session itself. Longer-term therapeutic benefits — tissue healing, muscle recovery, oedema reduction — build over a course of 6–12 sessions. Individual response varies by condition and severity.' },
+        { q: 'Can I use a TENS machine at home?', a: 'Yes. Home TENS units are widely available and safe for self-use when properly instructed. We can recommend an appropriate unit and teach you correct electrode placement for your condition.' }
+      ],
+      testimonials: [
+        { quote: 'NMES after my knee surgery woke my quad muscle up in 2 sessions. My surgeon was amazed at how quickly I regained full extension.', author: 'Tariq B.', initials: 'TB' },
+        { quote: 'The therapeutic ultrasound for my Achilles tendinopathy produced results I hadn\'t seen with any other treatment. Highly recommend.', author: 'Sana W.', initials: 'SW' }
+      ],
+      related: ['stroke', 'postop', 'backpain']
+    },
+
+    elakizhi: {
+      title: 'Elakizhi & Podikizhi Herbal Poultice Therapy',
+      titleItalic: 'Elakizhi &amp; Podikizhi <em>Herbal Poultice</em>',
+      category: 'Ayurvedic & Botanical Therapy', categoryIcon: 'bi-flower2',
+      image: 'assets/images/ayurveda-gcc-man.jpg',
+      tags: ['Steamed Herbal Leaves', 'Joint Pain Relief', 'Sciatica & Spine', 'Kizhi Therapy'],
+      lead: 'Traditional Kerala herbal leaf bolus massage — steaming bundles of wild medicinal herbs, neem, tulsi, and therapeutic powders soaked in warm medicated tailams to relieve acute joint inflammation, disc stiffness, and muscular spasms.',
+      duration: '45–60 min', sessions: '7–14',
+      overview: [
+        'Elakizhi (Patra Pinda Sweda) is one of the most celebrated rejuvenating and pain-relieving treatments in authentic Kerala Ayurveda. Fresh medicinal leaves—including Calotropis, Castor, Tamarind, Neem, and Nirgundi—are finely chopped, sautéed with herbal powders and rock salt in medicated oils, and bundled into sterile cotton pouches (kizhis).',
+        'These boluses are rhythmically massaged over the patient’s body while being continuously reheated in warm herbal oils. The heat opens the skin pores, allowing the deep-penetrating phytochemicals of the herbs to absorb directly into the affected muscles, nerves, and joint capsules, melting away chronic tension, dissolving stiffness, and restoring pain-free flexibility.'
+      ],
+      conditionsIntro: 'Elakizhi is exceptionally effective for acute and chronic musculoskeletal disorders:',
+      conditions: ['Sciatica & Lumbar Spondylosis', 'Osteoarthritis & Joint Degeneration', 'Cervical Spondylosis & Neck Pain', 'Frozen Shoulder & Bursitis', 'Chronic Muscle Spasms & Cramps', 'Ankylosing Spondylitis', 'Post-Traumatic Joint Stiffness', 'Sports Injury Soft Tissue Strain', 'Rheumatoid Aches & Swelling', 'Neurological Myalgia'],
+      benefits: [
+        'Rapidly alleviates joint stiffness and enhances natural range of motion',
+        'Improves local blood circulation and cellular metabolic waste removal',
+        'Deep thermal penetration relaxes tight hypertonic muscles and ligaments',
+        'Reduces swelling and synovial fluid inflammation naturally without pills',
+        'Strengthens connective tissues and promotes lubrication within joint capsules',
+        'Combines ancient botanical wisdom with modern physical therapy rehabilitation'
+      ],
+      steps: [
+        { title: 'Prakriti & Pain Assessment', desc: 'Ayurvedic doctor consultation to determine Dosha imbalance and select customized medicated tailams.' },
+        { title: 'Fresh Herb Preparation', desc: 'Sautéing certified organic medicinal leaves with medicated oils to prepare warm therapeutic kizhis.' },
+        { title: 'Synchronized Poultice Massage', desc: 'Rhythmic application of warm herbal bundles with controlled pressure along nerve pathways.' },
+        { title: 'Herbal Steam & Cleansing', desc: 'Brief medicinal steam bath followed by gentle cleansing and personalized herbal hydration.' }
+      ],
+      expects: [
+        'A private, peaceful therapy suite dedicated to your comfort and modesty.',
+        'Therapies performed exclusively by certified male therapists for gentlemen (and female for ladies).',
+        'Freshly prepared herbal poultices made on the same day from 100% natural wild botanicals.',
+        'Warm, soothing sensation that brings immediate comfort to tight, aching joints.',
+        'Post-treatment care advice on diet, hydration, and gentle home stretching routines.',
+        'Integrated with clinical physiotherapy protocols for enhanced recovery speed.'
+      ],
+      testimonials: [
+        { quote: 'After 3 sessions of Elakizhi at Al Farsi, the severe lower back stiffness I had struggled with for 8 months was completely gone.', author: 'Salem Al-Balushi', initials: 'SB' },
+        { quote: 'The authentic Kerala herbal therapy in Muscat is world class. The suite is extremely private, clean, and luxurious.', author: 'Hamad Al-Amri', initials: 'HA' }
+      ],
+      related: ['shirodhara', 'basti', 'abhyanga', 'backpain']
+    },
+
+    shirodhara: {
+      title: 'Shirodhara & Nasyam Neurological Therapy',
+      titleItalic: 'Shirodhara &amp; Nasyam <em>Stress Harmony</em>',
+      category: 'Ayurvedic & Botanical Therapy', categoryIcon: 'bi-droplet-fill',
+      image: 'assets/images/ayurveda-shirodhara.jpg',
+      tags: ['Medicated Oil Stream', 'Insomnia Relief', 'Stress & Anxiety', 'Migraine Care'],
+      lead: 'The crown jewel of Ayurvedic mind-body therapy — a continuous, rhythmic stream of warm herbal medicated oil poured gently over the forehead to pacify the nervous system, alleviate deep mental fatigue, and restore deep restorative sleep.',
+      duration: '45–60 min', sessions: '5–10',
+      overview: [
+        'Shirodhara (from Sanskrit ‘Shiro’ meaning head and ‘Dhara’ meaning continuous flow) is an ancient therapeutic modality designed to deeply settle the central nervous system. A continuous, steady stream of customized herbal oil (such as Brahmi, Ksheerabala, or Chandanadi Tailam) is oscillated rhythmically across the forehead—specifically targeting the ‘Ajna’ third-eye marma point.',
+        'This rhythmic thermal and physical stimulation synchronizes alpha brain waves, calms excessive sympathetic nervous tone (fight-or-flight), regulates cortisol production, and induces an unprecedented state of dynamic mental stillness. Combined with Nasyam (nasal herbal administration), it clears sinus congestion and enhances neurological clarity.'
+      ],
+      conditionsIntro: 'Shirodhara is clinically recommended for neurological and stress-induced conditions:',
+      conditions: ['Chronic Insomnia & Sleep Disorders', 'Severe Migraines & Tension Headaches', 'Anxiety, Panic & Burnout Syndrome', 'Hypertension & Elevated Stress Hormones', 'Post-Stroke Cognitive Recovery', 'Cervical Tension & Upper Neck Strain', 'Memory Fatigue & Lack of Focus', 'Facial Paralysis (Bell’s Palsy)', 'Tinnitus & Head Congestion', 'Chronic Fatigue Syndrome'],
+      benefits: [
+        'Induces profound mental relaxation and normalizes natural circadian sleep cycles',
+        'Significantly reduces frequency and intensity of vascular migraine attacks',
+        'Regulates autonomic nervous system balance and lowers blood pressure',
+        'Enhances cognitive focus, mental alertness, and emotional equilibrium',
+        'Soothes tension in the scalp, cervical spine, and facial muscles',
+        'Non-invasive, deeply rejuvenating therapy with no chemical side effects'
+      ],
+      steps: [
+        { title: 'Constitutional Diagnosis', desc: 'Pulse and lifestyle assessment to identify Vata-Pitta aggravation and select therapeutic oil.' },
+        { title: 'Head & Shoulder Acupressure', desc: 'Gentle preparatory Marma massage of the head, neck, and shoulders with warm herbal oil.' },
+        { title: 'Continuous Shirodhara Stream', desc: '40 minutes of rhythmic, temperature-controlled herbal oil pouring onto the forehead.' },
+        { title: 'Rest & Herbal Infusion', desc: 'Relaxation in a dimmed tranquility lounge followed by warm herbal tea.' }
+      ],
+      expects: [
+        'An intensely serene environment with gentle aromatherapy and soft ambient lighting.',
+        'Pure, medical-grade cold-pressed herbal oils prepared according to classical texts.',
+        'Deep relaxation so pronounced that most patients drift into restful meditative sleep.',
+        'A warm towel wrap for your hair following the session for ultimate comfort.',
+        'Noticeable improvement in sleep depth and reduced headache intensity within 2–3 sessions.',
+        'Full respect for patient privacy and dignity in exclusive private suites.'
+      ],
+      testimonials: [
+        { quote: 'Shirodhara at Al Farsi cured my chronic insomnia after 3 years of prescription sleeping pills. I now sleep 8 continuous hours naturally.', author: 'Nasser Al-Harthy', initials: 'NH' },
+        { quote: 'The most calming experience of my life. My work-related migraines have dropped from daily to zero after 5 sessions.', author: 'Tariq Al-Kiyumi', initials: 'TK' }
+      ],
+      related: ['elakizhi', 'abhyanga', 'reflexology', 'cervical']
+    },
+
+    basti: {
+      title: 'Kati & Janu Basti Spinal & Knee Deep Oil Reservoir',
+      titleItalic: 'Kati &amp; Janu Basti <em>Spine & Knee Care</em>',
+      category: 'Ayurvedic & Botanical Therapy', categoryIcon: 'bi-shield-plus',
+      image: 'assets/images/ayurveda-basti.jpg',
+      tags: ['Lumbar Disc Care', 'Knee Joint Therapy', 'Warm Oil Reservoir', 'Sciatica Care'],
+      lead: 'Specialized localized herbal oil pooling therapy — a handcrafted dough reservoir retaining warm medicated tailams directly over the spine or knee joints to nourish cartilage, relieve disc compression, and eliminate chronic pain.',
+      duration: '40–50 min', sessions: '7–14',
+      overview: [
+        'Kati Basti (for the lumbar spine) and Janu Basti (for the knee joints) are classical localized oleation and sudation therapies. A leak-proof circular dam made from specially prepared herbal dough (black gram flour) is affixed directly over the affected lumbar vertebra or knee joint.',
+        'Specially formulated warm medicated herbal oil (such as Mahanarayana, Sahacharadi, or Murivenna) is poured into the reservoir and maintained at a precise therapeutic temperature for 30 to 40 minutes. The sustained hydrostatic pressure and heat drive anti-inflammatory herbs deep into the spinal facet joints, intervertebral discs, and synovial membranes, regenerating lubricative fluids and relieving nerve impingement.'
+      ],
+      conditionsIntro: 'Kati & Janu Basti provide targeted therapeutic relief for:',
+      conditions: ['Herniated & Bulging Lumbar Discs (L4-L5, L5-S1)', 'Sciatica & Radiating Nerve Pain', 'Knee Osteoarthritis & Cartilage Wear', 'Lumbar Spondylosis & Disc Degeneration', 'Chronic Lower Back Muscle Spasms', 'Post-Surgical Spinal Stiffness', 'Patellar Tendonitis & Knee Crepitus', 'Sacroiliac (SI) Joint Dysfunction', 'Spinal Stenosis Discomfort', 'Postural Spinal Deformities'],
+      benefits: [
+        'Relieves direct mechanical and chemical compression on spinal nerve roots',
+        'Nourishes and restores elasticity to dehydrated intervertebral discs',
+        'Lubricates synovial joints in knees and spine to prevent cartilage friction',
+        'Substantially reduces or eliminates the need for strong pain medications',
+        'Strengthens the paraspinal musculature and pelvic lumbar stabilizers',
+        'Enhances effectiveness of modern spinal decompression and physiotherapy'
+      ],
+      steps: [
+        { title: 'Spinal Alignment Check', desc: 'Palpation of vertebral levels and assessment of radiating nerve pain pathways.' },
+        { title: 'Herbal Dough Ring Placement', desc: 'Crafting and affixing a leak-proof herbal dough boundary over the treatment site.' },
+        { title: 'Warm Medicated Oil Pooling', desc: 'Pouring and continuously reheating specific herbal tailams to sustain deep thermal penetration.' },
+        { title: 'Gentle Paraspinal Massage', desc: 'Removal of the dough ring followed by a light therapeutic back or knee massage.' }
+      ],
+      expects: [
+        'Targeted, comfortable relief right at the exact source of your spinal or knee pain.',
+        'Complete privacy in our medical-grade Ayurvedic clinical suite.',
+        'Continuous temperature monitoring by your therapist to ensure optimal therapeutic warmth.',
+        'Noticeable easing of morning stiffness and increased flexibility after each session.',
+        'Combined treatment options with manual physiotherapy and core strengthening exercises.',
+        'Personalized posture and ergonomics advice for your desk, car, and home routine.'
+      ],
+      testimonials: [
+        { quote: 'I was scheduled for lumbar disc surgery, but Kati Basti combined with physio at Al Farsi reduced my pain by 90%. I am back to gym and work.', author: 'Eng. Khalid Al-Rawahi', initials: 'KR' },
+        { quote: 'My knee osteoarthritis pain made climbing stairs impossible. After 7 Janu Basti sessions, I walk completely pain-free.', author: 'Said Al-Maskari', initials: 'SM' }
+      ],
+      related: ['elakizhi', 'backpain', 'joint', 'orthopedic']
+    },
+
+    abhyanga: {
+      title: 'Abhyanga & Panchakarma Detoxification Therapy',
+      titleItalic: 'Abhyanga &amp; <em>Panchakarma Detox</em>',
+      category: 'Ayurvedic & Botanical Therapy', categoryIcon: 'bi-tree-fill',
+      image: 'assets/images/ayurveda-hero.jpg',
+      tags: ['Full Body Rejuvenation', 'Lymphatic Drainage', 'Toxin Elimination', 'Vital Immunity'],
+      lead: 'Classical synchronized full-body herbal massage using therapeutic warm oils along vital energy pathways — stimulating lymphatic drainage, flushing deep-seated biological toxins (Ama), and revitalizing cellular vitality.',
+      duration: '50–60 min', sessions: '5–10',
+      overview: [
+        'Abhyanga is the cornerstone of Ayurvedic longevity and holistic medicine. It is a full-body rhythmic massage using copious amounts of warm, cold-pressed botanical oils infused with over 30 traditional herbs tailored to your specific Prakriti (constitutional makeup).',
+        'Using specialized long strokes along the arterial flow (Anuloma) and Marma vital point stimulation, Abhyanga activates lymphatic drainage, dislodges metabolic impurities stored in deep connective tissues, nourishes Dhatus (bodily tissues), tones muscles, and lubricates all joint systems. It is the premier preparatory therapy (Purvakarma) for complete Panchakarma detox.'
+      ],
+      conditionsIntro: 'Abhyanga is recommended for whole-body wellness and chronic systemic complaints:',
+      conditions: ['Systemic Muscle Fatigue & Weakness', 'Chronic Stress & Burnout', 'Poor Lymphatic Circulation & Fluid Retention', 'General Joint Stiffness & Aging', 'Low Immunity & Frequent Infections', 'Digestive Sluggishness & Toxin Buildup', 'Post-Illness Convalescence', 'Dry Skin & Tissue Dehydration', 'Neuromuscular Imbalances', 'Sports Fatigue & Exercise Recovery'],
+      benefits: [
+        'Stimulates whole-body lymphatic drainage to accelerate cellular toxin elimination',
+        'Enhances blood micro-circulation and oxygen delivery to vital organ tissues',
+        'Deeply nourishes skin layers and calms hyperactive nervous system tone',
+        'Improves muscular stamina, joint flexibility, and overall bodily vitality',
+        'Strengthens immune resilience against seasonal illnesses and metabolic fatigue',
+        'Promotes sound, deep sleep and emotional groundedness'
+      ],
+      steps: [
+        { title: 'Holistic Body Assessment', desc: 'Identification of current Dosha status, digestive strength, and toxic accumulation levels.' },
+        { title: 'Synchronized Oil Application', desc: 'Application of warm herbal oil from head to toe using specialized 7-posture classical strokes.' },
+        { title: 'Marma Point Stimulation', desc: 'Focused circular pressure on vital energy centers to unblock sluggish metabolic pathways.' },
+        { title: 'Herbal Swedana (Steam)', desc: 'Medicated herbal steam chamber session to sweat out toxins loosened by the massage.' }
+      ],
+      expects: [
+        'A luxurious, warm, and deeply relaxing clinical sanctuary experience.',
+        'Generous use of authentic Kerala medicated herbal oils matching your body type.',
+        'Immediate feeling of lightness, supple muscles, and renewed mental clarity.',
+        'Complimentary herbal detox tea and personalized diet recommendations following the session.',
+        'A comprehensive holistic journey designed to revitalize mind, body, and spirit.',
+        'Dedicated male therapists for gentlemen, and dedicated female therapists for ladies.'
+      ],
+      testimonials: [
+        { quote: 'The Abhyanga and steam therapy at Al Farsi made me feel 10 years younger. My chronic fatigue vanished and my energy levels surged.', author: 'Dr. Faisal Al-Zadjali', initials: 'FZ' },
+        { quote: 'Incredible standard of cleanliness and authenticity. Easily the best Ayurvedic center in the entire Gulf region.', author: 'Yousuf Al-Busaidi', initials: 'YB' }
+      ],
+      related: ['elakizhi', 'shirodhara', 'basti', 'hijama']
+    }
+  };
+
+  const RELATED_META = {
+    stroke: { label: 'Stroke Rehabilitation', icon: 'bi-heart-pulse-fill', cat: 'Neurological' },
+    backpain: { label: 'Back Pain & Sciatica', icon: 'bi-person-arms-up', cat: 'Spine Care' },
+    cervical: { label: 'Cervical Spondylosis', icon: 'bi-activity', cat: 'Neck & Spine' },
+    cerebralpalsy: { label: 'Cerebral Palsy Physio', icon: 'bi-heart-fill', cat: 'Pediatric' },
+    sports: { label: 'Sports Injury Rehab', icon: 'bi-trophy-fill', cat: 'Sports Care' },
+    orthopedic: { label: 'Orthopedic Rehab', icon: 'bi-bandaid-fill', cat: 'Orthopedic' },
+    postop: { label: 'Post-Surgical Rehab', icon: 'bi-shield-plus', cat: 'Post-Surgery' },
+    parkinsons: { label: "Parkinson's Physio", icon: 'bi-shuffle', cat: 'Movement Disorders' },
+    joint: { label: 'Joint & Muscle Mobility', icon: 'bi-arrows-move', cat: 'Joint Mobility' },
+    hijama: { label: 'Hijama Cupping', icon: 'bi-droplet-half', cat: 'Holistic Therapy' },
+    reflexology: { label: 'Therapeutic Reflexology', icon: 'bi-magic', cat: 'Complementary Care' },
+    electrotherapy: { label: 'Electrotherapy & Ultrasound', icon: 'bi-lightning-charge-fill', cat: 'Modern Modality' },
+    elakizhi: { label: 'Elakizhi Herbal Poultice', icon: 'bi-flower2', cat: 'Ayurvedic Therapy' },
+    shirodhara: { label: 'Shirodhara Stress Harmony', icon: 'bi-droplet-fill', cat: 'Ayurvedic Therapy' },
+    basti: { label: 'Kati & Janu Basti', icon: 'bi-shield-plus', cat: 'Spine & Joint Oil Dam' },
+    abhyanga: { label: 'Abhyanga & Detox', icon: 'bi-tree-fill', cat: 'Full Body Panchakarma' }
+  };
+
+  /* ══════════════════════
+     RENDER FUNCTION
+  ══════════════════════ */
+  function renderPage() {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const t = TREATMENTS[id];
+
+    if (!t) {
+      document.getElementById('tpHero').style.display = 'none';
+      document.getElementById('tpBody').style.display = 'none';
+      document.getElementById('tpNotFound').style.display = 'block';
+      document.querySelector('.tp-footer').style.display = 'none';
+      return;
+    }
+
+    // Apply leaf-green Ayurvedic theme if category is Ayurvedic
+    if (t.category && t.category.toLowerCase().includes('ayurvedic')) {
+      document.body.classList.add('ayur-theme');
+    } else {
+      document.body.classList.remove('ayur-theme');
+    }
+
+    // Meta
+    document.title = t.title + ' | Al Farsi Center, Muscat';
+    document.getElementById('pageTitle').textContent = document.title;
+    document.getElementById('pageDesc').content = t.lead;
+    document.getElementById('tpBreadcrumb').textContent = t.title;
+
+    // Hero
+    const heroImg = document.getElementById('tpHeroImg');
+    heroImg.src = t.image; heroImg.alt = t.title;
+    document.getElementById('tpCategoryIcon').className = 'bi ' + t.categoryIcon;
+    document.getElementById('tpCategoryLabel').textContent = t.category;
+    document.getElementById('tpHeroTitle').innerHTML = t.titleItalic;
+    document.getElementById('tpHeroDesc').textContent = t.lead;
+    t.tags.forEach(tag => {
+      const s = document.createElement('span');
+      s.className = 'tp-hero-tag'; s.textContent = tag;
+      document.getElementById('tpHeroTags').appendChild(s);
+    });
+    const waMsg = encodeURIComponent(`Hello, I'd like to enquire about ${t.title} at Al Farsi Center, Muscat.`);
+    const waUrl = `https://wa.me/96824567890?text=${waMsg}`;
+    document.getElementById('tpWaHeroBtn').href = waUrl;
+    document.getElementById('tpWaSideBtn').href = waUrl;
+
+    // Hero stats
+    document.getElementById('tpStat1Val').textContent = t.duration;
+    document.getElementById('tpStat2Val').textContent = t.sessions;
+    document.getElementById('qiDuration').textContent = t.duration;
+    document.getElementById('qiSessions').textContent = t.sessions;
+
+    // Overview
+    document.getElementById('overviewP1').textContent = t.overview[0];
+    document.getElementById('overviewP2').textContent = t.overview[1];
+    document.getElementById('overviewImg').src = t.image;
+    document.getElementById('overviewImg').alt = t.title;
+
+    // Conditions
+    document.getElementById('conditionsIntro').textContent = t.conditionsIntro;
+    const cg = document.getElementById('conditionsGrid');
+    t.conditions.forEach(c => {
+      cg.innerHTML += `<div class="condition-chip"><i class="bi bi-check2-circle"></i>${c}</div>`;
+    });
+
+    // Benefits
+    const bg = document.getElementById('benefitsGrid');
+    t.benefits.forEach(b => {
+      bg.innerHTML += `<div class="benefit-item"><div class="benefit-icon"><i class="bi bi-check-circle-fill"></i></div><div class="benefit-text">${b}</div></div>`;
+    });
+
+    // Process steps
+    const pt = document.getElementById('processTrack');
+    t.steps.forEach((s, i) => {
+      pt.innerHTML += `
+        <div class="pt-step">
+          <div class="pt-step-num">${String(i+1).padStart(2,'0')}</div>
+          <div>
+            <div class="pt-step-title">${s.title}</div>
+            <div class="pt-step-desc">${s.desc}</div>
+          </div>
+        </div>`;
+    });
+
+    // What to expect
+    const el = document.getElementById('expectList');
+    t.expects.forEach((e, i) => {
+      el.innerHTML += `<li><div class="expect-num">${String(i+1).padStart(2,'0')}</div><span>${e}</span></li>`;
+    });
+
+
+    // Mini testimonials
+    const mt = document.getElementById('miniTestimonials');
+    (t.testimonials || []).forEach(tes => {
+      mt.innerHTML += `
+        <div class="mini-testimonial">
+          <blockquote>"${tes.quote}"</blockquote>
+          <div class="mini-t-author">
+            <div class="mini-t-avatar">${tes.initials}</div>
+            <div>
+              <div class="mini-t-name">${tes.author}</div>
+              <div class="mini-t-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>`;
+    });
+
+    // Related treatments
+    const rl = document.getElementById('relatedList');
+    (t.related || []).forEach(rId => {
+      const rm = RELATED_META[rId];
+      if (!rm) return;
+      rl.innerHTML += `
+        <a href="treatment.html?id=${rId}" class="related-link">
+          <div class="related-icon"><i class="bi ${rm.icon}"></i></div>
+          <div class="related-info">
+            <h6>${rm.label}</h6>
+            <span>${rm.cat}</span>
+          </div>
+          <i class="bi bi-chevron-right ms-auto" style="color:#6B7C86; font-size:.8rem;"></i>
+        </a>`;
+    });
+
+    // Reveal animations
+    const reveals = document.querySelectorAll('.tp-reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  }
+
+  document.addEventListener('DOMContentLoaded', renderPage);
+  </script>
+</body>
+</html>
