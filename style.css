@@ -2536,3 +2536,84 @@ img {
   .appointment-form-card { padding: 24px 18px; }
   .contact-info-card { padding: 24px 18px; }
 }
+
+/* ==========================================================================
+   ENHANCED LANGUAGE SWITCHER BUTTON
+   ========================================================================== */
+.lang-switch-btn {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid rgba(8, 120, 190, 0.25);
+  border-radius: 50px;
+  padding: 5px 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 3px 12px rgba(8, 120, 190, 0.1);
+  outline: none;
+  user-select: none;
+  backdrop-filter: blur(8px);
+}
+
+.lang-switch-btn:hover {
+  border-color: var(--primary-blue);
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(8, 120, 190, 0.22);
+}
+
+.lang-switch-btn:active {
+  transform: translateY(0);
+}
+
+.lang-switch-inner {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--dark-navy);
+}
+
+.lang-icon {
+  color: var(--primary-blue);
+  font-size: 0.95rem;
+  transition: transform 0.4s ease;
+}
+
+.lang-switch-btn:hover .lang-icon {
+  transform: rotate(25deg) scale(1.1);
+}
+
+.lang-pill {
+  padding: 3px 9px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  color: var(--muted-text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
+}
+
+.lang-pill.lang-ar-pill {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+.lang-pill.active {
+  background: var(--brand-gradient);
+  color: #ffffff !important;
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(8, 120, 190, 0.35);
+}
+
+.lang-sep {
+  color: rgba(22, 59, 77, 0.25);
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+
+/* RTL layout adjustments when Arabic is active */
+html[dir="rtl"] body {
+  font-family: 'Cairo', 'Tajawal', 'Plus Jakarta Sans', sans-serif;
+}

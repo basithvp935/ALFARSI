@@ -351,6 +351,16 @@
 
           <!-- Header CTA -->
           <div class="d-flex align-items-center gap-2">
+            <!-- Language Switcher Button (Left of Book Appointment) -->
+            <button type="button" class="lang-switch-btn" id="langSwitchBtn" onclick="toggleSiteLanguage()" title="Switch Language / تغيير اللغة" aria-label="Language Switcher">
+              <div class="lang-switch-inner">
+                <i class="bi bi-globe2 lang-icon"></i>
+                <span class="lang-pill active" id="langEnPill">EN</span>
+                <span class="lang-sep">/</span>
+                <span class="lang-pill lang-ar-pill" id="langArPill">عربي</span>
+              </div>
+            </button>
+
             <a href="#booking-form" class="btn btn-primary-custom nav-cta-btn">
               <i class="bi bi-calendar2-check-fill"></i>
               <span>Book Appointment</span>

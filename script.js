@@ -623,3 +623,69 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+/* ==========================================================================
+   BILINGUAL LANGUAGE SWITCHER LOGIC (ENGLISH <-> ARABIC)
+   ========================================================================== */
+let currentLang = localStorage.getItem('alfarsi_lang') || 'en';
+
+window.toggleSiteLanguage = function () {
+  currentLang = currentLang === 'en' ? 'ar' : 'en';
+  localStorage.setItem('alfarsi_lang', currentLang);
+  applySiteLanguage(currentLang);
+};
+
+function applySiteLanguage(lang) {
+  const htmlEl = document.documentElement;
+  const enPill = document.getElementById('langEnPill');
+  const arPill = document.getElementById('langArPill');
+
+  if (lang === 'ar') {
+    htmlEl.setAttribute('dir', 'rtl');
+    htmlEl.setAttribute('lang', 'ar');
+    if (enPill) enPill.classList.remove('active');
+    if (arPill) arPill.classList.add('active');
+    translateElements('ar');
+  } else {
+    htmlEl.setAttribute('dir', 'ltr');
+    htmlEl.setAttribute('lang', 'en');
+    if (arPill) arPill.classList.remove('active');
+    if (enPill) enPill.classList.add('active');
+    translateElements('en');
+  }
+}
+
+const translations = {
+  ar: {
+    '.nav-cta-btn span': 'احجز موعد',
+    '.nav-link[href="#home"]': 'الرئيسية',
+    '.nav-link[href="#about"], .nav-link[href="index.html#about"]': 'من نحن',
+    '.nav-link[href="#doctors"], .nav-link[href="index.html#doctors"]': 'الأخصائيون',
+    '.nav-link[href="contact.html"]': 'تواصل معنا'
+  },
+  en: {
+    '.nav-cta-btn span': 'Book Appointment',
+    '.nav-link[href="#home"]': 'Home',
+    '.nav-link[href="#about"], .nav-link[href="index.html#about"]': 'About Us',
+    '.nav-link[href="#doctors"], .nav-link[href="index.html#doctors"]': 'Specialists',
+    '.nav-link[href="contact.html"]': 'Contact'
+  }
+};
+
+function translateElements(lang) {
+  const map = translations[lang];
+  if (!map) return;
+  Object.keys(map).forEach(selector => {
+    document.querySelectorAll(selector).forEach(el => {
+      if (el) el.textContent = map[selector];
+    });
+  });
+}
+
+// Ensure saved language is applied on DOM ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => applySiteLanguage(currentLang));
+} else {
+  applySiteLanguage(currentLang);
+}
+
