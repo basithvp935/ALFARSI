@@ -82,6 +82,7 @@
       font-weight: 800;
       line-height: 1.2;
       margin-bottom: 16px;
+      color: #FFFFFF;
     }
 
     .contact-hero-sub {
@@ -277,7 +278,7 @@
         <div class="top-bar-left d-flex align-items-center gap-4">
           <div class="top-bar-item">
             <i class="bi bi-geo-alt-fill text-accent-green"></i>
-            <span>Al Khuwair Medical District, Muscat, Sultanate of Oman</span>
+            <span data-i18n="top.location">Al Khuwair, Muscat, Sultanate of Oman</span>
           </div>
         </div>
 
@@ -316,36 +317,36 @@
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html" data-i18n="nav.home">Home</a>
             </li>
             <!-- Treatments Dropdown -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="index.html#treatments" id="treatmentsDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
+                data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.treatments">
                 Treatments
               </a>
               <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="treatmentsDropdown">
-                <li><a class="dropdown-item" href="treatment.html?id=stroke"><i class="bi bi-heart-pulse-fill text-primary"></i> Stroke &amp; Neurological Rehab</a></li>
-                <li><a class="dropdown-item" href="treatment.html?id=backpain"><i class="bi bi-person-arms-up text-primary"></i> Back Pain &amp; Sciatica</a></li>
-                <li><a class="dropdown-item" href="treatment.html?id=sports"><i class="bi bi-trophy-fill text-primary"></i> Sports Injury Rehab</a></li>
-                <li><a class="dropdown-item" href="treatment.html?id=postop"><i class="bi bi-bandaid-fill text-primary"></i> Post-Surgical Recovery</a></li>
-                <li><a class="dropdown-item" href="treatment.html?id=hijama"><i class="bi bi-stars text-primary"></i> Hijama &amp; Reflexology</a></li>
-                <li><a class="dropdown-item" href="treatment.html?id=elakizhi"><i class="bi bi-flower1 text-success"></i> Ayurvedic &amp; Panchakarma</a></li>
+                <li><a class="dropdown-item" href="treatment.html?id=stroke"><i class="bi bi-heart-pulse-fill text-primary"></i> <span data-i18n="nav.dd.stroke">Stroke &amp; Neurological Rehab</span></a></li>
+                <li><a class="dropdown-item" href="treatment.html?id=backpain"><i class="bi bi-person-arms-up text-primary"></i> <span data-i18n="nav.dd.backpain">Back Pain &amp; Sciatica</span></a></li>
+                <li><a class="dropdown-item" href="treatment.html?id=sports"><i class="bi bi-trophy-fill text-primary"></i> <span data-i18n="nav.dd.sports">Sports Injury Rehab</span></a></li>
+                <li><a class="dropdown-item" href="treatment.html?id=postop"><i class="bi bi-bandaid-fill text-primary"></i> <span data-i18n="nav.dd.postop">Post-Surgical Recovery</span></a></li>
+                <li><a class="dropdown-item" href="treatment.html?id=hijama"><i class="bi bi-stars text-primary"></i> <span data-i18n="nav.dd.hijama">Hijama &amp; Reflexology</span></a></li>
+                <li><a class="dropdown-item" href="treatment.html?id=elakizhi"><i class="bi bi-flower1 text-success"></i> <span data-i18n="nav.dd.ayurveda">Ayurvedic &amp; Panchakarma</span></a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item text-primary fw-bold" href="index.html#treatments">Explore All Treatments <i class="bi bi-arrow-right"></i></a></li>
+                <li><a class="dropdown-item text-primary fw-bold" href="index.html#treatments"><span data-i18n="nav.dd.explore">Explore All Treatments</span> <i class="bi bi-arrow-right"></i></a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html#about">About Us</a>
+              <a class="nav-link" href="index.html#about" data-i18n="nav.about">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html#ayurveda"><i class="bi bi-flower1 text-success me-1"></i>Ayurveda</a>
+              <a class="nav-link" href="index.html#ayurveda"><i class="bi bi-flower1 text-success me-1"></i><span data-i18n="nav.ayurveda">Ayurveda</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html#doctors">Specialists</a>
+              <a class="nav-link" href="index.html#doctors" data-i18n="nav.specialists">Specialists</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="contact.html">Contact</a>
+              <a class="nav-link active" href="contact.html" data-i18n="nav.contact">Contact</a>
             </li>
           </ul>
 
@@ -363,7 +364,7 @@
 
             <a href="#booking-form" class="btn btn-primary-custom nav-cta-btn">
               <i class="bi bi-calendar2-check-fill"></i>
-              <span>Book Appointment</span>
+              <span data-i18n="nav.book">Book Appointment</span>
             </a>
           </div>
         </div>
@@ -382,21 +383,21 @@
       <div class="container position-relative">
         <div class="contact-hero-badge">
           <i class="bi bi-geo-alt-fill text-accent-green"></i>
-          <span>SULTANATE OF OMAN • MUSCAT CENTER</span>
+          <span data-i18n="contact.hero.badge">SULTANATE OF OMAN • MUSCAT CENTER</span>
         </div>
 
         <h1 class="contact-hero-title font-serif">
-          Get in Touch &amp; <span style="font-style: italic; color: #6EE7B7;">Visit Our Clinic</span>
+          <span data-i18n="contact.hero.title">Get in Touch &amp;</span> <span style="font-style: italic; color: #6EE7B7;" data-i18n="contact.hero.titleAccent">Visit Our Clinic</span>
         </h1>
 
-        <p class="contact-hero-sub">
+        <p class="contact-hero-sub" data-i18n="contact.hero.sub">
           We are dedicated to helping you reclaim pain-free movement, optimal vitality, and long-term wellbeing. Contact our clinical reception or schedule your assessment today.
         </p>
 
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb justify-content-center" style="background: transparent;">
-            <li class="breadcrumb-item"><a href="index.html" class="text-light text-decoration-none opacity-75">Home</a></li>
-            <li class="breadcrumb-item active text-white fw-bold" aria-current="page">Contact &amp; Location</li>
+            <li class="breadcrumb-item"><a href="index.html" class="text-light text-decoration-none opacity-75" data-i18n="contact.crumb.home">Home</a></li>
+            <li class="breadcrumb-item active text-white fw-bold" aria-current="page" data-i18n="contact.crumb.current">Contact &amp; Location</li>
           </ol>
         </nav>
       </div>
@@ -413,12 +414,12 @@
             <div class="c-channel-icon icon-blue">
               <i class="bi bi-geo-alt-fill"></i>
             </div>
-            <h3 class="c-channel-title">Visit Clinic</h3>
-            <p class="c-channel-desc">
+            <h3 class="c-channel-title" data-i18n="contact.card.visit">Visit Clinic</h3>
+            <p class="c-channel-desc" data-i18n="contact.card.visitDesc">
               Al Khuwair Medical District, Way 3512, Building 40, Muscat, Sultanate of Oman.
             </p>
             <a href="#clinic-map" class="c-channel-link text-primary">
-              <span>View On Map</span>
+              <span data-i18n="contact.card.map">View On Map</span>
               <i class="bi bi-arrow-right"></i>
             </a>
           </div>
@@ -430,8 +431,8 @@
             <div class="c-channel-icon icon-green">
               <i class="bi bi-telephone-inbound-fill"></i>
             </div>
-            <h3 class="c-channel-title">Phone Helpline</h3>
-            <p class="c-channel-desc">
+            <h3 class="c-channel-title" data-i18n="contact.card.phone">Phone Helpline</h3>
+            <p class="c-channel-desc" data-i18n="contact.card.phoneDesc">
               Direct line for general inquiries, insurance approvals, and desk appointments.
             </p>
             <a href="tel:+96824567890" class="c-channel-link text-success">
@@ -447,8 +448,8 @@
             <div class="c-channel-icon icon-gold">
               <i class="bi bi-whatsapp"></i>
             </div>
-            <h3 class="c-channel-title">WhatsApp Support</h3>
-            <p class="c-channel-desc">
+            <h3 class="c-channel-title" data-i18n="contact.card.wa">WhatsApp Support</h3>
+            <p class="c-channel-desc" data-i18n="contact.card.waDesc">
               Quick consultations, MRI/X-Ray report sharing, and instant appointment booking.
             </p>
             <a href="https://wa.me/96871704990?text=Hello%20Al%20Farsi%20Center%2C%20I%20would%20like%20to%20inquire%20about%20a%20consultation." target="_blank" class="c-channel-link" style="color: #D97706;">
@@ -464,13 +465,13 @@
             <div class="c-channel-icon icon-purple">
               <i class="bi bi-clock-history"></i>
             </div>
-            <h3 class="c-channel-title">Working Hours</h3>
-            <p class="c-channel-desc">
+            <h3 class="c-channel-title" data-i18n="contact.card.hours">Working Hours</h3>
+            <p class="c-channel-desc" data-i18n-html="contact.card.hoursDesc">
               Sat – Thu: 8:00 AM – 9:00 PM<br>
               Friday: 2:00 PM – 9:00 PM
             </p>
             <a href="#booking-form" class="c-channel-link" style="color: #6366F1;">
-              <span>Book Priority Slot</span>
+              <span data-i18n="contact.card.bookSlot">Book Priority Slot</span>
               <i class="bi bi-arrow-right"></i>
             </a>
           </div>
@@ -489,14 +490,14 @@
           <div class="col-lg-6">
             <div class="appointment-form-card h-100">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <h2 style="font-size: 1.75rem; font-weight: 700; color: var(--dark-navy); margin-bottom: 0;">
+                <h2 style="font-size: 1.75rem; font-weight: 700; color: var(--dark-navy); margin-bottom: 0;" data-i18n="contact.form.title">
                   Schedule an Appointment
                 </h2>
                 <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill fw-bold fs-8">
                   <i class="bi bi-shield-check"></i> MOH Licensed
                 </span>
               </div>
-              <p class="text-muted mb-4">
+              <p class="text-muted mb-4" data-i18n="contact.form.sub">
                 Please provide your contact information and treatment requirements. Our clinical coordinator will respond promptly to confirm your session.
               </p>
 
@@ -507,30 +508,30 @@
                 <div class="row g-3">
                   <!-- Full Name -->
                   <div class="col-md-6">
-                    <label for="cFullName" class="form-label">Full Name <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="cFullName" placeholder="e.g. Salim Al-Harthy" required>
+                    <label for="cFullName" class="form-label"><span data-i18n="contact.form.name">Full Name</span> <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="cFullName" placeholder="e.g. Salim Al-Harthy" data-i18n-placeholder="contact.form.ph.name" required>
                     <div class="invalid-feedback">Please enter your name.</div>
                   </div>
 
                   <!-- Phone / WhatsApp -->
                   <div class="col-md-6">
-                    <label for="cPhoneNumber" class="form-label">Phone / WhatsApp Number <span class="text-danger">*</span></label>
-                    <input type="tel" class="form-control" id="cPhoneNumber" placeholder="e.g. +968 9123 4567" required>
+                    <label for="cPhoneNumber" class="form-label"><span data-i18n="contact.form.phone">Phone / WhatsApp Number</span> <span class="text-danger">*</span></label>
+                    <input type="tel" class="form-control" id="cPhoneNumber" placeholder="e.g. +968 9123 4567" data-i18n-placeholder="contact.form.ph.phone" required>
                     <div class="invalid-feedback">Please enter a valid phone number.</div>
                   </div>
 
                   <!-- Email Address -->
                   <div class="col-md-6">
-                    <label for="cEmail" class="form-label">Email Address <span class="text-danger">*</span></label>
-                    <input type="email" class="form-control" id="cEmail" placeholder="e.g. name@example.com" required>
+                    <label for="cEmail" class="form-label"><span data-i18n="contact.form.email">Email Address</span> <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="cEmail" placeholder="e.g. name@example.com" data-i18n-placeholder="contact.form.ph.email" required>
                     <div class="invalid-feedback">Please provide your email address.</div>
                   </div>
 
                   <!-- Treatment Service Needed -->
                   <div class="col-md-6">
-                    <label for="cServiceSelect" class="form-label">Treatment Department <span class="text-danger">*</span></label>
+                    <label for="cServiceSelect" class="form-label"><span data-i18n="contact.form.dept">Treatment Department</span> <span class="text-danger">*</span></label>
                     <select class="form-select" id="cServiceSelect" required>
-                      <option value="" selected disabled>Select Department / Therapy</option>
+                      <option value="" selected disabled data-i18n="contact.form.select">Select Department / Therapy</option>
                       <optgroup label="Neurological &amp; Stroke">
                         <option value="Stroke Treatment">Stroke Rehabilitation</option>
                         <option value="Cerebral Palsy">Cerebral Palsy &amp; Pediatric Care</option>
@@ -559,36 +560,36 @@
 
                   <!-- Preferred Date -->
                   <div class="col-md-6">
-                    <label for="cPreferredDate" class="form-label">Preferred Date <span class="text-danger">*</span></label>
+                    <label for="cPreferredDate" class="form-label"><span data-i18n="contact.form.date">Preferred Date</span> <span class="text-danger">*</span></label>
                     <input type="date" class="form-control" id="cPreferredDate" required>
                     <div class="invalid-feedback">Please select a date.</div>
                   </div>
 
                   <!-- Preferred Time Slot -->
                   <div class="col-md-6">
-                    <label for="cTimeSlotSelect" class="form-label">Preferred Time Window</label>
+                    <label for="cTimeSlotSelect" class="form-label" data-i18n="contact.form.time">Preferred Time Window</label>
                     <select class="form-select" id="cTimeSlotSelect">
-                      <option value="Morning (8:00 AM - 12:00 PM)">Morning (8:00 AM – 12:00 PM)</option>
-                      <option value="Afternoon (12:00 PM - 4:00 PM)">Afternoon (12:00 PM – 4:00 PM)</option>
-                      <option value="Evening (4:00 PM - 9:00 PM)">Evening (4:00 PM – 9:00 PM)</option>
+                      <option value="Morning (8:00 AM - 12:00 PM)" data-i18n="contact.form.morning">Morning (8:00 AM – 12:00 PM)</option>
+                      <option value="Afternoon (12:00 PM - 4:00 PM)" data-i18n="contact.form.afternoon">Afternoon (12:00 PM – 4:00 PM)</option>
+                      <option value="Evening (4:00 PM - 9:00 PM)" data-i18n="contact.form.evening">Evening (4:00 PM – 9:00 PM)</option>
                     </select>
                   </div>
 
                   <!-- Message / Symptoms Description -->
                   <div class="col-12">
-                    <label for="cMessage" class="form-label">Brief Description of Symptoms / Medical History (Optional)</label>
+                    <label for="cMessage" class="form-label" data-i18n="contact.form.message">Brief Description of Symptoms / Medical History (Optional)</label>
                     <textarea class="form-control" id="cMessage" rows="3"
-                      placeholder="Mention your pain area, previous surgeries, or symptoms..."></textarea>
+                      placeholder="Mention your pain area, previous surgeries, or symptoms..." data-i18n-placeholder="contact.form.ph.message"></textarea>
                   </div>
 
                   <!-- Submit Button -->
                   <div class="col-12 pt-2">
                     <button type="submit" class="btn btn-primary-custom w-100 py-3 d-flex align-items-center justify-content-center gap-2" id="cSubmitBtn">
                       <i class="bi bi-calendar2-check-fill"></i>
-                      <span class="fw-bold">Confirm &amp; Send Booking Request</span>
+                      <span class="fw-bold" data-i18n="contact.form.submit">Confirm &amp; Send Booking Request</span>
                     </button>
                     <div class="text-center mt-2 text-muted fs-8">
-                      <i class="bi bi-lock-fill text-success"></i> Your medical information is kept strictly confidential.
+                      <i class="bi bi-lock-fill text-success"></i> <span data-i18n="contact.form.privacy">Your medical information is kept strictly confidential.</span>
                     </div>
                   </div>
                 </div>
@@ -669,12 +670,12 @@
         <div class="text-center mb-5">
           <div class="badge-eyebrow mb-2">
             <span class="dot"></span>
-            <span>FREQUENT QUESTIONS</span>
+            <span data-i18n="contact.faq.badge">FREQUENT QUESTIONS</span>
           </div>
           <h2 class="section-title font-serif">
-            Before Your <span class="italic-accent">First Visit</span>
+            <span data-i18n="contact.faq.title">Before Your</span> <span class="italic-accent" data-i18n="contact.faq.titleAccent">First Visit</span>
           </h2>
-          <p class="section-subtitle">
+          <p class="section-subtitle" data-i18n="contact.faq.sub">
             Common questions regarding our appointment procedures, insurance coverage, and clinical protocols in Oman.
           </p>
         </div>
@@ -683,11 +684,11 @@
           <div class="col-lg-8">
             <div class="c-faq-item">
               <button class="c-faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                <span>Do I need a doctor's referral to visit Al Farsi?</span>
+                <span data-i18n="contact.faq.q1">Do I need a doctor's referral to visit Al Farsi?</span>
                 <i class="bi bi-chevron-down text-primary"></i>
               </button>
               <div id="faq1" class="collapse show">
-                <div class="c-faq-body">
+                <div class="c-faq-body" data-i18n="contact.faq.a1">
                   No, you can directly book an appointment with our specialist physiotherapists and Ayurvedic practitioners without a medical referral. If you have prior MRI, X-Ray reports, or doctor recommendations, please bring them along for your assessment.
                 </div>
               </div>
@@ -695,11 +696,11 @@
 
             <div class="c-faq-item">
               <button class="c-faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                <span>Are sessions covered by health insurance in Oman?</span>
+                <span data-i18n="contact.faq.q2">Are sessions covered by health insurance in Oman?</span>
                 <i class="bi bi-chevron-down text-primary"></i>
               </button>
               <div id="faq2" class="collapse">
-                <div class="c-faq-body">
+                <div class="c-faq-body" data-i18n="contact.faq.a2">
                   Yes, we provide official medical invoices, diagnostic reports, and stamped documentation for reimbursement across major private insurance providers in Oman (e.g., Oman Insurance, NextCare, Bupa, MedNet). Contact our reception for verification.
                 </div>
               </div>
@@ -707,11 +708,11 @@
 
             <div class="c-faq-item">
               <button class="c-faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                <span>Are there dedicated male and female therapists?</span>
+                <span data-i18n="contact.faq.q3">Are there dedicated male and female therapists?</span>
                 <i class="bi bi-chevron-down text-primary"></i>
               </button>
               <div id="faq3" class="collapse">
-                <div class="c-faq-body">
+                <div class="c-faq-body" data-i18n="contact.faq.a3">
                   Yes, in full accordance with GCC and Omani cultural values, we provide completely private suites with certified male therapists for gentlemen and certified female therapists for ladies.
                 </div>
               </div>
@@ -719,11 +720,11 @@
 
             <div class="c-faq-item">
               <button class="c-faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                <span>What should I wear to my initial physiotherapy consultation?</span>
+                <span data-i18n="contact.faq.q4">What should I wear to my initial physiotherapy consultation?</span>
                 <i class="bi bi-chevron-down text-primary"></i>
               </button>
               <div id="faq4" class="collapse">
-                <div class="c-faq-body">
+                <div class="c-faq-body" data-i18n="contact.faq.a4">
                   Please wear loose, comfortable athletic or casual clothing that allows easy physical movement and convenient access to the affected joint, spine, or muscle area.
                 </div>
               </div>
@@ -742,25 +743,25 @@
         <div class="cta-content-box">
           <div class="badge-eyebrow" style="background: rgba(255, 255, 255, 0.12); color: #6EE7B7; border-color: rgba(255, 255, 255, 0.2);">
             <span class="dot" style="background-color: #6EE7B7;"></span>
-            <span>START YOUR RECOVERY TODAY</span>
+            <span data-i18n="cta.contact.badge">START YOUR RECOVERY TODAY</span>
           </div>
 
-          <h2 class="cta-heading font-serif">
+          <h2 class="cta-heading font-serif" data-i18n="cta.contact.heading">
             Need Urgent Assistance or Same-Day Consultation?
           </h2>
 
-          <p class="cta-text">
+          <p class="cta-text" data-i18n="cta.contact.text">
             Our medical reception desk is active on WhatsApp and phone for priority bookings and emergency mobility support.
           </p>
 
           <div class="cta-buttons">
             <a href="https://wa.me/96871704990?text=Hello%20Al%20Farsi%20Center%2C%20I%20need%20urgent%20consultation." target="_blank" class="btn btn-secondary-custom">
               <i class="bi bi-whatsapp"></i>
-              <span>WhatsApp Helpline</span>
+              <span data-i18n="cta.whatsapp">WhatsApp Helpline</span>
             </a>
             <a href="tel:+96824567890" class="btn btn-outline-custom" style="color: #FFFFFF !important; border-color: rgba(255,255,255,0.6);">
               <i class="bi bi-telephone-fill"></i>
-              <span>Call Helpline</span>
+              <span data-i18n="cta.call">Call Helpline</span>
             </a>
           </div>
         </div>
@@ -777,64 +778,64 @@
         <div class="col-lg-4 col-md-6">
           <div class="footer-brand mb-3">
             <img src="assets/images/logo-white.svg" alt="Al Farsi Logo" class="brand-logo-img mb-3" style="filter: brightness(0) invert(1);">
-            <p class="text-muted fs-7 leading-relaxed">
+            <p class="footer-desc" data-i18n="footer.desc">
               Al Farsi Physiotherapy &amp; Rehabilitation Center is Oman's premier clinical facility dedicated to neurological stroke recovery, spine decompression, orthopedic care, and authentic Ayurvedic wellness.
             </p>
           </div>
-          <div class="social-links d-flex gap-2">
+          <div class="footer-socials">
             <a href="#" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
             <a href="#" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a href="https://wa.me/96871704990" class="social-btn text-success" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://wa.me/96871704990" class="social-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
           </div>
         </div>
 
         <div class="col-lg-2 col-md-6 col-6">
-          <h4 class="footer-heading">Quick Links</h4>
+          <h4 class="footer-heading" data-i18n="footer.quickLinks">Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About Center</a></li>
-            <li><a href="index.html#treatments">Treatments</a></li>
-            <li><a href="index.html#ayurveda">Ayurvedic Care</a></li>
-            <li><a href="index.html#doctors">Specialists</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="index.html#about" data-i18n="footer.aboutCenter">About Center</a></li>
+            <li><a href="index.html#treatments" data-i18n="nav.treatments">Treatments</a></li>
+            <li><a href="index.html#ayurveda" data-i18n="footer.ayurvedicCare">Ayurvedic Care</a></li>
+            <li><a href="index.html#doctors" data-i18n="nav.specialists">Specialists</a></li>
+            <li><a href="contact.html" data-i18n="footer.contactUs">Contact Us</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-6 col-6">
-          <h4 class="footer-heading">Treatments</h4>
+          <h4 class="footer-heading" data-i18n="footer.treatments">Treatments</h4>
           <ul class="footer-links">
-            <li><a href="treatment.html?id=stroke">Stroke Rehabilitation</a></li>
-            <li><a href="treatment.html?id=backpain">Back Pain &amp; Sciatica</a></li>
-            <li><a href="treatment.html?id=sports">Sports Rehabilitation</a></li>
-            <li><a href="treatment.html?id=elakizhi">Elakizhi Herbal Poultice</a></li>
-            <li><a href="treatment.html?id=shirodhara">Shirodhara Stress Relief</a></li>
-            <li><a href="treatment.html?id=hijama">Hijama Medical Cupping</a></li>
+            <li><a href="treatment.html?id=stroke" data-i18n="footer.t.stroke">Stroke Rehabilitation</a></li>
+            <li><a href="treatment.html?id=backpain" data-i18n="footer.t.backpain">Back Pain &amp; Sciatica</a></li>
+            <li><a href="treatment.html?id=sports" data-i18n="footer.t.sports">Sports Rehabilitation</a></li>
+            <li><a href="treatment.html?id=elakizhi" data-i18n="footer.t.elakizhi">Elakizhi Herbal Poultice</a></li>
+            <li><a href="treatment.html?id=shirodhara" data-i18n="footer.t.shirodhara">Shirodhara Stress Relief</a></li>
+            <li><a href="treatment.html?id=hijama" data-i18n="footer.t.hijama">Hijama Medical Cupping</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <h4 class="footer-heading">Contact Info</h4>
-          <ul class="footer-links">
-            <li class="d-flex align-items-start gap-2 text-muted mb-2">
-              <i class="bi bi-geo-alt-fill text-primary"></i>
-              <span>Al Khuwair Medical District, Way 3512, Muscat, Oman</span>
+          <h4 class="footer-heading" data-i18n="footer.contactInfo">Contact Info</h4>
+          <ul class="footer-links footer-contact">
+            <li class="d-flex align-items-start gap-2 mb-2">
+              <i class="bi bi-geo-alt-fill text-primary flex-shrink-0 mt-1"></i>
+              <span data-i18n="footer.address">Al Khuwair Medical District, Way 3512, Muscat, Oman</span>
             </li>
-            <li class="d-flex align-items-center gap-2 text-muted mb-2">
-              <i class="bi bi-telephone-fill text-primary"></i>
-              <span>+968 2456 7890</span>
+            <li class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-telephone-fill text-primary flex-shrink-0"></i>
+              <a href="tel:+96824567890">+968 2456 7890</a>
             </li>
-            <li class="d-flex align-items-center gap-2 text-muted mb-2">
-              <i class="bi bi-whatsapp text-success"></i>
-              <span>+968 7170 4990 (WhatsApp)</span>
+            <li class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-whatsapp text-success flex-shrink-0"></i>
+              <a href="https://wa.me/96871704990" target="_blank" rel="noopener noreferrer" data-i18n="footer.whatsapp">+968 7170 4990 (WhatsApp)</a>
             </li>
-            <li class="d-flex align-items-center gap-2 text-muted mb-2">
-              <i class="bi bi-envelope-fill text-primary"></i>
-              <span>care@alfarsiphysio.com</span>
+            <li class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-envelope-fill text-primary flex-shrink-0"></i>
+              <a href="mailto:care@alfarsiphysio.com">care@alfarsiphysio.com</a>
             </li>
-            <li class="d-flex align-items-center gap-2 text-muted">
-              <i class="bi bi-clock-fill text-primary"></i>
-              <span>Sat–Thu: 8am–9pm | Fri: 2pm–9pm</span>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-clock-fill text-primary flex-shrink-0"></i>
+              <span data-i18n="footer.hours">Sat–Thu: 8am–9pm | Fri: 2pm–9pm</span>
             </li>
           </ul>
         </div>
@@ -843,7 +844,7 @@
       <div class="footer-bottom text-center">
         <div class="row align-items-center">
           <div class="col-md-6 text-md-start mb-2 mb-md-0">
-            &copy; 2026 Al Farsi Physiotherapy Center. All Rights Reserved.
+            <span data-i18n="footer.copyright">&copy; 2026 Al Farsi Physiotherapy Center. All Rights Reserved.</span>
           </div>
           <div class="col-md-6 text-md-end">
             <span class="arabic-text text-light opacity-75">مركز الفارسي للعلاج الطبيعي والتأهيل — صحتك وحركتك في أمان</span>
@@ -858,11 +859,13 @@
     target="_blank" rel="noopener noreferrer" id="floatingWhatsappBtn" class="floating-whatsapp-btn"
     aria-label="Chat on WhatsApp" title="WhatsApp: +968 7170 4990">
     <i class="bi bi-whatsapp"></i>
-    <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+    <span class="whatsapp-tooltip" data-i18n="common.chatWhatsapp">Chat with us on WhatsApp</span>
   </a>
 
   <!-- Bootstrap 5.3.3 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="i18n-data.js?v=20261005b"></script>
+  <script src="script.js?v=20261005b"></script>
 
   <!-- Interactive Form Handling Script -->
   <script>

@@ -324,6 +324,40 @@ img {
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
 }
 
+.btn-secondary-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #25D366;
+  color: #FFFFFF !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 12px 28px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+  transition: var(--transition-smooth);
+}
+
+.btn-secondary-custom:hover {
+  background-color: #1ebe57;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.4);
+}
+
+.cta-section .btn-outline-custom {
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.cta-section .btn-outline-custom:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF !important;
+  border-color: #FFFFFF;
+}
+
 /* ==========================================================================
    0. TOP NOTIFICATION BAR (Inspired by Greenwich Kottakkal)
    ========================================================================== */
@@ -1772,7 +1806,25 @@ img {
   padding-bottom: 30px;
 }
 
-.footer-logo-img {
+/* Bootstrap text-muted is dark-gray — unreadable on navy footer */
+.site-footer .text-muted,
+.site-footer .footer-desc,
+.site-footer .footer-brand p,
+.site-footer .footer-links span,
+.site-footer .footer-contact li {
+  color: #B7CDD8 !important;
+}
+
+.site-footer .footer-contact a {
+  color: #B7CDD8;
+}
+
+.site-footer .footer-contact a:hover {
+  color: var(--primary-green);
+}
+
+.footer-logo-img,
+.site-footer .brand-logo-img {
   height: 48px;
   margin-bottom: 20px;
 }
@@ -1780,7 +1832,7 @@ img {
 .footer-desc {
   font-size: 0.9rem;
   line-height: 1.7;
-  color: #9DB4C0;
+  color: #B7CDD8;
   margin-bottom: 22px;
 }
 
@@ -1857,7 +1909,7 @@ img {
   padding-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 0.84rem;
-  color: #7E97A6;
+  color: #A8C0CC;
 }
 
 /* ==========================================================================
@@ -2614,6 +2666,33 @@ img {
 }
 
 /* RTL layout adjustments when Arabic is active */
-html[dir="rtl"] body {
+html[dir="rtl"] body,
+html.lang-ar body {
   font-family: 'Cairo', 'Tajawal', 'Plus Jakarta Sans', sans-serif;
+}
+
+html[dir="rtl"] .footer-heading::after {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .lang-switch-inner {
+  flex-direction: row;
+}
+
+html[dir="rtl"] .footer-links a:hover {
+  transform: translateX(-4px);
+}
+
+html[dir="rtl"] .text-md-start {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .text-md-end {
+  text-align: left !important;
+}
+
+html[dir="rtl"] .me-1 {
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important;
 }
