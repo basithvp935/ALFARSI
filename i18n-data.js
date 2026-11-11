@@ -1,7 +1,7 @@
 /* Auto-generated Al Farsi i18n dictionary — EN / AR */
 window.ALFARSI_I18N_EXTRA = {
   "en": {
-    "top.location": "Al Khuwair, Muscat, Sultanate of Oman",
+    "top.location": "Al Mudhaibi, North Al-Sharqiyah, Sultanate of Oman",
     "trust.years": "Years Experience",
     "trust.yearsSub": "UK & International Certified Experts",
     "trust.recovered": "Recovered",
@@ -250,7 +250,7 @@ window.ALFARSI_I18N_EXTRA = {
     "idx.contact.waDetail": "+968 7170 4990 (Instant Response)",
     "idx.contact.email": "Email Inquiries",
     "idx.contact.loc": "Center Location",
-    "idx.contact.locDetail": "Al Khuwair Medical District, Way 3512, Muscat, Sultanate of Oman",
+    "idx.contact.locDetail": "AL FARSI PHYSIOTHERAPY CENTRE<br>KHALFAN NASSER AMUR AL FARSI TRAD<br>Post Box No: 235, Postal Code: 420<br>Al Mudhaibi, North Al-Sharqiyah, Sultanate of Oman",
     "idx.contact.hours": "Opening Hours",
     "idx.contact.hoursDetail": "Saturday – Thursday: 8:00 AM – 9:00 PM<br>24/7 Patient On-Call Support",
     "idx.form.title": "Service Booking Form",
@@ -305,7 +305,7 @@ window.ALFARSI_I18N_EXTRA = {
     "art.3.read": "4 Min Read"
   },
   "ar": {
-    "top.location": "الخوير، مسقط، سلطنة عُمان",
+    "top.location": "المضيبي، شمال الشرقية، سلطنة عُمان",
     "trust.years": "سنوات خبرة",
     "trust.yearsSub": "خبراء معتمدون من المملكة المتحدة ودولياً",
     "trust.recovered": "تعافوا معنا",
@@ -554,7 +554,7 @@ window.ALFARSI_I18N_EXTRA = {
     "idx.contact.waDetail": "+968 7170 4990 (رد فوري)",
     "idx.contact.email": "استفسارات البريد",
     "idx.contact.loc": "موقع المركز",
-    "idx.contact.locDetail": "منطقة الخوير الطبية، طريق 3512، مسقط، سلطنة عُمان",
+    "idx.contact.locDetail": "مركز الفارسي للعلاج الطبيعي<br>خلفان ناصر عامر الفارسي للتجارة<br>صندوق بريد: 235، الرمز البريدي: 420<br>المضيبي، شمال الشرقية، سلطنة عُمان",
     "idx.contact.hours": "ساعات العمل",
     "idx.contact.hoursDetail": "السبت – الخميس: 8:00 ص – 9:00 م<br>دعم المرضى على مدار الساعة",
     "idx.form.title": "نموذج حجز الخدمة",
@@ -609,3 +609,129 @@ window.ALFARSI_I18N_EXTRA = {
     "art.3.read": "4 دقائق قراءة"
   }
 };
+
+/* Treatments directory page + home "View All" strings */
+(function () {
+  var d = window.ALFARSI_I18N_EXTRA = window.ALFARSI_I18N_EXTRA || { en: {}, ar: {} };
+  Object.assign(d.en, {
+    "home.viewAll.title": "16+ specialised therapies under one roof",
+    "home.viewAll.sub": "Neurological, spine, orthopaedic, holistic & Ayurvedic care",
+    "home.viewAll.btn": "View All Treatments",
+    "txp.hero.badge": "COMPLETE TREATMENT DIRECTORY",
+    "txp.hero.title": "Every Path to",
+    "txp.hero.titleAccent": "Pain-Free Movement",
+    "txp.hero.sub": "Explore our full range of clinical physiotherapy, neurological rehabilitation, holistic and Ayurvedic therapies, each tailored to your diagnosis, goals and pace of recovery.",
+    "txp.stat.therapies": "Therapies",
+    "txp.stat.specialties": "Specialties",
+    "txp.stat.surgery": "Surgery Needed",
+    "txp.search.ph": "Search a condition or therapy, e.g. sciatica, stroke, knee",
+    "txp.results": "treatments found",
+    "txp.unsure": "Not sure which treatment you need?",
+    "txp.empty.title": "No treatments match your search",
+    "txp.empty.sub": "Try another keyword, or talk to our specialists and we will recommend the right care plan.",
+    "txp.empty.reset": "Show all treatments",
+    "txp.steps.badge": "YOUR CARE JOURNEY",
+    "txp.steps.title": "From First Visit to",
+    "txp.steps.titleAccent": "Full Recovery",
+    "txp.step1.t": "Clinical Assessment",
+    "txp.step1.d": "A full biomechanical and medical-history review to pinpoint the root cause of your pain or limitation.",
+    "txp.step2.t": "Personalised Plan",
+    "txp.step2.d": "Your specialist combines the right therapies into a structured, goal-based programme.",
+    "txp.step3.t": "Measured Progress",
+    "txp.step3.d": "Regular re-assessments track strength, mobility and pain so your plan keeps evolving with you.",
+    "txp.cta.heading": "Ready to Start Your Treatment?",
+    "txp.cta.text": "Book an assessment and our specialists will build a recovery plan around your needs."
+  });
+  Object.assign(d.ar, {
+    "home.viewAll.title": "أكثر من 16 علاجاً متخصصاً تحت سقف واحد",
+    "home.viewAll.sub": "رعاية عصبية، العمود الفقري، العظام، العلاجات التكاملية والأيورفيدا",
+    "home.viewAll.btn": "عرض جميع العلاجات",
+    "txp.hero.badge": "الدليل الكامل للعلاجات",
+    "txp.hero.title": "كل الطرق نحو",
+    "txp.hero.titleAccent": "حركة بلا ألم",
+    "txp.hero.sub": "استكشف مجموعتنا الكاملة من العلاج الطبيعي السريري وإعادة التأهيل العصبي والعلاجات التكاملية والأيورفيدية، المصممة وفق تشخيصك وأهدافك ووتيرة تعافيك.",
+    "txp.stat.therapies": "علاجات",
+    "txp.stat.specialties": "تخصصات",
+    "txp.stat.surgery": "بدون جراحة",
+    "txp.search.ph": "ابحث عن حالة أو علاج، مثل: عرق النسا، السكتة، الركبة",
+    "txp.results": "علاجاً متاحاً",
+    "txp.unsure": "لست متأكداً من العلاج المناسب لك؟",
+    "txp.empty.title": "لا توجد علاجات مطابقة لبحثك",
+    "txp.empty.sub": "جرّب كلمة أخرى، أو تحدث مع أخصائيينا وسنرشح لك خطة العلاج المناسبة.",
+    "txp.empty.reset": "عرض جميع العلاجات",
+    "txp.steps.badge": "رحلة رعايتك",
+    "txp.steps.title": "من الزيارة الأولى إلى",
+    "txp.steps.titleAccent": "التعافي الكامل",
+    "txp.step1.t": "التقييم السريري",
+    "txp.step1.d": "مراجعة شاملة للميكانيكا الحيوية والتاريخ الطبي لتحديد السبب الجذري للألم أو القيود الحركية.",
+    "txp.step2.t": "خطة مخصصة",
+    "txp.step2.d": "يجمع أخصائيك العلاجات المناسبة في برنامج منظم قائم على الأهداف.",
+    "txp.step3.t": "تقدم قابل للقياس",
+    "txp.step3.d": "تقييمات دورية لمتابعة القوة والحركة والألم لتتطور خطتك معك باستمرار.",
+    "txp.cta.heading": "هل أنت مستعد لبدء علاجك؟",
+    "txp.cta.text": "احجز تقييمك وسيضع أخصائيونا خطة تعافٍ تناسب احتياجاتك."
+  });
+})();
+
+/* Compact doctor cards + Treatment Gallery strings */
+(function () {
+  var d = window.ALFARSI_I18N_EXTRA = window.ALFARSI_I18N_EXTRA || { en: {}, ar: {} };
+  Object.assign(d.en, {
+    "doc.tariq.name": "Dr. Tariq Al-Farsi, DPT, PhD",
+    "doc.layla.name": "Dr. Layla Al-Balushi, PT, MSc",
+    "doc.marcus.name": "Dr. Marcus Vance, PT, CMPT",
+    "doc.bookShort": "Book Visit",
+    "gal.badge": "INSIDE OUR CENTER",
+    "gal.title": "Treatment",
+    "gal.titleAccent": "Gallery",
+    "gal.sub": "A look at real therapy sessions, our rehabilitation studio and Ayurvedic wellness suites.",
+    "gal.f.all": "All Photos",
+    "gal.f.physio": "Physiotherapy",
+    "gal.f.rehab": "Rehab & Sports",
+    "gal.f.ayurveda": "Ayurveda",
+    "gal.f.clinic": "Our Clinic",
+    "gal.c1": "Parallel-bar gait training",
+    "gal.c2": "Manual leg mobilisation",
+    "gal.c3": "Elakizhi herbal poultice massage",
+    "gal.c4": "Balance & gait training zone",
+    "gal.c5": "Kinesio taping for sports knee",
+    "gal.c6": "Spinal manual therapy",
+    "gal.c7": "Shirodhara oil therapy",
+    "gal.c8": "Rehab & mobility studio",
+    "gal.c9": "Shoulder mobility therapy",
+    "gal.c10": "Herbal oils & poultice preparation",
+    "gal.c11": "Post-surgical strength training",
+    "gal.c12": "Knee joint assessment",
+    "gal.c13": "Kati Basti spinal oil therapy",
+    "gal.c14": "Podikizhi poultice therapy"
+  });
+  Object.assign(d.ar, {
+    "doc.tariq.name": "د. طارق الفارسي",
+    "doc.layla.name": "د. ليلى البلوشية",
+    "doc.marcus.name": "د. ماركوس فانس",
+    "doc.bookShort": "احجز زيارة",
+    "gal.badge": "داخل مركزنا",
+    "gal.title": "معرض",
+    "gal.titleAccent": "العلاجات",
+    "gal.sub": "لمحة عن جلسات العلاج الحقيقية واستوديو إعادة التأهيل وأجنحة العافية الأيورفيدية.",
+    "gal.f.all": "كل الصور",
+    "gal.f.physio": "العلاج الطبيعي",
+    "gal.f.rehab": "التأهيل والرياضة",
+    "gal.f.ayurveda": "الأيورفيدا",
+    "gal.f.clinic": "مركزنا",
+    "gal.c1": "تدريب المشي بين القضبان المتوازية",
+    "gal.c2": "تحريك يدوي للساق",
+    "gal.c3": "تدليك بكمادات الأعشاب (إيلاكيزي)",
+    "gal.c4": "منطقة تدريب التوازن والمشي",
+    "gal.c5": "شريط الكينيزيو لركبة الرياضيين",
+    "gal.c6": "العلاج اليدوي للعمود الفقري",
+    "gal.c7": "علاج شيرودارا بالزيت",
+    "gal.c8": "استوديو التأهيل والحركة",
+    "gal.c9": "علاج حركة الكتف",
+    "gal.c10": "تحضير الزيوت والكمادات العشبية",
+    "gal.c11": "تدريب القوة بعد الجراحة",
+    "gal.c12": "تقييم مفصل الركبة",
+    "gal.c13": "علاج كاتي باستي للعمود الفقري",
+    "gal.c14": "علاج بودي كيزي بالكمادات"
+  });
+})();

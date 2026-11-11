@@ -715,12 +715,12 @@ const i18n = {
     'footer.t.shirodhara': 'Shirodhara Stress Relief',
     'footer.t.hijama': 'Hijama Medical Cupping',
     'footer.contactInfo': 'Contact Info',
-    'footer.address': 'Al Khuwair Medical District, Way 3512, Muscat, Oman',
+    'footer.address': 'Al Mudhaibi, North Al-Sharqiyah, Sultanate of Oman (P.O. Box 235, PC 420)',
     'footer.hours': 'Sat–Thu: 8am–9pm | Fri: 2pm–9pm',
     'footer.copyright': '© 2026 Al Farsi Physiotherapy Center. All Rights Reserved.',
     'footer.whatsapp': '+968 7170 4990 (WhatsApp)',
 
-    'contact.hero.badge': 'SULTANATE OF OMAN • MUSCAT CENTER',
+    'contact.hero.badge': 'SULTANATE OF OMAN • AL MUDHAIBI',
     'contact.hero.title': 'Get in Touch &',
     'contact.hero.titleAccent': 'Visit Our Clinic',
     'contact.hero.sub': 'We are dedicated to helping you reclaim pain-free movement, optimal vitality, and long-term wellbeing. Contact our clinical reception or schedule your assessment today.',
@@ -728,7 +728,7 @@ const i18n = {
     'contact.crumb.current': 'Contact & Location',
 
     'contact.card.visit': 'Visit Clinic',
-    'contact.card.visitDesc': 'Al Khuwair Medical District, Way 3512, Building 40, Muscat, Sultanate of Oman.',
+    'contact.card.visitDesc': 'AL FARSI PHYSIOTHERAPY CENTRE<br>KHALFAN NASSER AMUR AL FARSI TRAD<br>P.O. Box: 235, PC: 420, Al Mudhaibi, North Al-Sharqiyah, Sultanate of Oman.',
     'contact.card.map': 'View On Map',
     'contact.card.phone': 'Phone Helpline',
     'contact.card.phoneDesc': 'Direct line for general inquiries, insurance approvals, and desk appointments.',
@@ -824,12 +824,12 @@ const i18n = {
     'footer.t.shirodhara': 'شيرودهARA لتخفيف التوتر',
     'footer.t.hijama': 'الحجامة الطبية',
     'footer.contactInfo': 'معلومات التواصل',
-    'footer.address': 'منطقة الخوير الطبية، طريق 3512، مسقط، عُمان',
+    'footer.address': 'المضيبي، شمال الشرقية، سلطنة عُمان (ص.ب 235، الرمز البريدي 420)',
     'footer.hours': 'السبت–الخميس: 8ص–9م | الجمعة: 2م–9م',
     'footer.copyright': '© 2026 مركز الفارسي للعلاج الطبيعي. جميع الحقوق محفوظة.',
     'footer.whatsapp': '+968 7170 4990 (واتساب)',
 
-    'contact.hero.badge': 'سلطنة عُمان • مركز مسقط',
+    'contact.hero.badge': 'سلطنة عُمان • المضيبي',
     'contact.hero.title': 'تواصل معنا و',
     'contact.hero.titleAccent': 'زر عيادتنا',
     'contact.hero.sub': 'نكرّس جهودنا لمساعدتك على استعادة الحركة الخالية من الألم والحيوية المثلى والعافية طويلة الأمد. تواصل مع الاستقبال الطبي أو احجز تقييمك اليوم.',
@@ -837,7 +837,7 @@ const i18n = {
     'contact.crumb.current': 'التواصل والموقع',
 
     'contact.card.visit': 'زيارة العيادة',
-    'contact.card.visitDesc': 'منطقة الخوير الطبية، طريق 3512، مبنى 40، مسقط، سلطنة عُمان.',
+    'contact.card.visitDesc': 'مركز الفارسي للعلاج الطبيعي<br>خلفان ناصر عامر الفارسي للتجارة<br>صندوق بريد: 235، الرمز البريدي: 420<br>المضيبي، شمال الشرقية، سلطنة عُمان.',
     'contact.card.map': 'عرض على الخريطة',
     'contact.card.phone': 'الخط الساخن',
     'contact.card.phoneDesc': 'خط مباشر للاستفسارات العامة وموافقات التأمين ومواعيد الاستقبال.',
@@ -896,7 +896,7 @@ i18n.ar['footer.t.shirodhara'] = 'شيرودهارا لتخفيف التوتر';
 /* Auto-generated Al Farsi i18n dictionary — EN / AR */
 window.ALFARSI_I18N_EXTRA = {
   "en": {
-    "top.location": "Al Khuwair, Muscat, Sultanate of Oman",
+    "top.location": "Al Mudhaibi, North Al-Sharqiyah, Sultanate of Oman",
     "trust.years": "Years Experience",
     "trust.yearsSub": "UK & International Certified Experts",
     "trust.recovered": "Recovered",
@@ -1145,7 +1145,7 @@ window.ALFARSI_I18N_EXTRA = {
     "idx.contact.waDetail": "+968 7170 4990 (Instant Response)",
     "idx.contact.email": "Email Inquiries",
     "idx.contact.loc": "Center Location",
-    "idx.contact.locDetail": "Al Khuwair Medical District, Way 3512, Muscat, Sultanate of Oman",
+    "idx.contact.locDetail": "AL FARSI PHYSIOTHERAPY CENTRE<br>KHALFAN NASSER AMUR AL FARSI TRAD<br>Post Box No: 235, Postal Code: 420<br>Al Mudhaibi, North Al-Sharqiyah, Sultanate of Oman",
     "idx.contact.hours": "Opening Hours",
     "idx.contact.hoursDetail": "Saturday – Thursday: 8:00 AM – 9:00 PM<br>24/7 Patient On-Call Support",
     "idx.form.title": "Service Booking Form",
@@ -1200,7 +1200,7 @@ window.ALFARSI_I18N_EXTRA = {
     "art.3.read": "4 Min Read"
   },
   "ar": {
-    "top.location": "الخوير، مسقط، سلطنة عُمان",
+    "top.location": "المضيبي، شمال الشرقية، سلطنة عُمان",
     "trust.years": "سنوات خبرة",
     "trust.yearsSub": "خبراء معتمدون من المملكة المتحدة ودولياً",
     "trust.recovered": "تعافوا معنا",
@@ -1449,7 +1449,7 @@ window.ALFARSI_I18N_EXTRA = {
     "idx.contact.waDetail": "+968 7170 4990 (رد فوري)",
     "idx.contact.email": "استفسارات البريد",
     "idx.contact.loc": "موقع المركز",
-    "idx.contact.locDetail": "منطقة الخوير الطبية، طريق 3512، مسقط، سلطنة عُمان",
+    "idx.contact.locDetail": "مركز الفارسي للعلاج الطبيعي<br>خلفان ناصر عامر الفارسي للتجارة<br>صندوق بريد: 235، الرمز البريدي: 420<br>المضيبي، شمال الشرقية، سلطنة عُمان",
     "idx.contact.hours": "ساعات العمل",
     "idx.contact.hoursDetail": "السبت – الخميس: 8:00 ص – 9:00 م<br>دعم المرضى على مدار الساعة",
     "idx.form.title": "نموذج حجز الخدمة",
@@ -1547,3 +1547,131 @@ if (document.readyState === 'loading') {
   applySiteLanguage(currentLang);
 }
 
+
+// --- Treatment Gallery: category filter + lightbox ---
+document.addEventListener('DOMContentLoaded', () => {
+  const grid = document.getElementById('galGrid');
+  if (!grid) return;
+  const items = Array.from(grid.querySelectorAll('.gal-item'));
+  const filters = Array.from(document.querySelectorAll('.gal-filter'));
+  const lb = document.getElementById('galLightbox');
+  const lbImg = document.getElementById('galLbImg');
+  const lbCap = document.getElementById('galLbCaption');
+  const lbCat = document.getElementById('galLbCat');
+  const lbCounter = document.getElementById('galLbCounter');
+  let current = 0;
+  let lastFocus = null;
+
+  filters.forEach(btn => {
+    const cat = btn.dataset.galCat;
+    const count = cat === 'all' ? items.length : items.filter(i => i.dataset.galCat === cat).length;
+    const badge = btn.querySelector('.gal-count');
+    if (badge) badge.textContent = count;
+
+    btn.addEventListener('click', () => {
+      filters.forEach(b => {
+        b.classList.toggle('active', b === btn);
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
+      let n = 0;
+      items.forEach(item => {
+        const show = cat === 'all' || item.dataset.galCat === cat;
+        item.hidden = !show;
+        item.classList.remove('gal-in');
+        if (show) {
+          void item.offsetWidth;
+          item.style.animationDelay = (Math.min(n++, 8) * 40) + 'ms';
+          item.classList.add('gal-in');
+        }
+      });
+    });
+  });
+
+  const visible = () => items.filter(i => !i.hidden);
+
+  function show(index) {
+    const list = visible();
+    if (!list.length) return;
+    current = (index + list.length) % list.length;
+    const item = list[current];
+    const img = item.querySelector('img');
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lbCap.textContent = item.querySelector('.gal-caption').textContent;
+    lbCat.textContent = item.querySelector('.gal-cat-tag').textContent;
+    lbCounter.textContent = (current + 1) + ' / ' + list.length;
+  }
+
+  function open(item) {
+    lastFocus = document.activeElement;
+    show(visible().indexOf(item));
+    lb.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lb.querySelector('.gal-lb-close').focus();
+  }
+
+  function close() {
+    lb.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+
+  const isRtl = () => document.documentElement.getAttribute('dir') === 'rtl';
+
+  items.forEach(item => item.querySelector('.gal-open').addEventListener('click', () => open(item)));
+  lb.querySelector('.gal-lb-close').addEventListener('click', close);
+  lb.querySelector('.gal-lb-prev').addEventListener('click', () => show(current - 1));
+  lb.querySelector('.gal-lb-next').addEventListener('click', () => show(current + 1));
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+
+  document.addEventListener('keydown', e => {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowRight') show(current + (isRtl() ? -1 : 1));
+    else if (e.key === 'ArrowLeft') show(current + (isRtl() ? 1 : -1));
+  });
+
+  let touchX = null;
+  lb.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', e => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+    touchX = null;
+  });
+});
+
+// --- Smart navbar: hide on scroll down, show on scroll up ---
+(function () {
+  function initSmartNav() {
+    const bar = document.querySelector('header') || document.querySelector('.tp-nav');
+    if (!bar) return;
+    const menu = bar.querySelector('.navbar-collapse');
+    let lastY = window.scrollY;
+
+    function update() {
+      const y = window.scrollY;
+      const delta = y - lastY;
+      const menuOpen = menu && menu.classList.contains('show');
+      const dropdownOpen = bar.querySelector('.dropdown-menu.show');
+
+      if (y <= bar.offsetHeight + 60 || menuOpen || dropdownOpen) {
+        bar.classList.remove('nav-hidden');
+      } else if (delta > 6) {
+        bar.classList.add('nav-hidden');
+      } else if (delta < -6) {
+        bar.classList.remove('nav-hidden');
+      }
+      if (Math.abs(delta) > 6) lastY = y;
+    }
+
+    // scroll events already fire at most once per frame; the work here is a few class toggles
+    window.addEventListener('scroll', update, { passive: true });
+
+    // keyboard users tabbing into the nav should always see it
+    bar.addEventListener('focusin', () => bar.classList.remove('nav-hidden'));
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initSmartNav);
+  else initSmartNav();
+})();

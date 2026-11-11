@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Treatments | Al Farsi Physiotherapy &amp; Rehabilitation Center</title>
+  <meta name="description"
+    content="Browse every treatment at Al Farsi Physiotherapy Center: stroke and neurological rehab, spine and back pain, orthopaedic and sports injury, Hijama, reflexology, electrotherapy and Ayurvedic therapies.">
+  <meta name="keywords"
+    content="physiotherapy treatments Oman, stroke rehabilitation, back pain treatment, sports injury rehab, hijama, ayurveda Oman, Al Farsi treatments">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600;1,700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       0. TOP NOTIFICATION & CONTACT BAR
+       ========================================================================== -->
+  <div class="top-header-bar d-none d-lg-block">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center py-2">
+        <div class="top-bar-left d-flex align-items-center gap-4">
+          <div class="top-bar-item">
+            <i class="bi bi-geo-alt-fill text-accent-green"></i>
+            <span data-i18n="top.location">Al Mudhaibi, North Al-Sharqiyah, Sultanate of Oman</span>
+          </div>
+        </div>
+
+        <div class="top-bar-right d-flex align-items-center gap-3">
+          <a href="tel:+96871704990" class="top-bar-link">
+            <i class="bi bi-telephone-fill text-accent-green"></i>
+            <span>+968 7170 4990</span>
+          </a>
+          <a href="mailto:physicaltherapy717@gmail.com" class="top-bar-link">
+            <i class="bi bi-envelope-fill text-accent-green"></i>
+            <span>physicaltherapy717@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       1. HEADER / NAVIGATION
+       ========================================================================== -->
+  <header>
+    <nav class="navbar navbar-expand-lg site-navbar" id="mainNav">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="index.html" title="Al Farsi Physiotherapy Center">
+          <img src="assets/images/logo.svg" alt="Al Farsi Physiotherapy Center Logo" class="brand-logo-img">
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" data-i18n="nav.home">Home</a>
+            </li>
+            <!-- Treatments (link + hover dropdown) -->
+            <li class="nav-item dropdown nav-hover-dropdown">
+              <a class="nav-link active" href="treatments.html" id="treatmentsDropdown" aria-current="page">
+                <span data-i18n="nav.treatments">Treatments</span> <i class="bi bi-chevron-down nav-caret"></i>
+              </a>
+              <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="treatmentsDropdown">
+                <li><a class="dropdown-item" href="treatment.html?id=stroke"><i class="bi bi-heart-pulse-fill text-primary"></i> <span data-i18n="nav.dd.stroke">Stroke &amp; Neurological Rehab</span></a></li>
+                <li><a class="dropdown-item" href="treatment.html?id=backpain"><i class="bi bi-person-arms-up text-primary"></i> <span data-i18n="nav.dd.backpain">Back Pain &amp; Sciatica</span></a></li>
+                <li><a class="dropdown-item" href="treatment.html?id=sports"><i class="bi bi-trophy-fill text-primary"></i> <span data-i18n="nav.dd.sports">Sports Injury Rehab</span></a></li>
+                <li><a class="dropdown-item" href="treatment.html?id=postop"><i class="bi bi-bandaid-fill text-primary"></i> <span data-i18n="nav.dd.postop">Post-Surgical Recovery</span></a></li>
+                <li><a class="dropdown-item" href="treatment.html?id=hijama"><i class="bi bi-stars text-primary"></i> <span data-i18n="nav.dd.hijama">Hijama &amp; Reflexology</span></a></li>
+                <li><a class="dropdown-item" href="treatments.html?cat=ayurveda"><i class="bi bi-flower1 text-success"></i> <span data-i18n="nav.dd.ayurveda">Ayurvedic &amp; Panchakarma</span></a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-primary fw-bold" href="treatments.html"><span data-i18n="nav.dd.explore">Explore All Treatments</span> <i class="bi bi-arrow-right"></i></a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about" data-i18n="nav.about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#ayurveda"><i class="bi bi-flower1 text-success me-1"></i><span data-i18n="nav.ayurveda">Ayurveda</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#doctors" data-i18n="nav.specialists">Specialists</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Header CTA -->
+          <div class="d-flex align-items-center gap-2">
+            <!-- Language Switcher Button (Left of Book Appointment) -->
+            <button type="button" class="lang-switch-btn" id="langSwitchBtn" onclick="toggleSiteLanguage()" title="Switch Language / تغيير اللغة" aria-label="Language Switcher">
+              <div class="lang-switch-inner">
+                <i class="bi bi-globe2 lang-icon"></i>
+                <span class="lang-pill active" id="langEnPill">EN</span>
+                <span class="lang-sep">/</span>
+                <span class="lang-pill lang-ar-pill" id="langArPill">عربي</span>
+              </div>
+            </button>
+
+            <a href="contact.html#booking-form" class="btn btn-primary-custom nav-cta-btn">
+              <i class="bi bi-calendar2-check-fill"></i>
+              <span data-i18n="nav.book">Book Appointment</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         2. TREATMENTS HERO
+         ========================================================================== -->
+    <section class="txp-hero">
+      <div class="txp-hero-glow txp-hero-glow-blue"></div>
+      <div class="txp-hero-glow txp-hero-glow-green"></div>
+      <div class="txp-hero-grid"></div>
+
+      <div class="container position-relative">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb txp-breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-fill me-1"></i><span data-i18n="contact.crumb.home">Home</span></a></li>
+            <li class="breadcrumb-item active" aria-current="page" data-i18n="nav.treatments">Treatments</li>
+          </ol>
+        </nav>
+
+        <div class="row align-items-end g-4">
+          <div class="col-lg-7">
+            <div class="txp-hero-badge">
+              <span class="dot"></span>
+              <span data-i18n="txp.hero.badge">COMPLETE TREATMENT DIRECTORY</span>
+            </div>
+            <h1 class="txp-hero-title">
+              <span data-i18n="txp.hero.title">Every Path to</span>
+              <span class="txp-hero-accent" data-i18n="txp.hero.titleAccent">Pain-Free Movement</span>
+            </h1>
+            <p class="txp-hero-sub" data-i18n="txp.hero.sub">
+              Explore our full range of clinical physiotherapy, neurological rehabilitation, holistic and Ayurvedic
+              therapies, each tailored to your diagnosis, goals and pace of recovery.
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <div class="txp-hero-stats">
+              <div class="txp-stat"><strong>16+</strong><span data-i18n="txp.stat.therapies">Therapies</span></div>
+              <div class="txp-stat"><strong>5</strong><span data-i18n="txp.stat.specialties">Specialties</span></div>
+              <div class="txp-stat"><strong>98%</strong><span data-i18n="trust.rate">Recovery Rate</span></div>
+              <div class="txp-stat"><strong>0</strong><span data-i18n="txp.stat.surgery">Surgery Needed</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. SEARCH + CATEGORY FILTER TOOLBAR
+         ========================================================================== -->
+    <section class="txp-toolbar-wrap">
+      <div class="container">
+        <div class="txp-toolbar">
+          <div class="txp-search">
+            <i class="bi bi-search"></i>
+            <input type="search" id="txSearch" placeholder="Search a condition or therapy, e.g. sciatica, stroke, knee"
+              data-i18n-placeholder="txp.search.ph" aria-label="Search treatments" autocomplete="off">
+            <button type="button" class="txp-search-clear" id="txSearchClear" aria-label="Clear search" hidden><i class="bi bi-x-lg"></i></button>
+          </div>
+          <div class="tx-filter-row" role="group" aria-label="Filter treatments by category">
+            <button type="button" class="tx-filter-btn active" data-cat="all" aria-pressed="true">
+              <i class="bi bi-grid-fill"></i> <span data-i18n="filter.all">All Treatments</span> <span class="tx-filter-count" data-count-for="all">0</span>
+            </button>
+            <button type="button" class="tx-filter-btn" data-cat="neurological" aria-pressed="false">
+              <i class="bi bi-heart-pulse-fill"></i> <span data-i18n="filter.neuro">Neurological &amp; Stroke</span> <span class="tx-filter-count" data-count-for="neurological">0</span>
+            </button>
+            <button type="button" class="tx-filter-btn" data-cat="spine" aria-pressed="false">
+              <i class="bi bi-person-arms-up"></i> <span data-i18n="filter.spine">Spine &amp; Pain Care</span> <span class="tx-filter-count" data-count-for="spine">0</span>
+            </button>
+            <button type="button" class="tx-filter-btn" data-cat="orthopedic" aria-pressed="false">
+              <i class="bi bi-trophy-fill"></i> <span data-i18n="filter.ortho">Orthopedic &amp; Sports</span> <span class="tx-filter-count" data-count-for="orthopedic">0</span>
+            </button>
+            <button type="button" class="tx-filter-btn" data-cat="holistic" aria-pressed="false">
+              <i class="bi bi-stars"></i> <span data-i18n="filter.holistic">Specialized &amp; Holistic</span> <span class="tx-filter-count" data-count-for="holistic">0</span>
+            </button>
+            <button type="button" class="tx-filter-btn" data-cat="ayurveda" aria-pressed="false">
+              <i class="bi bi-flower1"></i> <span data-i18n="nav.ayurveda">Ayurveda</span> <span class="tx-filter-count" data-count-for="ayurveda">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. TREATMENTS GRID
+         ========================================================================== -->
+    <section class="txp-grid-section">
+      <div class="container">
+        <div class="txp-results-bar">
+          <p class="mb-0" aria-live="polite">
+            <strong id="txResultCount">16</strong> <span data-i18n="txp.results">treatments found</span>
+          </p>
+          <a href="contact.html#booking-form" class="txp-help-link">
+            <i class="bi bi-question-circle-fill"></i> <span data-i18n="txp.unsure">Not sure which treatment you need?</span>
+          </a>
+        </div>
+
+        <div class="row g-4" id="txGrid">
+          <div class="col-lg-4 col-md-6 tx-item" data-cat="neurological">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/service-neurological.jpg" alt="Stroke Treatment & Neurological Rehab"
+                  class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-heart-pulse-fill"></i> <span
+                    data-i18n="tx.stroke.badge">Neurological</span></div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title" data-i18n="tx.stroke.title">Stroke Rehabilitation</h3>
+                <p class="service-card-desc" data-i18n="tx.stroke.desc">
+                  Neurological rehabilitation for stroke recovery, paralysis, gait retraining, and motor restoration
+                  using advanced neuro-facilitation.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip" data-i18n="tx.stroke.tag1">Paralysis Care</span>
+                  <span class="tag-chip" data-i18n="tx.stroke.tag2">Gait Training</span>
+                  <span class="tag-chip" data-i18n="tx.stroke.tag3">Neuroplasticity</span>
+                </div>
+                <a href="treatment.html?id=stroke" class="service-link">
+                  <span data-i18n="common.discover">Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 tx-item" data-cat="spine">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/service-back-neck.jpg" alt="Back Pain & Sciatica Treatment"
+                  class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-person-arms-up"></i> <span
+                    data-i18n="tx.backpain.badge">Spine Care</span></div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title" data-i18n="tx.backpain.title">Back Pain &amp; Sciatica</h3>
+                <p class="service-card-desc" data-i18n="tx.backpain.desc">
+                  Natural, surgery-free relief for sciatica, lumbar disc herniation, spinal stenosis, and chronic lower
+                  back pain.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip" data-i18n="tx.backpain.tag1">Disc Herniation</span>
+                  <span class="tag-chip" data-i18n="tx.backpain.tag2">Sciatic Nerve</span>
+                  <span class="tag-chip" data-i18n="tx.backpain.tag3">Decompression</span>
+                </div>
+                <a href="treatment.html?id=backpain" class="service-link">
+                  <span data-i18n="common.discover">Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 tx-item" data-cat="spine">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/service-back-neck.jpg" alt="Cervical Spondylosis & Neck Pain"
+                  class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-activity"></i> <span data-i18n="tx.cervical.badge">Neck
+                    &amp; Spine</span></div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title" data-i18n="tx.cervical.title">Cervical Spondylosis</h3>
+                <p class="service-card-desc" data-i18n="tx.cervical.desc">
+                  Comprehensive relief from neck stiffness, radiating arm numbness, posture strain, and degenerative
+                  cervical disc issues.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip" data-i18n="tx.cervical.tag1">Neck Stiffness</span>
+                  <span class="tag-chip" data-i18n="tx.cervical.tag2">Posture Correction</span>
+                  <span class="tag-chip" data-i18n="tx.cervical.tag3">Manual Therapy</span>
+                </div>
+                <a href="treatment.html?id=cervical" class="service-link">
+                  <span data-i18n="common.discover">Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 tx-item" data-cat="neurological">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/service-neurological.jpg" alt="Cerebral Palsy Pediatric Care"
+                  class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-heart-fill"></i> <span data-i18n="tx.cp.badge">Pediatric
+                    Neuro</span></div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title" data-i18n="tx.cp.title">Cerebral Palsy Care</h3>
+                <p class="service-card-desc" data-i18n="tx.cp.desc">
+                  Compassionate developmental physiotherapy and neuromuscular retraining supporting childhood mobility,
+                  motor skills, and independence.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip" data-i18n="tx.cp.tag1">Motor Skills</span>
+                  <span class="tag-chip" data-i18n="tx.cp.tag2">Spasticity Control</span>
+                  <span class="tag-chip" data-i18n="tx.cp.tag3">Child Rehab</span>
+                </div>
+                <a href="treatment.html?id=cerebralpalsy" class="service-link">
+                  <span data-i18n="common.discover">Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 tx-item" data-cat="orthopedic">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/service-sports.jpg" alt="Sports Injury Rehabilitation" class="service-card-img"
+                  loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-trophy"></i> <span data-i18n="tx.sports.badge">Sports
+                    Care</span></div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title" data-i18n="tx.sports.title">Sports Injury Recovery</h3>
+                <p class="service-card-desc" data-i18n="tx.sports.desc">
+                  High-performance recovery for ACL sprains, rotator cuff tears, ankle trauma, and return-to-play
+                  functional conditioning.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip" data-i18n="tx.sports.tag1">ACL / Meniscus</span>
+                  <span class="tag-chip" data-i18n="tx.sports.tag2">Tendonitis</span>
+                  <span class="tag-chip" data-i18n="tx.sports.tag3">Return-to-Play</span>
+                </div>
+                <a href="treatment.html?id=sports" class="service-link">
+                  <span data-i18n="common.discover">Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 tx-item" data-cat="orthopedic">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/service-orthopedic.jpg" alt="Orthopedic Physiotherapy" class="service-card-img"
+                  loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-bandaid"></i> <span
+                    data-i18n="tx.ortho.badge">Orthopedic</span></div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title" data-i18n="tx.ortho.title">Orthopedic Rehabilitation</h3>
+                <p class="service-card-desc" data-i18n="tx.ortho.desc">
+                  Specialized management for bone, joint, ligament, and cartilage disorders, easing chronic stiffness
+                  and arthritis.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip" data-i18n="tx.ortho.tag1">Osteoarthritis</span>
+                  <span class="tag-chip" data-i18n="tx.ortho.tag2">Joint Pain</span>
+                  <span class="tag-chip" data-i18n="tx.ortho.tag3">Biomechanical Alignment</span>
+                </div>
+                <a href="treatment.html?id=orthopedic" class="service-link">
+                  <span data-i18n="common.discover">Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 tx-item" data-cat="orthopedic">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/service-post-surgical.jpg" alt="Post-Surgical Rehabilitation"
+                  class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-shield-plus"></i> <span
+                    data-i18n="tx.postop.badge">Post-Surgery</span></div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title" data-i18n="tx.postop.title">Post-Surgical Rehabilitation</h3>
+                <p class="service-card-desc" data-i18n="tx.postop.desc">
+                  Structured recovery following joint replacement, spinal surgery, and arthroscopy to regain complete
+                  strength safely.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip" data-i18n="tx.postop.tag1">Knee / Hip Replacement</span>
+                  <span class="tag-chip" data-i18n="tx.postop.tag2">Scar Management</span>
+                  <span class="tag-chip" data-i18n="tx.postop.tag3">Rapid Mobility</span>
+                </div>
+                <a href="treatment.html?id=postop" class="service-link">
+                  <span data-i18n="common.discover">Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 tx-item" data-cat="neurological">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/service-neurological.jpg" alt="Parkinson's Disease Support"
+                  class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-shuffle"></i> <span
+                    data-i18n="tx.parkinson.badge">Movement Disorders</span></div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title" data-i18n="tx.parkinson.title">Parkinson's Movement Care</h3>
+                <p class="service-card-desc" data-i18n="tx.parkinson.desc">
+                  Targeted exercise therapy enhancing postural stability, reducing tremors, overcoming freezing
+                  episodes, and preventing falls.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip" data-i18n="tx.parkinson.tag1">Balance Training</span>
+                  <span class="tag-chip" data-i18n="tx.parkinson.tag2">Tremor Control</span>
+                  <span class="tag-chip" data-i18n="tx.parkinson.tag3">Coordination</span>
+                </div>
+                <a href="treatment.html?id=parkinsons" class="service-link">
+                  <span data-i18n="common.discover">Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 tx-item" data-cat="orthopedic">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/service-joint-muscle.jpg" alt="Frozen Shoulder & Joint Mobility"
+                  class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-arrows-move"></i> <span data-i18n="tx.frozen.badge">Joint
+                    Mobility</span></div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title" data-i18n="tx.frozen.title">Joint &amp; Muscle Mobility</h3>
+                <p class="service-card-desc" data-i18n="tx.frozen.desc">
+                  Dedicated therapeutic protocols for adhesive capsulitis (frozen shoulder), tendon stiffness, and
+                  myofascial restrictions.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip" data-i18n="tx.frozen.tag1">Frozen Shoulder</span>
+                  <span class="tag-chip" data-i18n="tx.frozen.tag2">Trigger Point</span>
+                  <span class="tag-chip" data-i18n="tx.frozen.tag3">Range of Motion</span>
+                </div>
+                <a href="treatment.html?id=joint" class="service-link">
+                  <span data-i18n="common.discover">Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 tx-item" data-cat="holistic">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/why-us.jpg" alt="Medical Cupping Hijama Therapy" class="service-card-img"
+                  loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-droplet-half"></i> <span
+                    data-i18n="tx.hijama.badge">Holistic Therapy</span></div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title" data-i18n="tx.hijama.title">Hijama (Medical Cupping)</h3>
+                <p class="service-card-desc" data-i18n="tx.hijama.desc">
+                  Sterile medical cupping and dry cupping to stimulate micro-circulation, relieve deep muscle spasm, and
+                  promote natural tissue detox.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip" data-i18n="tx.hijama.tag1">Circulation Boost</span>
+                  <span class="tag-chip" data-i18n="tx.hijama.tag2">Pain Decompression</span>
+                  <span class="tag-chip" data-i18n="tx.hijama.tag3">Natural Healing</span>
+                </div>
+                <a href="treatment.html?id=hijama" class="service-link">
+                  <span data-i18n="common.discover">Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 tx-item" data-cat="holistic">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/service-orthopedic.jpg" alt="Therapeutic Reflexology" class="service-card-img"
+                  loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-magic"></i> <span
+                    data-i18n="tx.reflex.badge">Complementary Care</span></div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title" data-i18n="tx.reflex.title">Therapeutic Reflexology</h3>
+                <p class="service-card-desc" data-i18n="tx.reflex.desc">
+                  Precision pressure point activation and dry needling targeting neuropathic discomfort, stress release,
+                  and sensory re-education.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip" data-i18n="tx.reflex.tag1">Dry Needling</span>
+                  <span class="tag-chip" data-i18n="tx.reflex.tag2">Acupressure</span>
+                  <span class="tag-chip" data-i18n="tx.reflex.tag3">Stress Relief</span>
+                </div>
+                <a href="treatment.html?id=reflexology" class="service-link">
+                  <span data-i18n="common.discover">Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 tx-item" data-cat="holistic">
+            <div class="service-card enhanced-service-card">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/service-neurological.jpg" alt="Electrotherapy & Deep Tissue Ultrasound"
+                  class="service-card-img" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-lightning-charge-fill"></i> <span
+                    data-i18n="tx.electro.badge">Modern Modality</span></div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title" data-i18n="tx.electro.title">Electrotherapy &amp; Ultrasound</h3>
+                <p class="service-card-desc" data-i18n="tx.electro.desc">
+                  TENS, neuromuscular electrical stimulation (NMES), and therapeutic deep ultrasound to accelerate
+                  cellular repair and block pain signals.
+                </p>
+                <div class="treatment-tags">
+                  <span class="tag-chip" data-i18n="tx.electro.tag1">TENS / NMES</span>
+                  <span class="tag-chip" data-i18n="tx.electro.tag2">Deep Ultrasound</span>
+                  <span class="tag-chip" data-i18n="tx.electro.tag3">Cellular Repair</span>
+                </div>
+                <a href="treatment.html?id=electrotherapy" class="service-link">
+                  <span data-i18n="common.discover">Discover More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 tx-item" data-cat="ayurveda">
+            <div class="service-card enhanced-service-card tx-card-ayur">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/ayurveda-gcc-man.jpg" alt="Elakizhi & Podikizhi" class="service-card-img" style="object-position: center 25%;" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-fire"></i> <span data-i18n="ayur.elakizhi.badge">Herbal Poultice</span></div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title" data-i18n="ayur.elakizhi.title">Elakizhi &amp; Podikizhi</h3>
+                <p class="service-card-desc" data-i18n="ayur.elakizhi.desc">Steamed bundles of wild medicinal leaves and herbal powders soaked in warm medicated oils to relieve acute joint pain, arthritis, sciatica, and chronic stiffness.</p>
+                <div class="treatment-tags">
+                  <span class="tag-chip" data-i18n="ayur.tag.joint">#JointPain</span>
+                  <span class="tag-chip" data-i18n="ayur.tag.steam">#HerbalSteam</span>
+                  <span class="tag-chip" data-i18n="ayur.tag.spine">#SpineRelief</span>
+                </div>
+                <a href="treatment.html?id=elakizhi" class="service-link">
+                  <span data-i18n="ayur.discover">Discover Protocol</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 tx-item" data-cat="ayurveda">
+            <div class="service-card enhanced-service-card tx-card-ayur">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/ayurveda-shirodhara.jpg" alt="Shirodhara & Nasyam" class="service-card-img" style="object-position: center 40%;" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-droplet-fill"></i> <span data-i18n="ayur.shiro.badge">Medicated Oil Stream</span></div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title" data-i18n="ayur.shiro.title">Shirodhara &amp; Nasyam</h3>
+                <p class="service-card-desc" data-i18n="ayur.shiro.desc">Continuous rhythmic stream of warm herbal oil over the forehead to soothe the nervous system, alleviate deep stress, chronic migraines, sleep disorders, and anxiety.</p>
+                <div class="treatment-tags">
+                  <span class="tag-chip" data-i18n="ayur.tag.stress">#StressRelief</span>
+                  <span class="tag-chip" data-i18n="ayur.tag.sleep">#SleepHarmony</span>
+                  <span class="tag-chip" data-i18n="ayur.tag.nervous">#NervousSystem</span>
+                </div>
+                <a href="treatment.html?id=shirodhara" class="service-link">
+                  <span data-i18n="ayur.discover">Discover Protocol</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 tx-item" data-cat="ayurveda">
+            <div class="service-card enhanced-service-card tx-card-ayur">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/ayurveda-basti.jpg" alt="Kati & Janu Basti" class="service-card-img" style="object-position: 75% 65%;" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-shield-plus"></i> <span data-i18n="ayur.basti.badge">Localized Oil Dam</span></div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title" data-i18n="ayur.basti.title">Kati &amp; Janu Basti</h3>
+                <p class="service-card-desc" data-i18n="ayur.basti.desc">Herbal dough reservoirs retaining warm medicinal oil over the lumbar spine or knee joints to penetrate deep tissues, healing slipped discs and knee cartilage degeneration.</p>
+                <div class="treatment-tags">
+                  <span class="tag-chip" data-i18n="ayur.tag.disc">#DiscHerniation</span>
+                  <span class="tag-chip" data-i18n="ayur.tag.knee">#KneeCare</span>
+                  <span class="tag-chip" data-i18n="ayur.tag.lumbar">#LumbarSpine</span>
+                </div>
+                <a href="treatment.html?id=basti" class="service-link">
+                  <span data-i18n="ayur.discover">Discover Protocol</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 tx-item" data-cat="ayurveda">
+            <div class="service-card enhanced-service-card tx-card-ayur">
+              <div class="service-card-img-wrap">
+                <img src="assets/images/ayurveda-hero.jpg" alt="Abhyanga & Detox" class="service-card-img" style="object-position: center 50%;" loading="lazy">
+                <div class="service-badge-tag"><i class="bi bi-tree-fill"></i> <span data-i18n="ayur.abhyanga.badge">Full Body Detox</span></div>
+                <div class="service-card-overlay"></div>
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title" data-i18n="ayur.abhyanga.title">Abhyanga &amp; Detox</h3>
+                <p class="service-card-desc" data-i18n="ayur.abhyanga.desc">Synchronized full-body massage using warm medicinal oils along biological energy pathways to stimulate lymphatic drainage, purge toxins, and nourish vital organs.</p>
+                <div class="treatment-tags">
+                  <span class="tag-chip" data-i18n="ayur.tag.detox">#Detoxification</span>
+                  <span class="tag-chip" data-i18n="ayur.tag.lymph">#LymphaticFlow</span>
+                  <span class="tag-chip" data-i18n="ayur.tag.immunity">#VitalImmunity</span>
+                </div>
+                <a href="treatment.html?id=abhyanga" class="service-link">
+                  <span data-i18n="ayur.discover">Discover Protocol</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="txp-empty" id="txEmpty" hidden>
+          <div class="txp-empty-icon"><i class="bi bi-search-heart"></i></div>
+          <h3 data-i18n="txp.empty.title">No treatments match your search</h3>
+          <p data-i18n="txp.empty.sub">Try another keyword, or talk to our specialists and we will recommend the right care plan.</p>
+          <button type="button" class="btn btn-outline-custom" id="txReset"><i class="bi bi-arrow-counterclockwise"></i> <span data-i18n="txp.empty.reset">Show all treatments</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. HOW WE PLAN YOUR TREATMENT
+         ========================================================================== -->
+    <section class="section-padding bg-light-bg">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <div class="badge-eyebrow">
+            <span class="dot"></span>
+            <span data-i18n="txp.steps.badge">YOUR CARE JOURNEY</span>
+          </div>
+          <h2 class="section-title">
+            <span data-i18n="txp.steps.title">From First Visit to</span> <span class="italic-accent" data-i18n="txp.steps.titleAccent">Full Recovery</span>
+          </h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4 reveal">
+            <div class="txp-step">
+              <span class="txp-step-num">01</span>
+              <div class="txp-step-icon"><i class="bi bi-clipboard2-pulse-fill"></i></div>
+              <h3 data-i18n="txp.step1.t">Clinical Assessment</h3>
+              <p data-i18n="txp.step1.d">A full biomechanical and medical-history review to pinpoint the root cause of your pain or limitation.</p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal delay-100">
+            <div class="txp-step">
+              <span class="txp-step-num">02</span>
+              <div class="txp-step-icon green"><i class="bi bi-diagram-3-fill"></i></div>
+              <h3 data-i18n="txp.step2.t">Personalised Plan</h3>
+              <p data-i18n="txp.step2.d">Your specialist combines the right therapies into a structured, goal-based programme.</p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal delay-200">
+            <div class="txp-step">
+              <span class="txp-step-num">03</span>
+              <div class="txp-step-icon"><i class="bi bi-graph-up-arrow"></i></div>
+              <h3 data-i18n="txp.step3.t">Measured Progress</h3>
+              <p data-i18n="txp.step3.d">Regular re-assessments track strength, mobility and pain so your plan keeps evolving with you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. CALL TO ACTION
+         ========================================================================== -->
+    <section class="cta-section">
+      <div class="cta-glow-circle"></div>
+      <div class="container">
+        <div class="cta-content-box">
+          <div class="badge-eyebrow" style="background: rgba(255, 255, 255, 0.12); color: #6EE7B7; border-color: rgba(255, 255, 255, 0.2);">
+            <span class="dot" style="background-color: #6EE7B7;"></span>
+            <span data-i18n="cta.contact.badge">START YOUR RECOVERY TODAY</span>
+          </div>
+          <h2 class="cta-heading font-serif" data-i18n="txp.cta.heading">Ready to Start Your Treatment?</h2>
+          <p class="cta-text" data-i18n="txp.cta.text">Book an assessment and our specialists will build a recovery plan around your needs.</p>
+          <div class="cta-buttons">
+            <a href="contact.html#booking-form" class="btn btn-white-custom">
+              <i class="bi bi-calendar2-check-fill"></i>
+              <span data-i18n="nav.book">Book Appointment</span>
+            </a>
+            <a href="https://wa.me/96871704990?text=Hello%20Al%20Farsi%20Center%2C%20I%20would%20like%20to%20ask%20about%20a%20treatment." target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom" style="color: #FFFFFF !important; border-color: rgba(255,255,255,0.6);">
+              <i class="bi bi-whatsapp"></i>
+              <span data-i18n="cta.whatsapp">WhatsApp Helpline</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ==========================================================================
+       7. SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand mb-3">
+            <img src="assets/images/logo-white.svg" alt="Al Farsi Logo" class="brand-logo-img mb-3" style="filter: brightness(0) invert(1);">
+            <p class="footer-desc" data-i18n="footer.desc">
+              Al Farsi Physiotherapy &amp; Rehabilitation Center is Oman's premier clinical facility dedicated to neurological stroke recovery, spine decompression, orthopedic care, and authentic Ayurvedic wellness.
+            </p>
+          </div>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/96871704990" class="social-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading" data-i18n="footer.quickLinks">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="index.html#about" data-i18n="footer.aboutCenter">About Center</a></li>
+            <li><a href="treatments.html" data-i18n="nav.treatments">Treatments</a></li>
+            <li><a href="index.html#ayurveda" data-i18n="footer.ayurvedicCare">Ayurvedic Care</a></li>
+            <li><a href="index.html#doctors" data-i18n="nav.specialists">Specialists</a></li>
+            <li><a href="contact.html" data-i18n="footer.contactUs">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-6">
+          <h4 class="footer-heading" data-i18n="footer.treatments">Treatments</h4>
+          <ul class="footer-links">
+            <li><a href="treatment.html?id=stroke" data-i18n="footer.t.stroke">Stroke Rehabilitation</a></li>
+            <li><a href="treatment.html?id=backpain" data-i18n="footer.t.backpain">Back Pain &amp; Sciatica</a></li>
+            <li><a href="treatment.html?id=sports" data-i18n="footer.t.sports">Sports Rehabilitation</a></li>
+            <li><a href="treatment.html?id=elakizhi" data-i18n="footer.t.elakizhi">Elakizhi Herbal Poultice</a></li>
+            <li><a href="treatment.html?id=shirodhara" data-i18n="footer.t.shirodhara">Shirodhara Stress Relief</a></li>
+            <li><a href="treatment.html?id=hijama" data-i18n="footer.t.hijama">Hijama Medical Cupping</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading" data-i18n="footer.contactInfo">Contact Info</h4>
+          <ul class="footer-links footer-contact">
+            <li class="footer-contact-item">
+              <i class="bi bi-geo-alt-fill footer-contact-icon"></i>
+              <span class="footer-contact-text" data-i18n="footer.address">Al Mudhaibi, North Al-Sharqiyah, Sultanate of Oman (P.O. Box 235, PC 420)</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-telephone-fill footer-contact-icon"></i>
+              <a href="tel:+96871704990" class="footer-contact-link">+968 7170 4990</a>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-envelope-fill footer-contact-icon"></i>
+              <a href="mailto:physicaltherapy717@gmail.com" class="footer-contact-link">physicaltherapy717@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom text-center">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-md-start mb-2 mb-md-0">
+            <span data-i18n="footer.copyright">&copy; 2026 Al Farsi Physiotherapy Center. All Rights Reserved.</span>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <span class="arabic-text text-light opacity-75">مركز الفارسي للعلاج الطبيعي والتأهيل — صحتك وحركتك في أمان</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Direct Contact Button -->
+  <a href="https://wa.me/96871704990?text=Hello%20Al%20Farsi%20Physiotherapy%20Center%2C%20I%20would%20like%20to%20inquire%20about%20an%20appointment."
+    target="_blank" rel="noopener noreferrer" id="floatingWhatsappBtn" class="floating-whatsapp-btn"
+    aria-label="Chat on WhatsApp" title="WhatsApp: +968 7170 4990">
+    <i class="bi bi-whatsapp"></i>
+    <span class="whatsapp-tooltip" data-i18n="common.chatWhatsapp">Chat with us on WhatsApp</span>
+  </a>
+
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="i18n-data.js?v=20261111c"></script>
+  <script src="script.js?v=20261111c"></script>
+
+  <!-- Treatments directory: search + category filter -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var items = Array.prototype.slice.call(document.querySelectorAll('.tx-item'));
+      var buttons = Array.prototype.slice.call(document.querySelectorAll('.tx-filter-btn'));
+      var search = document.getElementById('txSearch');
+      var clearBtn = document.getElementById('txSearchClear');
+      var countEl = document.getElementById('txResultCount');
+      var emptyEl = document.getElementById('txEmpty');
+      var validCats = buttons.map(function (b) { return b.dataset.cat; });
+      var state = { cat: 'all', q: '' };
+
+      // category counts
+      buttons.forEach(function (b) {
+        var n = b.dataset.cat === 'all' ? items.length
+          : items.filter(function (i) { return i.dataset.cat === b.dataset.cat; }).length;
+        var c = b.querySelector('.tx-filter-count');
+        if (c) c.textContent = n;
+      });
+
+      function matches(item) {
+        if (state.cat !== 'all' && item.dataset.cat !== state.cat) return false;
+        if (!state.q) return true;
+        return item.textContent.toLowerCase().indexOf(state.q) !== -1;
+      }
+
+      function render() {
+        var shown = 0;
+        items.forEach(function (item, i) {
+          var ok = matches(item);
+          item.hidden = !ok;
+          if (ok) {
+            item.style.animationDelay = (Math.min(shown, 8) * 45) + 'ms';
+            item.classList.remove('tx-in');
+            void item.offsetWidth;
+            item.classList.add('tx-in');
+            shown++;
+          }
+        });
+        countEl.textContent = shown;
+        emptyEl.hidden = shown !== 0;
+        clearBtn.hidden = !state.q;
+        buttons.forEach(function (b) {
+          var on = b.dataset.cat === state.cat;
+          b.classList.toggle('active', on);
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        var url = new URL(window.location.href);
+        if (state.cat === 'all') url.searchParams.delete('cat'); else url.searchParams.set('cat', state.cat);
+        history.replaceState(null, '', url);
+      }
+
+      buttons.forEach(function (b) {
+        b.addEventListener('click', function () { state.cat = b.dataset.cat; render(); });
+      });
+      search.addEventListener('input', function () { state.q = search.value.trim().toLowerCase(); render(); });
+      clearBtn.addEventListener('click', function () { search.value = ''; state.q = ''; render(); search.focus(); });
+      document.getElementById('txReset').addEventListener('click', function () {
+        search.value = ''; state.q = ''; state.cat = 'all'; render();
+      });
+
+      var initial = new URLSearchParams(window.location.search).get('cat');
+      if (initial && validCats.indexOf(initial) !== -1) state.cat = initial;
+      render();
+    });
+  </script>
+</body>
+</html>
