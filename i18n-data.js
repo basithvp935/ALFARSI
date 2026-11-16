@@ -735,3 +735,10 @@ window.ALFARSI_I18N_EXTRA = {
     "gal.c14": "علاج بودي كيزي بالكمادات"
   });
 })();
+
+/* Team cards */
+(function () {
+  var d = window.ALFARSI_I18N_EXTRA = window.ALFARSI_I18N_EXTRA || { en: {}, ar: {} };
+  d.en["team.exp"] = "Years Experience";
+  d.ar["team.exp"] = "سنوات خبرة";
+})();

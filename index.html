@@ -71,7 +71,7 @@
       <div class="container">
         <!-- Brand Logo -->
         <a class="navbar-brand" href="#home" title="Al Farsi Physiotherapy Center">
-          <img src="assets/images/logo.svg" alt="Al Farsi Physiotherapy Center Logo" class="brand-logo-img">
+          <img src="assets/images/logo-main.png" alt="Al Farsi Physiotherapy Center" class="brand-logo-img" width="984" height="226">
         </a>
 
         <!-- Mobile Toggler -->
@@ -146,8 +146,8 @@
          ========================================================================== -->
     <section class="hero-section hero-video-section" id="home">
       <!-- Background Video & Overlay -->
-      <video class="hero-bg-video" autoplay loop muted playsinline poster="assets/images/hero.jpg">
-        <source src="assets/images/alfarsi.mp4" type="video/mp4">
+      <video class="hero-bg-video" autoplay loop muted playsinline preload="auto" poster="assets/images/hero-poster.jpg" aria-hidden="true">
+        <source src="assets/images/hero-video.mp4" type="video/mp4">
       </video>
       <div class="hero-video-overlay"></div>
       <div class="hero-glow-1"></div>
@@ -378,7 +378,7 @@
         </div>
 
         <!-- 4 Primary Pillar Cards -->
-        <div class="row g-4">
+        <div class="row g-4 m-swipe">
           <!-- Offering 1 -->
           <div class="col-lg-3 col-md-6 reveal delay-100">
             <div class="offering-luxury-card">
@@ -466,7 +466,7 @@
           </p>
         </div>
 
-        <div class="row g-4">
+        <div class="row g-4 m-swipe">
           <!-- Featured 1: Stroke Treatment -->
           <div class="col-lg-4 col-md-6 reveal">
             <div class="service-card enhanced-service-card featured-tx-card">
@@ -687,7 +687,7 @@
         </div>
 
         <!-- 4 Specialized Ayurvedic Therapy Cards -->
-        <div class="row g-4">
+        <div class="row g-4 m-swipe">
           <!-- Card 1: Kizhi / Elakizhi -->
           <div class="col-lg-3 col-md-6 reveal">
             <div class="ayur-card">
@@ -864,7 +864,7 @@
             <div class="connector-dot dot-3"></div>
           </div>
 
-          <div class="row g-4 position-relative" style="z-index: 2;">
+          <div class="row g-4 m-swipe position-relative" style="z-index: 2;">
             <!-- Step 1 Card -->
             <div class="col-lg-4 reveal delay-100">
               <div class="luxury-journey-card" data-step="1">
@@ -1128,67 +1128,94 @@
           </p>
         </div>
 
-        <!-- Doctors Cards Grid (3 Doctors, compact) -->
-        <div class="row g-4 doc-grid">
-          <div class="col-lg-4 col-md-6 reveal delay-100">
-            <article class="doc-card">
-              <div class="doc-photo">
-                <img src="assets/images/doctor-1.jpg" alt="Dr. Tariq Al-Farsi - Consultant Physiotherapist" loading="lazy">
-                <span class="doc-exp"><i class="bi bi-award-fill"></i> <span data-i18n="doc.tariq.exp">16+ Yrs Exp • UK Certified</span></span>
-                <span class="doc-rating"><i class="bi bi-star-fill"></i> 4.98</span>
-              </div>
-              <div class="doc-panel">
-                <h3 class="doc-name"><span data-i18n="doc.tariq.name">Dr. Tariq Al-Farsi, DPT, PhD</span> <i class="bi bi-patch-check-fill doc-verified" title="Verified specialist"></i></h3>
-                <p class="doc-role" data-i18n="doc.tariq.role">Clinical Director &amp; Consultant</p>
-                <div class="doc-tags"><span data-i18n="doc.tariq.s1">Orthopedic Rehab</span><span data-i18n="doc.tariq.s2">Spine Care</span><span data-i18n="doc.tariq.s3">Manual Therapy</span></div>
-                <div class="doc-foot">
-                  <span class="doc-cases"><i class="bi bi-people-fill"></i> <span data-i18n="doc.tariq.cases">1,200+ Cases</span></span>
-                  <a href="contact.html#booking-form" class="doc-book" aria-label="Book with Dr. Tariq Al-Farsi, DPT, PhD">
-                    <span data-i18n="doc.bookShort">Book Visit</span> <i class="bi bi-arrow-up-right"></i>
-                  </a>
-                </div>
+        <!-- Team Grid (6 staff photos: 4 on top, 2 centered below) -->
+        <div class="team-grid">
+          <div class="team-col reveal">
+            <article class="team-card" tabindex="0" aria-label="Dr. Muhsin V.P, BPT">
+              <img src="assets/images/team-2.jpg" alt="Dr. Muhsin V.P, BPT" loading="lazy" style="object-position: center 18%;">
+              <span class="team-tap-hint" aria-hidden="true"><i class="bi bi-hand-index-thumb"></i></span>
+              <div class="team-info">
+                <h3 class="team-name">Dr. Muhsin V.P</h3>
+                <p class="team-degree">BPT</p>
+                <span class="team-exp"><i class="bi bi-award-fill"></i> 12 <span data-i18n="team.exp">Years Experience</span></span>
+                <a href="contact.html?doctor=Dr.%20Muhsin%20V.P#booking-form" class="team-book">
+                  <i class="bi bi-calendar2-check"></i> <span data-i18n="doc.bookShort">Book Visit</span> <i class="bi bi-arrow-right team-book-arrow"></i>
+                </a>
               </div>
             </article>
           </div>
 
-          <div class="col-lg-4 col-md-6 reveal delay-200">
-            <article class="doc-card">
-              <div class="doc-photo">
-                <img src="assets/images/doctor-2.jpg" alt="Dr. Layla Al-Balushi - Neurological Specialist" loading="lazy">
-                <span class="doc-exp"><i class="bi bi-award-fill"></i> <span data-i18n="doc.layla.exp">12+ Yrs Exp • Neuro Specialist</span></span>
-                <span class="doc-rating"><i class="bi bi-star-fill"></i> 4.95</span>
-              </div>
-              <div class="doc-panel">
-                <h3 class="doc-name"><span data-i18n="doc.layla.name">Dr. Layla Al-Balushi, PT, MSc</span> <i class="bi bi-patch-check-fill doc-verified" title="Verified specialist"></i></h3>
-                <p class="doc-role" data-i18n="doc.layla.role">Lead Neurological Specialist</p>
-                <div class="doc-tags"><span data-i18n="doc.layla.s1">Neuro Rehab</span><span data-i18n="doc.layla.s2">Stroke Recovery</span><span data-i18n="doc.layla.s3">Cerebral Palsy</span></div>
-                <div class="doc-foot">
-                  <span class="doc-cases"><i class="bi bi-people-fill"></i> <span data-i18n="doc.layla.cases">980+ Cases</span></span>
-                  <a href="contact.html#booking-form" class="doc-book" aria-label="Book with Dr. Layla Al-Balushi, PT, MSc">
-                    <span data-i18n="doc.bookShort">Book Visit</span> <i class="bi bi-arrow-up-right"></i>
-                  </a>
-                </div>
+          <div class="team-col reveal delay-100">
+            <article class="team-card" tabindex="0" aria-label="Dr. Usman Aminurahman, BPT">
+              <img src="assets/images/team-5.jpg" alt="Dr. Usman Aminurahman, BPT" loading="lazy" style="object-position: center 22%;">
+              <span class="team-tap-hint" aria-hidden="true"><i class="bi bi-hand-index-thumb"></i></span>
+              <div class="team-info">
+                <h3 class="team-name">Dr. Usman Aminurahman</h3>
+                <p class="team-degree">BPT</p>
+                <span class="team-exp"><i class="bi bi-award-fill"></i> 7 <span data-i18n="team.exp">Years Experience</span></span>
+                <a href="contact.html?doctor=Dr.%20Usman%20Aminurahman#booking-form" class="team-book">
+                  <i class="bi bi-calendar2-check"></i> <span data-i18n="doc.bookShort">Book Visit</span> <i class="bi bi-arrow-right team-book-arrow"></i>
+                </a>
               </div>
             </article>
           </div>
 
-          <div class="col-lg-4 col-md-6 reveal delay-300">
-            <article class="doc-card">
-              <div class="doc-photo">
-                <img src="assets/images/doctor-3.jpg" alt="Dr. Marcus Vance - Sports &amp; Post-Op Specialist" loading="lazy">
-                <span class="doc-exp"><i class="bi bi-award-fill"></i> <span data-i18n="doc.marcus.exp">14+ Yrs Exp • CMPT Certified</span></span>
-                <span class="doc-rating"><i class="bi bi-star-fill"></i> 4.97</span>
+          <div class="team-col reveal delay-200">
+            <article class="team-card" tabindex="0" aria-label="Dr. Mubashir Eriyadan, BPT">
+              <img src="assets/images/team-1.jpg" alt="Dr. Mubashir Eriyadan, BPT" loading="lazy" style="object-position: center 22%;">
+              <span class="team-tap-hint" aria-hidden="true"><i class="bi bi-hand-index-thumb"></i></span>
+              <div class="team-info">
+                <h3 class="team-name">Dr. Mubashir Eriyadan</h3>
+                <p class="team-degree">BPT</p>
+                <span class="team-exp"><i class="bi bi-award-fill"></i> 6 <span data-i18n="team.exp">Years Experience</span></span>
+                <a href="contact.html?doctor=Dr.%20Mubashir%20Eriyadan#booking-form" class="team-book">
+                  <i class="bi bi-calendar2-check"></i> <span data-i18n="doc.bookShort">Book Visit</span> <i class="bi bi-arrow-right team-book-arrow"></i>
+                </a>
               </div>
-              <div class="doc-panel">
-                <h3 class="doc-name"><span data-i18n="doc.marcus.name">Dr. Marcus Vance, PT, CMPT</span> <i class="bi bi-patch-check-fill doc-verified" title="Verified specialist"></i></h3>
-                <p class="doc-role" data-i18n="doc.marcus.role">Senior Sports Recovery Consultant</p>
-                <div class="doc-tags"><span data-i18n="doc.marcus.s1">Sports Trauma</span><span data-i18n="doc.marcus.s2">Post-Op Rehab</span><span data-i18n="doc.marcus.s3">Return-to-Play</span></div>
-                <div class="doc-foot">
-                  <span class="doc-cases"><i class="bi bi-people-fill"></i> <span data-i18n="doc.marcus.cases">1,150+ Cases</span></span>
-                  <a href="contact.html#booking-form" class="doc-book" aria-label="Book with Dr. Marcus Vance, PT, CMPT">
-                    <span data-i18n="doc.bookShort">Book Visit</span> <i class="bi bi-arrow-up-right"></i>
-                  </a>
-                </div>
+            </article>
+          </div>
+
+          <div class="team-col reveal delay-300">
+            <article class="team-card" tabindex="0" aria-label="Dr. Areeza Narmeen, BPT">
+              <img src="assets/images/team-4.jpg" alt="Dr. Areeza Narmeen, BPT" loading="lazy" style="object-position: center 20%;">
+              <span class="team-tap-hint" aria-hidden="true"><i class="bi bi-hand-index-thumb"></i></span>
+              <div class="team-info">
+                <h3 class="team-name">Dr. Areeza Narmeen</h3>
+                <p class="team-degree">BPT</p>
+                <span class="team-exp"><i class="bi bi-award-fill"></i> 5 <span data-i18n="team.exp">Years Experience</span></span>
+                <a href="contact.html?doctor=Dr.%20Areeza%20Narmeen#booking-form" class="team-book">
+                  <i class="bi bi-calendar2-check"></i> <span data-i18n="doc.bookShort">Book Visit</span> <i class="bi bi-arrow-right team-book-arrow"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="team-col reveal">
+            <article class="team-card" tabindex="0" aria-label="Dr. Anuhitha Kanhiroli, BPT">
+              <img src="assets/images/team-3.jpg" alt="Dr. Anuhitha Kanhiroli, BPT" loading="lazy" style="object-position: center 18%;">
+              <span class="team-tap-hint" aria-hidden="true"><i class="bi bi-hand-index-thumb"></i></span>
+              <div class="team-info">
+                <h3 class="team-name">Dr. Anuhitha Kanhiroli</h3>
+                <p class="team-degree">BPT</p>
+                <span class="team-exp"><i class="bi bi-award-fill"></i> 4 <span data-i18n="team.exp">Years Experience</span></span>
+                <a href="contact.html?doctor=Dr.%20Anuhitha%20Kanhiroli#booking-form" class="team-book">
+                  <i class="bi bi-calendar2-check"></i> <span data-i18n="doc.bookShort">Book Visit</span> <i class="bi bi-arrow-right team-book-arrow"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="team-col reveal delay-100">
+            <article class="team-card" tabindex="0" aria-label="Dr. Shabna Mangattuparamban, BAMS">
+              <img src="assets/images/team-6.jpg" alt="Dr. Shabna Mangattuparamban, BAMS" loading="lazy" style="object-position: center 85%;">
+              <span class="team-tap-hint" aria-hidden="true"><i class="bi bi-hand-index-thumb"></i></span>
+              <div class="team-info">
+                <h3 class="team-name">Dr. Shabna Mangattuparamban</h3>
+                <p class="team-degree">BAMS</p>
+                <span class="team-exp"><i class="bi bi-award-fill"></i> 8 <span data-i18n="team.exp">Years Experience</span></span>
+                <a href="contact.html?doctor=Dr.%20Shabna%20Mangattuparamban#booking-form" class="team-book">
+                  <i class="bi bi-calendar2-check"></i> <span data-i18n="doc.bookShort">Book Visit</span> <i class="bi bi-arrow-right team-book-arrow"></i>
+                </a>
               </div>
             </article>
           </div>
@@ -1403,7 +1430,7 @@
         </div>
 
         <!-- Testimonials Cards Grid -->
-        <div class="row g-4">
+        <div class="row g-4 m-swipe">
           <!-- Story 1 -->
           <div class="col-lg-4 col-md-6 reveal delay-100">
             <div class="testimonial-luxury-card">
@@ -1514,7 +1541,7 @@
         </div>
 
         <!-- 3 Blog Cards -->
-        <div class="row g-4">
+        <div class="row g-4 m-swipe">
           <!-- Article 1 -->
           <div class="col-lg-4 col-md-6 reveal delay-100">
             <div class="blog-luxury-card">
@@ -1644,7 +1671,7 @@
       <div class="row g-5">
         <!-- Brand & Description -->
         <div class="col-lg-4 col-md-6">
-          <img src="assets/images/logo-white.svg" alt="Al Farsi Logo" class="footer-logo-img">
+          <img src="assets/images/logo-white.png" alt="Al Farsi Physiotherapy Center" class="footer-logo-img" width="984" height="226">
           <p class="footer-desc" data-i18n="footer.desc">
             Al Farsi Physiotherapy &amp; Rehabilitation Center is Oman's premier clinical facility dedicated to
             neurological stroke recovery, spine decompression, orthopedic care, and authentic Ayurvedic wellness.
@@ -1812,8 +1839,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- i18n dictionary + Custom JavaScript -->
-  <script src="i18n-data.js?v=20261111c"></script>
-  <script src="script.js?v=20261111c"></script>
+  <script src="i18n-data.js?v=20261116c"></script>
+  <script src="script.js?v=20261116c"></script>
 </body>
 
 </html>

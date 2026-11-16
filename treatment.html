@@ -36,6 +36,12 @@
     }
     .tp-nav .brand-logo-img { height: 40px; }
     .tp-nav-right { display: flex; align-items: center; gap: 16px; }
+    @media (max-width: 575.98px) {
+      .tp-nav .brand-logo-img { height: 34px; max-width: 52vw; }
+      .tp-nav-right { gap: 8px; }
+      .tp-btn-label { display: none; }
+      .back-home-btn, .nav-book-btn { width: 40px; height: 40px; padding: 0; justify-content: center; font-size: 1rem; }
+    }
     .back-home-btn {
       display: inline-flex; align-items: center; gap: 8px;
       color: rgba(255,255,255,0.7); text-decoration: none;
@@ -562,14 +568,14 @@
   <nav class="tp-nav">
     <div class="container d-flex justify-content-between align-items-center">
       <a href="index.html">
-        <img src="assets/images/logo.svg" alt="Al Farsi Logo" class="brand-logo-img">
+        <img src="assets/images/logo-white.png" alt="Al Farsi Physiotherapy Center" class="brand-logo-img" width="984" height="226">
       </a>
       <div class="tp-nav-right">
-        <a href="treatments.html" class="back-home-btn">
-          <i class="bi bi-arrow-left"></i> All Treatments
+        <a href="treatments.html" class="back-home-btn" aria-label="All Treatments">
+          <i class="bi bi-arrow-left"></i> <span class="tp-btn-label">All Treatments</span>
         </a>
-        <a href="contact.html" class="nav-book-btn">
-          <i class="bi bi-calendar2-check-fill"></i> Book Appointment
+        <a href="contact.html#booking-form" class="nav-book-btn" aria-label="Book Appointment">
+          <i class="bi bi-calendar2-check-fill"></i> <span class="tp-btn-label">Book Appointment</span>
         </a>
       </div>
     </div>

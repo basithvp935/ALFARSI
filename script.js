@@ -1675,3 +1675,72 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initSmartNav);
   else initSmartNav();
 })();
+
+// --- Team cards: tap a photo to reveal its "Book Visit" button (touch screens) ---
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = Array.from(document.querySelectorAll('.team-card'));
+  if (!cards.length) return;
+
+  const closeAll = except => cards.forEach(c => { if (c !== except) c.classList.remove('is-active'); });
+
+  cards.forEach(card => {
+    card.addEventListener('click', e => {
+      if (e.target.closest('.team-book')) return; // let the booking link navigate
+      const willOpen = !card.classList.contains('is-active');
+      closeAll(card);
+      card.classList.toggle('is-active', willOpen);
+    });
+    card.addEventListener('keydown', e => {
+      if ((e.key === 'Enter' || e.key === ' ') && e.target === card) {
+        e.preventDefault();
+        closeAll(card);
+        card.classList.add('is-active');
+        const link = card.querySelector('.team-book');
+        if (link) link.focus();
+      } else if (e.key === 'Escape') {
+        card.classList.remove('is-active');
+        card.focus();
+      }
+    });
+  });
+
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.team-card')) closeAll(null);
+  });
+});
+
+// --- Mobile swipe rows: pagination dots that follow the scroll position ---
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.m-swipe').forEach(row => {
+    const slides = Array.from(row.children);
+    if (slides.length < 2) return;
+
+    const dots = document.createElement('div');
+    dots.className = 'm-swipe-dots';
+    slides.forEach((slide, i) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Show card ' + (i + 1));
+      b.addEventListener('click', () => {
+        row.scrollTo({ left: slide.offsetLeft - row.offsetLeft - 12, behavior: 'smooth' });
+      });
+      dots.appendChild(b);
+    });
+    row.insertAdjacentElement('afterend', dots);
+
+    const update = () => {
+      const center = row.scrollLeft + row.clientWidth / 2;
+      let best = 0, bestDist = Infinity;
+      slides.forEach((s, i) => {
+        const mid = s.offsetLeft - row.offsetLeft + s.offsetWidth / 2;
+        const d = Math.abs(mid - center);
+        if (d < bestDist) { bestDist = d; best = i; }
+      });
+      // RTL rows scroll the other way; offsets still map correctly
+      Array.from(dots.children).forEach((b, i) => b.classList.toggle('active', i === best));
+    };
+    row.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+});
