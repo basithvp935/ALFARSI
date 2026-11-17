@@ -1,9 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Arabic by default: set direction before the page paints (avoids an English/LTR flash) -->
+  <script>
+    (function () {
+      var lang = 'ar';
+      try { var s = localStorage.getItem('alfarsi_lang'); if (s === 'en' || s === 'ar') lang = s; } catch (e) {}
+      var h = document.documentElement;
+      h.setAttribute('lang', lang);
+      h.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+      if (lang === 'ar') h.classList.add('lang-ar');
+    })();
+  </script>
   <title>All Treatments | Al Farsi Physiotherapy &amp; Rehabilitation Center</title>
   <meta name="description"
     content="Browse every treatment at Al Farsi Physiotherapy Center: stroke and neurological rehab, spine and back pain, orthopaedic and sports injury, Hijama, reflexology, electrotherapy and Ayurvedic therapies.">
@@ -724,7 +735,7 @@
           </div>
           <h2 class="cta-heading font-serif" data-i18n="txp.cta.heading">Ready to Start Your Treatment?</h2>
           <p class="cta-text" data-i18n="txp.cta.text">Book an assessment and our specialists will build a recovery plan around your needs.</p>
-          <div class="cta-buttons">
+          <div class="cta-buttons btn-pair">
             <a href="contact.html#booking-form" class="btn btn-white-custom">
               <i class="bi bi-calendar2-check-fill"></i>
               <span data-i18n="nav.book">Book Appointment</span>
@@ -827,8 +838,8 @@
 
   <!-- Bootstrap 5.3.3 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="i18n-data.js?v=20261116c"></script>
-  <script src="script.js?v=20261116c"></script>
+  <script src="i18n-data.js?v=20261117t"></script>
+  <script src="script.js?v=20261117t"></script>
 
   <!-- Treatments directory: search + category filter -->
   <script>

@@ -582,7 +582,12 @@ document.addEventListener('DOMContentLoaded', () => {
    BILINGUAL LANGUAGE SWITCHER LOGIC (ENGLISH <-> ARABIC)
    Uses data-i18n / data-i18n-html / data-i18n-placeholder attributes
    ========================================================================== */
-let currentLang = localStorage.getItem('alfarsi_lang') || 'en';
+// Arabic is the default; a visitor's own choice (saved when they press the EN/عربي switch) wins.
+let currentLang = 'ar';
+try {
+  const savedLang = localStorage.getItem('alfarsi_lang');
+  if (savedLang === 'en' || savedLang === 'ar') currentLang = savedLang;
+} catch (e) { /* storage blocked: stay on Arabic */ }
 let typewriterTimer = null;
 
 const TYPEWRITER_PHRASES = {
@@ -639,7 +644,7 @@ function startTypewriter(lang) {
 
 window.toggleSiteLanguage = function () {
   currentLang = currentLang === 'en' ? 'ar' : 'en';
-  localStorage.setItem('alfarsi_lang', currentLang);
+  try { localStorage.setItem('alfarsi_lang', currentLang); } catch (e) { /* not saved */ }
   applySiteLanguage(currentLang);
 };
 
@@ -894,7 +899,8 @@ i18n.ar['footer.t.shirodhara'] = 'شيرودهارا لتخفيف التوتر';
 
 // Extended dictionary (also available via i18n-data.js for caching/debug)
 /* Auto-generated Al Farsi i18n dictionary — EN / AR */
-window.ALFARSI_I18N_EXTRA = {
+// Built-in fallback copy. i18n-data.js (loaded first) is the source of truth, so its entries win.
+const ALFARSI_I18N_FALLBACK = {
   "en": {
     "top.location": "Al Mudhaibi, North Al-Sharqiyah, Sultanate of Oman",
     "trust.years": "Years Experience",
@@ -907,7 +913,7 @@ window.ALFARSI_I18N_EXTRA = {
     "trust.helplineSub": "Ongoing clinical follow-up care",
     "about.title": "Helping You Move With",
     "about.titleAccent": "Freedom & Vitality",
-    "about.lead": "Al Farsi Physiotherapy Center is a premier specialized medical rehabilitation facility in Muscat, dedicated to restoring mobility, eliminating chronic discomfort, and fostering long-term physical independence.",
+    "about.lead": "Al Farsi Physiotherapy Center is a premier specialized medical rehabilitation facility in Al Mudhaibi, Oman, dedicated to restoring mobility, eliminating chronic discomfort, and fostering long-term physical independence.",
     "about.body": "Our evidence-based clinical model combines comprehensive biomechanical analysis with personalized treatment protocols—spanning orthopedic physical therapy, neurological stroke rehabilitation, spinal decompression, and complementary natural therapies.",
     "about.f1": "Comprehensive Biomechanical & Dosha Movement Assessment",
     "about.f2": "Multi-Disciplinary Personalized Treatment Protocols",
@@ -1027,7 +1033,7 @@ window.ALFARSI_I18N_EXTRA = {
     "ayur.discover": "Discover Protocol",
     "ayur.p1": "<strong>100% Organically Sourced:</strong> Certified wild herbs with no chemical additives",
     "ayur.p2": "<strong>Integrated Care:</strong> Harmonized with modern clinical physiotherapy protocols",
-    "ayur.p3": "<strong>Private Luxury Rooms:</strong> Dedicated serene wellness suites in Muscat, Oman",
+    "ayur.p3": "<strong>Private Luxury Rooms:</strong> Dedicated serene wellness suites in Al Mudhaibi, Oman",
     "ayur.elakizhi.badge": "Herbal Poultice",
     "ayur.elakizhi.title": "Elakizhi & Podikizhi",
     "ayur.elakizhi.desc": "Steamed bundles of wild medicinal leaves and herbal powders soaked in warm medicated oils to relieve acute joint pain, arthritis, sciatica, and chronic stiffness.",
@@ -1211,7 +1217,7 @@ window.ALFARSI_I18N_EXTRA = {
     "trust.helplineSub": "متابعة سريرية مستمرة",
     "about.title": "نساعدك على التحرك بـ",
     "about.titleAccent": "حرية وحيوية",
-    "about.lead": "مركز الفارسي للعلاج الطبيعي هو منشأة طبية متخصصة رائدة في مسقط، مكرسة لاستعادة الحركة، وإزالة الألم المزمن، وتعزيز الاستقلالية الجسدية طويلة الأمد.",
+    "about.lead": "مركز الفارسي للعلاج الطبيعي هو منشأة طبية متخصصة رائدة في المضيبي، مكرسة لاستعادة الحركة، وإزالة الألم المزمن، وتعزيز الاستقلالية الجسدية طويلة الأمد.",
     "about.body": "يجمع نموذجنا السريري القائم على الأدلة بين التحليل الميكانيكي الحيوي الشامل وبروتوكولات العلاج المخصصة — من العلاج الطبيعي العظمي، وتأهيل السكتة الدماغية، وتخفيف ضغط العمود الفقري، إلى العلاجات الطبيعية التكميلية.",
     "about.f1": "تقييم شامل للحركة الميكانيكية الحيوية والدوشا",
     "about.f2": "بروتوكولات علاج متعددة التخصصات ومخصصة",
@@ -1331,7 +1337,7 @@ window.ALFARSI_I18N_EXTRA = {
     "ayur.discover": "اكتشف البروتوكول",
     "ayur.p1": "<strong>مصادر عضوية 100٪:</strong> أعشاب برية معتمدة بلا إضافات كيميائية",
     "ayur.p2": "<strong>رعاية متكاملة:</strong> منسجمة مع بروتوكولات العلاج الطبيعي الحديثة",
-    "ayur.p3": "<strong>غرف فاخرة خاصة:</strong> أجنحة عافية هادئة في مسقط، عُمان",
+    "ayur.p3": "<strong>غرف فاخرة خاصة:</strong> أجنحة عافية هادئة في المضيبي، عُمان",
     "ayur.elakizhi.badge": "كمادات عشبية",
     "ayur.elakizhi.title": "إيلاكيزهي وبوديكيزهي",
     "ayur.elakizhi.desc": "حزم مطهوة من أوراق طبية برية ومساحيق عشبية منقوعة في زيوت طبية دافئة لتخفيف آلام المفاصل والتهابها وعرق النسا والتيبس المزمن.",
@@ -1504,6 +1510,13 @@ window.ALFARSI_I18N_EXTRA = {
     "art.3.read": "4 دقائق قراءة"
   }
 };
+(function () {
+  const loaded = window.ALFARSI_I18N_EXTRA || { en: {}, ar: {} };
+  window.ALFARSI_I18N_EXTRA = {
+    en: Object.assign({}, ALFARSI_I18N_FALLBACK.en, loaded.en || {}),
+    ar: Object.assign({}, ALFARSI_I18N_FALLBACK.ar, loaded.ar || {})
+  };
+})();
 
 function mergeExtraI18n() {
   const extraDict = window.ALFARSI_I18N_EXTRA;
@@ -1530,6 +1543,11 @@ function translateElements(lang) {
     const value = t(lang, key);
     if (!value) return;
     el.innerHTML = value;
+  });
+
+  document.querySelectorAll('[data-i18n-label]').forEach(el => {
+    const value = t(lang, el.getAttribute('data-i18n-label'));
+    if (value) el.setAttribute('label', value);
   });
 
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
@@ -1722,25 +1740,187 @@ document.addEventListener('DOMContentLoaded', () => {
       b.type = 'button';
       b.setAttribute('aria-label', 'Show card ' + (i + 1));
       b.addEventListener('click', () => {
-        row.scrollTo({ left: slide.offsetLeft - row.offsetLeft - 12, behavior: 'smooth' });
+        const delta = slide.getBoundingClientRect().left - row.getBoundingClientRect().left - 12;
+        row.scrollBy({ left: delta, behavior: 'smooth' });
       });
       dots.appendChild(b);
     });
     row.insertAdjacentElement('afterend', dots);
 
+    // pick the card whose centre is closest to the row's centre (works for LTR and RTL)
     const update = () => {
-      const center = row.scrollLeft + row.clientWidth / 2;
+      const r = row.getBoundingClientRect();
+      const center = r.left + r.width / 2;
       let best = 0, bestDist = Infinity;
       slides.forEach((s, i) => {
-        const mid = s.offsetLeft - row.offsetLeft + s.offsetWidth / 2;
-        const d = Math.abs(mid - center);
+        const b = s.getBoundingClientRect();
+        const d = Math.abs(b.left + b.width / 2 - center);
         if (d < bestDist) { bestDist = d; best = i; }
       });
-      // RTL rows scroll the other way; offsets still map correctly
       Array.from(dots.children).forEach((b, i) => b.classList.toggle('active', i === best));
     };
     row.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update);
     update();
   });
+});
+
+// --- Testimonials carousel: smooth auto-slide with seamless looping, swipe/drag, arrows and dots ---
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.getElementById('tstCarousel');
+  if (!root) return;
+  const viewport = root.querySelector('.tst-viewport');
+  const track = root.querySelector('.tst-track');
+  const originals = Array.from(track.children);
+  const count = originals.length;
+  if (count < 2) return;
+
+  const DELAY = 5000;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isRtl = () => document.documentElement.getAttribute('dir') === 'rtl';
+
+  // Clone every slide once and append them, so sliding past the last real card
+  // shows the clones, then we silently jump back to the matching real card.
+  originals.forEach(s => {
+    const c = s.cloneNode(true);
+    c.setAttribute('aria-hidden', 'true');
+    c.querySelectorAll('a, button').forEach(el => el.setAttribute('tabindex', '-1'));
+    track.appendChild(c);
+  });
+
+  let index = 0;
+  let timer = null;
+  let paused = false;
+  let inView = true;
+
+  // dots
+  const dotsWrap = root.querySelector('.tst-dots');
+  const dots = originals.map((_, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('role', 'tab');
+    b.setAttribute('aria-label', 'Show story ' + (i + 1));
+    b.addEventListener('click', () => { go(i); restart(); });
+    dotsWrap.appendChild(b);
+    return b;
+  });
+
+  const step = () => {
+    const first = track.children[0];
+    const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
+    return first.getBoundingClientRect().width + gap;
+  };
+
+  const apply = (animate = true) => {
+    track.classList.toggle('no-anim', !animate);
+    const x = index * step() * (isRtl() ? 1 : -1);
+    track.style.transform = `translate3d(${x}px, 0, 0)`;
+    const real = ((index % count) + count) % count;
+    dots.forEach((d, i) => {
+      d.classList.toggle('active', i === real);
+      d.setAttribute('aria-selected', i === real ? 'true' : 'false');
+    });
+  };
+
+  const go = (i, animate = true) => {
+    // if a previous move ended on a clone and its transitionend never fired
+    // (tab hidden mid-slide, etc.), snap back to the real slide first
+    if (index >= count) {
+      const delta = i - index;
+      index -= count;
+      apply(false);
+      void track.offsetWidth;
+      i = index + delta;
+    }
+    // going backwards from the first real slide: jump to its clone, then animate back
+    if (i < 0) {
+      index = count;
+      apply(false);
+      void track.offsetWidth;
+      i = count - 1;
+    }
+    index = i;
+    apply(animate);
+  };
+
+  // after landing on a clone, snap back to the identical real slide without animation
+  track.addEventListener('transitionend', e => {
+    if (e.target !== track || e.propertyName !== 'transform') return;
+    if (index >= count) {
+      index -= count;
+      apply(false);
+    }
+  });
+
+  const next = () => go(index + 1);
+  const prev = () => go(index - 1);
+
+  const stop = () => { clearInterval(timer); timer = null; };
+  const start = () => {
+    stop();
+    if (reduceMotion || paused || !inView || document.hidden) return;
+    timer = setInterval(next, DELAY);
+  };
+  const restart = () => start();
+
+  root.querySelector('.tst-next').addEventListener('click', () => { next(); restart(); });
+  root.querySelector('.tst-prev').addEventListener('click', () => { prev(); restart(); });
+
+  // pause while the visitor is interacting
+  root.addEventListener('mouseenter', () => { paused = true; stop(); });
+  root.addEventListener('mouseleave', () => { paused = false; start(); });
+  root.addEventListener('focusin', () => { paused = true; stop(); });
+  root.addEventListener('focusout', () => { paused = false; start(); });
+  document.addEventListener('visibilitychange', start);
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => {
+      inView = entries[0].isIntersecting;
+      start();
+    }, { threshold: 0.25 }).observe(root);
+  }
+
+  // swipe / drag (pointer events cover touch, pen and mouse)
+  let startX = 0, startY = 0, dx = 0, dragging = false, decided = false;
+  viewport.addEventListener('pointerdown', e => {
+    if (e.button !== 0) return;
+    startX = e.clientX; startY = e.clientY; dx = 0;
+    dragging = true; decided = false;
+    paused = true; stop();
+  });
+  viewport.addEventListener('pointermove', e => {
+    if (!dragging) return;
+    const mx = e.clientX - startX, my = e.clientY - startY;
+    if (!decided) {
+      if (Math.abs(mx) < 6 && Math.abs(my) < 6) return;
+      decided = true;
+      if (Math.abs(my) > Math.abs(mx)) { dragging = false; paused = false; start(); return; } // vertical scroll wins
+      viewport.classList.add('is-dragging');
+      try { viewport.setPointerCapture(e.pointerId); } catch (_) {}
+    }
+    dx = mx;
+    track.classList.add('no-anim');
+    const base = index * step() * (isRtl() ? 1 : -1);
+    track.style.transform = `translate3d(${base + dx}px, 0, 0)`;
+  });
+  const endDrag = () => {
+    if (!dragging) return;
+    dragging = false;
+    viewport.classList.remove('is-dragging');
+    const threshold = Math.min(80, step() * 0.18);
+    const forward = isRtl() ? dx > threshold : dx < -threshold;
+    const back = isRtl() ? dx < -threshold : dx > threshold;
+    if (forward) next(); else if (back) prev(); else apply(true);
+    paused = false;
+    start();
+  };
+  viewport.addEventListener('pointerup', endDrag);
+  viewport.addEventListener('pointercancel', endDrag);
+  viewport.addEventListener('lostpointercapture', endDrag);
+  // don't let a drag turn into a link click / text selection
+  viewport.addEventListener('dragstart', e => e.preventDefault());
+
+  window.addEventListener('resize', () => apply(false));
+  apply(false);
+  start();
 });

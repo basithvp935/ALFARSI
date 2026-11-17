@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us &amp; Location | Al Farsi Physiotherapy &amp; Rehabilitation Center Muscat</title>
+  <!-- Arabic by default: set direction before the page paints (avoids an English/LTR flash) -->
+  <script>
+    (function () {
+      var lang = 'ar';
+      try { var s = localStorage.getItem('alfarsi_lang'); if (s === 'en' || s === 'ar') lang = s; } catch (e) {}
+      var h = document.documentElement;
+      h.setAttribute('lang', lang);
+      h.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+      if (lang === 'ar') h.classList.add('lang-ar');
+    })();
+  </script>
+  <title>Contact Us &amp; Location | Al Farsi Physiotherapy &amp; Rehabilitation Center, Al Mudhaibi</title>
   <meta name="description"
-    content="Contact Al Farsi Physiotherapy & Rehabilitation Center in Al Khuwair, Muscat, Oman. Schedule appointments, view interactive map, helpline numbers, and WhatsApp consultation.">
+    content="Contact Al Farsi Physiotherapy & Rehabilitation Center in Al Mudhaibi, North Al-Sharqiyah, Oman. Schedule appointments, view interactive map, helpline numbers, and WhatsApp consultation.">
   <meta name="keywords"
-    content="Contact Al Farsi, Al Farsi Physiotherapy location, Muscat physiotherapy center, Al Khuwair clinic, book physiotherapy Oman, rehabilitation contact">
+    content="Contact Al Farsi, Al Farsi Physiotherapy location, Al Mudhaibi physiotherapy center, North Al-Sharqiyah clinic, book physiotherapy Oman, rehabilitation contact">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
@@ -193,28 +204,6 @@
       border: 0;
     }
 
-    .map-footer-guide {
-      padding: 22px 28px;
-      background: #F9FCFD;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .map-guide-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.85rem;
-      color: #4B5563;
-    }
-
-    .map-guide-item i {
-      color: var(--primary-blue);
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
-
     /* FAQ Section */
     .contact-faq-section {
       background: #F2FAF5;
@@ -257,9 +246,6 @@
     }
 
     @media (max-width: 768px) {
-      .map-footer-guide {
-        grid-template-columns: 1fr;
-      }
       .contact-card-grid {
         margin-top: 20px;
       }
@@ -493,7 +479,7 @@
                   Schedule an Appointment
                 </h2>
                 <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill fw-bold fs-8">
-                  <i class="bi bi-shield-check"></i> MOH Licensed
+                  <i class="bi bi-shield-check"></i> <span data-i18n="contact.moh">MOH Licensed</span>
                 </span>
               </div>
               <p class="text-muted mb-4" data-i18n="contact.form.sub">
@@ -531,30 +517,30 @@
                     <label for="cServiceSelect" class="form-label"><span data-i18n="contact.form.dept">Treatment Department</span> <span class="text-danger">*</span></label>
                     <select class="form-select" id="cServiceSelect" required>
                       <option value="" selected disabled data-i18n="contact.form.select">Select Department / Therapy</option>
-                      <optgroup label="Neurological &amp; Stroke">
-                        <option value="Stroke Treatment">Stroke Rehabilitation</option>
-                        <option value="Cerebral Palsy">Cerebral Palsy &amp; Pediatric Care</option>
-                        <option value="Parkinson's Disease">Parkinson's Support</option>
+                      <optgroup label="Neurological &amp; Stroke" data-i18n-label="svc.g.neuro">
+                        <option value="Stroke Treatment" data-i18n="svc.stroke">Stroke Rehabilitation</option>
+                        <option value="Cerebral Palsy" data-i18n="svc.cp">Cerebral Palsy &amp; Pediatric Care</option>
+                        <option value="Parkinson's Disease" data-i18n="svc.parkinson">Parkinson's Support</option>
                       </optgroup>
-                      <optgroup label="Spine &amp; Chronic Pain">
-                        <option value="Back Pain Treatment">Back Pain &amp; Sciatica Treatment</option>
-                        <option value="Cervical Spondylosis">Cervical Spondylosis &amp; Neck Care</option>
-                        <option value="Postural Realignment">Spine Decompression</option>
+                      <optgroup label="Spine &amp; Chronic Pain" data-i18n-label="svc.g.spine">
+                        <option value="Back Pain Treatment" data-i18n="svc.backpain">Back Pain &amp; Sciatica Treatment</option>
+                        <option value="Cervical Spondylosis" data-i18n="svc.cervical">Cervical Spondylosis &amp; Neck Care</option>
+                        <option value="Postural Realignment" data-i18n="svc.decomp">Spine Decompression</option>
                       </optgroup>
-                      <optgroup label="Orthopedic &amp; Sports">
-                        <option value="Orthopedic Physiotherapy">Orthopedic Physiotherapy</option>
-                        <option value="Sports Injury Rehabilitation">Sports Injury Recovery</option>
-                        <option value="Post-Surgical Rehabilitation">Post-Surgical Joint Rehab</option>
+                      <optgroup label="Orthopedic &amp; Sports" data-i18n-label="svc.g.ortho">
+                        <option value="Orthopedic Physiotherapy" data-i18n="svc.ortho">Orthopedic Physiotherapy</option>
+                        <option value="Sports Injury Rehabilitation" data-i18n="svc.sports">Sports Injury Recovery</option>
+                        <option value="Post-Surgical Rehabilitation" data-i18n="svc.postop">Post-Surgical Joint Rehab</option>
                       </optgroup>
-                      <optgroup label="Ayurveda &amp; Holistic Care">
-                        <option value="Elakizhi Poultice">Elakizhi &amp; Podikizhi (Herbal Poultice)</option>
-                        <option value="Shirodhara Stream">Shirodhara &amp; Nasyam (Neurological)</option>
-                        <option value="Kati Janu Basti">Kati &amp; Janu Basti (Spine &amp; Knee)</option>
-                        <option value="Abhyanga Detox">Abhyanga &amp; Panchakarma Detox</option>
-                        <option value="Hijama Cupping">Medical Hijama Cupping</option>
+                      <optgroup label="Ayurveda &amp; Holistic Care" data-i18n-label="svc.g.ayur">
+                        <option value="Elakizhi Poultice" data-i18n="svc.elakizhi">Elakizhi &amp; Podikizhi (Herbal Poultice)</option>
+                        <option value="Shirodhara Stream" data-i18n="svc.shirodhara">Shirodhara &amp; Nasyam (Neurological)</option>
+                        <option value="Kati Janu Basti" data-i18n="svc.basti">Kati &amp; Janu Basti (Spine &amp; Knee)</option>
+                        <option value="Abhyanga Detox" data-i18n="svc.abhyanga">Abhyanga &amp; Panchakarma Detox</option>
+                        <option value="Hijama Cupping" data-i18n="svc.hijama">Medical Hijama Cupping</option>
                       </optgroup>
                     </select>
-                    <div class="invalid-feedback">Please choose a department.</div>
+                    <div class="invalid-feedback" data-i18n="svc.invalid">Please choose a department.</div>
                   </div>
 
                   <!-- Preferred Date -->
@@ -583,11 +569,11 @@
 
                   <!-- Submit Button -->
                   <div class="col-12 pt-2">
-                    <button type="submit" class="btn btn-primary-custom w-100 py-3 d-flex align-items-center justify-content-center gap-2" id="cSubmitBtn">
+                    <button type="submit" class="btn btn-primary-custom w-100 py-3 d-flex align-items-center justify-content-center gap-2 form-submit-btn" id="cSubmitBtn">
                       <i class="bi bi-calendar2-check-fill"></i>
                       <span class="fw-bold" data-i18n="contact.form.submit">Confirm &amp; Send Booking Request</span>
                     </button>
-                    <div class="text-center mt-2 text-muted fs-8">
+                    <div class="text-center mt-2 text-muted fs-8 form-privacy-note">
                       <i class="bi bi-lock-fill text-success"></i> <span data-i18n="contact.form.privacy">Your medical information is kept strictly confidential.</span>
                     </div>
                   </div>
@@ -600,58 +586,48 @@
           <div class="col-lg-6" id="clinic-map">
             <div class="map-container-card">
               <div class="map-header">
-                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
-                  <div>
-                    <h3 class="fs-5 fw-bold text-dark mb-1">
-                      <i class="bi bi-geo-alt-fill text-primary me-1"></i> Clinic Location Map
-                    </h3>
-                    <span class="text-muted fs-8">Al Mudhaibi, North Al-Sharqiyah, Sultanate of Oman</span>
+                <div class="map-title-row">
+                  <span class="map-pin-badge"><i class="bi bi-geo-alt-fill"></i></span>
+                  <div class="min-w-0">
+                    <h3 class="map-title" data-i18n="contact.map.title">Clinic Location</h3>
+                    <span class="map-subtitle" data-i18n="contact.map.area">Al Mudhaibi, North Al-Sharqiyah, Sultanate of Oman</span>
                   </div>
-                  <a href="https://maps.google.com/?q=Al+Mudhaibi+Oman" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill px-3">
-                    <i class="bi bi-box-arrow-up-right"></i> Open Maps App
-                  </a>
                 </div>
               </div>
 
-              <!-- Embedded Google Map -->
+              <!-- Embedded Google Map: Al Mudhaibi -->
               <div class="map-frame-wrapper">
                 <iframe
-                  title="Al Farsi Physiotherapy Center Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117001.28588507873!2d58.3734005!3d23.5937965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e91ff2c68a44c9b%3A0x62a8cf218f4a1801!2sAl%20Khuwair%2C%20Muscat%2C%20Oman!5e0!3m2!1sen!2som!4v1710000000000!5m2!1sen!2som"
+                  title="Al Farsi Physiotherapy Center location, Al Mudhaibi, Oman"
+                  src="https://maps.google.com/maps?q=Al+Farsi+Physiotherapy+Centre,+Al+Mudhaibi,+Oman&amp;z=13&amp;output=embed"
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
+                <a class="map-directions-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Al+Farsi+Physiotherapy+Centre,+Al+Mudhaibi,+Oman" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-sign-turn-right-fill"></i> <span data-i18n="contact.map.directions">Get Directions</span>
+                </a>
               </div>
 
-              <!-- Map Directions & Facility Highlights -->
-              <div class="map-footer-guide">
-                <div class="map-guide-item">
-                  <i class="bi bi-car-front-fill"></i>
+              <!-- Address & visit details -->
+              <div class="map-info">
+                <div class="map-info-item map-info-address">
+                  <span class="map-info-icon"><i class="bi bi-building-fill"></i></span>
                   <div>
-                    <strong>Easy Accessibility</strong>
-                    <div class="fs-8 text-muted">10 mins from Muscat Grand Mall &amp; Sultan Qaboos Highway</div>
+                    <strong data-i18n="contact.map.name">AL FARSI PHYSIOTHERAPY CENTRE</strong>
+                    <span data-i18n-html="contact.map.address">P.O. Box 235, Postal Code 420<br>Al Mudhaibi, North Al-Sharqiyah, Oman</span>
                   </div>
                 </div>
-                <div class="map-guide-item">
-                  <i class="bi bi-p-square-fill text-success"></i>
+                <div class="map-info-item">
+                  <span class="map-info-icon green"><i class="bi bi-clock-fill"></i></span>
                   <div>
-                    <strong>Free Patient Parking</strong>
-                    <div class="fs-8 text-muted">Dedicated ground-level patient parking spots</div>
+                    <strong data-i18n="contact.map.hours">Opening Hours</strong>
+                    <span data-i18n="cta.hours">Sat – Thu · 8 AM – 9 PM</span>
                   </div>
                 </div>
-                <div class="map-guide-item">
-                  <i class="bi bi-person-wheelchair text-primary"></i>
-                  <div>
-                    <strong>Wheelchair Accessible</strong>
-                    <div class="fs-8 text-muted">Step-free ramp entrance &amp; spacious medical elevator</div>
-                  </div>
-                </div>
-                <div class="map-guide-item">
-                  <i class="bi bi-shield-check text-success"></i>
-                  <div>
-                    <strong>Private Suites</strong>
-                    <div class="fs-8 text-muted">Dedicated private treatment rooms for men &amp; women</div>
-                  </div>
+                <div class="map-info-actions">
+                  <a href="tel:+96871704990" class="map-chip"><i class="bi bi-telephone-fill"></i> +968 7170 4990</a>
+                  <a href="https://wa.me/96871704990" target="_blank" rel="noopener noreferrer" class="map-chip wa"><i class="bi bi-whatsapp"></i> <span data-i18n="cta.wa">WhatsApp Us</span></a>
+                  <a href="https://maps.google.com/?q=Al+Farsi+Physiotherapy+Centre,+Al+Mudhaibi,+Oman" target="_blank" rel="noopener noreferrer" class="map-chip"><i class="bi bi-box-arrow-up-right"></i> <span data-i18n="contact.map.open">Open in Maps</span></a>
                 </div>
               </div>
             </div>
@@ -753,7 +729,7 @@
             Our medical reception desk is active on WhatsApp and phone for priority bookings and emergency mobility support.
           </p>
 
-          <div class="cta-buttons">
+          <div class="cta-buttons btn-pair">
             <a href="https://wa.me/96871704990?text=Hello%20Al%20Farsi%20Center%2C%20I%20need%20urgent%20consultation." target="_blank" class="btn btn-secondary-custom">
               <i class="bi bi-whatsapp"></i>
               <span data-i18n="cta.whatsapp">WhatsApp Helpline</span>
@@ -855,8 +831,8 @@
 
   <!-- Bootstrap 5.3.3 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="i18n-data.js?v=20261116c"></script>
-  <script src="script.js?v=20261116c"></script>
+  <script src="i18n-data.js?v=20261117t"></script>
+  <script src="script.js?v=20261117t"></script>
 
   <!-- Interactive Form Handling Script -->
   <script>
@@ -904,7 +880,7 @@
               <i class="bi bi-check-circle-fill fs-3 text-success"></i>
               <div>
                 <strong>Thank you, ${name}!</strong>
-                <div>Your booking request for <strong>${service}</strong> has been received. Our clinical coordinator in Muscat will contact you shortly to confirm your time slot.</div>
+                <div>Your booking request for <strong>${service}</strong> has been received. Our clinical coordinator will contact you shortly to confirm your time slot.</div>
               </div>
             `;
 

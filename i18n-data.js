@@ -12,7 +12,7 @@ window.ALFARSI_I18N_EXTRA = {
     "trust.helplineSub": "Ongoing clinical follow-up care",
     "about.title": "Helping You Move With",
     "about.titleAccent": "Freedom & Vitality",
-    "about.lead": "Al Farsi Physiotherapy Center is a premier specialized medical rehabilitation facility in Muscat, dedicated to restoring mobility, eliminating chronic discomfort, and fostering long-term physical independence.",
+    "about.lead": "Al Farsi Physiotherapy Center is a premier specialized medical rehabilitation facility in Al Mudhaibi, Oman, dedicated to restoring mobility, eliminating chronic discomfort, and fostering long-term physical independence.",
     "about.body": "Our evidence-based clinical model combines comprehensive biomechanical analysis with personalized treatment protocols—spanning orthopedic physical therapy, neurological stroke rehabilitation, spinal decompression, and complementary natural therapies.",
     "about.f1": "Comprehensive Biomechanical & Dosha Movement Assessment",
     "about.f2": "Multi-Disciplinary Personalized Treatment Protocols",
@@ -132,7 +132,7 @@ window.ALFARSI_I18N_EXTRA = {
     "ayur.discover": "Discover Protocol",
     "ayur.p1": "<strong>100% Organically Sourced:</strong> Certified wild herbs with no chemical additives",
     "ayur.p2": "<strong>Integrated Care:</strong> Harmonized with modern clinical physiotherapy protocols",
-    "ayur.p3": "<strong>Private Luxury Rooms:</strong> Dedicated serene wellness suites in Muscat, Oman",
+    "ayur.p3": "<strong>Private Luxury Rooms:</strong> Dedicated serene wellness suites in Al Mudhaibi, Oman",
     "ayur.elakizhi.badge": "Herbal Poultice",
     "ayur.elakizhi.title": "Elakizhi & Podikizhi",
     "ayur.elakizhi.desc": "Steamed bundles of wild medicinal leaves and herbal powders soaked in warm medicated oils to relieve acute joint pain, arthritis, sciatica, and chronic stiffness.",
@@ -316,7 +316,7 @@ window.ALFARSI_I18N_EXTRA = {
     "trust.helplineSub": "متابعة سريرية مستمرة",
     "about.title": "نساعدك على التحرك بـ",
     "about.titleAccent": "حرية وحيوية",
-    "about.lead": "مركز الفارسي للعلاج الطبيعي هو منشأة طبية متخصصة رائدة في مسقط، مكرسة لاستعادة الحركة، وإزالة الألم المزمن، وتعزيز الاستقلالية الجسدية طويلة الأمد.",
+    "about.lead": "مركز الفارسي للعلاج الطبيعي هو منشأة طبية متخصصة رائدة في المضيبي، مكرسة لاستعادة الحركة، وإزالة الألم المزمن، وتعزيز الاستقلالية الجسدية طويلة الأمد.",
     "about.body": "يجمع نموذجنا السريري القائم على الأدلة بين التحليل الميكانيكي الحيوي الشامل وبروتوكولات العلاج المخصصة — من العلاج الطبيعي العظمي، وتأهيل السكتة الدماغية، وتخفيف ضغط العمود الفقري، إلى العلاجات الطبيعية التكميلية.",
     "about.f1": "تقييم شامل للحركة الميكانيكية الحيوية والدوشا",
     "about.f2": "بروتوكولات علاج متعددة التخصصات ومخصصة",
@@ -436,7 +436,7 @@ window.ALFARSI_I18N_EXTRA = {
     "ayur.discover": "اكتشف البروتوكول",
     "ayur.p1": "<strong>مصادر عضوية 100٪:</strong> أعشاب برية معتمدة بلا إضافات كيميائية",
     "ayur.p2": "<strong>رعاية متكاملة:</strong> منسجمة مع بروتوكولات العلاج الطبيعي الحديثة",
-    "ayur.p3": "<strong>غرف فاخرة خاصة:</strong> أجنحة عافية هادئة في مسقط، عُمان",
+    "ayur.p3": "<strong>غرف فاخرة خاصة:</strong> أجنحة عافية هادئة في المضيبي، عُمان",
     "ayur.elakizhi.badge": "كمادات عشبية",
     "ayur.elakizhi.title": "إيلاكيزهي وبوديكيزهي",
     "ayur.elakizhi.desc": "حزم مطهوة من أوراق طبية برية ومساحيق عشبية منقوعة في زيوت طبية دافئة لتخفيف آلام المفاصل والتهابها وعرق النسا والتيبس المزمن.",
@@ -741,4 +741,102 @@ window.ALFARSI_I18N_EXTRA = {
   var d = window.ALFARSI_I18N_EXTRA = window.ALFARSI_I18N_EXTRA || { en: {}, ar: {} };
   d.en["team.exp"] = "Years Experience";
   d.ar["team.exp"] = "سنوات خبرة";
+})();
+
+/* CTA banner (split heading + quick-info strip) */
+(function () {
+  var d = window.ALFARSI_I18N_EXTRA = window.ALFARSI_I18N_EXTRA || { en: {}, ar: {} };
+  Object.assign(d.en, {
+    "cta.heading.a": "Ready to Reclaim Your",
+    "cta.heading.b": "Movement & Vitality?",
+    "cta.hours": "Sat – Thu · 8 AM – 9 PM",
+    "cta.wa": "WhatsApp Us",
+    "cta.location": "Al Mudhaibi, Oman"
+  });
+  Object.assign(d.ar, {
+    "cta.heading.a": "هل أنت مستعد لاستعادة",
+    "cta.heading.b": "حركتك وحيويتك؟",
+    "cta.hours": "السبت – الخميس · 8 ص – 9 م",
+    "cta.wa": "راسلنا واتساب",
+    "cta.location": "المضيبي، عُمان"
+  });
+})();
+
+/* Stats panel: "24/7" shown as the number, label translated separately */
+(function () {
+  var d = window.ALFARSI_I18N_EXTRA = window.ALFARSI_I18N_EXTRA || { en: {}, ar: {} };
+  d.en["trust.helplineLabel"] = "Helpline";
+  d.ar["trust.helplineLabel"] = "خط المساعدة";
+})();
+
+/* Contact location card */
+(function () {
+  var d = window.ALFARSI_I18N_EXTRA = window.ALFARSI_I18N_EXTRA || { en: {}, ar: {} };
+  Object.assign(d.en, {
+    "contact.map.title": "Clinic Location",
+    "contact.map.area": "Al Mudhaibi, North Al-Sharqiyah, Sultanate of Oman",
+    "contact.map.directions": "Get Directions",
+    "contact.map.hours": "Opening Hours",
+    "contact.map.open": "Open in Maps"
+  });
+  Object.assign(d.ar, {
+    "contact.map.title": "موقع المركز",
+    "contact.map.area": "المضيبي، شمال الشرقية، سلطنة عُمان",
+    "contact.map.directions": "احصل على الاتجاهات",
+    "contact.map.hours": "ساعات العمل",
+    "contact.map.open": "افتح في الخرائط"
+  });
+})();
+
+/* Contact form: department list, badge, address */
+(function () {
+  var d = window.ALFARSI_I18N_EXTRA = window.ALFARSI_I18N_EXTRA || { en: {}, ar: {} };
+  Object.assign(d.en, {
+    "svc.stroke": "Stroke Rehabilitation",
+    "svc.cp": "Cerebral Palsy & Pediatric Care",
+    "svc.parkinson": "Parkinson's Support",
+    "svc.backpain": "Back Pain & Sciatica Treatment",
+    "svc.cervical": "Cervical Spondylosis & Neck Care",
+    "svc.decomp": "Spine Decompression",
+    "svc.ortho": "Orthopedic Physiotherapy",
+    "svc.sports": "Sports Injury Recovery",
+    "svc.postop": "Post-Surgical Joint Rehab",
+    "svc.elakizhi": "Elakizhi & Podikizhi (Herbal Poultice)",
+    "svc.shirodhara": "Shirodhara & Nasyam (Neurological)",
+    "svc.basti": "Kati & Janu Basti (Spine & Knee)",
+    "svc.abhyanga": "Abhyanga & Panchakarma Detox",
+    "svc.hijama": "Medical Hijama Cupping",
+    "svc.g.neuro": "Neurological & Stroke",
+    "svc.g.spine": "Spine & Chronic Pain",
+    "svc.g.ortho": "Orthopedic & Sports",
+    "svc.g.ayur": "Ayurveda & Holistic Care",
+    "svc.invalid": "Please choose a department.",
+    "contact.moh": "MOH Licensed",
+    "contact.map.name": "AL FARSI PHYSIOTHERAPY CENTRE",
+    "contact.map.address": "P.O. Box 235, Postal Code 420<br>Al Mudhaibi, North Al-Sharqiyah, Oman"
+});
+  Object.assign(d.ar, {
+    "svc.stroke": "تأهيل السكتة الدماغية",
+    "svc.cp": "الشلل الدماغي ورعاية الأطفال",
+    "svc.parkinson": "دعم مرضى باركنسون",
+    "svc.backpain": "علاج آلام الظهر وعرق النسا",
+    "svc.cervical": "خشونة الفقرات العنقية والرقبة",
+    "svc.decomp": "تخفيف ضغط العمود الفقري",
+    "svc.ortho": "العلاج الطبيعي لأمراض العظام",
+    "svc.sports": "التعافي من الإصابات الرياضية",
+    "svc.postop": "تأهيل المفاصل بعد الجراحة",
+    "svc.elakizhi": "إيلاكيزي وبودي كيزي (الكمادات العشبية)",
+    "svc.shirodhara": "شيرودارا وناسيام (عصبي)",
+    "svc.basti": "كاتي وجانو باستي (الظهر والركبة)",
+    "svc.abhyanga": "أبهيانغا وتنقية بانشاكارما",
+    "svc.hijama": "الحجامة الطبية",
+    "svc.g.neuro": "الأعصاب والسكتة الدماغية",
+    "svc.g.spine": "العمود الفقري والألم المزمن",
+    "svc.g.ortho": "العظام والإصابات الرياضية",
+    "svc.g.ayur": "الأيورفيدا والرعاية التكاملية",
+    "svc.invalid": "يرجى اختيار القسم.",
+    "contact.moh": "مرخّص من وزارة الصحة",
+    "contact.map.name": "مركز الفارسي للعلاج الطبيعي",
+    "contact.map.address": "ص.ب 235، الرمز البريدي 420<br>المضيبي، شمال الشرقية، سلطنة عُمان"
+});
 })();
