@@ -5296,7 +5296,8 @@ a.cta-info-item:hover { color: #fff; background: rgba(79, 175, 69, 0.2); border-
 .ayp-team-grid .team-col { flex: 0 0 300px; max-width: 300px; }
 @media (max-width: 767.98px) {
   .ayp-team-grid { flex-wrap: wrap; justify-content: center; overflow: visible; margin: 0; padding: 0; }
-  .ayp-team-grid .team-col { flex: 0 0 72%; max-width: 72%; }
+  .ayp-team-grid { gap: 12px; }
+  .ayp-team-grid .team-col { flex: 0 0 calc(50% - 6px); max-width: calc(50% - 6px); }
 }
 
 /* What We Offer: 3 cards; center the odd one on phones */
