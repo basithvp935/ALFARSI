@@ -5419,3 +5419,8 @@ a.cta-info-item:hover { color: #fff; background: rgba(79, 175, 69, 0.2); border-
   .hero-image-section .hero-description { font-size: 0.88rem; color: #3F5561; }
   .hero-image-section .hero-btn-group .btn-outline-custom { background: rgba(255, 255, 255, 0.92); }
 }
+
+/* Ayurveda page gallery: green accents */
+.ayp-gallery { background: radial-gradient(at 0% 0%, rgba(79, 175, 69, 0.08) 0px, transparent 50%), radial-gradient(at 100% 100%, rgba(8, 120, 190, 0.06) 0px, transparent 50%), #fff; }
+.ayp-gallery .gal-cat-tag { background: var(--green-gradient); }
+.ayp-gallery .gal-zoom { color: var(--primary-green-dark); }

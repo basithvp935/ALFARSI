@@ -484,6 +484,92 @@
     </section>
 
     <!-- ==========================================================================
+         AYURVEDA GALLERY
+         ========================================================================== -->
+    <section class="section-padding gallery-section ayp-gallery" id="gallery">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <div class="badge-eyebrow ayur-badge-eyebrow">
+            <span class="ayur-leaf-icon"><i class="bi bi-images"></i></span>
+            <span data-i18n="ayp.gal.badge">INSIDE OUR AYURVEDA SUITES</span>
+          </div>
+          <h2 class="section-title">
+            <span data-i18n="ayp.gal.title">Ayurveda</span> <span class="italic-accent ayp-accent" data-i18n="ayp.gal.titleAccent">Treatment Gallery</span>
+          </h2>
+          <p class="section-subtitle" data-i18n="ayp.gal.sub">Herbal poultices, medicated oil therapies and our private treatment suites.</p>
+        </div>
+
+        <div class="gal-grid" id="galGrid">
+          <figure class="gal-item g-wide g-tall" data-gal-cat="ayurveda">
+            <button type="button" class="gal-open" aria-label="Open photo: Elakizhi herbal poultice massage">
+              <img src="assets/images/ayurveda-elakizhi.jpg" alt="Elakizhi herbal poultice massage" loading="lazy" style="object-position: center;">
+              <span class="gal-zoom"><i class="bi bi-arrows-angle-expand"></i></span>
+              <figcaption>
+                <span class="gal-cat-tag" data-i18n="gal.f.ayurveda">Ayurveda</span>
+                <span class="gal-caption" data-i18n="gal.c3">Elakizhi herbal poultice massage</span>
+              </figcaption>
+            </button>
+          </figure>
+          <figure class="gal-item" data-gal-cat="ayurveda">
+            <button type="button" class="gal-open" aria-label="Open photo: Shirodhara oil therapy">
+              <img src="assets/images/ayurveda-shirodhara.jpg" alt="Shirodhara oil therapy" loading="lazy" style="object-position: center 40%;">
+              <span class="gal-zoom"><i class="bi bi-arrows-angle-expand"></i></span>
+              <figcaption>
+                <span class="gal-cat-tag" data-i18n="gal.f.ayurveda">Ayurveda</span>
+                <span class="gal-caption" data-i18n="gal.c7">Shirodhara oil therapy</span>
+              </figcaption>
+            </button>
+          </figure>
+          <figure class="gal-item" data-gal-cat="ayurveda">
+            <button type="button" class="gal-open" aria-label="Open photo: Herbal oils and poultice preparation">
+              <img src="assets/images/ayurveda-hero.jpg" alt="Herbal oils and poultice preparation" loading="lazy" style="object-position: center;">
+              <span class="gal-zoom"><i class="bi bi-arrows-angle-expand"></i></span>
+              <figcaption>
+                <span class="gal-cat-tag" data-i18n="gal.f.ayurveda">Ayurveda</span>
+                <span class="gal-caption" data-i18n="gal.c10">Herbal oils &amp; poultice preparation</span>
+              </figcaption>
+            </button>
+          </figure>
+          <figure class="gal-item" data-gal-cat="ayurveda">
+            <button type="button" class="gal-open" aria-label="Open photo: Kati Basti spinal oil therapy">
+              <img src="assets/images/ayurveda-basti.jpg" alt="Kati Basti spinal oil therapy" loading="lazy" style="object-position: 75% 65%;">
+              <span class="gal-zoom"><i class="bi bi-arrows-angle-expand"></i></span>
+              <figcaption>
+                <span class="gal-cat-tag" data-i18n="gal.f.ayurveda">Ayurveda</span>
+                <span class="gal-caption" data-i18n="gal.c13">Kati Basti spinal oil therapy</span>
+              </figcaption>
+            </button>
+          </figure>
+          <figure class="gal-item" data-gal-cat="ayurveda">
+            <button type="button" class="gal-open" aria-label="Open photo: Podikizhi poultice therapy">
+              <img src="assets/images/ayurveda-gcc-man.jpg" alt="Podikizhi poultice therapy" loading="lazy" style="object-position: center 25%;">
+              <span class="gal-zoom"><i class="bi bi-arrows-angle-expand"></i></span>
+              <figcaption>
+                <span class="gal-cat-tag" data-i18n="gal.f.ayurveda">Ayurveda</span>
+                <span class="gal-caption" data-i18n="gal.c14">Podikizhi poultice therapy</span>
+              </figcaption>
+            </button>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="gal-lightbox" id="galLightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+        <button type="button" class="gal-lb-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+        <button type="button" class="gal-lb-nav gal-lb-prev" aria-label="Previous photo"><i class="bi bi-chevron-left"></i></button>
+        <figure class="gal-lb-figure">
+          <img src="" alt="" id="galLbImg">
+          <figcaption>
+            <span class="gal-cat-tag" id="galLbCat"></span>
+            <span id="galLbCaption"></span>
+            <span class="gal-lb-counter" id="galLbCounter"></span>
+          </figcaption>
+        </figure>
+        <button type="button" class="gal-lb-nav gal-lb-next" aria-label="Next photo"><i class="bi bi-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
          4. HOW AN AYURVEDIC VISIT WORKS
          ========================================================================== -->
     <section class="section-padding ayp-steps-section">
@@ -650,8 +736,8 @@
 
   <!-- Bootstrap 5.3.3 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="i18n-data.js?v=20261118s"></script>
-  <script src="script.js?v=20261118s"></script>
+  <script src="i18n-data.js?v=20261118t"></script>
+  <script src="script.js?v=20261118t"></script>
 
 </body>
 </html>

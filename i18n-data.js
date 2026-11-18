@@ -935,3 +935,20 @@ window.ALFARSI_I18N_EXTRA = {
   Object.assign(d.en, { "ayp.ther.role2": "Panchakarma Therapist", "ayp.ther.dip": "Dip. Panchakarma & Spa" });
   Object.assign(d.ar, { "ayp.ther.role2": "معالج بانشاكارما", "ayp.ther.dip": "دبلوم بانشاكارما وسبا" });
 })();
+
+/* Ayurveda page gallery */
+(function () {
+  var d = window.ALFARSI_I18N_EXTRA = window.ALFARSI_I18N_EXTRA || { en: {}, ar: {} };
+  Object.assign(d.en, {
+    "ayp.gal.badge": "INSIDE OUR AYURVEDA SUITES",
+    "ayp.gal.title": "Ayurveda",
+    "ayp.gal.titleAccent": "Treatment Gallery",
+    "ayp.gal.sub": "Herbal poultices, medicated oil therapies and our private treatment suites."
+  });
+  Object.assign(d.ar, {
+    "ayp.gal.badge": "داخل أجنحة الأيورفيدا",
+    "ayp.gal.title": "معرض",
+    "ayp.gal.titleAccent": "علاجات الأيورفيدا",
+    "ayp.gal.sub": "الكمادات العشبية وعلاجات الزيوت الطبية وأجنحتنا العلاجية الخاصة."
+  });
+})();
