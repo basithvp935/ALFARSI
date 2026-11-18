@@ -707,7 +707,7 @@ const i18n = {
     'cta.contact.text': 'Our medical reception desk is active on WhatsApp and phone for priority bookings and emergency mobility support.',
     'cta.whatsapp': 'WhatsApp Helpline',
 
-    'footer.desc': "Al Farsi Physiotherapy & Rehabilitation Center is Oman's premier clinical facility dedicated to neurological stroke recovery, spine decompression, orthopedic care, and authentic Ayurvedic wellness.",
+    'footer.desc': "Al Farsi Physiotherapy & Rehabilitation Center is Oman's premier clinical facility dedicated to neurological stroke recovery, spine decompression, and orthopedic care.",
     'footer.quickLinks': 'Quick Links',
     'footer.aboutCenter': 'About Center',
     'footer.ayurvedicCare': 'Ayurvedic Care',
@@ -816,7 +816,7 @@ const i18n = {
     'cta.contact.text': 'مكتب الاستقبال الطبي متاح عبر واتساب والهاتف للحجوزات ذات الأولوية ودعم الحركة الطارئة.',
     'cta.whatsapp': 'واتساب الطوارئ',
 
-    'footer.desc': 'مركز الفارسي للعلاج الطبيعي والتأهيل هو المنشأة السريرية الرائدة في عُمان والمتخصصة في تعافي السكتة الدماغية، وعلاج العمود الفقري، والرعاية العظمية، والعافية الأيورفيدية الأصيلة.',
+    'footer.desc': 'مركز الفارسي للعلاج الطبيعي والتأهيل هو المنشأة السريرية الرائدة في عُمان والمتخصصة في تعافي السكتة الدماغية، وعلاج العمود الفقري، والرعاية العظمية.',
     'footer.quickLinks': 'روابط سريعة',
     'footer.aboutCenter': 'عن المركز',
     'footer.ayurvedicCare': 'الرعاية الأيورفيدية',
