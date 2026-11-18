@@ -315,8 +315,7 @@
                 <li><a class="dropdown-item" href="treatment.html?id=backpain"><i class="bi bi-person-arms-up text-primary"></i> <span data-i18n="nav.dd.backpain">Back Pain &amp; Sciatica</span></a></li>
                 <li><a class="dropdown-item" href="treatment.html?id=sports"><i class="bi bi-trophy-fill text-primary"></i> <span data-i18n="nav.dd.sports">Sports Injury Rehab</span></a></li>
                 <li><a class="dropdown-item" href="treatment.html?id=postop"><i class="bi bi-bandaid-fill text-primary"></i> <span data-i18n="nav.dd.postop">Post-Surgical Recovery</span></a></li>
-                <li><a class="dropdown-item" href="treatment.html?id=hijama"><i class="bi bi-stars text-primary"></i> <span data-i18n="nav.dd.hijama">Hijama &amp; Reflexology</span></a></li>
-                <li><a class="dropdown-item" href="treatments.html?cat=ayurveda"><i class="bi bi-flower1 text-success"></i> <span data-i18n="nav.dd.ayurveda">Ayurvedic &amp; Panchakarma</span></a></li>
+                <li><a class="dropdown-item" href="ayurveda.html"><i class="bi bi-flower1 text-success"></i> <span data-i18n="nav.dd.ayurveda">Ayurvedic &amp; Panchakarma</span></a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item text-primary fw-bold" href="treatments.html"><span data-i18n="nav.dd.explore">Explore All Treatments</span> <i class="bi bi-arrow-right"></i></a></li>
               </ul>
@@ -325,7 +324,7 @@
               <a class="nav-link" href="index.html#about" data-i18n="nav.about">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html#ayurveda"><i class="bi bi-flower1 text-success me-1"></i><span data-i18n="nav.ayurveda">Ayurveda</span></a>
+              <a class="nav-link" href="ayurveda.html"><i class="bi bi-flower1 text-success me-1"></i><span data-i18n="nav.ayurveda">Ayurveda</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="index.html#doctors" data-i18n="nav.specialists">Specialists</a>
@@ -452,8 +451,8 @@
             </div>
             <h3 class="c-channel-title" data-i18n="contact.card.hours">Working Hours</h3>
             <p class="c-channel-desc" data-i18n-html="contact.card.hoursDesc">
-              Sat – Thu: 8:00 AM – 9:00 PM<br>
-              Friday: 2:00 PM – 9:00 PM
+              Sat – Thu: 8:00 AM – 1:00 PM &amp; 4:00 PM – 9:00 PM<br>
+              Friday: Closed
             </p>
             <a href="#booking-form" class="c-channel-link" style="color: #6366F1;">
               <span data-i18n="contact.card.bookSlot">Book Priority Slot</span>
@@ -519,7 +518,7 @@
                       <option value="" selected disabled data-i18n="contact.form.select">Select Department / Therapy</option>
                       <optgroup label="Neurological &amp; Stroke" data-i18n-label="svc.g.neuro">
                         <option value="Stroke Treatment" data-i18n="svc.stroke">Stroke Rehabilitation</option>
-                        <option value="Cerebral Palsy" data-i18n="svc.cp">Cerebral Palsy &amp; Pediatric Care</option>
+                        <option value="Pediatric Rehabilitation" data-i18n="svc.cp">Pediatric Rehabilitation</option>
                         <option value="Parkinson's Disease" data-i18n="svc.parkinson">Parkinson's Support</option>
                       </optgroup>
                       <optgroup label="Spine &amp; Chronic Pain" data-i18n-label="svc.g.spine">
@@ -537,7 +536,6 @@
                         <option value="Shirodhara Stream" data-i18n="svc.shirodhara">Shirodhara &amp; Nasyam (Neurological)</option>
                         <option value="Kati Janu Basti" data-i18n="svc.basti">Kati &amp; Janu Basti (Spine &amp; Knee)</option>
                         <option value="Abhyanga Detox" data-i18n="svc.abhyanga">Abhyanga &amp; Panchakarma Detox</option>
-                        <option value="Hijama Cupping" data-i18n="svc.hijama">Medical Hijama Cupping</option>
                       </optgroup>
                     </select>
                     <div class="invalid-feedback" data-i18n="svc.invalid">Please choose a department.</div>
@@ -554,8 +552,7 @@
                   <div class="col-md-6">
                     <label for="cTimeSlotSelect" class="form-label" data-i18n="contact.form.time">Preferred Time Window</label>
                     <select class="form-select" id="cTimeSlotSelect">
-                      <option value="Morning (8:00 AM - 12:00 PM)" data-i18n="contact.form.morning">Morning (8:00 AM – 12:00 PM)</option>
-                      <option value="Afternoon (12:00 PM - 4:00 PM)" data-i18n="contact.form.afternoon">Afternoon (12:00 PM – 4:00 PM)</option>
+                      <option value="Morning (8:00 AM - 1:00 PM)" data-i18n="contact.form.morning">Morning (8:00 AM – 1:00 PM)</option>
                       <option value="Evening (4:00 PM - 9:00 PM)" data-i18n="contact.form.evening">Evening (4:00 PM – 9:00 PM)</option>
                     </select>
                   </div>
@@ -621,7 +618,7 @@
                   <span class="map-info-icon green"><i class="bi bi-clock-fill"></i></span>
                   <div>
                     <strong data-i18n="contact.map.hours">Opening Hours</strong>
-                    <span data-i18n="cta.hours">Sat – Thu · 8 AM – 9 PM</span>
+                    <span data-i18n="cta.hours">Sat – Thu · 8 AM – 1 PM &amp; 4 PM – 9 PM</span>
                   </div>
                 </div>
                 <div class="map-info-actions">
@@ -771,7 +768,7 @@
             <li><a href="index.html" data-i18n="nav.home">Home</a></li>
             <li><a href="index.html#about" data-i18n="footer.aboutCenter">About Center</a></li>
             <li><a href="treatments.html" data-i18n="nav.treatments">Treatments</a></li>
-            <li><a href="index.html#ayurveda" data-i18n="footer.ayurvedicCare">Ayurvedic Care</a></li>
+            <li><a href="ayurveda.html" data-i18n="footer.ayurvedicCare">Ayurvedic Care</a></li>
             <li><a href="index.html#doctors" data-i18n="nav.specialists">Specialists</a></li>
             <li><a href="contact.html" data-i18n="footer.contactUs">Contact Us</a></li>
           </ul>
@@ -785,7 +782,6 @@
             <li><a href="treatment.html?id=sports" data-i18n="footer.t.sports">Sports Rehabilitation</a></li>
             <li><a href="treatment.html?id=elakizhi" data-i18n="footer.t.elakizhi">Elakizhi Herbal Poultice</a></li>
             <li><a href="treatment.html?id=shirodhara" data-i18n="footer.t.shirodhara">Shirodhara Stress Relief</a></li>
-            <li><a href="treatment.html?id=hijama" data-i18n="footer.t.hijama">Hijama Medical Cupping</a></li>
           </ul>
         </div>
 
@@ -831,8 +827,8 @@
 
   <!-- Bootstrap 5.3.3 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="i18n-data.js?v=20261117t"></script>
-  <script src="script.js?v=20261117t"></script>
+  <script src="i18n-data.js?v=20261118q"></script>
+  <script src="script.js?v=20261118q"></script>
 
   <!-- Interactive Form Handling Script -->
   <script>
@@ -842,6 +838,24 @@
       if (dateInput) {
         const today = new Date().toISOString().split('T')[0];
         dateInput.min = today;
+
+        // The clinic is closed on Fridays: reject a Friday date with a clear message
+        const dateFeedback = dateInput.parentElement.querySelector('.invalid-feedback');
+        const defaultDateMsg = dateFeedback ? dateFeedback.textContent : '';
+        const checkFriday = function () {
+          const isArabic = document.documentElement.getAttribute('lang') === 'ar';
+          let msg = '';
+          if (dateInput.value) {
+            const d = new Date(dateInput.value + 'T12:00:00');
+            if (d.getDay() === 5) {
+              msg = isArabic ? 'المركز مغلق يوم الجمعة، يرجى اختيار يوم آخر.' : 'We are closed on Fridays. Please choose another day.';
+            }
+          }
+          dateInput.setCustomValidity(msg);
+          if (dateFeedback) dateFeedback.textContent = msg || defaultDateMsg;
+        };
+        dateInput.addEventListener('change', checkFriday);
+        dateInput.addEventListener('input', checkFriday);
       }
 
       // Pre-fill the chosen therapist when arriving from a team card (contact.html?doctor=...)

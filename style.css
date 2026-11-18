@@ -4953,3 +4953,468 @@ a.cta-info-item:hover { color: #fff; background: rgba(79, 175, 69, 0.2); border-
 [dir="rtl"] a[href^="tel:"]:not(:has(span)),
 [dir="rtl"] a[href^="mailto:"] span,
 [dir="rtl"] .map-chip[href^="tel:"] { direction: ltr; unicode-bidi: isolate; }
+
+/* ==========================================================================
+   AYURVEDA PAGE (ayurveda.html)
+   ========================================================================== */
+.ayp-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 44px 0 70px;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: #0E2632;
+}
+.ayp-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+.ayp-hero-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(10, 34, 28, 0.92) 0%, rgba(10, 40, 34, 0.78) 42%, rgba(10, 40, 34, 0.25) 75%, rgba(10, 40, 34, 0.1) 100%),
+    linear-gradient(180deg, transparent 60%, rgba(14, 38, 50, 0.55) 100%);
+}
+.ayp-hero-leaves {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(143, 219, 134, 0.16) 1px, transparent 1px);
+  background-size: 26px 26px;
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, transparent 60%);
+  mask-image: linear-gradient(90deg, #000 0%, transparent 60%);
+  pointer-events: none;
+}
+.ayp-hero .container { z-index: 2; }
+
+.ayp-breadcrumb { background: transparent; margin-bottom: 26px; font-size: 0.88rem; }
+.ayp-breadcrumb a { color: rgba(255, 255, 255, 0.72); text-decoration: none; }
+.ayp-breadcrumb a:hover { color: #fff; }
+.ayp-breadcrumb .breadcrumb-item.active { color: #fff; font-weight: 700; }
+.ayp-breadcrumb .breadcrumb-item + .breadcrumb-item::before { color: rgba(255, 255, 255, 0.4); }
+
+.ayp-hero-content { max-width: 620px; }
+.ayp-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  margin-bottom: 18px;
+  border-radius: 50px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #A7E3A1;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(167, 227, 161, 0.3);
+  backdrop-filter: blur(10px);
+}
+.ayp-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4.8vw, 3.7rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: #fff;
+  margin-bottom: 18px;
+}
+.ayp-hero-accent {
+  display: block;
+  font-style: italic;
+  background: linear-gradient(90deg, #8FDB86 0%, #6CC3F5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.ayp-hero-sub { font-size: 1.04rem; line-height: 1.7; color: rgba(255, 255, 255, 0.82); margin-bottom: 28px; }
+.ayp-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.ayp-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #fff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  transition: var(--transition-smooth);
+}
+.ayp-btn-ghost:hover { background: rgba(255, 255, 255, 0.18); border-color: #fff; }
+
+.ayp-hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 36px;
+}
+.ayp-hero-chips > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+.ayp-hero-chips i { color: #8FDB86; }
+
+/* the moved spotlight section no longer needs its own header spacing */
+.ayurveda-page .ayurveda-sanctuary-section { padding-top: 70px; }
+
+.ayp-accent { color: var(--primary-green-dark); }
+
+/* ---- Doctor ---- */
+.ayp-doctor-section {
+  background:
+    radial-gradient(at 100% 0%, rgba(79, 175, 69, 0.09) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(8, 120, 190, 0.07) 0px, transparent 50%),
+    var(--light-bg);
+}
+.ayp-doctor-card {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  max-width: 980px;
+  margin: 0 auto;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(79, 175, 69, 0.18);
+  box-shadow: 0 26px 60px rgba(14, 38, 50, 0.12);
+  position: relative;
+}
+.ayp-doctor-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  z-index: 2;
+  background: linear-gradient(90deg, var(--primary-green), var(--primary-blue));
+}
+.ayp-doctor-photo { position: relative; min-height: 440px; }
+.ayp-doctor-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 70%;
+}
+.ayp-doctor-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(14, 38, 50, 0.55) 100%);
+}
+.ayp-doctor-exp {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--green-gradient);
+  box-shadow: var(--shadow-glow-green);
+}
+.ayp-doctor-body { padding: 40px 42px; display: flex; flex-direction: column; justify-content: center; }
+.ayp-doctor-role {
+  align-self: flex-start;
+  padding: 5px 13px;
+  margin-bottom: 12px;
+  border-radius: 50px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-green-dark);
+  background: var(--primary-green-light);
+}
+.ayp-doctor-name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin-bottom: 10px;
+}
+.ayp-doctor-degree {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-size: 0.88rem;
+  color: var(--muted-text);
+}
+.ayp-doctor-degree strong {
+  padding: 3px 11px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: var(--brand-gradient);
+}
+.ayp-doctor-text { font-size: 0.96rem; line-height: 1.7; color: #4B5E68; margin-bottom: 22px; }
+.ayp-doctor-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 26px;
+}
+.ayp-doctor-facts > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 14px;
+  border-radius: 16px;
+  background: var(--light-bg);
+  border: 1px solid var(--light-border);
+}
+.ayp-doctor-facts i { color: var(--primary-green); font-size: 1.1rem; margin-bottom: 4px; }
+.ayp-doctor-facts strong { font-size: 1.15rem; font-weight: 800; color: var(--dark-navy); line-height: 1.1; }
+.ayp-doctor-facts span { font-size: 0.74rem; color: var(--muted-text); }
+.ayp-doctor-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ---- Steps ---- */
+.ayp-steps-section { background: #fff; }
+.ayp-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+}
+.ayp-step {
+  position: relative;
+  padding: 28px 22px 24px;
+  border-radius: 24px;
+  background: #fff;
+  border: 1px solid var(--light-border);
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition-smooth);
+  overflow: hidden;
+}
+.ayp-step:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+.ayp-step-num {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-family: var(--font-serif);
+  font-size: 2.6rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1;
+  color: rgba(79, 175, 69, 0.14);
+}
+.ayp-step-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+  color: #fff;
+  background: var(--green-gradient);
+  box-shadow: var(--shadow-glow-green);
+}
+.ayp-step:nth-child(even) .ayp-step-icon { background: var(--blue-gradient); box-shadow: var(--shadow-glow-blue); }
+.ayp-step h3 { font-size: 1.08rem; font-weight: 800; color: var(--dark-navy); margin-bottom: 6px; }
+.ayp-step p { font-size: 0.88rem; line-height: 1.6; color: var(--muted-text); margin: 0; }
+
+.ayp-cta { background: linear-gradient(135deg, #0A2A22 0%, #0E3B3A 50%, #0D3346 100%); }
+
+/* ---- Responsive ---- */
+@media (max-width: 991.98px) {
+  .ayp-doctor-card { grid-template-columns: 300px 1fr; }
+  .ayp-doctor-body { padding: 30px 28px; }
+  .ayp-steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767.98px) {
+  .ayp-hero { min-height: 0; padding: 30px 0 46px; }
+  .ayp-hero-shade { background: linear-gradient(180deg, rgba(10, 34, 28, 0.78) 0%, rgba(10, 40, 34, 0.86) 60%, rgba(14, 38, 50, 0.92) 100%); }
+  .ayp-hero-title { font-size: clamp(1.9rem, 8.6vw, 2.4rem); }
+  .ayp-hero-sub { font-size: 0.92rem; margin-bottom: 22px; }
+  .ayp-hero-chips { margin-top: 24px; gap: 8px; }
+  .ayp-hero-chips > span { font-size: 0.74rem; padding: 6px 11px; }
+  .ayp-btn-ghost { padding: 12px 10px; }
+
+  .ayurveda-page .ayurveda-sanctuary-section { padding-top: 46px; }
+
+  .ayp-doctor-card { grid-template-columns: 1fr; border-radius: 24px; }
+  .ayp-doctor-photo { min-height: 340px; }
+  .ayp-doctor-photo img { object-position: center 80%; }
+  .ayp-doctor-body { padding: 22px 18px 22px; }
+  .ayp-doctor-text { font-size: 0.88rem; margin-bottom: 18px; }
+  .ayp-doctor-facts { gap: 8px; margin-bottom: 20px; }
+  .ayp-doctor-facts > div { padding: 10px; align-items: center; text-align: center; }
+  .ayp-doctor-facts strong { font-size: 1rem; }
+  .ayp-doctor-facts span { font-size: 0.68rem; }
+
+  .ayp-steps { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .ayp-step { padding: 18px 14px; border-radius: 18px; }
+  .ayp-step-icon { width: 40px; height: 40px; font-size: 1rem; border-radius: 12px; margin-bottom: 10px; }
+  .ayp-step-num { font-size: 1.9rem; top: 10px; right: 12px; }
+  .ayp-step h3 { font-size: 0.92rem; }
+  .ayp-step p { font-size: 0.76rem; line-height: 1.5; }
+  .ayp-step:hover { transform: none; }
+}
+
+/* Arabic (RTL) */
+[dir="rtl"] .ayp-hero-shade {
+  background:
+    linear-gradient(270deg, rgba(10, 34, 28, 0.92) 0%, rgba(10, 40, 34, 0.78) 42%, rgba(10, 40, 34, 0.25) 75%, rgba(10, 40, 34, 0.1) 100%),
+    linear-gradient(180deg, transparent 60%, rgba(14, 38, 50, 0.55) 100%);
+}
+@media (max-width: 767.98px) {
+  [dir="rtl"] .ayp-hero-shade { background: linear-gradient(180deg, rgba(10, 34, 28, 0.78) 0%, rgba(10, 40, 34, 0.86) 60%, rgba(14, 38, 50, 0.92) 100%); }
+}
+[dir="rtl"] .ayp-hero-leaves { -webkit-mask-image: linear-gradient(270deg, #000 0%, transparent 60%); mask-image: linear-gradient(270deg, #000 0%, transparent 60%); }
+[dir="rtl"] .ayp-doctor-card::before { background: linear-gradient(270deg, var(--primary-green), var(--primary-blue)); }
+[dir="rtl"] .ayp-doctor-exp { left: auto; right: 16px; }
+[dir="rtl"] .ayp-step-num { right: auto; left: 18px; }
+
+/* Ayurveda page: single team card, same design as the home page team */
+.ayp-team-grid { max-width: none; }
+.ayp-team-grid .team-col { flex: 0 0 300px; max-width: 300px; }
+@media (max-width: 767.98px) {
+  .ayp-team-grid { flex-wrap: wrap; justify-content: center; overflow: visible; margin: 0; padding: 0; }
+  .ayp-team-grid .team-col { flex: 0 0 72%; max-width: 72%; }
+}
+
+/* What We Offer: 3 cards; center the odd one on phones */
+@media (max-width: 767.98px) { .offer-grid { justify-content: center; } }
+
+/* ==========================================================================
+   HERO — clinic building photo (replaces the video)
+   Desktop: photo fills the side opposite the text and fades into the light hero background.
+   ========================================================================== */
+.hero-image-section {
+  background:
+    radial-gradient(at 0% 0%, rgba(8, 120, 190, 0.08) 0px, transparent 55%),
+    radial-gradient(at 0% 100%, rgba(79, 175, 69, 0.08) 0px, transparent 50%),
+    linear-gradient(175deg, #FFFFFF 0%, #F5FAFC 60%, #EAF6F8 100%);
+}
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 76% 62%;
+  z-index: 0;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.6) 14%, #000 28%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.6) 14%, #000 28%);
+  transform-origin: 70% 60%;
+  animation: heroZoom 22s ease-in-out infinite alternate;
+}
+[dir="rtl"] .hero-bg-image {
+  right: auto;
+  left: 0;
+  -webkit-mask-image: linear-gradient(270deg, transparent 0%, rgba(0, 0, 0, 0.6) 14%, #000 28%);
+  mask-image: linear-gradient(270deg, transparent 0%, rgba(0, 0, 0, 0.6) 14%, #000 28%);
+  transform-origin: 30% 60%;
+}
+@keyframes heroZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.06); }
+}
+/* text sits on the plain light side, so no extra white veil is needed on desktop */
+.hero-image-section .hero-video-overlay,
+[dir="rtl"] .hero-image-section .hero-video-overlay { background: none; }
+
+@media (max-width: 991.98px) {
+  .hero-bg-image,
+  [dir="rtl"] .hero-bg-image {
+    left: 0;
+    right: 0;
+    width: 100%;
+    object-position: center 60%;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .hero-image-section .hero-video-overlay,
+  [dir="rtl"] .hero-image-section .hero-video-overlay {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0.62) 50%, rgba(245, 250, 252, 0.86) 100%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-image { animation: none; }
+}
+
+/* ==========================================================================
+   HERO — phones: the building photo is the background behind the hero content;
+   sign clear at the top, shopfront continues behind the text under a light veil
+   ========================================================================== */
+@media (max-width: 767.98px) {
+  .hero-image-section {
+    display: block;
+    min-height: 0;
+    padding-top: 46vw;
+    padding-bottom: 84px;
+    text-align: center;
+    background:
+      radial-gradient(at 0% 100%, rgba(79, 175, 69, 0.12) 0px, transparent 50%),
+      radial-gradient(at 100% 85%, rgba(8, 120, 190, 0.12) 0px, transparent 55%),
+      #F5FAFC;
+  }
+  .hero-image-section .hero-bg-image,
+  [dir="rtl"] .hero-image-section .hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: -9%;
+    right: auto;
+    bottom: auto;
+    width: 115%;
+    max-width: none;
+    height: auto;
+    margin: 0;
+    object-fit: contain;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 78%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, #000 78%, transparent 100%);
+    animation: none;
+    transform: none;
+    z-index: 0;
+  }
+  .hero-image-section .hero-video-overlay,
+  [dir="rtl"] .hero-image-section .hero-video-overlay {
+    display: block;
+    background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 30vw,
+      rgba(255, 255, 255, 0.55) 46vw,
+      rgba(255, 255, 255, 0.7) 75vw,
+      rgba(245, 250, 252, 0.6) 100vw,
+      rgba(245, 250, 252, 0) 140vw);
+  }
+  .hero-image-section .hero-glow-1,
+  .hero-image-section .hero-glow-2 { display: none; }
+  .hero-image-section .badge-eyebrow { font-size: 0.68rem; padding: 6px 12px; margin-bottom: 12px; background: rgba(255, 255, 255, 0.9); }
+  .hero-image-section .hero-heading { font-size: clamp(1.9rem, 8.6vw, 2.3rem); }
+  .hero-image-section .hero-subheading { font-size: 0.95rem; }
+  .hero-image-section .hero-description { font-size: 0.88rem; color: #3F5561; }
+  .hero-image-section .hero-btn-group .btn-outline-custom { background: rgba(255, 255, 255, 0.92); }
+}

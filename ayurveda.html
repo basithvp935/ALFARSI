@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Arabic by default: set direction before the page paints (avoids an English/LTR flash) -->
+  <script>
+    (function () {
+      var lang = 'ar';
+      try { var s = localStorage.getItem('alfarsi_lang'); if (s === 'en' || s === 'ar') lang = s; } catch (e) {}
+      var h = document.documentElement;
+      h.setAttribute('lang', lang);
+      h.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+      if (lang === 'ar') h.classList.add('lang-ar');
+    })();
+  </script>
+  <title>Ayurveda &amp; Panchakarma | Al Farsi Physiotherapy Center, Al Mudhaibi</title>
+  <meta name="description"
+    content="Authentic Kerala Ayurvedic therapies at Al Farsi Physiotherapy Center, Al Mudhaibi, Oman: Elakizhi, Shirodhara, Kati Basti, Abhyanga and Panchakarma with our BAMS Ayurvedic physician.">
+  <meta name="keywords"
+    content="Ayurveda Oman, Panchakarma Al Mudhaibi, Kerala Ayurvedic massage, Shirodhara, Elakizhi, Kati Basti, BAMS doctor Oman">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600;1,700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       0. TOP NOTIFICATION & CONTACT BAR
+       ========================================================================== -->
+  <div class="top-header-bar d-none d-lg-block">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center py-2">
+        <div class="top-bar-left d-flex align-items-center gap-4">
+          <div class="top-bar-item">
+            <i class="bi bi-geo-alt-fill text-accent-green"></i>
+            <span data-i18n="top.location">Al Mudhaibi, North Al-Sharqiyah, Sultanate of Oman</span>
+          </div>
+        </div>
+
+        <div class="top-bar-right d-flex align-items-center gap-3">
+          <a href="tel:+96871704990" class="top-bar-link">
+            <i class="bi bi-telephone-fill text-accent-green"></i>
+            <span>+968 7170 4990</span>
+          </a>
+          <a href="mailto:physicaltherapy717@gmail.com" class="top-bar-link">
+            <i class="bi bi-envelope-fill text-accent-green"></i>
+            <span>physicaltherapy717@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       1. HEADER / NAVIGATION
+       ========================================================================== -->
+  <header>
+    <nav class="navbar navbar-expand-lg site-navbar" id="mainNav">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="index.html" title="Al Farsi Physiotherapy Center">
+          <img src="assets/images/logo-main.png" alt="Al Farsi Physiotherapy Center" class="brand-logo-img" width="984" height="226">
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" data-i18n="nav.home">Home</a>
+            </li>
+            <!-- Treatments (link + hover dropdown) -->
+            <li class="nav-item dropdown nav-hover-dropdown">
+              <a class="nav-link" href="treatments.html" id="treatmentsDropdown">
+                <span data-i18n="nav.treatments">Treatments</span> <i class="bi bi-chevron-down nav-caret"></i>
+              </a>
+              <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="treatmentsDropdown">
+                <li><a class="dropdown-item" href="treatment.html?id=stroke"><i class="bi bi-heart-pulse-fill text-primary"></i> <span data-i18n="nav.dd.stroke">Stroke &amp; Neurological Rehab</span></a></li>
+                <li><a class="dropdown-item" href="treatment.html?id=backpain"><i class="bi bi-person-arms-up text-primary"></i> <span data-i18n="nav.dd.backpain">Back Pain &amp; Sciatica</span></a></li>
+                <li><a class="dropdown-item" href="treatment.html?id=sports"><i class="bi bi-trophy-fill text-primary"></i> <span data-i18n="nav.dd.sports">Sports Injury Rehab</span></a></li>
+                <li><a class="dropdown-item" href="treatment.html?id=postop"><i class="bi bi-bandaid-fill text-primary"></i> <span data-i18n="nav.dd.postop">Post-Surgical Recovery</span></a></li>
+                <li><a class="dropdown-item" href="ayurveda.html"><i class="bi bi-flower1 text-success"></i> <span data-i18n="nav.dd.ayurveda">Ayurvedic &amp; Panchakarma</span></a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-primary fw-bold" href="treatments.html"><span data-i18n="nav.dd.explore">Explore All Treatments</span> <i class="bi bi-arrow-right"></i></a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about" data-i18n="nav.about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="ayurveda.html" aria-current="page"><i class="bi bi-flower1 text-success me-1"></i><span data-i18n="nav.ayurveda">Ayurveda</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#doctors" data-i18n="nav.specialists">Specialists</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Header CTA -->
+          <div class="d-flex align-items-center gap-2">
+            <!-- Language Switcher Button (Left of Book Appointment) -->
+            <button type="button" class="lang-switch-btn" id="langSwitchBtn" onclick="toggleSiteLanguage()" title="Switch Language / تغيير اللغة" aria-label="Language Switcher">
+              <div class="lang-switch-inner">
+                <i class="bi bi-globe2 lang-icon"></i>
+                <span class="lang-pill active" id="langEnPill">EN</span>
+                <span class="lang-sep">/</span>
+                <span class="lang-pill lang-ar-pill" id="langArPill">عربي</span>
+              </div>
+            </button>
+
+            <a href="contact.html#booking-form" class="btn btn-primary-custom nav-cta-btn">
+              <i class="bi bi-calendar2-check-fill"></i>
+              <span data-i18n="nav.book">Book Appointment</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="ayurveda-page">
+    <!-- ==========================================================================
+         1. AYURVEDA HERO
+         ========================================================================== -->
+    <section class="ayp-hero">
+      <img src="assets/images/ayurveda-hero.jpg" alt="" class="ayp-hero-bg" aria-hidden="true">
+      <div class="ayp-hero-shade"></div>
+      <div class="ayp-hero-leaves" aria-hidden="true"></div>
+
+      <div class="container position-relative">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb ayp-breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-fill me-1"></i><span data-i18n="contact.crumb.home">Home</span></a></li>
+            <li class="breadcrumb-item active" aria-current="page" data-i18n="nav.ayurveda">Ayurveda</li>
+          </ol>
+        </nav>
+
+        <div class="ayp-hero-content">
+          <div class="ayp-hero-badge">
+            <i class="bi bi-tree-fill"></i>
+            <span data-i18n="ayur.badge">ANCIENT WISDOM &amp; BOTANICAL HEALING</span>
+          </div>
+          <h1 class="ayp-hero-title">
+            <span data-i18n="ayp.hero.title">Authentic Kerala</span>
+            <span class="ayp-hero-accent" data-i18n="ayp.hero.accent">Ayurveda &amp; Panchakarma</span>
+          </h1>
+          <p class="ayp-hero-sub" data-i18n="ayur.sub">
+            Immerse yourself in authentic Kerala Ayurvedic healing, customized medicated oils, and time-honored
+            botanical protocols designed to eliminate chronic pain, restore vital energy, and balance your body’s
+            natural doshas.
+          </p>
+          <div class="ayp-hero-actions btn-pair">
+            <a href="contact.html?doctor=Dr.%20Shabna%20Mangattuparamban#booking-form" class="btn btn-ayur-primary">
+              <i class="bi bi-calendar-heart-fill"></i>
+              <span data-i18n="ayur.book">Book Ayurvedic Consultation</span>
+            </a>
+            <a href="#ayurvedic-doctor" class="btn ayp-btn-ghost">
+              <i class="bi bi-person-badge-fill"></i>
+              <span data-i18n="ayp.meetDoctor">Meet Our Ayurvedic Team</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="ayp-hero-chips">
+          <span><i class="bi bi-flower1"></i> <span data-i18n="ayp.chip1">Kerala Herbal Oils</span></span>
+          <span><i class="bi bi-person-check-fill"></i> <span data-i18n="ayp.chip2">Private Suites</span></span>
+          <span><i class="bi bi-patch-check-fill"></i> <span data-i18n="ayp.chip3">BAMS Physician</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         2. SPOTLIGHT + THERAPIES (moved from the home page)
+         ========================================================================== -->
+    <section class="section-padding ayurveda-sanctuary-section" id="ayurveda">
+      <div class="ayur-bg-leaf-pattern"></div>
+      <div class="ayur-ambient-glow-1"></div>
+      <div class="ayur-ambient-glow-2"></div>
+
+      <div class="container position-relative">
+        <!-- Featured Ayurvedic Spotlight Banner -->
+        <div class="ayur-spotlight-card reveal mb-5">
+          <div class="row g-0 align-items-stretch">
+            <div class="col-lg-6 ayur-spotlight-content">
+              <div class="ayur-spotlight-tag">
+                <i class="bi bi-patch-check-fill"></i> <span data-i18n="ayur.gcc">100% Authentic Kerala Ayurveda • GCC
+                  Standard</span>
+              </div>
+              <h3 class="ayur-spotlight-title" data-i18n="ayur.sideTitle">
+                Personalized Botanical Healing for Spine, Joints &amp; Vitality
+              </h3>
+              <p class="ayur-spotlight-text" data-i18n="ayur.sideBody">
+                Every therapy at Al Farsi combines pure herbal extractions, warm cold-pressed botanical oils, and
+                skilled Kerala master therapists. Private luxury treatment suites dedicated for gentlemen and ladies
+                with full privacy and sterile comfort.
+              </p>
+
+              <!-- 4 Feature Highlights Grid -->
+              <div class="ayur-highlights-grid">
+                <div class="ayur-highlight-item">
+                  <div class="ayur-hl-icon"><i class="bi bi-droplet-half"></i></div>
+                  <div>
+                    <strong data-i18n="ayur.f1t">Pure Medicated Tailams</strong>
+                    <span data-i18n="ayur.f1d">Neem, Bala, Dhanwantharam &amp; Ashwagandha oils</span>
+                  </div>
+                </div>
+                <div class="ayur-highlight-item">
+                  <div class="ayur-hl-icon"><i class="bi bi-person-check-fill"></i></div>
+                  <div>
+                    <strong data-i18n="ayur.f2t">Private Suites for Men &amp; Women</strong>
+                    <span data-i18n="ayur.f2d">Dedicated male &amp; female certified therapists</span>
+                  </div>
+                </div>
+                <div class="ayur-highlight-item">
+                  <div class="ayur-hl-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+                  <div>
+                    <strong data-i18n="ayur.f3t">Spine &amp; Disc Natural Relief</strong>
+                    <span data-i18n="ayur.f3d">Deep herbal penetration for sciatica &amp; lumbar care</span>
+                  </div>
+                </div>
+                <div class="ayur-highlight-item">
+                  <div class="ayur-hl-icon"><i class="bi bi-shield-fill-check"></i></div>
+                  <div>
+                    <strong data-i18n="ayur.f4t">MOH Oman Certified Standard</strong>
+                    <span data-i18n="ayur.f4d">Authentic Kerala wooden Droni tables &amp; calm aroma</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ayur-spotlight-actions mt-4 btn-pair">
+                <a href="contact.html#booking-form" class="btn btn-ayur-primary">
+                  <i class="bi bi-calendar-heart-fill"></i>
+                  <span data-i18n="ayur.book">Book Ayurvedic Consultation</span>
+                </a>
+                <a href="https://wa.me/96871704990?text=Hello%20Al%20Farsi%20Center%2C%20I%20would%20like%20to%20inquire%20about%20Ayurvedic%20Treatments."
+                  target="_blank" rel="noopener noreferrer" class="btn btn-ayur-outline">
+                  <i class="bi bi-whatsapp"></i>
+                  <span data-i18n="ayur.whatsapp">WhatsApp Doctor</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-6 ayur-spotlight-media">
+              <img src="assets/images/ayurveda-gcc-man.jpg" alt="Traditional Ayurvedic Kizhi Massage for GCC Men"
+                class="ayur-media-photo" loading="lazy">
+              <div class="ayur-media-wrapper">
+                <div class="ayur-media-badge">
+                  <i class="bi bi-flower1"></i>
+                  <span data-i18n="ayur.kizhiLabel">Herbal Kizhi &amp; Panchakarma</span>
+                </div>
+                <div class="ayur-floating-stat">
+                  <span class="ayur-stat-num">5,000+</span>
+                  <span class="ayur-stat-label"><span data-i18n="ayur.years">Years of Time-Tested Botanical
+                      Healing</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Specialized Ayurvedic Therapy Cards -->
+        <div class="row g-4 ayur-list">
+          <!-- Card 1: Kizhi / Elakizhi -->
+          <div class="col-lg-3 col-md-6 reveal">
+            <div class="ayur-card">
+              <div class="ayur-card-banner banner-kizhi">
+                <img src="assets/images/ayurveda-gcc-man.jpg" alt="Elakizhi Herbal Poultice for Men"
+                  class="ayur-card-banner-img" style="object-position: center 25%;" loading="lazy">
+                <span class="ayur-card-pill"><i class="bi bi-flower2"></i> <span data-i18n="ayur.elakizhi.badge">Herbal
+                    Poultice</span></span>
+                <div class="ayur-card-icon-bubble">
+                  <i class="bi bi-fire"></i>
+                </div>
+              </div>
+              <div class="ayur-card-body">
+                <h4 class="ayur-card-title" data-i18n="ayur.elakizhi.title">Elakizhi &amp; Podikizhi</h4>
+                <p class="ayur-card-desc" data-i18n="ayur.elakizhi.desc">Steamed bundles of wild medicinal leaves and
+                  herbal powders soaked in warm medicated oils to relieve acute joint pain, arthritis, sciatica, and
+                  chronic stiffness.</p>
+                <div class="ayur-card-tags">
+                  <span data-i18n="ayur.tag.joint">#JointPain</span>
+                  <span data-i18n="ayur.tag.steam">#HerbalSteam</span>
+                  <span data-i18n="ayur.tag.spine">#SpineRelief</span>
+                </div>
+                <a href="treatment.html?id=elakizhi" class="ayur-card-link">
+                  <span data-i18n="ayur.discover">Discover Protocol</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Shirodhara -->
+          <div class="col-lg-3 col-md-6 reveal">
+            <div class="ayur-card">
+              <div class="ayur-card-banner banner-shirodhara">
+                <img src="assets/images/ayurveda-shirodhara.jpg" alt="Shirodhara Oil Stream for Men"
+                  class="ayur-card-banner-img" style="object-position: center 40%;" loading="lazy">
+                <span class="ayur-card-pill"><i class="bi bi-droplet-fill"></i> <span
+                    data-i18n="ayur.shiro.badge">Medicated Oil Stream</span></span>
+                <div class="ayur-card-icon-bubble">
+                  <i class="bi bi-moon-stars-fill"></i>
+                </div>
+              </div>
+              <div class="ayur-card-body">
+                <h4 class="ayur-card-title" data-i18n="ayur.shiro.title">Shirodhara &amp; Nasyam</h4>
+                <p class="ayur-card-desc" data-i18n="ayur.shiro.desc">Continuous rhythmic stream of warm herbal oil over
+                  the forehead to soothe the nervous system, alleviate deep stress, chronic migraines, sleep disorders,
+                  and anxiety.</p>
+                <div class="ayur-card-tags">
+                  <span data-i18n="ayur.tag.stress">#StressRelief</span>
+                  <span data-i18n="ayur.tag.sleep">#SleepHarmony</span>
+                  <span data-i18n="ayur.tag.nervous">#NervousSystem</span>
+                </div>
+                <a href="treatment.html?id=shirodhara" class="ayur-card-link">
+                  <span data-i18n="ayur.discover">Discover Protocol</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Kati & Janu Basti -->
+          <div class="col-lg-3 col-md-6 reveal">
+            <div class="ayur-card">
+              <div class="ayur-card-banner banner-basti">
+                <img src="assets/images/ayurveda-basti.jpg" alt="Kati Basti Spinal Oil Reservoir"
+                  class="ayur-card-banner-img" style="object-position: 75% 65%;" loading="lazy">
+                <span class="ayur-card-pill"><i class="bi bi-shield-plus"></i> <span
+                    data-i18n="ayur.basti.badge">Localized Oil Dam</span></span>
+                <div class="ayur-card-icon-bubble">
+                  <i class="bi bi-bandaid-fill"></i>
+                </div>
+              </div>
+              <div class="ayur-card-body">
+                <h4 class="ayur-card-title" data-i18n="ayur.basti.title">Kati &amp; Janu Basti</h4>
+                <p class="ayur-card-desc" data-i18n="ayur.basti.desc">Herbal dough reservoirs retaining warm medicinal
+                  oil over the lumbar spine or knee joints to penetrate deep tissues, healing slipped discs and knee
+                  cartilage degeneration.</p>
+                <div class="ayur-card-tags">
+                  <span data-i18n="ayur.tag.disc">#DiscHerniation</span>
+                  <span data-i18n="ayur.tag.knee">#KneeCare</span>
+                  <span data-i18n="ayur.tag.lumbar">#LumbarSpine</span>
+                </div>
+                <a href="treatment.html?id=basti" class="ayur-card-link">
+                  <span data-i18n="ayur.discover">Discover Protocol</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Abhyanga & Panchakarma -->
+          <div class="col-lg-3 col-md-6 reveal">
+            <div class="ayur-card">
+              <div class="ayur-card-banner banner-abhyanga">
+                <img src="assets/images/ayurveda-hero.jpg" alt="Abhyanga Medicated Herbal Therapy"
+                  class="ayur-card-banner-img" style="object-position: center 50%;" loading="lazy">
+                <span class="ayur-card-pill"><i class="bi bi-tree-fill"></i> <span data-i18n="ayur.abhyanga.badge">Full
+                    Body Detox</span></span>
+                <div class="ayur-card-icon-bubble">
+                  <i class="bi bi-stars"></i>
+                </div>
+              </div>
+              <div class="ayur-card-body">
+                <h4 class="ayur-card-title" data-i18n="ayur.abhyanga.title">Abhyanga &amp; Detox</h4>
+                <p class="ayur-card-desc" data-i18n="ayur.abhyanga.desc">Synchronized full-body massage using warm
+                  medicinal oils along biological energy pathways to stimulate lymphatic drainage, purge toxins, and
+                  nourish vital organs.</p>
+                <div class="ayur-card-tags">
+                  <span data-i18n="ayur.tag.detox">#Detoxification</span>
+                  <span data-i18n="ayur.tag.lymph">#LymphaticFlow</span>
+                  <span data-i18n="ayur.tag.immunity">#VitalImmunity</span>
+                </div>
+                <a href="treatment.html?id=abhyanga" class="ayur-card-link">
+                  <span data-i18n="ayur.discover">Discover Protocol</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botanical Quality Promise Strip -->
+        <div class="ayur-promise-strip reveal mt-5">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+            <div class="ayur-promise-item">
+              <i class="bi bi-patch-check-fill text-leaf"></i>
+              <span data-i18n-html="ayur.p1"><strong>100% Organically Sourced:</strong> Certified wild herbs with no
+                chemical additives</span>
+            </div>
+            <div class="ayur-promise-divider"></div>
+            <div class="ayur-promise-item">
+              <i class="bi bi-heart-pulse-fill text-leaf"></i>
+              <span data-i18n-html="ayur.p2"><strong>Integrated Care:</strong> Harmonized with modern clinical
+                physiotherapy protocols</span>
+            </div>
+            <div class="ayur-promise-divider"></div>
+            <div class="ayur-promise-item">
+              <i class="bi bi-geo-alt-fill text-leaf"></i>
+              <span data-i18n-html="ayur.p3"><strong>Private Luxury Rooms:</strong> Dedicated serene wellness suites in
+                Al Mudhaibi, Oman</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. AYURVEDIC DOCTOR
+         ========================================================================== -->
+    <section class="section-padding ayp-doctor-section" id="ayurvedic-doctor">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <div class="badge-eyebrow ayur-badge-eyebrow">
+            <span class="ayur-leaf-icon"><i class="bi bi-person-heart"></i></span>
+            <span data-i18n="ayp.doc.badge">YOUR AYURVEDIC CARE TEAM</span>
+          </div>
+          <h2 class="section-title">
+            <span data-i18n="ayp.doc.title">Meet Our</span> <span class="italic-accent ayp-accent" data-i18n="ayp.doc.titleAccent">Ayurvedic Team</span>
+          </h2>
+        </div>
+
+        <div class="team-grid ayp-team-grid">
+          <div class="team-col reveal">
+            <article class="team-card" tabindex="0" aria-label="Dr. Shabna Mangattuparamban, BAMS">
+              <img src="assets/images/team-6.jpg" alt="Dr. Shabna Mangattuparamban, BAMS" loading="lazy" style="object-position: center 85%;">
+              <span class="team-tap-hint" aria-hidden="true"><i class="bi bi-hand-index-thumb"></i></span>
+              <div class="team-info">
+                <h3 class="team-name">Dr. Shabna Mangattuparamban</h3>
+                <p class="team-degree">BAMS</p>
+                <span class="team-exp"><i class="bi bi-award-fill"></i> 8 <span data-i18n="team.exp">Years Experience</span></span>
+                <a href="contact.html?doctor=Dr.%20Shabna%20Mangattuparamban#booking-form" class="team-book">
+                  <i class="bi bi-calendar2-check"></i> <span data-i18n="doc.bookShort">Book Visit</span> <i class="bi bi-arrow-right team-book-arrow"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="team-col reveal delay-100">
+            <article class="team-card" tabindex="0" aria-label="Abhijith P Rajeev, Ayurvedic Therapist">
+              <img src="assets/images/team-ayur-therapist.jpg" alt="Abhijith P Rajeev, Ayurvedic Therapist" loading="lazy" style="object-position: center 22%;">
+              <span class="team-tap-hint" aria-hidden="true"><i class="bi bi-hand-index-thumb"></i></span>
+              <div class="team-info">
+                <h3 class="team-name">Abhijith P Rajeev</h3>
+                <p class="team-degree" data-i18n="ayp.ther.name">Ayurvedic Therapist</p>
+                <a href="contact.html?doctor=Abhijith%20P%20Rajeev#booking-form" class="team-book">
+                  <i class="bi bi-calendar2-check"></i> <span data-i18n="doc.bookShort">Book Visit</span> <i class="bi bi-arrow-right team-book-arrow"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. HOW AN AYURVEDIC VISIT WORKS
+         ========================================================================== -->
+    <section class="section-padding ayp-steps-section">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <div class="badge-eyebrow ayur-badge-eyebrow">
+            <span class="ayur-leaf-icon"><i class="bi bi-signpost-split-fill"></i></span>
+            <span data-i18n="ayp.steps.badge">YOUR AYURVEDIC JOURNEY</span>
+          </div>
+          <h2 class="section-title">
+            <span data-i18n="ayp.steps.title">Simple Steps to</span> <span class="italic-accent ayp-accent" data-i18n="ayp.steps.titleAccent">Natural Healing</span>
+          </h2>
+        </div>
+        <div class="ayp-steps">
+          <div class="ayp-step reveal">
+            <span class="ayp-step-num">01</span>
+            <div class="ayp-step-icon"><i class="bi bi-chat-heart-fill"></i></div>
+            <h3 data-i18n="ayp.s1.t">Consultation</h3>
+            <p data-i18n="ayp.s1.d">The doctor reviews your health, lifestyle and body constitution (Prakriti).</p>
+          </div>
+          <div class="ayp-step reveal delay-100">
+            <span class="ayp-step-num">02</span>
+            <div class="ayp-step-icon"><i class="bi bi-clipboard2-heart-fill"></i></div>
+            <h3 data-i18n="ayp.s2.t">Personal Plan</h3>
+            <p data-i18n="ayp.s2.d">A therapy plan with the right oils, herbs and number of sessions.</p>
+          </div>
+          <div class="ayp-step reveal delay-200">
+            <span class="ayp-step-num">03</span>
+            <div class="ayp-step-icon"><i class="bi bi-droplet-half"></i></div>
+            <h3 data-i18n="ayp.s3.t">Therapy Sessions</h3>
+            <p data-i18n="ayp.s3.d">Treatments in private suites, with separate therapists for men and women.</p>
+          </div>
+          <div class="ayp-step reveal delay-300">
+            <span class="ayp-step-num">04</span>
+            <div class="ayp-step-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+            <h3 data-i18n="ayp.s4.t">Follow-Up Care</h3>
+            <p data-i18n="ayp.s4.d">Diet and home-care advice so the results last.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. CALL TO ACTION
+         ========================================================================== -->
+    <section class="cta-section ayp-cta">
+      <div class="cta-glow-circle"></div>
+      <div class="cta-pattern" aria-hidden="true"></div>
+      <div class="container">
+        <div class="cta-content-box reveal">
+          <div class="badge-eyebrow" style="background: rgba(255, 255, 255, 0.12); color: #A7E3A1; border-color: rgba(255, 255, 255, 0.2);">
+            <span class="dot" style="background-color: #8FDB86;"></span>
+            <span data-i18n="ayp.cta.badge">BEGIN YOUR AYURVEDIC CARE</span>
+          </div>
+          <h2 class="cta-heading font-serif">
+            <span data-i18n="ayp.cta.a">Restore Balance with</span>
+            <span class="cta-heading-accent" data-i18n="ayp.cta.b">Authentic Ayurveda</span>
+          </h2>
+          <p class="cta-text" data-i18n="ayp.cta.text">Book a consultation with our Ayurvedic doctor and start a therapy plan made for you.</p>
+          <div class="cta-buttons btn-pair">
+            <a href="contact.html?doctor=Dr.%20Shabna%20Mangattuparamban#booking-form" class="btn btn-white-custom">
+              <i class="bi bi-calendar-heart-fill text-success"></i>
+              <span data-i18n="ayur.book">Book Ayurvedic Consultation</span>
+            </a>
+            <a href="tel:+96871704990" class="btn btn-outline-custom" style="color: #FFFFFF !important; border-color: rgba(255,255,255,0.6);">
+              <i class="bi bi-telephone-fill"></i>
+              <span data-i18n="cta.call">Call Helpline</span>
+            </a>
+          </div>
+          <div class="cta-info-strip">
+            <span class="cta-info-item"><i class="bi bi-clock-fill"></i> <span data-i18n="cta.hours">Sat – Thu · 8 AM – 1 PM &amp; 4 PM – 9 PM</span></span>
+            <span class="cta-info-item"><i class="bi bi-geo-alt-fill"></i> <span data-i18n="cta.location">Al Mudhaibi, Oman</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+  <!-- ==========================================================================
+       7. SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand mb-3">
+            <img src="assets/images/logo-white.png" alt="Al Farsi Physiotherapy Center" class="footer-logo-img" width="984" height="226">
+            <p class="footer-desc" data-i18n="footer.desc">
+              Al Farsi Physiotherapy &amp; Rehabilitation Center is Oman's premier clinical facility dedicated to neurological stroke recovery, spine decompression, orthopedic care, and authentic Ayurvedic wellness.
+            </p>
+          </div>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/96871704990" class="social-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading" data-i18n="footer.quickLinks">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="index.html#about" data-i18n="footer.aboutCenter">About Center</a></li>
+            <li><a href="treatments.html" data-i18n="nav.treatments">Treatments</a></li>
+            <li><a href="ayurveda.html" data-i18n="footer.ayurvedicCare">Ayurvedic Care</a></li>
+            <li><a href="index.html#doctors" data-i18n="nav.specialists">Specialists</a></li>
+            <li><a href="contact.html" data-i18n="footer.contactUs">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-6">
+          <h4 class="footer-heading" data-i18n="footer.treatments">Treatments</h4>
+          <ul class="footer-links">
+            <li><a href="treatment.html?id=stroke" data-i18n="footer.t.stroke">Stroke Rehabilitation</a></li>
+            <li><a href="treatment.html?id=backpain" data-i18n="footer.t.backpain">Back Pain &amp; Sciatica</a></li>
+            <li><a href="treatment.html?id=sports" data-i18n="footer.t.sports">Sports Rehabilitation</a></li>
+            <li><a href="treatment.html?id=elakizhi" data-i18n="footer.t.elakizhi">Elakizhi Herbal Poultice</a></li>
+            <li><a href="treatment.html?id=shirodhara" data-i18n="footer.t.shirodhara">Shirodhara Stress Relief</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading" data-i18n="footer.contactInfo">Contact Info</h4>
+          <ul class="footer-links footer-contact">
+            <li class="footer-contact-item">
+              <i class="bi bi-geo-alt-fill footer-contact-icon"></i>
+              <span class="footer-contact-text" data-i18n="footer.address">Al Mudhaibi, North Al-Sharqiyah, Sultanate of Oman (P.O. Box 235, PC 420)</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-telephone-fill footer-contact-icon"></i>
+              <a href="tel:+96871704990" class="footer-contact-link">+968 7170 4990</a>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-envelope-fill footer-contact-icon"></i>
+              <a href="mailto:physicaltherapy717@gmail.com" class="footer-contact-link">physicaltherapy717@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom text-center">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-md-start mb-2 mb-md-0">
+            <span data-i18n="footer.copyright">&copy; 2026 Al Farsi Physiotherapy Center. All Rights Reserved.</span>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <span class="arabic-text text-light opacity-75">مركز الفارسي للعلاج الطبيعي والتأهيل — صحتك وحركتك في أمان</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Direct Contact Button -->
+  <a href="https://wa.me/96871704990?text=Hello%20Al%20Farsi%20Physiotherapy%20Center%2C%20I%20would%20like%20to%20inquire%20about%20an%20appointment."
+    target="_blank" rel="noopener noreferrer" id="floatingWhatsappBtn" class="floating-whatsapp-btn"
+    aria-label="Chat on WhatsApp" title="WhatsApp: +968 7170 4990">
+    <i class="bi bi-whatsapp"></i>
+    <span class="whatsapp-tooltip" data-i18n="common.chatWhatsapp">Chat with us on WhatsApp</span>
+  </a>
+
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="i18n-data.js?v=20261118q"></script>
+  <script src="script.js?v=20261118q"></script>
+
+</body>
+</html>

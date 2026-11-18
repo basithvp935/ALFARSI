@@ -61,7 +61,7 @@ window.ALFARSI_I18N_EXTRA = {
     "tx.cervical.tag2": "Posture Correction",
     "tx.cervical.tag3": "Manual Therapy",
     "tx.cp.badge": "Pediatric Neuro",
-    "tx.cp.title": "Cerebral Palsy Care",
+    "tx.cp.title": "Pediatric Rehabilitation",
     "tx.cp.desc": "Compassionate developmental physiotherapy and neuromuscular retraining supporting childhood mobility, motor skills, and independence.",
     "tx.cp.tag1": "Motor Skills",
     "tx.cp.tag2": "Spasticity Control",
@@ -109,7 +109,7 @@ window.ALFARSI_I18N_EXTRA = {
     "tx.reflex.tag2": "Acupressure",
     "tx.reflex.tag3": "Stress Relief",
     "tx.electro.badge": "Modern Modality",
-    "tx.electro.title": "Electrotherapy & Ultrasound",
+    "tx.electro.title": "Electrotherapy",
     "tx.electro.desc": "TENS, neuromuscular electrical stimulation (NMES), and therapeutic deep ultrasound to accelerate cellular repair and block pain signals.",
     "tx.electro.tag1": "TENS / NMES",
     "tx.electro.tag2": "Deep Ultrasound",
@@ -252,7 +252,7 @@ window.ALFARSI_I18N_EXTRA = {
     "idx.contact.loc": "Center Location",
     "idx.contact.locDetail": "AL FARSI PHYSIOTHERAPY CENTRE<br>KHALFAN NASSER AMUR AL FARSI TRAD<br>Post Box No: 235, Postal Code: 420<br>Al Mudhaibi, North Al-Sharqiyah, Sultanate of Oman",
     "idx.contact.hours": "Opening Hours",
-    "idx.contact.hoursDetail": "Saturday – Thursday: 8:00 AM – 9:00 PM<br>24/7 Patient On-Call Support",
+    "idx.contact.hoursDetail": "Saturday – Thursday: 8:00 AM – 1:00 PM & 4:00 PM – 9:00 PM<br>Friday: Closed<br>24/7 Patient On-Call Support",
     "idx.form.title": "Service Booking Form",
     "idx.form.fast": "Fast Response",
     "idx.form.sub": "Fill in your details below and our clinical team will get back to you promptly to confirm your consultation.",
@@ -275,7 +275,7 @@ window.ALFARSI_I18N_EXTRA = {
     "idx.form.ph.email": "e.g. name@example.com",
     "idx.form.ph.message": "Tell us about your pain duration, previous surgeries, or recovery goals...",
     "idx.form.submit": "Submit Appointment Request",
-    "idx.form.morning": "Morning (8:00 AM – 12:00 PM)",
+    "idx.form.morning": "Morning (8:00 AM – 1:00 PM)",
     "idx.form.afternoon": "Afternoon (12:00 PM – 4:00 PM)",
     "idx.form.evening": "Evening (4:00 PM – 9:00 PM)",
     "test.titleAccent": "Our Patients",
@@ -365,7 +365,7 @@ window.ALFARSI_I18N_EXTRA = {
     "tx.cervical.tag2": "تصحيح القوام",
     "tx.cervical.tag3": "علاج يدوي",
     "tx.cp.badge": "أعصاب الأطفال",
-    "tx.cp.title": "رعاية الشلل الدماغي",
+    "tx.cp.title": "تأهيل الأطفال",
     "tx.cp.desc": "علاج طبيعي تنموي رحيم وإعادة تدريب عضلي عصبي لدعم حركة الأطفال والمهارات الحركية والاستقلالية.",
     "tx.cp.tag1": "المهارات الحركية",
     "tx.cp.tag2": "التحكم بالتشنج",
@@ -413,7 +413,7 @@ window.ALFARSI_I18N_EXTRA = {
     "tx.reflex.tag2": "ضغط النقاط",
     "tx.reflex.tag3": "تخفيف التوتر",
     "tx.electro.badge": "تقنية حديثة",
-    "tx.electro.title": "العلاج الكهربائي والموجات فوق الصوتية",
+    "tx.electro.title": "العلاج الكهربائي",
     "tx.electro.desc": "تحفيز كهربائي عصبي عضلي وموجات فوق صوتية علاجية عميقة لتسريع إصلاح الخلايا وحجب إشارات الألم.",
     "tx.electro.tag1": "TENS / NMES",
     "tx.electro.tag2": "موجات عميقة",
@@ -556,7 +556,7 @@ window.ALFARSI_I18N_EXTRA = {
     "idx.contact.loc": "موقع المركز",
     "idx.contact.locDetail": "مركز الفارسي للعلاج الطبيعي<br>خلفان ناصر عامر الفارسي للتجارة<br>صندوق بريد: 235، الرمز البريدي: 420<br>المضيبي، شمال الشرقية، سلطنة عُمان",
     "idx.contact.hours": "ساعات العمل",
-    "idx.contact.hoursDetail": "السبت – الخميس: 8:00 ص – 9:00 م<br>دعم المرضى على مدار الساعة",
+    "idx.contact.hoursDetail": "السبت – الخميس: 8:00 ص – 1:00 م و 4:00 م – 9:00 م<br>الجمعة: مغلق<br>دعم المرضى على مدار الساعة",
     "idx.form.title": "نموذج حجز الخدمة",
     "idx.form.fast": "استجابة سريعة",
     "idx.form.sub": "املأ بياناتك أدناه وسيتواصل معك فريقنا السريري سريعاً لتأكيد استشارتك.",
@@ -579,7 +579,7 @@ window.ALFARSI_I18N_EXTRA = {
     "idx.form.ph.email": "مثال: name@example.com",
     "idx.form.ph.message": "أخبرنا عن مدة الألم أو العمليات السابقة أو أهداف التعافي...",
     "idx.form.submit": "إرسال طلب الموعد",
-    "idx.form.morning": "صباحاً (8:00 ص – 12:00 م)",
+    "idx.form.morning": "صباحاً (8:00 ص – 1:00 م)",
     "idx.form.afternoon": "ظهراً (12:00 م – 4:00 م)",
     "idx.form.evening": "مساءً (4:00 م – 9:00 م)",
     "test.titleAccent": "مرضانا",
@@ -614,7 +614,7 @@ window.ALFARSI_I18N_EXTRA = {
 (function () {
   var d = window.ALFARSI_I18N_EXTRA = window.ALFARSI_I18N_EXTRA || { en: {}, ar: {} };
   Object.assign(d.en, {
-    "home.viewAll.title": "16+ specialised therapies under one roof",
+    "home.viewAll.title": "14 specialised therapies under one roof",
     "home.viewAll.sub": "Neurological, spine, orthopaedic, holistic & Ayurvedic care",
     "home.viewAll.btn": "View All Treatments",
     "txp.hero.badge": "COMPLETE TREATMENT DIRECTORY",
@@ -643,7 +643,7 @@ window.ALFARSI_I18N_EXTRA = {
     "txp.cta.text": "Book an assessment and our specialists will build a recovery plan around your needs."
   });
   Object.assign(d.ar, {
-    "home.viewAll.title": "أكثر من 16 علاجاً متخصصاً تحت سقف واحد",
+    "home.viewAll.title": "14 علاجاً متخصصاً تحت سقف واحد",
     "home.viewAll.sub": "رعاية عصبية، العمود الفقري، العظام، العلاجات التكاملية والأيورفيدا",
     "home.viewAll.btn": "عرض جميع العلاجات",
     "txp.hero.badge": "الدليل الكامل للعلاجات",
@@ -749,14 +749,14 @@ window.ALFARSI_I18N_EXTRA = {
   Object.assign(d.en, {
     "cta.heading.a": "Ready to Reclaim Your",
     "cta.heading.b": "Movement & Vitality?",
-    "cta.hours": "Sat – Thu · 8 AM – 9 PM",
+    "cta.hours": "Sat – Thu · 8 AM – 1 PM & 4 PM – 9 PM",
     "cta.wa": "WhatsApp Us",
     "cta.location": "Al Mudhaibi, Oman"
   });
   Object.assign(d.ar, {
     "cta.heading.a": "هل أنت مستعد لاستعادة",
     "cta.heading.b": "حركتك وحيويتك؟",
-    "cta.hours": "السبت – الخميس · 8 ص – 9 م",
+    "cta.hours": "السبت – الخميس · 8 ص – 1 م و 4 م – 9 م",
     "cta.wa": "راسلنا واتساب",
     "cta.location": "المضيبي، عُمان"
   });
@@ -793,7 +793,7 @@ window.ALFARSI_I18N_EXTRA = {
   var d = window.ALFARSI_I18N_EXTRA = window.ALFARSI_I18N_EXTRA || { en: {}, ar: {} };
   Object.assign(d.en, {
     "svc.stroke": "Stroke Rehabilitation",
-    "svc.cp": "Cerebral Palsy & Pediatric Care",
+    "svc.cp": "Pediatric Rehabilitation",
     "svc.parkinson": "Parkinson's Support",
     "svc.backpain": "Back Pain & Sciatica Treatment",
     "svc.cervical": "Cervical Spondylosis & Neck Care",
@@ -817,7 +817,7 @@ window.ALFARSI_I18N_EXTRA = {
 });
   Object.assign(d.ar, {
     "svc.stroke": "تأهيل السكتة الدماغية",
-    "svc.cp": "الشلل الدماغي ورعاية الأطفال",
+    "svc.cp": "تأهيل الأطفال",
     "svc.parkinson": "دعم مرضى باركنسون",
     "svc.backpain": "علاج آلام الظهر وعرق النسا",
     "svc.cervical": "خشونة الفقرات العنقية والرقبة",
@@ -839,4 +839,92 @@ window.ALFARSI_I18N_EXTRA = {
     "contact.map.name": "مركز الفارسي للعلاج الطبيعي",
     "contact.map.address": "ص.ب 235، الرمز البريدي 420<br>المضيبي، شمال الشرقية، سلطنة عُمان"
 });
+})();
+
+/* Ayurveda page */
+(function () {
+  var d = window.ALFARSI_I18N_EXTRA = window.ALFARSI_I18N_EXTRA || { en: {}, ar: {} };
+  Object.assign(d.en, {
+    "ayp.hero.title": "Authentic Kerala",
+    "ayp.hero.accent": "Ayurveda & Panchakarma",
+    "ayp.meetDoctor": "Meet Our Ayurvedic Doctor",
+    "ayp.chip1": "Kerala Herbal Oils",
+    "ayp.chip2": "Private Suites",
+    "ayp.chip3": "BAMS Physician",
+    "ayp.doc.badge": "YOUR AYURVEDIC PHYSICIAN",
+    "ayp.doc.title": "Meet Our",
+    "ayp.doc.titleAccent": "Ayurvedic Doctor",
+    "ayp.doc.role": "Ayurvedic Physician",
+    "ayp.doc.degree": "Bachelor of Ayurvedic Medicine and Surgery",
+    "ayp.doc.text": "Our Ayurvedic physician assesses each patient personally and designs the right combination of herbal therapies, medicated oils and Panchakarma care for their condition.",
+    "ayp.doc.f1": "Qualification",
+    "ayp.doc.f3": "Signature Therapies",
+    "ayp.doc.book": "Book with Dr. Shabna",
+    "ayp.steps.badge": "YOUR AYURVEDIC JOURNEY",
+    "ayp.steps.title": "Simple Steps to",
+    "ayp.steps.titleAccent": "Natural Healing",
+    "ayp.s1.t": "Consultation",
+    "ayp.s1.d": "The doctor reviews your health, lifestyle and body constitution (Prakriti).",
+    "ayp.s2.t": "Personal Plan",
+    "ayp.s2.d": "A therapy plan with the right oils, herbs and number of sessions.",
+    "ayp.s3.t": "Therapy Sessions",
+    "ayp.s3.d": "Treatments in private suites, with separate therapists for men and women.",
+    "ayp.s4.t": "Follow-Up Care",
+    "ayp.s4.d": "Diet and home-care advice so the results last.",
+    "ayp.cta.badge": "BEGIN YOUR AYURVEDIC CARE",
+    "ayp.cta.a": "Restore Balance with",
+    "ayp.cta.b": "Authentic Ayurveda",
+    "ayp.cta.text": "Book a consultation with our Ayurvedic doctor and start a therapy plan made for you."
+  });
+  Object.assign(d.ar, {
+    "ayp.hero.title": "الأيورفيدا الكيرالية",
+    "ayp.hero.accent": "الأصيلة والبانشاكارما",
+    "ayp.meetDoctor": "تعرّف على طبيبة الأيورفيدا",
+    "ayp.chip1": "زيوت عشبية كيرالية",
+    "ayp.chip2": "أجنحة خاصة",
+    "ayp.chip3": "طبيبة حاصلة على BAMS",
+    "ayp.doc.badge": "طبيبة الأيورفيدا لديكم",
+    "ayp.doc.title": "تعرّف على",
+    "ayp.doc.titleAccent": "طبيبة الأيورفيدا",
+    "ayp.doc.role": "طبيبة أيورفيدا",
+    "ayp.doc.degree": "بكالوريوس الطب والجراحة الأيورفيدية",
+    "ayp.doc.text": "تقيّم طبيبة الأيورفيدا كل مريض شخصياً وتضع المزيج المناسب من العلاجات العشبية والزيوت الطبية ورعاية البانشاكارما وفق حالته.",
+    "ayp.doc.f1": "المؤهل",
+    "ayp.doc.f3": "علاجات مميزة",
+    "ayp.doc.book": "احجز مع د. شبنا",
+    "ayp.steps.badge": "رحلتك الأيورفيدية",
+    "ayp.steps.title": "خطوات بسيطة نحو",
+    "ayp.steps.titleAccent": "الشفاء الطبيعي",
+    "ayp.s1.t": "الاستشارة",
+    "ayp.s1.d": "تراجع الطبيبة صحتك ونمط حياتك وطبيعة جسمك (براكريتي).",
+    "ayp.s2.t": "خطة مخصصة",
+    "ayp.s2.d": "خطة علاجية بالزيوت والأعشاب المناسبة وعدد الجلسات.",
+    "ayp.s3.t": "جلسات العلاج",
+    "ayp.s3.d": "علاجات في أجنحة خاصة مع معالجين منفصلين للرجال والنساء.",
+    "ayp.s4.t": "المتابعة",
+    "ayp.s4.d": "نصائح غذائية ورعاية منزلية لتدوم النتائج.",
+    "ayp.cta.badge": "ابدأ رعايتك الأيورفيدية",
+    "ayp.cta.a": "استعد توازنك مع",
+    "ayp.cta.b": "الأيورفيدا الأصيلة",
+    "ayp.cta.text": "احجز استشارة مع طبيبة الأيورفيدا وابدأ خطة علاج مصممة لك."
+  });
+})();
+
+/* Ayurveda page: therapist card + team heading */
+(function () {
+  var d = window.ALFARSI_I18N_EXTRA = window.ALFARSI_I18N_EXTRA || { en: {}, ar: {} };
+  Object.assign(d.en, {
+    "ayp.ther.name": "Ayurvedic Therapist",
+    "ayp.ther.role": "Kerala Therapies",
+    "ayp.doc.badge": "YOUR AYURVEDIC CARE TEAM",
+    "ayp.doc.titleAccent": "Ayurvedic Team",
+    "ayp.meetDoctor": "Meet Our Ayurvedic Team"
+  });
+  Object.assign(d.ar, {
+    "ayp.ther.name": "معالج أيورفيدا",
+    "ayp.ther.role": "علاجات كيرالية",
+    "ayp.doc.badge": "فريق رعاية الأيورفيدا",
+    "ayp.doc.titleAccent": "فريق الأيورفيدا",
+    "ayp.meetDoctor": "تعرّف على فريق الأيورفيدا"
+  });
 })();

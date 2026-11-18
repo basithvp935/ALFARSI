@@ -19,7 +19,7 @@
   <meta name="description"
     content="Al Farsi Physiotherapy Center offers advanced, personalized physiotherapy, neurological stroke rehabilitation, back pain relief, orthopedic recovery, and holistic therapies in Al Mudhaibi, North Al-Sharqiyah, Oman.">
   <meta name="keywords"
-    content="Al Farsi Physiotherapy, مركز الفارسي للعلاج الطبيعي, physiotherapy, stroke rehabilitation, back pain relief, cerebral palsy, orthopedic rehab, sports injury, hijama, reflexology, Oman medical center">
+    content="Al Farsi Physiotherapy, مركز الفارسي للعلاج الطبيعي, physiotherapy, stroke rehabilitation, back pain relief, cerebral palsy, orthopedic rehab, sports injury, Oman medical center">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
@@ -107,8 +107,7 @@
                 <li><a class="dropdown-item" href="treatment.html?id=backpain"><i class="bi bi-person-arms-up text-primary"></i> <span data-i18n="nav.dd.backpain">Back Pain &amp; Sciatica</span></a></li>
                 <li><a class="dropdown-item" href="treatment.html?id=sports"><i class="bi bi-trophy-fill text-primary"></i> <span data-i18n="nav.dd.sports">Sports Injury Rehab</span></a></li>
                 <li><a class="dropdown-item" href="treatment.html?id=postop"><i class="bi bi-bandaid-fill text-primary"></i> <span data-i18n="nav.dd.postop">Post-Surgical Recovery</span></a></li>
-                <li><a class="dropdown-item" href="treatment.html?id=hijama"><i class="bi bi-stars text-primary"></i> <span data-i18n="nav.dd.hijama">Hijama &amp; Reflexology</span></a></li>
-                <li><a class="dropdown-item" href="treatments.html?cat=ayurveda"><i class="bi bi-flower1 text-success"></i> <span data-i18n="nav.dd.ayurveda">Ayurvedic &amp; Panchakarma</span></a></li>
+                <li><a class="dropdown-item" href="ayurveda.html"><i class="bi bi-flower1 text-success"></i> <span data-i18n="nav.dd.ayurveda">Ayurvedic &amp; Panchakarma</span></a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item text-primary fw-bold" href="treatments.html"><span data-i18n="nav.dd.explore">Explore All Treatments</span> <i class="bi bi-arrow-right"></i></a></li>
               </ul>
@@ -117,7 +116,7 @@
               <a class="nav-link" href="#about" data-i18n="nav.about">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#ayurveda"><i class="bi bi-flower1 text-success me-1"></i><span
+              <a class="nav-link" href="ayurveda.html"><i class="bi bi-flower1 text-success me-1"></i><span
                   data-i18n="nav.ayurveda">Ayurveda</span></a>
             </li>
             <li class="nav-item">
@@ -155,11 +154,9 @@
     <!-- ==========================================================================
          2. HERO SECTION WITH BACKGROUND VIDEO & GOOGLE RATING WIDGET
          ========================================================================== -->
-    <section class="hero-section hero-video-section" id="home">
+    <section class="hero-section hero-video-section hero-image-section" id="home">
       <!-- Background Video & Overlay -->
-      <video class="hero-bg-video" autoplay loop muted playsinline preload="auto" poster="assets/images/hero-poster.jpg" aria-hidden="true">
-        <source src="assets/images/hero-video.mp4" type="video/mp4">
-      </video>
+      <img src="assets/images/hero-building.jpg?v=2" alt="Al Farsi Physiotherapy Center building" class="hero-bg-image" fetchpriority="high">
       <div class="hero-video-overlay"></div>
       <div class="hero-glow-1"></div>
       <div class="hero-glow-2"></div>
@@ -219,7 +216,7 @@
           <div class="stat-item">
             <div class="stat-icon stat-icon-blue"><i class="bi bi-award-fill"></i></div>
             <div class="stat-body">
-              <div class="stat-number"><span class="counter-value" data-target="16" data-suffix="+">16+</span></div>
+              <div class="stat-number"><span class="counter-value" data-target="8" data-suffix="+">8+</span></div>
               <div class="stat-label" data-i18n="trust.years">Years Experience</div>
               <p class="stat-sub" data-i18n="trust.yearsSub">UK &amp; International Certified Experts</p>
             </div>
@@ -367,7 +364,7 @@
         <!-- 4 Primary Pillar Cards -->
         <div class="row g-4 offer-grid">
           <!-- Offering 1 -->
-          <div class="col-lg-3 col-md-6 reveal delay-100">
+          <div class="col-lg-4 col-md-6 reveal delay-100">
             <div class="offering-luxury-card">
               <div class="offering-icon-wrap bg-blue-soft">
                 <i class="bi bi-activity text-primary"></i>
@@ -383,7 +380,7 @@
           </div>
 
           <!-- Offering 2 -->
-          <div class="col-lg-3 col-md-6 reveal delay-200">
+          <div class="col-lg-4 col-md-6 reveal delay-200">
             <div class="offering-luxury-card">
               <div class="offering-icon-wrap bg-green-soft">
                 <i class="bi bi-heart-pulse text-success"></i>
@@ -399,7 +396,7 @@
           </div>
 
           <!-- Offering 3 -->
-          <div class="col-lg-3 col-md-6 reveal delay-300">
+          <div class="col-lg-4 col-md-6 reveal delay-300">
             <div class="offering-luxury-card">
               <div class="offering-icon-wrap bg-blue-soft">
                 <i class="bi bi-person-arms-up text-primary"></i>
@@ -414,20 +411,6 @@
             </div>
           </div>
 
-          <!-- Offering 4 -->
-          <div class="col-lg-3 col-md-6 reveal delay-400">
-            <div class="offering-luxury-card">
-              <div class="offering-icon-wrap bg-green-soft">
-                <i class="bi bi-stars text-success"></i>
-              </div>
-              <h3 class="offering-title" data-i18n="offer.4.t">Holistic Complementary Care</h3>
-              <p class="offering-desc" data-i18n="offer.4.d">Medical cupping (Hijama), therapeutic reflexology, dry
-                needling, and therapeutic relaxation for total body circulation and natural pain relief.</p>
-              <a href="treatments.html?cat=holistic" class="offering-link">
-                <span data-i18n="offer.explore">Explore Category</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -489,7 +472,7 @@
             <div class="service-card enhanced-service-card featured-tx-card">
               <span class="featured-tx-num">02</span>
               <div class="service-card-img-wrap">
-                <img src="assets/images/service-back-neck.jpg" alt="Back Pain & Sciatica Treatment"
+                <img src="assets/images/service-backpain.jpg" alt="Physiotherapist assessing a patient's lower back" style="object-position: center center;"
                   class="service-card-img" loading="lazy">
                 <div class="service-badge-tag"><i class="bi bi-person-arms-up"></i> <span
                     data-i18n="tx.backpain.badge">Spine Care</span></div>
@@ -555,7 +538,7 @@
               <span class="leaf"><i class="bi bi-flower1"></i></span>
             </div>
             <div>
-              <strong class="view-all-tx-title" data-i18n="home.viewAll.title">16+ specialised therapies under one roof</strong>
+              <strong class="view-all-tx-title" data-i18n="home.viewAll.title">14 specialised therapies under one roof</strong>
               <span class="view-all-tx-sub" data-i18n="home.viewAll.sub">Neurological, spine, orthopaedic, holistic &amp; Ayurvedic care</span>
             </div>
           </div>
@@ -564,261 +547,6 @@
             <i class="bi bi-arrow-right"></i>
           </a>
         </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         6B. AYURVEDIC & HOLISTIC HEALING SANCTUARY (Dedicated Section)
-         ========================================================================== -->
-    <section class="section-padding ayurveda-sanctuary-section" id="ayurveda">
-      <!-- Botanical Leaf Ambient Background Glows -->
-      <div class="ayur-bg-leaf-pattern"></div>
-      <div class="ayur-ambient-glow-1"></div>
-      <div class="ayur-ambient-glow-2"></div>
-
-      <div class="container position-relative">
-        <!-- Section Header -->
-        <div class="text-center mb-5 reveal">
-          <div class="badge-eyebrow ayur-badge-eyebrow">
-            <span class="ayur-leaf-icon"><i class="bi bi-tree-fill"></i></span>
-            <span data-i18n="ayur.badge">ANCIENT WISDOM &amp; BOTANICAL HEALING</span>
-          </div>
-          <h2 class="section-title" data-i18n="ayur.title">
-            Traditional Ayurvedic Therapies &amp; Herbal Wellness
-          </h2>
-          <p class="section-subtitle" data-i18n="ayur.sub">
-            Immerse yourself in authentic Kerala Ayurvedic healing, customized medicated oils, and time-honored
-            botanical protocols designed to eliminate chronic pain, restore vital energy, and balance your body’s
-            natural doshas.
-          </p>
-        </div>
-
-        <!-- Featured Ayurvedic Spotlight Banner -->
-        <div class="ayur-spotlight-card reveal mb-5">
-          <div class="row g-0 align-items-stretch">
-            <div class="col-lg-6 ayur-spotlight-content">
-              <div class="ayur-spotlight-tag">
-                <i class="bi bi-patch-check-fill"></i> <span data-i18n="ayur.gcc">100% Authentic Kerala Ayurveda • GCC
-                  Standard</span>
-              </div>
-              <h3 class="ayur-spotlight-title" data-i18n="ayur.sideTitle">
-                Personalized Botanical Healing for Spine, Joints &amp; Vitality
-              </h3>
-              <p class="ayur-spotlight-text" data-i18n="ayur.sideBody">
-                Every therapy at Al Farsi combines pure herbal extractions, warm cold-pressed botanical oils, and
-                skilled Kerala master therapists. Private luxury treatment suites dedicated for gentlemen and ladies
-                with full privacy and sterile comfort.
-              </p>
-
-              <!-- 4 Feature Highlights Grid -->
-              <div class="ayur-highlights-grid">
-                <div class="ayur-highlight-item">
-                  <div class="ayur-hl-icon"><i class="bi bi-droplet-half"></i></div>
-                  <div>
-                    <strong data-i18n="ayur.f1t">Pure Medicated Tailams</strong>
-                    <span data-i18n="ayur.f1d">Neem, Bala, Dhanwantharam &amp; Ashwagandha oils</span>
-                  </div>
-                </div>
-                <div class="ayur-highlight-item">
-                  <div class="ayur-hl-icon"><i class="bi bi-person-check-fill"></i></div>
-                  <div>
-                    <strong data-i18n="ayur.f2t">Private Suites for Men &amp; Women</strong>
-                    <span data-i18n="ayur.f2d">Dedicated male &amp; female certified therapists</span>
-                  </div>
-                </div>
-                <div class="ayur-highlight-item">
-                  <div class="ayur-hl-icon"><i class="bi bi-heart-pulse-fill"></i></div>
-                  <div>
-                    <strong data-i18n="ayur.f3t">Spine &amp; Disc Natural Relief</strong>
-                    <span data-i18n="ayur.f3d">Deep herbal penetration for sciatica &amp; lumbar care</span>
-                  </div>
-                </div>
-                <div class="ayur-highlight-item">
-                  <div class="ayur-hl-icon"><i class="bi bi-shield-fill-check"></i></div>
-                  <div>
-                    <strong data-i18n="ayur.f4t">MOH Oman Certified Standard</strong>
-                    <span data-i18n="ayur.f4d">Authentic Kerala wooden Droni tables &amp; calm aroma</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="ayur-spotlight-actions mt-4 btn-pair">
-                <a href="contact.html#booking-form" class="btn btn-ayur-primary">
-                  <i class="bi bi-calendar-heart-fill"></i>
-                  <span data-i18n="ayur.book">Book Ayurvedic Consultation</span>
-                </a>
-                <a href="https://wa.me/96871704990?text=Hello%20Al%20Farsi%20Center%2C%20I%20would%20like%20to%20inquire%20about%20Ayurvedic%20Treatments."
-                  target="_blank" rel="noopener noreferrer" class="btn btn-ayur-outline">
-                  <i class="bi bi-whatsapp"></i>
-                  <span data-i18n="ayur.whatsapp">WhatsApp Doctor</span>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-6 ayur-spotlight-media">
-              <img src="assets/images/ayurveda-gcc-man.jpg" alt="Traditional Ayurvedic Kizhi Massage for GCC Men"
-                class="ayur-media-photo" loading="lazy">
-              <div class="ayur-media-wrapper">
-                <div class="ayur-media-badge">
-                  <i class="bi bi-flower1"></i>
-                  <span data-i18n="ayur.kizhiLabel">Herbal Kizhi &amp; Panchakarma</span>
-                </div>
-                <div class="ayur-floating-stat">
-                  <span class="ayur-stat-num">5,000+</span>
-                  <span class="ayur-stat-label"><span data-i18n="ayur.years">Years of Time-Tested Botanical
-                      Healing</span></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4 Specialized Ayurvedic Therapy Cards -->
-        <div class="row g-4 ayur-list">
-          <!-- Card 1: Kizhi / Elakizhi -->
-          <div class="col-lg-3 col-md-6 reveal">
-            <div class="ayur-card">
-              <div class="ayur-card-banner banner-kizhi">
-                <img src="assets/images/ayurveda-gcc-man.jpg" alt="Elakizhi Herbal Poultice for Men"
-                  class="ayur-card-banner-img" style="object-position: center 25%;" loading="lazy">
-                <span class="ayur-card-pill"><i class="bi bi-flower2"></i> <span data-i18n="ayur.elakizhi.badge">Herbal
-                    Poultice</span></span>
-                <div class="ayur-card-icon-bubble">
-                  <i class="bi bi-fire"></i>
-                </div>
-              </div>
-              <div class="ayur-card-body">
-                <h4 class="ayur-card-title" data-i18n="ayur.elakizhi.title">Elakizhi &amp; Podikizhi</h4>
-                <p class="ayur-card-desc" data-i18n="ayur.elakizhi.desc">Steamed bundles of wild medicinal leaves and
-                  herbal powders soaked in warm medicated oils to relieve acute joint pain, arthritis, sciatica, and
-                  chronic stiffness.</p>
-                <div class="ayur-card-tags">
-                  <span data-i18n="ayur.tag.joint">#JointPain</span>
-                  <span data-i18n="ayur.tag.steam">#HerbalSteam</span>
-                  <span data-i18n="ayur.tag.spine">#SpineRelief</span>
-                </div>
-                <a href="treatment.html?id=elakizhi" class="ayur-card-link">
-                  <span data-i18n="ayur.discover">Discover Protocol</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2: Shirodhara -->
-          <div class="col-lg-3 col-md-6 reveal">
-            <div class="ayur-card">
-              <div class="ayur-card-banner banner-shirodhara">
-                <img src="assets/images/ayurveda-shirodhara.jpg" alt="Shirodhara Oil Stream for Men"
-                  class="ayur-card-banner-img" style="object-position: center 40%;" loading="lazy">
-                <span class="ayur-card-pill"><i class="bi bi-droplet-fill"></i> <span
-                    data-i18n="ayur.shiro.badge">Medicated Oil Stream</span></span>
-                <div class="ayur-card-icon-bubble">
-                  <i class="bi bi-moon-stars-fill"></i>
-                </div>
-              </div>
-              <div class="ayur-card-body">
-                <h4 class="ayur-card-title" data-i18n="ayur.shiro.title">Shirodhara &amp; Nasyam</h4>
-                <p class="ayur-card-desc" data-i18n="ayur.shiro.desc">Continuous rhythmic stream of warm herbal oil over
-                  the forehead to soothe the nervous system, alleviate deep stress, chronic migraines, sleep disorders,
-                  and anxiety.</p>
-                <div class="ayur-card-tags">
-                  <span data-i18n="ayur.tag.stress">#StressRelief</span>
-                  <span data-i18n="ayur.tag.sleep">#SleepHarmony</span>
-                  <span data-i18n="ayur.tag.nervous">#NervousSystem</span>
-                </div>
-                <a href="treatment.html?id=shirodhara" class="ayur-card-link">
-                  <span data-i18n="ayur.discover">Discover Protocol</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3: Kati & Janu Basti -->
-          <div class="col-lg-3 col-md-6 reveal">
-            <div class="ayur-card">
-              <div class="ayur-card-banner banner-basti">
-                <img src="assets/images/ayurveda-basti.jpg" alt="Kati Basti Spinal Oil Reservoir"
-                  class="ayur-card-banner-img" style="object-position: 75% 65%;" loading="lazy">
-                <span class="ayur-card-pill"><i class="bi bi-shield-plus"></i> <span
-                    data-i18n="ayur.basti.badge">Localized Oil Dam</span></span>
-                <div class="ayur-card-icon-bubble">
-                  <i class="bi bi-bandaid-fill"></i>
-                </div>
-              </div>
-              <div class="ayur-card-body">
-                <h4 class="ayur-card-title" data-i18n="ayur.basti.title">Kati &amp; Janu Basti</h4>
-                <p class="ayur-card-desc" data-i18n="ayur.basti.desc">Herbal dough reservoirs retaining warm medicinal
-                  oil over the lumbar spine or knee joints to penetrate deep tissues, healing slipped discs and knee
-                  cartilage degeneration.</p>
-                <div class="ayur-card-tags">
-                  <span data-i18n="ayur.tag.disc">#DiscHerniation</span>
-                  <span data-i18n="ayur.tag.knee">#KneeCare</span>
-                  <span data-i18n="ayur.tag.lumbar">#LumbarSpine</span>
-                </div>
-                <a href="treatment.html?id=basti" class="ayur-card-link">
-                  <span data-i18n="ayur.discover">Discover Protocol</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4: Abhyanga & Panchakarma -->
-          <div class="col-lg-3 col-md-6 reveal">
-            <div class="ayur-card">
-              <div class="ayur-card-banner banner-abhyanga">
-                <img src="assets/images/ayurveda-hero.jpg" alt="Abhyanga Medicated Herbal Therapy"
-                  class="ayur-card-banner-img" style="object-position: center 50%;" loading="lazy">
-                <span class="ayur-card-pill"><i class="bi bi-tree-fill"></i> <span data-i18n="ayur.abhyanga.badge">Full
-                    Body Detox</span></span>
-                <div class="ayur-card-icon-bubble">
-                  <i class="bi bi-stars"></i>
-                </div>
-              </div>
-              <div class="ayur-card-body">
-                <h4 class="ayur-card-title" data-i18n="ayur.abhyanga.title">Abhyanga &amp; Detox</h4>
-                <p class="ayur-card-desc" data-i18n="ayur.abhyanga.desc">Synchronized full-body massage using warm
-                  medicinal oils along biological energy pathways to stimulate lymphatic drainage, purge toxins, and
-                  nourish vital organs.</p>
-                <div class="ayur-card-tags">
-                  <span data-i18n="ayur.tag.detox">#Detoxification</span>
-                  <span data-i18n="ayur.tag.lymph">#LymphaticFlow</span>
-                  <span data-i18n="ayur.tag.immunity">#VitalImmunity</span>
-                </div>
-                <a href="treatment.html?id=abhyanga" class="ayur-card-link">
-                  <span data-i18n="ayur.discover">Discover Protocol</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Botanical Quality Promise Strip -->
-        <div class="ayur-promise-strip reveal mt-5">
-          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
-            <div class="ayur-promise-item">
-              <i class="bi bi-patch-check-fill text-leaf"></i>
-              <span data-i18n-html="ayur.p1"><strong>100% Organically Sourced:</strong> Certified wild herbs with no
-                chemical additives</span>
-            </div>
-            <div class="ayur-promise-divider"></div>
-            <div class="ayur-promise-item">
-              <i class="bi bi-heart-pulse-fill text-leaf"></i>
-              <span data-i18n-html="ayur.p2"><strong>Integrated Care:</strong> Harmonized with modern clinical
-                physiotherapy protocols</span>
-            </div>
-            <div class="ayur-promise-divider"></div>
-            <div class="ayur-promise-item">
-              <i class="bi bi-geo-alt-fill text-leaf"></i>
-              <span data-i18n-html="ayur.p3"><strong>Private Luxury Rooms:</strong> Dedicated serene wellness suites in
-                Al Mudhaibi, Oman</span>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -1115,7 +843,7 @@
           </p>
         </div>
 
-        <!-- Team Grid (6 staff photos: 4 on top, 2 centered below) -->
+        <!-- Team Grid (5 staff photos) -->
         <div class="team-grid">
           <div class="team-col reveal">
             <article class="team-card" tabindex="0" aria-label="Dr. Muhsin V.P, BPT">
@@ -1186,21 +914,6 @@
                 <p class="team-degree">BPT</p>
                 <span class="team-exp"><i class="bi bi-award-fill"></i> 4 <span data-i18n="team.exp">Years Experience</span></span>
                 <a href="contact.html?doctor=Dr.%20Anuhitha%20Kanhiroli#booking-form" class="team-book">
-                  <i class="bi bi-calendar2-check"></i> <span data-i18n="doc.bookShort">Book Visit</span> <i class="bi bi-arrow-right team-book-arrow"></i>
-                </a>
-              </div>
-            </article>
-          </div>
-
-          <div class="team-col reveal delay-100">
-            <article class="team-card" tabindex="0" aria-label="Dr. Shabna Mangattuparamban, BAMS">
-              <img src="assets/images/team-6.jpg" alt="Dr. Shabna Mangattuparamban, BAMS" loading="lazy" style="object-position: center 85%;">
-              <span class="team-tap-hint" aria-hidden="true"><i class="bi bi-hand-index-thumb"></i></span>
-              <div class="team-info">
-                <h3 class="team-name">Dr. Shabna Mangattuparamban</h3>
-                <p class="team-degree">BAMS</p>
-                <span class="team-exp"><i class="bi bi-award-fill"></i> 8 <span data-i18n="team.exp">Years Experience</span></span>
-                <a href="contact.html?doctor=Dr.%20Shabna%20Mangattuparamban#booking-form" class="team-book">
                   <i class="bi bi-calendar2-check"></i> <span data-i18n="doc.bookShort">Book Visit</span> <i class="bi bi-arrow-right team-book-arrow"></i>
                 </a>
               </div>
@@ -1634,7 +1347,7 @@
           </div>
 
           <div class="cta-info-strip">
-            <span class="cta-info-item"><i class="bi bi-clock-fill"></i> <span data-i18n="cta.hours">Sat – Thu · 8 AM – 9 PM</span></span>
+            <span class="cta-info-item"><i class="bi bi-clock-fill"></i> <span data-i18n="cta.hours">Sat – Thu · 8 AM – 1 PM &amp; 4 PM – 9 PM</span></span>
             <a class="cta-info-item" href="https://wa.me/96871704990" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i> <span data-i18n="cta.wa">WhatsApp Us</span></a>
             <span class="cta-info-item"><i class="bi bi-geo-alt-fill"></i> <span data-i18n="cta.location">Al Mudhaibi, Oman</span></span>
           </div>
@@ -1684,7 +1397,7 @@
             <li><a href="#home" data-i18n="nav.home">Home</a></li>
             <li><a href="#about" data-i18n="footer.aboutCenter">About Center</a></li>
             <li><a href="treatments.html" data-i18n="nav.treatments">Treatments</a></li>
-            <li><a href="#ayurveda" data-i18n="footer.ayurvedicCare">Ayurvedic Care</a></li>
+            <li><a href="ayurveda.html" data-i18n="footer.ayurvedicCare">Ayurvedic Care</a></li>
             <li><a href="#doctors" data-i18n="nav.specialists">Specialists</a></li>
             <li><a href="contact.html" data-i18n="footer.contactUs">Contact Us</a></li>
           </ul>
@@ -1699,7 +1412,6 @@
             <li><a href="treatment.html?id=sports" data-i18n="footer.t.sports">Sports Rehabilitation</a></li>
             <li><a href="treatment.html?id=elakizhi" data-i18n="footer.t.elakizhi">Elakizhi Herbal Poultice</a></li>
             <li><a href="treatment.html?id=shirodhara" data-i18n="footer.t.shirodhara">Shirodhara Stress Relief</a></li>
-            <li><a href="treatment.html?id=hijama" data-i18n="footer.t.hijama">Hijama Medical Cupping</a></li>
           </ul>
         </div>
 
@@ -1819,8 +1531,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- i18n dictionary + Custom JavaScript -->
-  <script src="i18n-data.js?v=20261117t"></script>
-  <script src="script.js?v=20261117t"></script>
+  <script src="i18n-data.js?v=20261118q"></script>
+  <script src="script.js?v=20261118q"></script>
 </body>
 
 </html>
