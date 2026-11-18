@@ -928,3 +928,10 @@ window.ALFARSI_I18N_EXTRA = {
     "ayp.meetDoctor": "تعرّف على فريق الأيورفيدا"
   });
 })();
+
+/* Ayurveda page: therapist designation + qualification */
+(function () {
+  var d = window.ALFARSI_I18N_EXTRA = window.ALFARSI_I18N_EXTRA || { en: {}, ar: {} };
+  Object.assign(d.en, { "ayp.ther.role2": "Panchakarma Therapist", "ayp.ther.dip": "Dip. Panchakarma & Spa" });
+  Object.assign(d.ar, { "ayp.ther.role2": "معالج بانشاكارما", "ayp.ther.dip": "دبلوم بانشاكارما وسبا" });
+})();
