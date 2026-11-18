@@ -827,8 +827,8 @@
 
   <!-- Bootstrap 5.3.3 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="i18n-data.js?v=20261118v"></script>
-  <script src="script.js?v=20261118v"></script>
+  <script src="i18n-data.js?v=20261118w"></script>
+  <script src="script.js?v=20261118w"></script>
 
   <!-- Interactive Form Handling Script -->
   <script>
@@ -880,31 +880,57 @@
             return;
           }
 
-          // Show loading state
-          submitBtn.disabled = true;
-          submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending Request...';
+          // Build the booking message and send it to the clinic's WhatsApp (+968 7170 4990)
+          const val = function (id) { const el = document.getElementById(id); return el ? el.value.trim() : ''; };
+          const optText = function (id) {
+            const el = document.getElementById(id);
+            return el && el.selectedIndex >= 0 ? el.options[el.selectedIndex].text.trim() : '';
+          };
+          const name = val('cFullName');
+          const lines = [
+            '*New Appointment Request – Al Farsi Physiotherapy Center*',
+            '',
+            '👤 *Name:* ' + name,
+            '📞 *Phone:* ' + val('cPhoneNumber'),
+            '✉️ *Email:* ' + val('cEmail'),
+            '🩺 *Treatment:* ' + optText('cServiceSelect'),
+            '📅 *Preferred Date:* ' + val('cPreferredDate'),
+            '🕒 *Preferred Time:* ' + optText('cTimeSlotSelect')
+          ];
+          const notes = val('cMessage');
+          if (notes) lines.push('📝 *Notes:* ' + notes);
+          const waUrl = 'https://wa.me/96871704990?text=' + encodeURIComponent(lines.join('\n'));
 
-          setTimeout(function() {
-            const name = document.getElementById('cFullName').value;
-            const service = document.getElementById('cServiceSelect').value;
+          // open immediately (inside the click) so browsers don't block it
+          const waWindow = window.open(waUrl, '_blank', 'noopener');
+          if (!waWindow) window.location.href = waUrl;
 
-            alertBox.style.display = 'block';
-            alertBox.className = 'alert alert-success d-flex align-items-center gap-3 p-3 rounded-4 mb-4';
-            alertBox.innerHTML = `
-              <i class="bi bi-check-circle-fill fs-3 text-success"></i>
-              <div>
-                <strong>Thank you, ${name}!</strong>
-                <div>Your booking request for <strong>${service}</strong> has been received. Our clinical coordinator will contact you shortly to confirm your time slot.</div>
-              </div>
-            `;
+          // confirmation (built with textContent, never raw HTML from the form)
+          const isArabic = document.documentElement.getAttribute('lang') === 'ar';
+          alertBox.style.display = 'block';
+          alertBox.className = 'alert alert-success d-flex align-items-center gap-3 p-3 rounded-4 mb-4';
+          alertBox.textContent = '';
+          const icon = document.createElement('i');
+          icon.className = 'bi bi-whatsapp fs-3 text-success';
+          const box = document.createElement('div');
+          const strong = document.createElement('strong');
+          strong.textContent = isArabic ? ('شكراً، ' + name + '!') : ('Thank you, ' + name + '!');
+          const msg = document.createElement('div');
+          msg.textContent = isArabic
+            ? 'تم فتح واتساب مع تفاصيل حجزك. اضغط "إرسال" في واتساب لتأكيد طلبك.'
+            : 'WhatsApp has opened with your booking details. Press "Send" in WhatsApp to confirm your request.';
+          const link = document.createElement('a');
+          link.href = waUrl;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.className = 'fw-bold d-inline-block mt-1';
+          link.textContent = isArabic ? 'لم يُفتح واتساب؟ اضغط هنا' : "WhatsApp didn't open? Tap here";
+          box.append(strong, msg, link);
+          alertBox.append(icon, box);
 
-            form.reset();
-            form.classList.remove('was-validated');
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i class="bi bi-calendar2-check-fill"></i> <span class="fw-bold">Confirm & Send Booking Request</span>';
-
-            alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          }, 1000);
+          form.reset();
+          form.classList.remove('was-validated');
+          alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         });
       }
     });
