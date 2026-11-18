@@ -5424,3 +5424,93 @@ a.cta-info-item:hover { color: #fff; background: rgba(79, 175, 69, 0.2); border-
 .ayp-gallery { background: radial-gradient(at 0% 0%, rgba(79, 175, 69, 0.08) 0px, transparent 50%), radial-gradient(at 100% 100%, rgba(8, 120, 190, 0.06) 0px, transparent 50%), #fff; }
 .ayp-gallery .gal-cat-tag { background: var(--green-gradient); }
 .ayp-gallery .gal-zoom { color: var(--primary-green-dark); }
+
+/* ==========================================================================
+   AYURVEDA HERO — Ayurvedic Center building photo
+   Desktop: photo on the side opposite the text, fading into deep green.
+   Phones: photo across the top, text below on green.
+   ========================================================================== */
+.ayp-hero { background: linear-gradient(135deg, #0A2A22 0%, #0E3B33 55%, #0F3D45 100%); }
+.ayp-hero .ayp-hero-photo {
+  left: auto;
+  right: 0;
+  width: 60%;
+  object-position: 58% 45%;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.6) 14%, #000 30%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.6) 14%, #000 30%);
+  animation: heroZoom 22s ease-in-out infinite alternate;
+  transform-origin: 60% 50%;
+}
+.ayp-hero .ayp-hero-shade {
+  background:
+    radial-gradient(at 0% 0%, rgba(79, 175, 69, 0.22) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(8, 120, 190, 0.18) 0px, transparent 50%),
+    linear-gradient(90deg, rgba(10, 42, 34, 0.55) 0%, rgba(10, 42, 34, 0.15) 45%, transparent 60%),
+    linear-gradient(180deg, transparent 70%, rgba(10, 42, 34, 0.45) 100%);
+}
+[dir="rtl"] .ayp-hero .ayp-hero-photo {
+  right: auto;
+  left: 0;
+  -webkit-mask-image: linear-gradient(270deg, transparent 0%, rgba(0, 0, 0, 0.6) 14%, #000 30%);
+  mask-image: linear-gradient(270deg, transparent 0%, rgba(0, 0, 0, 0.6) 14%, #000 30%);
+  transform-origin: 40% 50%;
+}
+[dir="rtl"] .ayp-hero .ayp-hero-shade {
+  background:
+    radial-gradient(at 100% 0%, rgba(79, 175, 69, 0.22) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(8, 120, 190, 0.18) 0px, transparent 50%),
+    linear-gradient(270deg, rgba(10, 42, 34, 0.55) 0%, rgba(10, 42, 34, 0.15) 45%, transparent 60%),
+    linear-gradient(180deg, transparent 70%, rgba(10, 42, 34, 0.45) 100%);
+}
+.ayp-hero-content { max-width: 560px; }
+
+@media (max-width: 991.98px) and (min-width: 768px) {
+  .ayp-hero .ayp-hero-photo,
+  [dir="rtl"] .ayp-hero .ayp-hero-photo { width: 55%; }
+}
+@media (max-width: 767.98px) {
+  .ayp-hero { display: block; padding-top: 58vw; padding-bottom: 46px; }
+  .ayp-hero .ayp-hero-photo,
+  [dir="rtl"] .ayp-hero .ayp-hero-photo {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: auto;
+    width: 100%;
+    height: 66vw;
+    object-position: 50% 45%;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
+    animation: none;
+  }
+  .ayp-hero .ayp-hero-shade,
+  [dir="rtl"] .ayp-hero .ayp-hero-shade {
+    background: radial-gradient(at 0% 100%, rgba(79, 175, 69, 0.2) 0px, transparent 55%),
+                radial-gradient(at 100% 70%, rgba(8, 120, 190, 0.18) 0px, transparent 55%);
+  }
+  .ayp-hero-leaves { display: none; }
+  .ayp-hero .ayp-breadcrumb { position: absolute; top: 10px; left: 14px; right: 14px; margin: 0; }
+  .ayp-hero .ayp-breadcrumb .breadcrumb-item,
+  .ayp-hero .ayp-breadcrumb a { color: #fff; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45); }
+  .ayp-hero .container { position: static !important; }
+  .ayp-hero-content { text-align: center; margin: 0 auto; }
+  .ayp-hero-actions { justify-content: center; }
+  .ayp-hero-chips { justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ayp-hero .ayp-hero-photo { animation: none; }
+}
+
+/* Ayurveda hero: fit the full sign */
+@media (min-width: 992px) {
+  .ayp-hero { min-height: 0; padding: 40px 0 52px; }
+  .ayp-hero .ayp-hero-photo { width: 64%; object-position: 50% 40%; }
+  .ayp-hero-content { max-width: 600px; }
+  .ayp-hero-title { font-size: clamp(2.2rem, 4vw, 3.3rem); }
+  .ayp-hero-chips { margin-top: 26px; }
+}
+@media (max-width: 767.98px) {
+  .ayp-hero { padding-top: 52vw; }
+  .ayp-hero .ayp-hero-photo,
+  [dir="rtl"] .ayp-hero .ayp-hero-photo { height: 58vw; object-position: 50% 50%; }
+}
